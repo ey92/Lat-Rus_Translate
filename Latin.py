@@ -45,13 +45,23 @@ def toLower(word):
 
 def presentTense(inf, t, num, per):
 	# 1st Conjugations
-	if t[0] == ("1"):
+	if t[0] == "1":
 		if (per+num) == "FSTSG":
 			stem = inf[:-3]
 		else:
 			stem = inf[:-2] 	# cutoff "re" from ending (ama)
-		end = endings[per+num]
-		return stem+end
+	elif t[0] == "2":
+		stem = inf[:-2]
+	elif t[0] == "3":
+		if (per+num) == "FSTSG":
+			stem = inf[:-3]
+		elif (per+num) == "TRDPL":
+			stem = inf[:-3]+"u"
+		else:
+			stem = inf[:-3]+"i"	
+
+	end = endings[per+num]
+	return stem+end
 
 
 # takes infinitive, type, number, person, tense
