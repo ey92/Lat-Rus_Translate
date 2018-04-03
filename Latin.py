@@ -58,7 +58,16 @@ def presentTense(inf, t, num, per):
 		elif (per+num) == "TRDPL":
 			stem = inf[:-3]+"u"
 		else:
-			stem = inf[:-3]+"i"	
+			stem = inf[:-3]+"i"
+	elif t[0] == "4":
+		if (per+num) == "TRDPL":
+			stem = inf[:-2]+"u"
+		else:
+			stem = inf[:-2]
+	elif t[0] == "5":
+		stem = inf[:-3]+"i"
+		if (per+num) == "TRDPL":
+			stem +="u"
 
 	end = endings[per+num]
 	return stem+end
