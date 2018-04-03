@@ -19,6 +19,8 @@ NUM_LETTERS_CAP = len(lettersCap)
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 endingsV = {"FSTSG":"m","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 perfEndings = {"FSTSG":"i","SNDSG":"isti","TRDSG":"it","FSTPL":"imus","SNDPL":"istis","TRDPL":"erunt"}
+plupEndings = {"FSTSG":"eram","SNDSG":"eras","TRDSG":"erat","FSTPL":"eramus","SNDPL":"eratis","TRDPL":"erant"}
+futpEndings = {"FSTSG":"ero","SNDSG":"eris","TRDSG":"erit","FSTPL":"erimus","SNDPL":"eritis","TRDPL":"erint"}
 
 def getIndexL(letter):
 	return letters.index(letter)
@@ -45,7 +47,10 @@ def toLowerL(letter):
 def toLower(word):
 	toUpper(word)
 
-def presentTense(inf, t, num, per):
+# -------------------------------------------------------------
+# CONJUGATION
+
+def presentTense(inf, t, per, num):
 	# 1st Conjugations
 	if t[0] == "1":
 		if (per+num) == "FSTSG":
@@ -74,7 +79,7 @@ def presentTense(inf, t, num, per):
 	end = endings[per+num]
 	return stem+end
 
-def imperfectTense(inf, t, num, per):
+def imperfectTense(inf, t, per, num):
 	if t[0] =="1" or t[0] == "2" or t[0] == "3":
 		stem = inf[:-2]
 	if t[0] =="4" or t[0] == "5":
@@ -83,7 +88,7 @@ def imperfectTense(inf, t, num, per):
 	end = endingsV[per+num]
 	return stem+"ba"+end
 
-def futureTense(inf, t, num, per):
+def futureTense(inf, t, per, num):
 	if t[0] == "1" or t[0] == "2":
 		if (per+num) == "FSTSG":
 			stem = inf[:-2]+"b"
@@ -111,18 +116,35 @@ def futureTense(inf, t, num, per):
 
 	return stem+end
 
-def perfectTense(perf, t, num, per):
+def perfectTense(perf, t, per, num):
 	stem = perf[:-1]
 	end = perfEndings[per+num]
 	return stem+end
 
+def pluperfectTense(perf, t, per, num):
+	stem = perf[:-1]
+	end = plupEndings[per+num]
+	return stem+end
+
+def futureperfectTense(perf, t, per, num):
+	stem = perf[:-1]
+	end = futpEndings[per+num]
+	return stem+end	
+
 # takes infinitive, perfective, type, number, person, tense
 def conjugate(inf, perf, t, per, num, tense):
-	if tense == ("PRES"):
-		return presentTense(inf,t,num,per)
-	elif tense == ("IMPF"):
-		return imperfectTense(inf,t,num,per)
-	elif tense == ("FUTR"):
-		return futureTense(inf,t,num,per)
-	elif tense == ("PERF"):
-		return perfectTense(perf,t,num,per)
+	if tense == "PRES":
+		return presentTense(inf,t,per,num)
+	elif tense == "IMPF":
+		return imperfectTense(inf,t,per,num)
+	elif tense == "FUTR":
+		return futureTense(inf,t,per,num)
+	elif tense == "PERF":
+		return perfectTense(perf,t,per,num)
+	elif tense == "PLUP":
+		return pluperfectTense(perf,t,per,num)
+	elif tense == "FUTP":
+		return futureperfectTense(perf,t,per,num)
+
+# -------------------------------------------------------------
+# REVERSE CONJUGATION

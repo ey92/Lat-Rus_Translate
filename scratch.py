@@ -28,3 +28,5 @@ def foo(word):
 		lst.append(fooL(letter))
 	return lst
 print ','.join(map(str,foo(y)))
+
+"eram" in Latin.plupEndings.values()
