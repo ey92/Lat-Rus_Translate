@@ -28,10 +28,3 @@ def foo(word):
 		lst.append(fooL(letter))
 	return lst
 print ','.join(map(str,foo(y)))
-
-Latin.conjugate("capere","5","FST","SG","PRES")
-Latin.conjugate("capere","5","SND","SG","PRES")
-Latin.conjugate("capere","5","TRD","SG","PRES")
-Latin.conjugate("capere","5","FST","PL","PRES")
-Latin.conjugate("capere","5","SND","PL","PRES")
-Latin.conjugate("capere","5","TRD","PL","PRES")

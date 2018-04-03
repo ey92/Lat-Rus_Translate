@@ -17,6 +17,7 @@ NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
 
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
+endingsV = {"FSTSG":"m","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 
 def getIndexL(letter):
 	return letters.index(letter)
@@ -72,8 +73,48 @@ def presentTense(inf, t, num, per):
 	end = endings[per+num]
 	return stem+end
 
+def imperfectTense(inf, t, num, per):
+	if t[0] =="1" or t[0] == "2" or t[0] == "3":
+		stem = inf[:-2]
+	if t[0] =="4" or t[0] == "5":
+		stem = inf[:-3]+"ie"
+
+	end = endingsV[per+num]
+	return stem+"ba"+end
+
+def futureTense(inf, t, num, per):
+	if t[0] == "1" or t[0] == "2":
+		if (per+num) == "FSTSG":
+			stem = inf[:-2]+"b"
+		elif (per+num) == "TRDPL":
+			stem = inf[:-2]+"bu"
+		else:
+			stem = inf[:-2]+"bi"
+		
+		end = endings[per+num]
+
+	else:
+		if t[0] == "3":
+			if (per+num) == "FSTSG":
+				stem = inf[:-3]+"a"
+			else:
+				stem = inf[:-2]
+		elif t[0] == "4" or t[0] == "5":
+			stem = inf[:-3]
+			if (per+num) == "FSTSG":
+				stem += "ia"
+			else:
+				stem += "ie"
+
+		end = endingsV[per+num]
+
+	return stem+end
 
 # takes infinitive, type, number, person, tense
 def conjugate(inf, t, per, num, tense):
 	if tense == ("PRES"):
 		return presentTense(inf,t,num,per)
+	elif tense == ("IMPF"):
+		return imperfectTense(inf,t,num,per)
+	elif tense == ("FUTR"):
+		return futureTense(inf,t,num,per)
