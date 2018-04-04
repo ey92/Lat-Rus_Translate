@@ -403,7 +403,67 @@ def findTense2S(root, per, num, perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
-# def findTense1P(root, per, num, perf):
+def findTense1P(root, per, num, perf):
+	if root[-6:] == "eramus":
+		tense = "PLUP"
+		perf = True
+	elif root[-6:] == "erimus":
+		tense = "FUTP"
+		perf = True
+
+	elif root[-5:] == "bimus":
+		tense = "FUTR"
+		inf = root[:-5]+"re"
+
+	elif root[-4:] == "imus":
+		if (root[:-4]+"ī") in Roots.LatinV_perf:
+			tense = "PERF"
+			perf = True
+		else:
+			perf = False
+			tense = "PRES"
+			inf = root[:-3]+"re" 		#ire 4th pres
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-4]+"ere"	#ere 3rd or 3rd IO/5th pres
+
+	elif root[-5:] == "bamus":
+		tense = "IMPF"
+		if root[-7:-5] == "ie":
+			inf = root[:-6]+"re"	 	#ire 4th
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-7]+"ere" 	#ere 3rd IO/5th
+		else:
+			inf = root[:-5]+"re"
+
+	elif root[-5:] == "iemus":	 		#4th, 3rd IO/5th fut
+		tense = "FUTR"
+		inf = root[:-4]+"re" 			#ire 4th
+		if not(inf in Roots.LatinV_inf):
+			inf = root[:-5]+"ere" 		#ere 3rd IO/5th
+
+	elif root[-4:] == "emus":
+		inf = root[:-4]+"ēre"
+		if inf in Roots.LatinV_inf: 	#2nd pres
+			tense = "PRES"
+		else: 							#3rd fut
+			tense = "FUTR" 
+			inf = root[:-3]+"re"
+
+	elif root[-3:] == "mus": 			# 1st, 2nd pres
+		tense = "PRES"
+		inf = root[:-3]+"re"
+
+	if (perf):
+		perf = root[:-4]+"ī"
+		if root[-6] == "e":
+			perf = root[:-6]+"ī"
+		# print(perf)
+		inf = Roots.findInfP(perf)
+	else: 
+		# print(inf)
+		perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
+
 # def findTense1S(root, per, num, perf):
 
 def reverseConjugate(word):
