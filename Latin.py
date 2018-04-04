@@ -22,7 +22,40 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
+
+# irregular verb conjugations
 irreg = ["ire","esse","posse","velle","nelle","ferre"]
+irePres = {"FSTSG":"eo","SNDSG":"is","TRDSG":"it","FSTPL":"imus","SNDPL":"itis","TRDPL":"eunt"}
+ireImpf = {"FSTSG":"ibam","SNDSG":"ibas","TRDSG":"ibat","FSTPL":"ibamus","SNDPL":"ibatis","TRDPL":"ibant"}
+ireFutr = {"FSTSG":"ibo","SNDSG":"ibis","TRDSG":"ibit","FSTPL":"ibimus","SNDPL":"ibitis","TRDPL":"ibunt"}
+irePerf = {"FSTSG":"īvī","SNDSG":"īvisti","TRDSG":"īvit","FSTPL":"īvimus","SNDPL":"īvistis","TRDPL":"īverunt"}
+irePlup = {"FSTSG":"īveram","SNDSG":"īveras","TRDSG":"īverat","FSTPL":"īveramus","SNDPL":"īveratis","TRDPL":"īverant"}
+ireFutp = {"FSTSG":"īvero","SNDSG":"īveris","TRDSG":"īverit","FSTPL":"īverimus","SNDPL":"īveritis","TRDPL":"īverint"}
+ireConj = {"PRES":irePres,"IMPF":ireImpf,"FUTR":ireFutr,"PERF":irePerf,"PLUP":irePlup,"FUTP":ireFutp}
+
+essePres = {"FSTSG":"sum","SNDSG":"es","TRDSG":"est","FSTPL":"sumus","SNDPL":"estis","TRDPL":"sunt"}
+esseImpf = {"FSTSG":"eram","SNDSG":"eras","TRDSG":"erat","FSTPL":"eramus","SNDPL":"eratis","TRDPL":"erant"}
+esseFutr = {"FSTSG":"ero","SNDSG":"eris","TRDSG":"erit","FSTPL":"erimus","SNDPL":"eritis","TRDPL":"erunt"}
+essePerf = {"FSTSG":"fuī","SNDSG":"fuisti","TRDSG":"fuit","FSTPL":"fuimus","SNDPL":"fuistis","TRDPL":"fuerunt"}
+essePlup = {"FSTSG":"fueram","SNDSG":"fueras","TRDSG":"fuerat","FSTPL":"fueramus","SNDPL":"fueratis","TRDPL":"fuerant"}
+esseFutp = {"FSTSG":"fuero","SNDSG":"fueris","TRDSG":"fuerit","FSTPL":"fuerimus","SNDPL":"fueritis","TRDPL":"fuerint"}
+esseConj = {"PRES":essePres,"IMPF":esseImpf,"FUTR":esseFutr,"PERF":essePerf,"PLUP":essePlup,"FUTP":esseFutp}
+
+vellePres = {"FSTSG":"volo","SNDSG":"vis","TRDSG":"vult","FSTPL":"volumus","SNDPL":"vultis","TRDPL":"volunt"}
+velleImpf = {"FSTSG":"volēbam","SNDSG":"volēbas","TRDSG":"volēbat","FSTPL":"volēbamus","SNDPL":"volēbatis","TRDPL":"volēbant"}
+velleFutr = {"FSTSG":"volam","SNDSG":"volēs","TRDSG":"volet","FSTPL":"volēmus","SNDPL":"volētis","TRDPL":"volent"}
+vellePerf = {"FSTSG":"voluī","SNDSG":"voluisti","TRDSG":"voluit","FSTPL":"voluimus","SNDPL":"voluistis","TRDPL":"voluērunt"}
+vellePlup = {"FSTSG":"volueram","SNDSG":"volueras","TRDSG":"voluerat","FSTPL":"volueramus","SNDPL":"volueratis","TRDPL":"voluerant"}
+velleFutp = {"FSTSG":"voluero","SNDSG":"volueris","TRDSG":"voluerit","FSTPL":"voluerimus","SNDPL":"volueritis","TRDPL":"voluerint"}
+velleConj = {"PRES":vellePres,"IMPF":velleImpf,"FUTR":velleFutr,"PERF":vellePerf,"PLUP":vellePlup,"FUTP":velleFutp}
+
+ferrePres = {"FSTSG":"fero","SNDSG":"fers","TRDSG":"fert","FSTPL":"ferimus","SNDPL":"fertis","TRDPL":"ferunt"}
+ferreImpf = {"FSTSG":"ferēbam","SNDSG":"ferēbas","TRDSG":"ferēbat","FSTPL":"ferēbamus","SNDPL":"ferēbatis","TRDPL":"ferēbant"}
+ferreFutr = {"FSTSG":"feram","SNDSG":"ferēs","TRDSG":"feret","FSTPL":"ferēmus","SNDPL":"ferētis","TRDPL":"ferent"}
+ferrePerf = {"FSTSG":"tulī","SNDSG":"tulisti","TRDSG":"tulit","FSTPL":"tulimus","SNDPL":"tulistis","TRDPL":"tulērunt"}
+ferrePlup = {"FSTSG":"tuleram","SNDSG":"tuleras","TRDSG":"tulerat","FSTPL":"tuleramus","SNDPL":"tuleratis","TRDPL":"tulerant"}
+ferreFutp = {"FSTSG":"tulero","SNDSG":"tuleris","TRDSG":"tulerit","FSTPL":"tulerimus","SNDPL":"tuleritis","TRDPL":"tulerint"}
+ferreConj = {"PRES":ferrePres,"IMPF":ferreImpf,"FUTR":ferreFutr,"PERF":ferrePerf,"PLUP":ferrePlup,"FUTP":ferreFutp}
 
 # endings
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
@@ -142,166 +175,13 @@ def futureperfectTense(perf, t, per, num):
 def irregular(inf, perf, per, num, tense):
 	form = per+num
 	if inf == "ire":
-		if tense == "PRES":
-			if form == "FSTSG":
-				return "eo"
-			elif form == "SNDSG":
-				return "is"
-			elif form == "TRDSG":
-				return "it"
-			elif form == "FSTPL":
-				return "imus"
-			elif form == "SNDPL":
-				return "itis"
-			elif form == "TRDPL":
-				return "eunt"
-		elif tense == "IMPF":
-			if form == "FSTSG":
-				return "ibam"
-			elif form == "SNDSG":
-				return "ibas"
-			elif form == "TRDSG":
-				return "ibat"
-			elif form == "FSTPL":
-				return "ibamus"
-			elif form == "SNDPL":
-				return "ibatis"
-			elif form == "TRDPL":
-				return "ibant"
-		elif tense == "FUTR":
-			if form == "FSTSG":
-				return "ibo"
-			elif form == "SNDSG":
-				return "ibis"
-			elif form == "TRDSG":
-				return "ibit"
-			elif form == "FSTPL":
-				return "ibimus"
-			elif form == "SNDPL":
-				return "ibitis"
-			elif form == "TRDPL":
-				return "ibunt"
-		elif tense == "PERF":
-			if form == "FSTSG":
-				return "īvī"
-			elif form == "SNDSG":
-				return "īvisti"
-			elif form == "TRDSG":
-				return "īvit"
-			elif form == "FSTPL":
-				return "īvimus"
-			elif form == "SNDPL":
-				return "īvistis"
-			elif form == "TRDPL":
-				return "īverunt"
-		elif tense == "PLUP":
-			if form == "FSTSG":
-				return "īveram"
-			elif form == "SNDSG":
-				return "īveras"
-			elif form == "TRDSG":
-				return "īverat"
-			elif form == "FSTPL":
-				return "īveramus"
-			elif form == "SNDPL":
-				return "īveratis"
-			elif form == "TRDPL":
-				return "īverant"
-		elif tense == "FUTP":
-			if form == "FSTSG":
-				return "īvero"
-			elif form == "SNDSG":
-				return "īveris"
-			elif form == "TRDSG":
-				return "īverit"
-			elif form == "FSTPL":
-				return "īverimus"
-			elif form == "SNDPL":
-				return "īveritis"
-			elif form == "TRDPL":
-				return "īverint"
+		return ireConj[tense][(per+num)]
+
 	if inf == "esse":
-		if tense == "PRES":
-			if form == "FSTSG":
-				return "sum"
-			elif form == "SNDSG":
-				return "es"
-			elif form == "TRDSG":
-				return "est"
-			elif form == "FSTPL":
-				return "sumus"
-			elif form == "SNDPL":
-				return "estis"
-			elif form == "TRDPL":
-				return "sunt"
-		elif tense == "IMPF":
-			if form == "FSTSG":
-				return "eram"
-			elif form == "SNDSG":
-				return "eras"
-			elif form == "TRDSG":
-				return "erat"
-			elif form == "FSTPL":
-				return "eramus"
-			elif form == "SNDPL":
-				return "eratis"
-			elif form == "TRDPL":
-				return "erant"
-		elif tense == "FUTR":
-			if form == "FSTSG":
-				return "ero"
-			elif form == "SNDSG":
-				return "eris"
-			elif form == "TRDSG":
-				return "erit"
-			elif form == "FSTPL":
-				return "erimus"
-			elif form == "SNDPL":
-				return "eritis"
-			elif form == "TRDPL":
-				return "erunt"
-		elif tense == "FUTR":
-			if form == "FSTSG":
-				return "fuī"
-			elif form == "SNDSG":
-				return "fuisti"
-			elif form == "TRDSG":
-				return "fuit"
-			elif form == "FSTPL":
-				return "fuimus"
-			elif form == "SNDPL":
-				return "fuistis"
-			elif form == "TRDPL":
-				return "fuerunt"
-		elif tense == "PLUP":
-			if form == "FSTSG":
-				return "fueram"
-			elif form == "SNDSG":
-				return "fueras"
-			elif form == "TRDSG":
-				return "fuerat"
-			elif form == "FSTPL":
-				return "fueramus"
-			elif form == "SNDPL":
-				return "fueratis"
-			elif form == "TRDPL":
-				print('tense')
-				return "fuerant"
-		elif tense == "FUTP":
-			if form == "FSTSG":
-				return "fuero"
-			elif form == "SNDSG":
-				return "fueris"
-			elif form == "TRDSG":
-				return "fuerit"
-			elif form == "FSTPL":
-				return "fuerimus"
-			elif form == "SNDPL":
-				return "fueritis"
-			elif form == "TRDPL":
-				return "fuerint"
+		return esseConj[tense][(per+num)]
+
 	if inf == "posse":
-		temp = irregular("sum", "esse", per, num, tense)
+		temp = irregular("esse", "fuī", per, num, tense)
 		if tense == "PRES" or tense == "IMPF" or tense == "FUTR":
 			if temp[0] == "s":
 				return "pos"+temp
@@ -309,6 +189,19 @@ def irregular(inf, perf, per, num, tense):
 				return "pot"+temp
 		else:
 			return "pot"+temp[1:]
+
+	if inf == "velle":
+		return velleConj[tense][(per+num)]
+		
+	if inf == "nōlle":
+		temp = irregular("velle", "voluī", per, num, tense)
+		if tense == "PRES" and ((per+num) in ["SNDSG", "TRDSG", "SNDPL"]):
+				return "non"+temp
+		else:
+			return "nō"+temp[2:]
+
+	if inf == "ferre":
+		return ferreConj[tense][(per+num)]
 
 # takes infinitive, perfective, type, number, person, tense
 def conjugate(inf, perf, t, per, num, tense):

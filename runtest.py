@@ -62,7 +62,6 @@ def main():
 				print Latin.conjugate(params[0], params[1], params[2], params[3], params[4], params[5])
 
 				choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
-				print(choice4 in YCHOICES)
 				while choice4 not in YNCHOICES:
 					choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
 				if choice4 in YCHOICES:
