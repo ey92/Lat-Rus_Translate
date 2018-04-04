@@ -464,7 +464,55 @@ def findTense1P(root, per, num, perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
-# def findTense1S(root, per, num, perf):
+def findTense1S(root, per, num, perf):
+	if root in Roots.LatinV_perf:
+		tense = "PERF"
+		perf = True
+	elif root[-4:] == "eram":
+		tense = "PLUP"
+		perf = True
+	elif root[-3:] == "ero":
+		tense = "FUTP"
+		perf = True
+
+	elif root[-3:] == "bam":
+		tense = "IMPF"
+		if root[-5:-3] == "ie": 
+			inf = root[:-4]+"re" 		#ire 4th
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-5]+"ere"	#ere 3rd IO/5th
+		else:
+			inf = root[:-3]+"re" 		#1st,2nd,3rd
+
+	elif root[-2:] == "bo":
+		tense = "FUTR"
+		inf = root[:-2]+"re"
+	elif root[-3:] == "iam":
+		tense = "FUTR"
+		inf = root[:-2]+"re" 		#ire 4th
+		if not(inf in Roots.LatinV_inf):
+			inf = root[:-3]+"ere" 	#ere 3rd IO/5th
+
+	elif root[-2:] == "am":
+		tense = "FUTR"
+		inf = root[:-2]+"ere" 		#ere 3rd
+
+	elif root[-1] == "o":			#pres
+		tense = "PRES"
+		inf = Roots.findInfFS(root)
+
+	if (perf):
+		if tense == "PERF":
+			perf = root
+		elif root[-4] == "e":
+			perf = root[:-4]+"ī"
+		elif root[-3] == "e":
+			perf = root[:-3]+"ī"
+		inf = Roots.findInfP(perf)
+	else: 
+		# print(inf)
+		perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
 
 def reverseConjugate(word):
 	perf = False
@@ -491,7 +539,9 @@ def reverseConjugate(word):
 			num = "SG"
 			return findTense3S(word,per,num,perf)
 
-	elif word[-1] == "o" or word[-1] == "m" or word[-1] == "i":
+	# unicode macron issues
+	# elif word[-1] == "o" or word[-1] == "m" or word[-2] == "ī":
+	else:
 		per = "FST"
 		num = "SG"
 		return findTense1S(word,per,num,perf)

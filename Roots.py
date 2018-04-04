@@ -54,6 +54,7 @@ LatinV = [
     ("venio","venire","vēnī",4), \
     ("capio","capere","cēpī",5) \
 ]
+LatinV_fs = [x[0] for x in LatinV]
 LatinV_inf = [x[1] for x in LatinV]
 LatinV_perf = [x[2] for x in LatinV]
 LatinV_conj = [x[3] for x in LatinV]
@@ -63,6 +64,9 @@ def findConjI(word):
 
 def findConjP(word):
     return LatinV_conj[LatinV_perf.index(word)]
+
+def findInfFS(word):
+    return LatinV_inf[LatinV_fs.index(word)]
 
 def findInfP(word):
     return LatinV_inf[LatinV_perf.index(word)]
