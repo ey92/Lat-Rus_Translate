@@ -22,6 +22,7 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
+irreg = ["ire","esse","posse","velle","nelle","ferre"]
 
 # endings
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
@@ -138,10 +139,182 @@ def futureperfectTense(perf, t, per, num):
 	end = futpEndings[per+num]
 	return stem+end
 
+def irregular(inf, perf, per, num, tense):
+	form = per+num
+	if inf == "ire":
+		if tense == "PRES":
+			if form == "FSTSG":
+				return "eo"
+			elif form == "SNDSG":
+				return "is"
+			elif form == "TRDSG":
+				return "it"
+			elif form == "FSTPL":
+				return "imus"
+			elif form == "SNDSG":
+				return "itis"
+			elif form == "SNDSG":
+				return "eunt"
+		elif tense == "IMPF":
+			if form == "FSTSG":
+				return "ibam"
+			elif form == "SNDSG":
+				return "ibas"
+			elif form == "TRDSG":
+				return "ibat"
+			elif form == "FSTPL":
+				return "ibamus"
+			elif form == "SNDSG":
+				return "ibatis"
+			elif form == "SNDSG":
+				return "ibant"
+		elif tense == "FUTR":
+			if form == "FSTSG":
+				return "ibo"
+			elif form == "SNDSG":
+				return "ibis"
+			elif form == "TRDSG":
+				return "ibit"
+			elif form == "FSTPL":
+				return "ibimus"
+			elif form == "SNDSG":
+				return "ibitis"
+			elif form == "SNDSG":
+				return "ibunt"
+		elif tense == "PERF":
+			if form == "FSTSG":
+				return "īvī"
+			elif form == "SNDSG":
+				return "īvisti"
+			elif form == "TRDSG":
+				return "īvit"
+			elif form == "FSTPL":
+				return "īvimus"
+			elif form == "SNDSG":
+				return "īvistis"
+			elif form == "SNDSG":
+				return "īverunt"
+		elif tense == "PLUP":
+			if form == "FSTSG":
+				return "īveram"
+			elif form == "SNDSG":
+				return "īveras"
+			elif form == "TRDSG":
+				return "īverat"
+			elif form == "FSTPL":
+				return "īveramus"
+			elif form == "SNDSG":
+				return "īveratis"
+			elif form == "SNDSG":
+				return "īverant"
+		elif tense == "FUTP":
+			if form == "FSTSG":
+				return "īvero"
+			elif form == "SNDSG":
+				return "īveris"
+			elif form == "TRDSG":
+				return "īverit"
+			elif form == "FSTPL":
+				return "īverimus"
+			elif form == "SNDSG":
+				return "īveritis"
+			elif form == "SNDSG":
+				return "īverint"
+	if inf == "esse":
+		if tense == "PRES":
+			if form == "FSTSG":
+				return "sum"
+			elif form == "SNDSG":
+				return "es"
+			elif form == "TRDSG":
+				return "est"
+			elif form == "FSTPL":
+				return "sumus"
+			elif form == "SNDSG":
+				return "estis"
+			elif form == "SNDSG":
+				return "sunt"
+		elif tense == "IMPF":
+			if form == "FSTSG":
+				return "eram"
+			elif form == "SNDSG":
+				return "eras"
+			elif form == "TRDSG":
+				return "erat"
+			elif form == "FSTPL":
+				return "eramus"
+			elif form == "SNDSG":
+				return "eratis"
+			elif form == "SNDSG":
+				return "erant"
+		elif tense == "FUTR":
+			if form == "FSTSG":
+				return "ero"
+			elif form == "SNDSG":
+				return "eris"
+			elif form == "TRDSG":
+				return "erit"
+			elif form == "FSTPL":
+				return "erimus"
+			elif form == "SNDSG":
+				return "eritis"
+			elif form == "SNDSG":
+				return "erunt"
+		elif tense == "FUTR":
+			if form == "FSTSG":
+				return "fuī"
+			elif form == "SNDSG":
+				return "fuisti"
+			elif form == "TRDSG":
+				return "fuit"
+			elif form == "FSTPL":
+				return "fuimus"
+			elif form == "SNDSG":
+				return "fuistis"
+			elif form == "SNDSG":
+				return "fuerunt"
+		elif tense == "PLUP":
+			if form == "FSTSG":
+				return "fueram"
+			elif form == "SNDSG":
+				return "fueras"
+			elif form == "TRDSG":
+				return "fuerat"
+			elif form == "FSTPL":
+				return "fueramus"
+			elif form == "SNDSG":
+				return "fueratis"
+			elif form == "SNDSG":
+				return "fuerant"
+		elif tense == "FUTP":
+			if form == "FSTSG":
+				return "fuero"
+			elif form == "SNDSG":
+				return "fueris"
+			elif form == "TRDSG":
+				return "fuerit"
+			elif form == "FSTPL":
+				return "fuerimus"
+			elif form == "SNDSG":
+				return "fueritis"
+			elif form == "SNDSG":
+				return "fuerint"
+	if inf == "posse":
+		temp = irregular("sum", "esse", per, num, tense):
+		if tense == "PRES" or tense == "IMPF" or tense == "FUTR":
+			if temp[0] == "s":
+				return "pos"+temp
+			elif temp[0] == "e":
+				return "pot"+temp
+		else:
+			return "pot"+temp[1:]
+
 # takes infinitive, perfective, type, number, person, tense
 def conjugate(inf, perf, t, per, num, tense):
 	# active  voice
-	if tense == "PRES":
+	if inf in irreg:
+		return irregular(inf,perf,per,num,tense)
+	elif tense == "PRES":
 		return presentTense(inf,t,per,num)
 	elif tense == "IMPF":
 		return imperfectTense(inf,t,per,num)
@@ -153,6 +326,7 @@ def conjugate(inf, perf, t, per, num, tense):
 		return pluperfectTense(perf,t,per,num)
 	elif tense == "FUTP":
 		return futureperfectTense(perf,t,per,num)
+	elif tense == "IREG":
 	# passive voice
 	# imperative
 

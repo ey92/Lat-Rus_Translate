@@ -48,6 +48,9 @@ VMap = {
 }
 
 LatinV = [
+    ("eo","ire","īvī",0), \
+    ("sum","esse","fuī",0), \
+    ("possum","posse","potuī",0), \
     ("amo","amare","amāvī",1), \
     ("dēleo","dēlēre","dēlēvī",2), \
     ("peto","petere","petīvī",3), \
