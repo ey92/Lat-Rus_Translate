@@ -22,9 +22,10 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
+FORM_KEYS = ['FSTSG', 'TRDPL', 'TRDSG', 'SNDPL', 'SNDSG', 'FSTPL']
 
 # irregular verb conjugations
-irreg = ["ire","esse","posse","velle","nelle","ferre"]
+irreg = ["ire","esse","posse","velle","nolle","ferre"]
 irePres = {"FSTSG":"eo","SNDSG":"is","TRDSG":"it","FSTPL":"imus","SNDPL":"itis","TRDPL":"eunt"}
 ireImpf = {"FSTSG":"ibam","SNDSG":"ibas","TRDSG":"ibat","FSTPL":"ibamus","SNDPL":"ibatis","TRDPL":"ibant"}
 ireFutr = {"FSTSG":"ibo","SNDSG":"ibis","TRDSG":"ibit","FSTPL":"ibimus","SNDPL":"ibitis","TRDPL":"ibunt"}
@@ -32,6 +33,7 @@ irePerf = {"FSTSG":"īvī","SNDSG":"īvisti","TRDSG":"īvit","FSTPL":"īvimus","
 irePlup = {"FSTSG":"īveram","SNDSG":"īveras","TRDSG":"īverat","FSTPL":"īveramus","SNDPL":"īveratis","TRDPL":"īverant"}
 ireFutp = {"FSTSG":"īvero","SNDSG":"īveris","TRDSG":"īverit","FSTPL":"īverimus","SNDPL":"īveritis","TRDPL":"īverint"}
 ireConj = {"PRES":irePres,"IMPF":ireImpf,"FUTR":ireFutr,"PERF":irePerf,"PLUP":irePlup,"FUTP":ireFutp}
+ireAll = irePres.values() + ireImpf.values() + ireFutr.values() + irePerf.values() + irePlup.values() + ireFutp.values()
 
 essePres = {"FSTSG":"sum","SNDSG":"es","TRDSG":"est","FSTPL":"sumus","SNDPL":"estis","TRDPL":"sunt"}
 esseImpf = {"FSTSG":"eram","SNDSG":"eras","TRDSG":"erat","FSTPL":"eramus","SNDPL":"eratis","TRDPL":"erant"}
@@ -40,6 +42,21 @@ essePerf = {"FSTSG":"fuī","SNDSG":"fuisti","TRDSG":"fuit","FSTPL":"fuimus","SND
 essePlup = {"FSTSG":"fueram","SNDSG":"fueras","TRDSG":"fuerat","FSTPL":"fueramus","SNDPL":"fueratis","TRDPL":"fuerant"}
 esseFutp = {"FSTSG":"fuero","SNDSG":"fueris","TRDSG":"fuerit","FSTPL":"fuerimus","SNDPL":"fueritis","TRDPL":"fuerint"}
 esseConj = {"PRES":essePres,"IMPF":esseImpf,"FUTR":esseFutr,"PERF":essePerf,"PLUP":essePlup,"FUTP":esseFutp}
+esseAll = essePres.values() + esseImpf.values() + esseFutr.values() + essePerf.values() + essePlup.values() + esseFutp.values()
+
+possePresV = ['pos'+x if x[0]=='s' else 'pot'+x for x in essePres.values()]
+posseImpfV = ['pos'+x if x[0]=='s' else 'pot'+x for x in esseImpf.values()]
+posseFutrV = ['pos'+x if x[0]=='s' else 'pot'+x for x in esseFutr.values()]
+possePerfV = ['pot'+x[1:] for x in essePerf.values()]
+possePlupV = ['pot'+x[1:] for x in essePlup.values()]
+posseFutpV = ['pot'+x[1:] for x in esseFutp.values()]
+possePres = dict(zip(FORM_KEYS,possePresV))
+posseImpf = dict(zip(FORM_KEYS,posseImpfV))
+posseFutr = dict(zip(FORM_KEYS,posseFutrV))
+possePerf = dict(zip(FORM_KEYS,possePerfV))
+possePlup = dict(zip(FORM_KEYS,possePlupV))
+posseFutp = dict(zip(FORM_KEYS,posseFutrV))
+posseAll = possePres.values() + posseImpf.values() + posseFutr.values() + possePerf.values() + possePlup.values() + posseFutp.values()
 
 vellePres = {"FSTSG":"volo","SNDSG":"vis","TRDSG":"vult","FSTPL":"volumus","SNDPL":"vultis","TRDPL":"volunt"}
 velleImpf = {"FSTSG":"volēbam","SNDSG":"volēbas","TRDSG":"volēbat","FSTPL":"volēbamus","SNDPL":"volēbatis","TRDPL":"volēbant"}
@@ -48,6 +65,21 @@ vellePerf = {"FSTSG":"voluī","SNDSG":"voluisti","TRDSG":"voluit","FSTPL":"volui
 vellePlup = {"FSTSG":"volueram","SNDSG":"volueras","TRDSG":"voluerat","FSTPL":"volueramus","SNDPL":"volueratis","TRDPL":"voluerant"}
 velleFutp = {"FSTSG":"voluero","SNDSG":"volueris","TRDSG":"voluerit","FSTPL":"voluerimus","SNDPL":"volueritis","TRDPL":"voluerint"}
 velleConj = {"PRES":vellePres,"IMPF":velleImpf,"FUTR":velleFutr,"PERF":vellePerf,"PLUP":vellePlup,"FUTP":velleFutp}
+velleAll = vellePres.values() + velleImpf.values() + velleFutr.values() + vellePerf.values() + vellePlup.values() + velleFutp.values()
+
+nollePresV = ['pos'+x if x[0]=='s' else 'pot'+x for x in vellePres]
+nolleImpfV = ['nō'+x[2:] for x in velleImpf]
+nolleFutrV = ['nō'+x[2:] for x in velleFutr]
+nollePerfV = ['nō'+x[2:] for x in vellePerf]
+nollePlupV = ['nō'+x[2:] for x in vellePlup]
+nolleFutpV = ['nō'+x[2:] for x in velleFutp]
+nollePres = dict(zip(FORM_KEYS,nollePresV)) 
+nolleImpf = dict(zip(FORM_KEYS,nolleImpfV)) 
+nolleFutr = dict(zip(FORM_KEYS,nolleFutrV)) 
+nollePerf = dict(zip(FORM_KEYS,nollePerfV)) 
+nollePlup = dict(zip(FORM_KEYS,nollePlupV)) 
+nolleFutp = dict(zip(FORM_KEYS,nolleFutrV)) 
+nolleAll = nollePres.values() + nolleImpf.values() + nolleFutr.values() + nollePerf.values() + nollePlup.values() + nolleFutp.values()
 
 ferrePres = {"FSTSG":"fero","SNDSG":"fers","TRDSG":"fert","FSTPL":"ferimus","SNDPL":"fertis","TRDPL":"ferunt"}
 ferreImpf = {"FSTSG":"ferēbam","SNDSG":"ferēbas","TRDSG":"ferēbat","FSTPL":"ferēbamus","SNDPL":"ferēbatis","TRDPL":"ferēbant"}
@@ -56,6 +88,15 @@ ferrePerf = {"FSTSG":"tulī","SNDSG":"tulisti","TRDSG":"tulit","FSTPL":"tulimus"
 ferrePlup = {"FSTSG":"tuleram","SNDSG":"tuleras","TRDSG":"tulerat","FSTPL":"tuleramus","SNDPL":"tuleratis","TRDPL":"tulerant"}
 ferreFutp = {"FSTSG":"tulero","SNDSG":"tuleris","TRDSG":"tulerit","FSTPL":"tulerimus","SNDPL":"tuleritis","TRDPL":"tulerint"}
 ferreConj = {"PRES":ferrePres,"IMPF":ferreImpf,"FUTR":ferreFutr,"PERF":ferrePerf,"PLUP":ferrePlup,"FUTP":ferreFutp}
+ferreAll = ferrePres.values() + ferreImpf.values() + ferreFutr.values() + ferrePerf.values() + ferrePlup.values() + ferreFutp.values()
+
+irregPres = irePres.values()+essePres.values()+possePres.values()+vellePres.values()+nollePres.values()+ferrePres.values()
+irregImpf = ireImpf.values()+esseImpf.values()+posseImpf.values()+velleImpf.values()+nolleImpf.values()+ferreImpf.values()
+irregFutr = ireFutr.values()+esseFutr.values()+posseFutr.values()+velleFutr.values()+nolleFutr.values()+ferreFutr.values()
+irregPerf = irePerf.values()+essePerf.values()+possePerf.values()+vellePerf.values()+nollePerf.values()+ferrePerf.values()
+irregPlup = irePlup.values()+essePlup.values()+possePlup.values()+vellePlup.values()+nollePlup.values()+ferrePlup.values()
+irregFutp = ireFutp.values()+esseFutp.values()+posseFutp.values()+velleFutp.values()+nolleFutp.values()+ferreFutp.values()
+allIrreg = ireAll+esseAll+posseAll+velleAll+nolleAll+ferreAll
 
 # endings
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
@@ -64,6 +105,7 @@ perfEndings = {"FSTSG":"ī","SNDSG":"isti","TRDSG":"it","FSTPL":"imus","SNDPL":"
 plupEndings = {"FSTSG":"eram","SNDSG":"eras","TRDSG":"erat","FSTPL":"eramus","SNDPL":"eratis","TRDPL":"erant"}
 futpEndings = {"FSTSG":"ero","SNDSG":"eris","TRDSG":"erit","FSTPL":"erimus","SNDPL":"eritis","TRDPL":"erint"}
 
+# -------------------------------------------------------------
 def getIndexL(letter):
 	return letters.index(letter)
 
@@ -175,10 +217,10 @@ def futureperfectTense(perf, t, per, num):
 def irregular(inf, perf, per, num, tense):
 	form = per+num
 	if inf == "ire":
-		return ireConj[tense][(per+num)]
+		return ireConj[tense][form]
 
 	if inf == "esse":
-		return esseConj[tense][(per+num)]
+		return esseConj[tense][form]
 
 	if inf == "posse":
 		temp = irregular("esse", "fuī", per, num, tense)
@@ -191,17 +233,17 @@ def irregular(inf, perf, per, num, tense):
 			return "pot"+temp[1:]
 
 	if inf == "velle":
-		return velleConj[tense][(per+num)]
+		return velleConj[tense][form]
 		
 	if inf == "nōlle":
 		temp = irregular("velle", "voluī", per, num, tense)
-		if tense == "PRES" and ((per+num) in ["SNDSG", "TRDSG", "SNDPL"]):
+		if tense == "PRES" and (form in ["SNDSG", "TRDSG", "SNDPL"]):
 				return "non"+temp
 		else:
 			return "nō"+temp[2:]
 
 	if inf == "ferre":
-		return ferreConj[tense][(per+num)]
+		return ferreConj[tense][form]
 
 # takes infinitive, perfective, type, number, person, tense
 def conjugate(inf, perf, t, per, num, tense):
@@ -591,10 +633,141 @@ def findTense1S(root, per, num, perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
+def findTenseIrreg(root):
+	form = ""
+	tense = ""
+	if root in ireAll:
+		inf = "ire"
+		if root in irePres:
+			tense = "PRES"
+			form = irePres.keys()[irePres.values().index(root)]
+		elif root in ireImpf:
+			tense = "IMPF"
+			form = ireImpf.keys()[ireImpf.values().index(root)]
+		elif root in ireFutr:
+			tense = "FUTR"
+			form = ireFutr.keys()[ireFutr.values().index(root)]
+		elif root in irePerf:
+			tense = "PERF"
+			form = irePerf.keys()[irePerf.values().index(root)]
+		elif root in irePlup:
+			tense = "PLUP"
+			form = irePlup.keys()[irePlup.values().index(root)]
+		elif root in ireFutp:
+			tense = "FUTP"
+			form = ireFutp.keys()[ireFutp.values().index(root)]
+	elif root in esseAll:
+		inf = "esse"
+		if root in essePres:
+			tense = "PRES"
+			form = essePres.keys()[essePres.values().index(root)]
+		elif root in esseImpf:
+			tense = "IMPF"
+			form = esseImpf.keys()[esseImpf.values().index(root)]
+		elif root in esseFutr:
+			tense = "FUTR"
+			form = esseFutr.keys()[esseFutr.values().index(root)]
+		elif root in essePerf:
+			tense = "PERF"
+			form = essePerf.keys()[essePerf.values().index(root)]
+		elif root in essePlup:
+			tense = "PLUP"
+			form = essePlup.keys()[essePlup.values().index(root)]
+		elif root in esseFutp:
+			tense = "FUTP"
+			form = esseFutp.keys()[esseFutp.values().index(root)]
+	elif root in posseAll:
+		inf = "posse"
+		if root in possePres:
+			tense = "PRES"
+			form = possePres.keys()[possePres.values().index(root)]
+		elif root in posseImpf:
+			tense = "IMPF"
+			form = posseImpf.keys()[posseImpf.values().index(root)]
+		elif root in posseFutr:
+			tense = "FUTR"
+			form = posseFutr.keys()[posseFutr.values().index(root)]
+		elif root in possePerf:
+			tense = "PERF"
+			form = possePerf.keys()[possePerf.values().index(root)]
+		elif root in possePlup:
+			tense = "PLUP"
+			form = possePlup.keys()[possePlup.values().index(root)]
+		elif root in posseFutp:
+			tense = "FUTP"
+			form = posseFutp.keys()[posseFutp.values().index(root)]
+	elif root in velleAll:
+		inf = "velle"
+		if root in vellePres:
+			tense = "PRES"
+			form = vellePres.keys()[vellePres.values().index(root)]
+		elif root in velleImpf:
+			tense = "IMPF"
+			form = velleImpf.keys()[velleImpf.values().index(root)]
+		elif root in velleFutr:
+			tense = "FUTR"
+			form = velleFutr.keys()[velleFutr.values().index(root)]
+		elif root in vellePerf:
+			tense = "PERF"
+			form = vellePerf.keys()[vellePerf.values().index(root)]
+		elif root in vellePlup:
+			tense = "PLUP"
+			form = vellePlup.keys()[vellePlup.values().index(root)]
+		elif root in velleFutp:
+			tense = "FUTP"
+			form = velleFutp.keys()[velleFutp.values().index(root)]
+	elif root in nolleAll:
+		inf = "nōlle"
+		if root in nollePres:
+			tense = "PRES"
+			form = nollePres.keys()[nollePres.values().index(root)]
+		elif root in nolleImpf:
+			tense = "IMPF"
+			form = nolleImpf.keys()[nolleImpf.values().index(root)]
+		elif root in nolleFutr:
+			tense = "FUTR"
+			form = nolleFutr.keys()[nolleFutr.values().index(root)]
+		elif root in nollePerf:
+			tense = "PERF"
+			form = nollePerf.keys()[nollePerf.values().index(root)]
+		elif root in nollePlup:
+			tense = "PLUP"
+			form = nollePlup.keys()[nollePlup.values().index(root)]
+		elif root in nolleFutp:
+			tense = "FUTP"
+			form = nolleFutp.keys()[nolleFutp.values().index(root)]
+	elif root in ferreAll:
+		inf = "ferre"
+		if root in ferrePres:
+			tense = "PRES"
+			form = ferrePres.keys()[ferrePres.values().index(root)]
+		elif root in ferreImpf:
+			tense = "IMPF"
+			form = ferreImpf.keys()[ferreImpf.values().index(root)]
+		elif root in ferreFutr:
+			tense = "FUTR"
+			form = ferreFutr.keys()[ferreFutr.values().index(root)]
+		elif root in ferrePerf:
+			tense = "PERF"
+			form = ferrePerf.keys()[ferrePerf.values().index(root)]
+		elif root in ferrePlup:
+			tense = "PLUP"
+			form = ferrePlup.keys()[ferrePlup.values().index(root)]
+		elif root in ferreFutp:
+			tense = "FUTP"
+			form = ferreFutp.keys()[ferreFutp.values().index(root)]
+
+	num = form[-2:]
+	per = form[:-2]
+	perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
+
 def reverseConjugate(word):
 	perf = False
+	if word in allIrreg:
+		return findTenseIrreg(word)
 
-	if word[-3:] == "mus":
+	elif word[-3:] == "mus":
 		per = "FST"
 		num = "PL"
 		return findTense1P(word,per,num,perf)

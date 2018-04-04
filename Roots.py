@@ -53,6 +53,7 @@ LatinV = [
     ("possum","posse","potuī",0), \
     ("volo","velle","voluī",0), \
     ("nōlo","nōlle","nōluī",0), \
+    ("fero","ferre","tulī",0), \
     ("amo","amare","amāvī",1), \
     ("dēleo","dēlēre","dēlēvī",2), \
     ("peto","petere","petīvī",3), \
