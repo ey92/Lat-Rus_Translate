@@ -272,7 +272,7 @@ def conjugate(inf, perf, t, per, num, tense):
 	elif tense == "FUTP":
 		# print('hi6')
 		return futureperfectTense(perf,t,per,num)
-	else:
+	# else:
 		# print('hi7')
 	# passive voice
 	# imperative
@@ -312,7 +312,7 @@ def findTense3P(root, per, num, perf):
 		tense = "FUTR"
 		inf = root[:-3]+"re" 	#ire 4th
 		# print('hi5')
-		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+		if not (inf in Roots.LatinV_inf): 		#ere 3rd IO/5th
 			inf = root[:-4]+"ere"
 			# print('hi5a')
 
@@ -323,7 +323,7 @@ def findTense3P(root, per, num, perf):
 	elif root[-4:] == "iunt":
 		tense = "PRES"
 		inf = root[:-3]+"re" 	#ire 4th
-		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+		if not (inf in Roots.LatinV_inf): 		#ere 3rd IO/5th
 			inf = root[:-4]+"ere"
 		# print('hi7')
 	elif root[-3:] == "unt":
@@ -337,7 +337,7 @@ def findTense3P(root, per, num, perf):
 			tense = "FUTR"
 		else:
 			inf = root[:-3]+"ēre"
-			tense = "PRES" 							# in 2nd conj
+			tense = "PRES" 						# in 2nd conj
 
 	if (perf):
 		perf = root[:-5]+"ī" 	# perf
@@ -836,7 +836,7 @@ def fstDecl(nom, gen, gender, num, case):
 			return gen
 
 def sndDecl(nom, gen, gender, num, case):
-	# always masculine or neuter
+	# always masculine or neuter	
 	if gender == "N":
 		if num == "SG":
 			if case == "NOM":
@@ -867,7 +867,8 @@ def sndDecl(nom, gen, gender, num, case):
 				return gen[:-1]+"a"
 
 	elif gender == "M":
-		if case == "NOM":
+		if num ==  "SG":
+			if case == "NOM":
 				return nom
 			elif case == "GEN":
 				return gen
@@ -878,8 +879,10 @@ def sndDecl(nom, gen, gender, num, case):
 			elif case == "ABL":
 				return gen[:-1]+"ō"
 			elif case == "VOC":
-				if nom[-2:] == "us":
-					return gen[:-1]+"e"
+				if nom[-3:] == "ius":
+					return gen[:-3]+"ī"
+				elif nom[-2:] == "us":
+					return gen[:-2]+"e"
 				else:
 					return nom
 
@@ -959,6 +962,7 @@ def forDecl(nom, gen, gender, num, case):
 
 def fthDecl(nom, gen, gender, num, case):
 	# mostly feminine, but masculine shares same forms; no neuter
+	# i with macron (ī) is treated as 2 characters
 	if num == "SG":
 		if case == "NOM":
 			return nom
@@ -967,36 +971,36 @@ def fthDecl(nom, gen, gender, num, case):
 		elif case == "DAT":
 			return gen
 		elif case == "ACC":
-			return gen[:-2]+"em"
+			return gen[:-3]+"em"
 		elif case == "ABL":
-			return gen[:-2]+"ē"
+			return gen[:-3]+"ē"
 		elif case == "VOC":
-			return gen[:-2]+"ēs"
+			return gen[:-3]+"ēs"
 	elif num == "PL":
 		if case == "NOM":
-			return gen[:-2]+"ēs"
+			return gen[:-3]+"ēs"
 		elif case == "GEN":
-			return gen[:-2]+"ērum"
+			return gen[:-3]+"ērum"
 		elif case == "DAT":
-			return gen[:-2]+"ēbus"
+			return gen[:-3]+"ēbus"
 		elif case == "ACC":
-			return gen[:-2]+"ēs"
+			return gen[:-3]+"ēs"
 		elif case == "ABL":
-			return gen[:-2]+"ēbus"
+			return gen[:-3]+"ēbus"
 		elif case == "VOC":
-			return gen[:-2]+"ēs"
+			return gen[:-3]+"ēs"
 
 # takes nominativeS, genitiveS, declension d, number, person, tense
-def decline(nom, gen, d, gender, num, case):
+def decline(nom, gen, d, gender, case, num):
 	if d == '1':
-		return fstDecl(nom,gen,d,num,case)
+		return fstDecl(nom,gen,gender,num,case)
 	elif d == '2':
-		return sndDecl(nom,gen,d,num,case)
+		return sndDecl(nom,gen,gender,num,case)
 	# elif d == '3':
 		# return trdDecl(nom,gen,d,num,case)
 	elif d == '4':
-		return forDecl(nom,gen,d,num,case)
+		return forDecl(nom,gen,gender,num,case)
 	elif d == '5':
-		return fthDecl(nom,gen,d,num,case)
+		return fthDecl(nom,gen,gender,num,case)
 
 # -------------------------------------------------------------
