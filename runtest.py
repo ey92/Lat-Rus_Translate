@@ -14,13 +14,31 @@ def checkStr(lst):
 			return False
 	return True
 
+def checkInt(num):
+	try:
+	    int(num)
+	    return True
+	except:
+	    return False
+
+def cont():
+	choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
+	while choice4 not in YNCHOICES:
+		choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
+	if choice4 in YCHOICES:
+		choice0 = 0
+		return 'y'
+	else:
+		sys.exit(0)
+
 def main():
 	print("Latin/Russian Translator\n")
 	choice0 = 0
-	while choice0 < 1 or choice0 > 4:
+	while checkInt(choice0) and (int(choice0) < 1 or int(choice0) > 4):
 		print("Please enter the number corresponding with your choice")
 		print("What do you want to do?\n1) Latin to Russian\n2) Russian to Latin\n3) Latin\n4) Russian")
-		choice0 = int(raw_input("").strip())
+		choice0 = raw_input("").strip()
+	choice0 = int(choice0)
 
 	# Latin to Russian
 	# if choice0 == 1:
@@ -35,15 +53,17 @@ def main():
 	if choice0 == 3:
 		print("What do you want to do?\n1) Construct Latin forms\n2) Deconstruct Latin forms")
 		choice1 = 0
-		while choice1 < 1 or choice1 > 2:
-			choice1 = int(raw_input().strip())
+		while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 2):
+			choice1 = raw_input().strip()
+		choice1 = int(choice1)
 			
 		# Construct Latin forms
 		if choice1 == 1:
 			print("What part of speech do you want to make?\n1) Nouns\n2) Verbs\n3) Adjectives")
 			choice2 = 0
-			while choice2 < 1 or choice2 > 3:
-				choice2 = int(raw_input().strip())
+			while checkInt(choice2) and (int(choice2) < 1 or int(choice2) > 3):
+				choice2 = raw_input().strip()
+			choice2 = int(choice2)
 
 			# Construct Nouns
 			# if choice2 == 1:
@@ -61,36 +81,41 @@ def main():
 					params = processInput(params)
 				print Latin.conjugate(params[0], params[1], params[2], params[3], params[4], params[5])
 
-				choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
-				while choice4 not in YNCHOICES:
-					choice4 = raw_input("Would you like to do more? (y/n)\n").lower()
-				if choice4 in YCHOICES:
-					choice0 = 0
-					return 'y'
-				else:
-					sys.exit(0)
+				return cont()
 
 			# Construct Adjectives
 			# elif choice2 == 3:
 				# make adjectives
 
 		# Deconstruct Latin forms
-		# elif choice1 == 2:
-			# print("What part of speech is the form you want to deconstruct?\n1)Noun\n2)Verb\n3)Adjective")
-			# choice3 = 0
-			# while choice3 < 1 or choice >3:
-				# choice3 = raw_input().strip()
+		elif choice1 == 2:
+			print("What part of speech is the form you want to deconstruct?\n1) Noun\n2) Verb\n3) Adjective")
+			choice3 = 0
+			while checkInt(choice3) and (int(choice3) < 1 or int(choice3) > 3):
+				choice3 = raw_input().strip()
+			choice3 = int(choice3)
 
 			# Deconstruct Noun
 			# if choice3 == 1:
 				# deconstruct noun
 			
 			# Deconstruct Verb
-			# if choice3 == 2:
+			# elif choice3 == 2:
+			if choice3 == 2:
 				# deconstruct verb
+				params = str(raw_input("Please enter the form you want to deconstruct\n").strip())
+				params = processInput(params)
+				while len(params) != 1 or not(checkStr(params)):
+					print(len(params))
+					print("Sorry, not the right number of parameters or they aren't all strings.")
+					params = str(raw_input("Please enter the form you want to deconstruct\n").strip())
+					params = processInput(params)
+				print Latin.reverseConjugate(params[0])
+
+				return cont()
 
 			# Deconstruct Adjective
-			# if choice3 == 3:
+			# elif choice3 == 3:
 				# deconstruct adjective
 	
 	# Russian
