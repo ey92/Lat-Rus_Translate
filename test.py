@@ -288,6 +288,43 @@ def testrev3S():
 	print Latin.reverseConjugate("cēperat")
 	print Latin.reverseConjugate("cēperit")
 
+def testrev2P():
+	print Latin.reverseConjugate("amatis")
+	print Latin.reverseConjugate("amabatis")
+	print Latin.reverseConjugate("amabitis")
+	print Latin.reverseConjugate("amāvistis")
+	print Latin.reverseConjugate("amāveratis")
+	print Latin.reverseConjugate("amāveritis")
+
+	print Latin.reverseConjugate("dēletis")
+	print Latin.reverseConjugate("dēlēbatis")
+	print Latin.reverseConjugate("dēlēbitis")
+	print Latin.reverseConjugate("dēlēvistis")
+	print Latin.reverseConjugate("dēlēveratis")
+	print Latin.reverseConjugate("dēlēveritis")
+
+	print Latin.reverseConjugate("petitis")
+	print Latin.reverseConjugate("petebatis")
+	print Latin.reverseConjugate("petetis")
+	print Latin.reverseConjugate("petīvistis")
+	print Latin.reverseConjugate("petīveratis")
+	print Latin.reverseConjugate("petīveritis")
+
+	print Latin.reverseConjugate("venitis")
+	print Latin.reverseConjugate("veniebatis")
+	print Latin.reverseConjugate("venietis")
+	print Latin.reverseConjugate("vēnistis")
+	print Latin.reverseConjugate("vēneratis")
+	print Latin.reverseConjugate("vēneritis")
+
+	print Latin.reverseConjugate("capitis")
+	print Latin.reverseConjugate("capiebatis")
+	print Latin.reverseConjugate("capietis")
+	print Latin.reverseConjugate("cēpistis")
+	print Latin.reverseConjugate("cēperatis")
+	print Latin.reverseConjugate("cēperitis")
+
+
 # if __name__ == "__main__": main()
 # testpres()
 # print("---------")
@@ -303,4 +340,6 @@ def testrev3S():
 
 # testrev3P()
 # print("---------")
-testrev3S()
+# testrev3S()
+# print("---------")
+testrev2P()

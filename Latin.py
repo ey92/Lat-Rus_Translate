@@ -136,7 +136,7 @@ def pluperfectTense(perf, t, per, num):
 def futureperfectTense(perf, t, per, num):
 	stem = perf[:-1]
 	end = futpEndings[per+num]
-	return stem+end	
+	return stem+end
 
 # takes infinitive, perfective, type, number, person, tense
 def conjugate(inf, perf, t, per, num, tense):
@@ -297,12 +297,64 @@ def findTense3S(root, per, num, perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
+def findTense2P(root, per, num, perf):
+	if root[-5:] == "istis":
+		tense = "PERF"
+		perf = True
+	elif root[-6:] == "eratis":
+		tense = "PLUP"
+		perf = True
+	elif root[-6:] == "eritis":
+		tense = "FUTP"
+		perf = True
+
+	elif root[-5:] == "batis":
+		tense = "IMPF"
+		if root[-7:-5] == "ie":
+			inf = root[:-6]+"re"	 	#ire 4th
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-7]+"ere" 	#ere 3rd IO/5th
+		else:
+			inf = root[:-5]+"re"
+
+	elif root[-5:] == "bitis":
+		tense = "FUTR"
+		inf = root[:-5]+"re"
+	elif root[-5:] == "ietis":
+		tense = "FUTR"
+		inf = root[:-4]+"re" 	#ire 4th
+		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-5]+"ere"
+
+	elif root[-4:] == "etis":
+		tense = "FUTR"
+		inf = root[:-3]+"re" 	#ere 3rd fut
+		if not(inf in Roots.LatinV_inf): 	#ēre 2nd pres
+			tense = "PRES"
+			inf = root[:-4]+"ēre"
+
+	elif root[-3:] == "tis":
+		tense = "PRES"
+		inf = root[:-3]+"re"
+		if not(inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-4]+"ere"
+
+	if (perf):
+		perf = root[:-5]+"ī"
+		if root[-6] == "e":
+			perf = root[:-6]+"ī"
+		# print(perf)
+		inf = Roots.findInfP(perf)
+	else: 
+		# print(inf)
+		perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
+
+# def findTense2S(root, per, num, perf):
 # def findTense1P(root, per, num, perf):
+# def findTense1S(root, per, num, perf):
 
 def reverseConjugate(word):
-	per = ""
-	num = ""
-	root = ""
 	perf = False
 
 	if word[-3:] == "mus":
@@ -314,8 +366,10 @@ def reverseConjugate(word):
 		per = "SND"
 		if word[-3:] == "tis":
 			num = "PL"
+			return findTense2P(word,per,num,perf)
 		else:
 			num = "SG"
+			return findTense2S(word,per,num,perf)
 	elif word[-1] == "t":
 		per = "TRD"
 		if word[-2:] == "nt":
@@ -328,4 +382,5 @@ def reverseConjugate(word):
 	elif word[-1] == "o" or word[-1] == "m":
 		per = "FST"
 		num = "SG"
+		return findTense1S(word,per,num,perf)
 
