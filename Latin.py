@@ -22,7 +22,7 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
-FORM_KEYS = ['FSTSG', 'TRDPL', 'TRDSG', 'SNDPL', 'SNDSG', 'FSTPL']
+VERB_FORM_KEYS = ['FSTSG', 'TRDPL', 'TRDSG', 'SNDPL', 'SNDSG', 'FSTPL']
 
 # irregular verb conjugations
 irreg = ["ire","esse","posse","velle","nolle","ferre"]
@@ -50,12 +50,12 @@ posseFutrV = ['pos'+x if x[0]=='s' else 'pot'+x for x in esseFutr.values()]
 possePerfV = ['pot'+x[1:] for x in essePerf.values()]
 possePlupV = ['pot'+x[1:] for x in essePlup.values()]
 posseFutpV = ['pot'+x[1:] for x in esseFutp.values()]
-possePres = dict(zip(FORM_KEYS,possePresV))
-posseImpf = dict(zip(FORM_KEYS,posseImpfV))
-posseFutr = dict(zip(FORM_KEYS,posseFutrV))
-possePerf = dict(zip(FORM_KEYS,possePerfV))
-possePlup = dict(zip(FORM_KEYS,possePlupV))
-posseFutp = dict(zip(FORM_KEYS,posseFutrV))
+possePres = dict(zip(VERB_FORM_KEYS,possePresV))
+posseImpf = dict(zip(VERB_FORM_KEYS,posseImpfV))
+posseFutr = dict(zip(VERB_FORM_KEYS,posseFutrV))
+possePerf = dict(zip(VERB_FORM_KEYS,possePerfV))
+possePlup = dict(zip(VERB_FORM_KEYS,possePlupV))
+posseFutp = dict(zip(VERB_FORM_KEYS,posseFutrV))
 posseAll = possePres.values() + posseImpf.values() + posseFutr.values() + possePerf.values() + possePlup.values() + posseFutp.values()
 
 vellePres = {"FSTSG":"volo","SNDSG":"vis","TRDSG":"vult","FSTPL":"volumus","SNDPL":"vultis","TRDPL":"volunt"}
@@ -73,12 +73,12 @@ nolleFutrV = ['nō'+x[2:] for x in velleFutr]
 nollePerfV = ['nō'+x[2:] for x in vellePerf]
 nollePlupV = ['nō'+x[2:] for x in vellePlup]
 nolleFutpV = ['nō'+x[2:] for x in velleFutp]
-nollePres = dict(zip(FORM_KEYS,nollePresV)) 
-nolleImpf = dict(zip(FORM_KEYS,nolleImpfV)) 
-nolleFutr = dict(zip(FORM_KEYS,nolleFutrV)) 
-nollePerf = dict(zip(FORM_KEYS,nollePerfV)) 
-nollePlup = dict(zip(FORM_KEYS,nollePlupV)) 
-nolleFutp = dict(zip(FORM_KEYS,nolleFutrV)) 
+nollePres = dict(zip(VERB_FORM_KEYS,nollePresV)) 
+nolleImpf = dict(zip(VERB_FORM_KEYS,nolleImpfV)) 
+nolleFutr = dict(zip(VERB_FORM_KEYS,nolleFutrV)) 
+nollePerf = dict(zip(VERB_FORM_KEYS,nollePerfV)) 
+nollePlup = dict(zip(VERB_FORM_KEYS,nollePlupV)) 
+nolleFutp = dict(zip(VERB_FORM_KEYS,nolleFutrV)) 
 nolleAll = nollePres.values() + nolleImpf.values() + nolleFutr.values() + nollePerf.values() + nollePlup.values() + nolleFutp.values()
 
 ferrePres = {"FSTSG":"fero","SNDSG":"fers","TRDSG":"fert","FSTPL":"ferimus","SNDPL":"fertis","TRDPL":"ferunt"}
@@ -98,7 +98,7 @@ irregPlup = irePlup.values()+essePlup.values()+possePlup.values()+vellePlup.valu
 irregFutp = ireFutp.values()+esseFutp.values()+posseFutp.values()+velleFutp.values()+nolleFutp.values()+ferreFutp.values()
 allIrreg = ireAll+esseAll+posseAll+velleAll+nolleAll+ferreAll
 
-# endings
+# verb endings
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 endingsV = {"FSTSG":"m","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 perfEndings = {"FSTSG":"ī","SNDSG":"isti","TRDSG":"it","FSTPL":"imus","SNDPL":"istis","TRDPL":"erunt"}
@@ -131,6 +131,9 @@ def toLowerL(letter):
 def toLower(word):
 	toUpper(word)
 
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# VERBS
 # -------------------------------------------------------------
 # CONJUGATION
 
@@ -249,28 +252,28 @@ def irregular(inf, perf, per, num, tense):
 def conjugate(inf, perf, t, per, num, tense):
 	# active  voice
 	if inf in irreg:
-		print('hi')
+		# print('hi')
 		return irregular(inf,perf,per,num,tense)
 	elif tense == "PRES":
-		print('hi1')
+		# print('hi1')
 		return presentTense(inf,t,per,num)
 	elif tense == "IMPF":
-		print('hi2')
+		# print('hi2')
 		return imperfectTense(inf,t,per,num)
 	elif tense == "FUTR":
-		print('hi3')
+		# print('hi3')
 		return futureTense(inf,t,per,num)
 	elif tense == "PERF":
-		print('hi4')
+		# print('hi4')
 		return perfectTense(perf,t,per,num)
 	elif tense == "PLUP":
-		print('hi5')
+		# print('hi5')
 		return pluperfectTense(perf,t,per,num)
 	elif tense == "FUTP":
-		print('hi6')
+		# print('hi6')
 		return futureperfectTense(perf,t,per,num)
 	else:
-		print('hi7')
+		# print('hi7')
 	# passive voice
 	# imperative
 
@@ -796,3 +799,204 @@ def reverseConjugate(word):
 		num = "SG"
 		return findTense1S(word,per,num,perf)
 
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# NOUNS
+# -------------------------------------------------------------
+# DECLENSION
+
+def fstDecl(nom, gen, gender, num, case):
+	# always feminine or masculine, same forms for both
+	if num == "SG":
+		if case == "NOM":
+			return nom
+		elif case == "GEN":
+			return gen
+		elif case == "DAT":
+			return gen
+		elif case == "ACC":
+			return gen[:-2]+"am"
+		elif case == "ABL":
+			return gen[:-2]+"ā"
+		elif case == "VOC":
+			return nom
+
+	elif num == "PL":
+		if case == "NOM":
+			return gen
+		elif case == "GEN":
+			return gen[:-2]+"ārum"
+		elif case == "DAT":
+			return gen[:-2]+"īs"
+		elif case == "ACC":
+			return gen[:-2]+"ās"
+		elif case == "ABL":
+			return gen[:-2]+"īs"
+		elif case == "VOC":
+			return gen
+
+def sndDecl(nom, gen, gender, num, case):
+	# always masculine or neuter
+	if gender == "N":
+		if num == "SG":
+			if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-1]+"ō"
+			elif case == "ACC":
+				return nom
+			elif case == "ABL":
+				return gen[:-1]+"ō"
+			elif case == "VOC":
+				return nom
+
+		elif num == "PL":
+			if case == "NOM":
+				return gen[:-1]+"a"
+			elif case == "GEN":
+				return gen[:-1]+"ōrum"
+			elif case == "DAT":
+				return gen[:-1]+"īs"
+			elif case == "ACC":
+				return gen[:-1]+"a"
+			elif case == "ABL":
+				return gen[:-1]+"īs"
+			elif case == "VOC":
+				return gen[:-1]+"a"
+
+	elif gender == "M":
+		if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-1]+"ō"
+			elif case == "ACC":
+				return gen[:-1]+"um"
+			elif case == "ABL":
+				return gen[:-1]+"ō"
+			elif case == "VOC":
+				if nom[-2:] == "us":
+					return gen[:-1]+"e"
+				else:
+					return nom
+
+		elif num == "PL":
+			if case == "NOM":
+				return gen
+			elif case == "GEN":
+				return gen[:-2]+"ōrum"
+			elif case == "DAT":
+				return gen[:-2]+"īs"
+			elif case == "ACC":
+				return gen[:-2]+"ōs"
+			elif case == "ABL":
+				return gen[:-2]+"īs"
+			elif case == "VOC":
+				return gen
+
+# def trdDecl(nom, gen, gender, num, case):
+	# masculine and feminine share same forms; neuter is different
+
+def forDecl(nom, gen, gender, num, case):
+	# masculine and feminine share same forms; neuter is different
+	if gender == "N":
+		if num == "SG":
+			if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-2]+"ū"
+			elif case == "ACC":
+				return gen[:-2]+"ū"
+			elif case == "ABL":
+				return gen[:-2]+"ū"
+			elif case == "VOC":
+				return gen[:-2]+"ū"
+		elif num == "PL":
+			if case == "NOM":
+				return gen[:-2]+"ua"
+			elif case == "GEN":
+				return gen[:-2]+"uum"
+			elif case == "DAT":
+				return gen[:-2]+"ibus"
+			elif case == "ACC":
+				return gen[:-2]+"ua"
+			elif case == "ABL":
+				return gen[:-2]+"ibus"
+			elif case == "VOC":
+				return gen[:-2]+"ua"
+	else:
+		if num == "SG":
+			if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-2]+"uī"
+			elif case == "ACC":
+				return gen[:-2]+"um"
+			elif case == "ABL":
+				return gen[:-2]+"ū"
+			elif case == "VOC":
+				return gen[:-2]+"us"
+		elif num == "PL":
+			if case == "NOM":
+				return gen[:-2]+"ūs"
+			elif case == "GEN":
+				return gen[:-2]+"uum"
+			elif case == "DAT":
+				return gen[:-2]+"ibus"
+			elif case == "ACC":
+				return gen[:-2]+"ūs"
+			elif case == "ABL":
+				return gen[:-2]+"ibus"
+			elif case == "VOC":
+				return gen[:-2]+"ūs"
+
+def fthDecl(nom, gen, gender, num, case):
+	# mostly feminine, but masculine shares same forms; no neuter
+	if num == "SG":
+		if case == "NOM":
+			return nom
+		elif case == "GEN":
+			return gen
+		elif case == "DAT":
+			return gen
+		elif case == "ACC":
+			return gen[:-2]+"em"
+		elif case == "ABL":
+			return gen[:-2]+"ē"
+		elif case == "VOC":
+			return gen[:-2]+"ēs"
+	elif num == "PL":
+		if case == "NOM":
+			return gen[:-2]+"ēs"
+		elif case == "GEN":
+			return gen[:-2]+"ērum"
+		elif case == "DAT":
+			return gen[:-2]+"ēbus"
+		elif case == "ACC":
+			return gen[:-2]+"ēs"
+		elif case == "ABL":
+			return gen[:-2]+"ēbus"
+		elif case == "VOC":
+			return gen[:-2]+"ēs"
+
+# takes nominativeS, genitiveS, declension d, number, person, tense
+def decline(nom, gen, d, gender, num, case):
+	if d == '1':
+		return fstDecl(nom,gen,d,num,case)
+	elif d == '2':
+		return sndDecl(nom,gen,d,num,case)
+	# elif d == '3':
+		# return trdDecl(nom,gen,d,num,case)
+	elif d == '4':
+		return forDecl(nom,gen,d,num,case)
+	elif d == '5':
+		return fthDecl(nom,gen,d,num,case)
+
+# -------------------------------------------------------------
