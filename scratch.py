@@ -37,3 +37,5 @@ m: impf(12345), fut(345), plup(12345)
 o: pres(12345), fut(12), futp(12345)
 i: perf(12345)
 
+ire , īvī , 0 , FST , SG , PRES 
+esse, fuī, 0, TRD, PL, PLUP

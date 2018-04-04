@@ -151,9 +151,9 @@ def irregular(inf, perf, per, num, tense):
 				return "it"
 			elif form == "FSTPL":
 				return "imus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "itis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "eunt"
 		elif tense == "IMPF":
 			if form == "FSTSG":
@@ -164,9 +164,9 @@ def irregular(inf, perf, per, num, tense):
 				return "ibat"
 			elif form == "FSTPL":
 				return "ibamus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "ibatis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "ibant"
 		elif tense == "FUTR":
 			if form == "FSTSG":
@@ -177,9 +177,9 @@ def irregular(inf, perf, per, num, tense):
 				return "ibit"
 			elif form == "FSTPL":
 				return "ibimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "ibitis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "ibunt"
 		elif tense == "PERF":
 			if form == "FSTSG":
@@ -190,9 +190,9 @@ def irregular(inf, perf, per, num, tense):
 				return "īvit"
 			elif form == "FSTPL":
 				return "īvimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "īvistis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "īverunt"
 		elif tense == "PLUP":
 			if form == "FSTSG":
@@ -203,9 +203,9 @@ def irregular(inf, perf, per, num, tense):
 				return "īverat"
 			elif form == "FSTPL":
 				return "īveramus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "īveratis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "īverant"
 		elif tense == "FUTP":
 			if form == "FSTSG":
@@ -216,9 +216,9 @@ def irregular(inf, perf, per, num, tense):
 				return "īverit"
 			elif form == "FSTPL":
 				return "īverimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "īveritis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "īverint"
 	if inf == "esse":
 		if tense == "PRES":
@@ -230,9 +230,9 @@ def irregular(inf, perf, per, num, tense):
 				return "est"
 			elif form == "FSTPL":
 				return "sumus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "estis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "sunt"
 		elif tense == "IMPF":
 			if form == "FSTSG":
@@ -243,9 +243,9 @@ def irregular(inf, perf, per, num, tense):
 				return "erat"
 			elif form == "FSTPL":
 				return "eramus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "eratis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "erant"
 		elif tense == "FUTR":
 			if form == "FSTSG":
@@ -256,9 +256,9 @@ def irregular(inf, perf, per, num, tense):
 				return "erit"
 			elif form == "FSTPL":
 				return "erimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "eritis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "erunt"
 		elif tense == "FUTR":
 			if form == "FSTSG":
@@ -269,9 +269,9 @@ def irregular(inf, perf, per, num, tense):
 				return "fuit"
 			elif form == "FSTPL":
 				return "fuimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "fuistis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "fuerunt"
 		elif tense == "PLUP":
 			if form == "FSTSG":
@@ -282,9 +282,10 @@ def irregular(inf, perf, per, num, tense):
 				return "fuerat"
 			elif form == "FSTPL":
 				return "fueramus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "fueratis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
+				print('tense')
 				return "fuerant"
 		elif tense == "FUTP":
 			if form == "FSTSG":
@@ -295,12 +296,12 @@ def irregular(inf, perf, per, num, tense):
 				return "fuerit"
 			elif form == "FSTPL":
 				return "fuerimus"
-			elif form == "SNDSG":
+			elif form == "SNDPL":
 				return "fueritis"
-			elif form == "SNDSG":
+			elif form == "TRDPL":
 				return "fuerint"
 	if inf == "posse":
-		temp = irregular("sum", "esse", per, num, tense):
+		temp = irregular("sum", "esse", per, num, tense)
 		if tense == "PRES" or tense == "IMPF" or tense == "FUTR":
 			if temp[0] == "s":
 				return "pos"+temp
@@ -313,25 +314,34 @@ def irregular(inf, perf, per, num, tense):
 def conjugate(inf, perf, t, per, num, tense):
 	# active  voice
 	if inf in irreg:
+		print('hi')
 		return irregular(inf,perf,per,num,tense)
 	elif tense == "PRES":
+		print('hi1')
 		return presentTense(inf,t,per,num)
 	elif tense == "IMPF":
+		print('hi2')
 		return imperfectTense(inf,t,per,num)
 	elif tense == "FUTR":
+		print('hi3')
 		return futureTense(inf,t,per,num)
 	elif tense == "PERF":
+		print('hi4')
 		return perfectTense(perf,t,per,num)
 	elif tense == "PLUP":
+		print('hi5')
 		return pluperfectTense(perf,t,per,num)
 	elif tense == "FUTP":
+		print('hi6')
 		return futureperfectTense(perf,t,per,num)
-	elif tense == "IREG":
+	else:
+		print('hi7')
 	# passive voice
 	# imperative
 
 # -------------------------------------------------------------
 # REVERSE CONJUGATION
+
 def findTense3P(root, per, num, perf):
 	if root[-5:] == "erunt":
 		tense = "PERF"
