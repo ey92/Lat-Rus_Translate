@@ -215,6 +215,42 @@ def testfutp():
 	print Latin.conjugate("capere","cepi","5","SND","PL","FUTP")
 	print Latin.conjugate("capere","cepi","5","TRD","PL","FUTP")
 
+def testrev3P():
+	print Latin.reverseConjugate("amant")
+	print Latin.reverseConjugate("amabant")
+	print Latin.reverseConjugate("amabunt")
+	print Latin.reverseConjugate("amaverunt")
+	print Latin.reverseConjugate("amaverant")
+	print Latin.reverseConjugate("amaverint")
+
+	print Latin.reverseConjugate("delent")
+	print Latin.reverseConjugate("delebant")
+	print Latin.reverseConjugate("delebunt")
+	print Latin.reverseConjugate("deleverunt")
+	print Latin.reverseConjugate("deleverant")
+	print Latin.reverseConjugate("deleverint")
+
+	print Latin.reverseConjugate("petunt")
+	print Latin.reverseConjugate("petebant")
+	print Latin.reverseConjugate("petent")
+	print Latin.reverseConjugate("peteverunt")
+	print Latin.reverseConjugate("peteverant")
+	print Latin.reverseConjugate("peteverint")
+
+	print Latin.reverseConjugate("veniunt")
+	print Latin.reverseConjugate("veniebant")
+	print Latin.reverseConjugate("venient")
+	print Latin.reverseConjugate("venierunt")
+	print Latin.reverseConjugate("venierant")
+	print Latin.reverseConjugate("venierint")
+
+	print Latin.reverseConjugate("capiunt")
+	print Latin.reverseConjugate("capiebant")
+	print Latin.reverseConjugate("capient")
+	print Latin.reverseConjugate("ceperunt")
+	print Latin.reverseConjugate("ceperant")
+	print Latin.reverseConjugate("ceperint")
+
 # if __name__ == "__main__": main()
 # testpres()
 # print("---------")
@@ -226,4 +262,6 @@ def testfutp():
 # print("---------")
 # testplup()
 # print("---------")
-testfutp()
+# testfutp()
+
+testrev3P()
