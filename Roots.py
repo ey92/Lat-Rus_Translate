@@ -80,3 +80,16 @@ def findInfP(word):
 
 def findPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
+
+LatinN = [
+    ("puella","puellae","1","F"), \
+    ("agricola","agricolae","1","M"), \
+    ("puer","puerī","2","M"), \
+    ("filius","filiī","2","M"), \
+    ("mūrus","mūrī","2","M"), \
+    ("bellum","bellī","2","N"), \
+    ("manus","manūs","4","F"), \
+    ("cornū","cornūs","4","N"), \
+    ("rēs","reī","5","F"), \
+    ("diēs","diēī","5","N")
+]
