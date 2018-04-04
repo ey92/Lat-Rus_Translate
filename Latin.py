@@ -350,7 +350,59 @@ def findTense2P(root, per, num, perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
-# def findTense2S(root, per, num, perf):
+def findTense2S(root, per, num, perf):
+	if root[-4:] == "isti":
+		tense = "PERF"
+		perf = True
+		# print('hi1')
+	elif root[-4:] == "eras":
+		tense = "PLUP"
+		perf = True
+	elif root[-4:] == "eris":
+		tense = "FUTP"
+		perf = True
+
+	elif root[-3:] == "bas":
+		tense = "IMPF"
+		if root[-5:-3] == "ie":
+			inf = root[:-4]+"re"	 	#ire 4th
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-5]+"ere" 	#ere 3rd IO/5th
+		else:
+			inf = root[:-3]+"re"
+
+	elif root[-3:] == "bis":
+		tense = "FUTR"
+		inf = root[:-3]+"re"
+	elif root[-3:] == "ies":
+		tense = "FUTR"
+		inf = root[:-2]+"re" 	#ire 4th
+		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-3]+"ere"
+
+	elif root[-2:] == "es":
+		tense = "FUTR"
+		inf = root[:-1]+"re" 	#ere 3rd fut
+		if not(inf in Roots.LatinV_inf): 	#ēre 2nd pres
+			tense = "PRES"
+			inf = root[:-2]+"ēre"
+
+	elif root[-1] == "s":
+		# print('hi8')
+		tense = "PRES"
+		inf = root[:-1]+"re"
+		if not(inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-2]+"ere"
+
+	if (perf):
+		perf = root[:-4]+"ī"
+		# print(perf)
+		inf = Roots.findInfP(perf)
+	else: 
+		# print(inf)
+		perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
+
 # def findTense1P(root, per, num, perf):
 # def findTense1S(root, per, num, perf):
 
@@ -362,9 +414,9 @@ def reverseConjugate(word):
 		num = "PL"
 		return findTense1P(word,per,num,perf)
 
-	elif word[-1] == "s":
+	elif word[-1] == "s" or word[-3:] == "sti":
 		per = "SND"
-		if word[-3:] == "tis":
+		if word[-3:] == "tis" and len(word) > 5:
 			num = "PL"
 			return findTense2P(word,per,num,perf)
 		else:
@@ -379,7 +431,7 @@ def reverseConjugate(word):
 			num = "SG"
 			return findTense3S(word,per,num,perf)
 
-	elif word[-1] == "o" or word[-1] == "m":
+	elif word[-1] == "o" or word[-1] == "m" or word[-1] == "i":
 		per = "FST"
 		num = "SG"
 		return findTense1S(word,per,num,perf)
