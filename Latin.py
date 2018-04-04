@@ -158,7 +158,7 @@ def conjugate(inf, perf, t, per, num, tense):
 
 # -------------------------------------------------------------
 # REVERSE CONJUGATION
-def findTense3P(root,per,num,perf):
+def findTense3P(root, per, num, perf):
 	if root[-5:] == "erunt":
 		tense = "PERF"
 		perf = True
@@ -225,7 +225,24 @@ def findTense3P(root,per,num,perf):
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
-#def findTense3P()
+def findTense3S(root, per, num, perf):
+	if root[-2:] == "it":
+		if root[:-1] in Roots.LatinV_perf:
+			tense = "PERF"
+			perf = True
+		else:
+			tense = "PRES"
+		# print('hi1')
+	elif root[-4:] == "erat":
+		tense = "PLUP"
+		perf = True
+		# print('hi2')
+	elif root[-4:] == "erit":
+		tense = "FUTP"
+		perf = True
+		# print('hi3')
+
+# def findTense1P(root, per, num, perf):
 
 def reverseConjugate(word):
 	per = ""
@@ -251,6 +268,8 @@ def reverseConjugate(word):
 			return findTense3P(word,per,num,perf)
 		else:
 			num = "SG"
+			return findTense3S(word,per,num,perf)
+
 	elif word[-1] == "o" or word[-1] == "m":
 		per = "FST"
 		num = "SG"

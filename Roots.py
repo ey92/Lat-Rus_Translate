@@ -48,11 +48,11 @@ VMap = {
 }
 
 LatinV = [
-    ("amo","amare","amavi",1), \
-    ("deleo","delere","delevi",2), \
-    ("peto","petere","petevi",3), \
-    ("venio","venire","veni",4), \
-    ("capio","capere","cepi",5) \
+    ("amo","amare","amāvī",1), \
+    ("dēleo","dēlēre","dēlēvī",2), \
+    ("peto","petere","petīvī",3), \
+    ("venio","venire","vēnī",4), \
+    ("capio","capere","cēpī",5) \
 ]
 LatinV_inf = [x[1] for x in LatinV]
 LatinV_perf = [x[2] for x in LatinV]
