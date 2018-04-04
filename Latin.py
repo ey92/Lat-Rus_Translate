@@ -26,7 +26,7 @@ NUM_LETTERS_CAP = len(lettersCap)
 # endings
 endings = {"FSTSG":"o","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
 endingsV = {"FSTSG":"m","SNDSG":"s","TRDSG":"t","FSTPL":"mus","SNDPL":"tis","TRDPL":"nt"}
-perfEndings = {"FSTSG":"i","SNDSG":"isti","TRDSG":"it","FSTPL":"imus","SNDPL":"istis","TRDPL":"erunt"}
+perfEndings = {"FSTSG":"ī","SNDSG":"isti","TRDSG":"it","FSTPL":"imus","SNDPL":"istis","TRDPL":"erunt"}
 plupEndings = {"FSTSG":"eram","SNDSG":"eras","TRDSG":"erat","FSTPL":"eramus","SNDPL":"eratis","TRDPL":"erant"}
 futpEndings = {"FSTSG":"ero","SNDSG":"eris","TRDSG":"erit","FSTPL":"erimus","SNDPL":"eritis","TRDPL":"erint"}
 
@@ -65,7 +65,7 @@ def presentTense(inf, t, per, num):
 		else:
 			stem = inf[:-2] 	# cutoff "re" from ending (ama)
 	elif t[0] == "2":
-		stem = inf[:-2]
+		stem = inf[:-3]+"e"
 	elif t[0] == "3":
 		if (per+num) == "FSTSG":
 			stem = inf[:-3]
@@ -211,36 +211,91 @@ def findTense3P(root, per, num, perf):
 
 	elif root[-3:] == "ent": 	# could be future(3rd) or present(2nd)
 		inf = root[:-2]+"re"
-		if Roots.findConjI(root[:-2]+"re") == 3:	# if 3rd conj
+		if root[:-2]+"re" in Roots.LatinV_inf:	# if 3rd conj
 			tense = "FUTR"
 		else:
+			inf = root[:-3]+"ēre"
 			tense = "PRES" 							# in 2nd conj
 
 	if (perf):
-		perf = root[:-5]+"i"
-		if root[-6] == "i":
-			perf = root[:-5]
+		perf = root[:-5]+"ī" 	# perf
 		inf = Roots.findInfP(perf)
 	else: 
 		perf = Roots.findPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense3S(root, per, num, perf):
-	if root[-2:] == "it":
-		if root[:-1] in Roots.LatinV_perf:
+	if root[-3:] == "bat":
+		tense = "IMPF"
+		if root[-5:-3] == "ie":
+			inf = root[:-4]+"re"	 	#ire 4th
+			if not(inf in Roots.LatinV_inf):
+				inf = root[:-5]+"ere" 	#ere 3rd IO/5th
+		else:
+			inf = root[:-3]+"re"
+		# print('hi4')
+
+	elif root[-3:] == "bit":
+		tense = "FUTR"
+		inf = root[:-3]+"re"
+		# print('hi8')
+	elif root[-3:] == "iet":
+		tense = "FUTR"
+		inf = root[:-2]+"re" 	#ire 4th
+		# print('hi5')
+		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-3]+"ere"
+			# print('hi5a')
+
+	elif root[-4:] == "erit":
+		tense = "FUTP"
+		perf = True
+		# print('hi3')
+	elif root[-2:] == "it":
+		if root[:-2]+"ī" in Roots.LatinV_perf:
 			tense = "PERF"
 			perf = True
 		else:
 			tense = "PRES"
+			inf = root[:-1]+"re" 	#ire 4th
+			if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+				inf = root[:-2]+"ere"
+			# print('hi7')
 		# print('hi1')
 	elif root[-4:] == "erat":
 		tense = "PLUP"
 		perf = True
 		# print('hi2')
-	elif root[-4:] == "erit":
-		tense = "FUTP"
-		perf = True
-		# print('hi3')
+
+	elif root[-2:] == "at":
+		tense = "PRES"
+		inf = root[:-1]+"re" 	#are 1st
+		# print('hi6')
+	elif root[-2:] == "it":
+		tense = "PRES"
+		inf = root[:-1]+"re" 	#ire 4th
+		if not (inf in Roots.LatinV_inf): 	#ere 3rd IO/5th
+			inf = root[:-2]+"ere"
+		# print('hi7')
+
+	elif root[-2:] == "et": 	# could be future(3rd) or present(2nd)
+		inf = root[:-1]+"re"
+		if root[:-1]+"re" in Roots.LatinV_inf:	# if 3rd conj
+			tense = "FUTR"
+		else:
+			inf = root[:-2]+"ēre"
+			tense = "PRES" 							# in 2nd conj
+
+	if (perf):
+		perf = root[:-2]+"ī"
+		if root[-4] == "e":
+			perf = root[:-4]+"ī"
+		# print(perf)
+		inf = Roots.findInfP(perf)
+	else: 
+		# print(inf)
+		perf = Roots.findPerfI(inf)
+	return [inf,perf,per,num,tense]
 
 # def findTense1P(root, per, num, perf):
 

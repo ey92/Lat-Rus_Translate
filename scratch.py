@@ -30,3 +30,10 @@ def foo(word):
 print ','.join(map(str,foo(y)))
 
 "eram" in Latin.plupEndings.values()
+*future* m or o
+
+1st sg
+m: impf(12345), fut(345), plup(12345)
+o: pres(12345), fut(12), futp(12345)
+i: perf(12345)
+
