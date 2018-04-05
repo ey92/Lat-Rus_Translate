@@ -74,6 +74,10 @@ def main():
 					print("Sorry, not the right number of parameters or they aren't all strings.")
 					params = str(raw_input("Please enter the nominativeS form, genitiveS form, declension, gender, number, and case, separated by commas\n").strip())
 					params = processInput(params)
+
+				# pad declension param with spaces
+				if len(params[3]) < 3:
+					params[3]+='  '
 				print Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
 				
 				return cont()
