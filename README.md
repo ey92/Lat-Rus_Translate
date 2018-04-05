@@ -44,14 +44,15 @@ Declensions:
 | 4 | -us       | -ūs |
 | 5 | -ēs       | -ēī |
 
-Does not include:<br>
+Does not include:
 - locative
 
 ---
 ### Adjectives:
 (declines like 3ii noun)
 
-Declensions:<br>
+Declensions:
+
 | Declension | M | F | N | Root from |
 | ---------- | - | - | - | --------- |
 | 1/2   | -us | -a  | -um | F   |
