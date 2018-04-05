@@ -12,13 +12,13 @@ Conjugations:<br>
 4: io, ire, (v)ī, -tus<br>
 5: io, ere, ī, tus          (3 IO)<br>
 <br><br>
-Indicative mood, Active voice:
-    - (PRES) present
-    - (IMPF) imperfect
-    - (FUTR) future
-    - (PERF) perfect
-    - (PLUP) pluperfect
-    - (FUTP) future perfect
+Indicative mood, Active voice:<br>
+    - (PRES) present<br>
+    - (IMPF) imperfect<br>
+    - (FUTR) future<br>
+    - (PERF) perfect<br>
+    - (PLUP) pluperfect<br>
+    - (FUTP) future perfect<br>
 ---
 Does not include:
 - Passive voice
@@ -28,7 +28,7 @@ Does not include:
 - Participles
 
 <br><br>
-**Nouns:**<br>
+**Nouns:** <br>
 Declensions:<br>
 1: -a, -ae<br>
 2: -um/us/r, -ī<br>
@@ -37,5 +37,5 @@ Declensions:<br>
 5: ēs, ēī<br>
 <br><br>
 ---
-Does not include:
+Does not include:<br>
 locative
