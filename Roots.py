@@ -50,7 +50,7 @@ VMap = [
     ("scire",            "знать",       "to know"           ), \
     ("venire",           "приходить",   "to come"           ), \
     ("capere",           "брать",       "to take"           ), \
-    ("incipere",         "начать",      "to begin"          ), \
+    ("incipere",         "начать",      "to begin"          ) \
 ]
 VMap_lat = [x[0] for x in VMap]
 VMap_rus = [x[1] for x in VMap]
@@ -84,7 +84,7 @@ LatinV = [
     ("scio",        "scire",            "scīvī",        4, "to know",           "знать",     "узнать"), \
     ("venio",       "venire",           "vēnī",         4, "to come",           "приходить", "прийти"), \
     ("capio",       "capere",           "cēpī",         5, "to take",           "брать",     "взять"), \
-    ("incipio",     "incipere",         "incēpī",       5, "to begin",          "начать",    "начинать"), \
+    ("incipio",     "incipere",         "incēpī",       5, "to begin",          "начать",    "начинать") \
 ]
 LatinV_fs = [x[0] for x in LatinV]
 LatinV_inf = [x[1] for x in LatinV]
@@ -149,7 +149,7 @@ LatinN = [
     ("portus",  "portūs",   "4",    "F",    "harbor, port",     "порт"), \
     ("cornū",   "cornūs",   "4",    "N",    "horn",             "рог"), \
     ("rēs",     "reī",      "5",    "F",    "thing",            "вещь"), \
-    ("diēs",    "diēī",     "5",    "M",    "day",              "день"),
+    ("diēs",    "diēī",     "5",    "M",    "day",              "день") \
 ]
 LatinN_ns = [x[0] for x in LatinN]
 LatinN_gs = [x[1] for x in LatinN]
