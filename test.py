@@ -645,11 +645,11 @@ def test5D():
 	print Latin.decline("diēs","diēī","5","N","ABL","PL")
 	print Latin.decline("diēs","diēī","5","N","VOC","PL")
 
-# test1D()
+test1D()
 # print("---------")
 # test2D()
 # print("---------")
-test3D()
+# test3D()
 # print("---------")
 # test4D()
 # print("---------")

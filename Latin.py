@@ -1079,3 +1079,6 @@ def decline(nom, gen, d, gender, case, num):
 		return fthDecl(nom,gen,gender,num,case)
 
 # -------------------------------------------------------------
+# REVERSE DECLENSION
+
+# def reverseDecline(word):

@@ -66,12 +66,21 @@ def main():
 			choice2 = int(choice2)
 
 			# Construct Nouns
-			# if choice2 == 1:
+			if choice2 == 1:
 				# make nouns
+				params = str(raw_input("Please enter the nominativeS form, genitiveS form, declension, gender, number, and case, separated by commas\n").strip())
+				params = processInput(params)
+				while len(params) != 6 or not(checkStr(params)):
+					print("Sorry, not the right number of parameters or they aren't all strings.")
+					params = str(raw_input("Please enter the nominativeS form, genitiveS form, declension, gender, number, and case, separated by commas\n").strip())
+					params = processInput(params)
+				print Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
+				
+				return cont()
 
 			# Construct Verbs
-			# elif choice2 == 2:
-			if choice2 == 2:
+			elif choice2 == 2:
+			# if choice2 == 2:
 				# make verbs
 				params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n").strip())
 				params = processInput(params)

@@ -1,5 +1,26 @@
 # -*- coding: utf-8 -*-
-# 20 Noun stems
+
+# LATIN
+
+# CONJUGATION
+# input:    Latin.conjugate("amare","amāvi","1","FST","SG","PRES")
+# output:   amo
+
+# REVERSE CONJUGATION
+# input:    Latin.reverseConjugate("amant")
+# output:   ['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']
+# output2:  ['amare', 'amāvi', 'TRD', 'PL', 'PRES']
+
+# DECLENSION
+# input:    Latin.decline("puella","puellae","1","F","ACC","SG")
+# output:   puellam
+
+# REVERSE DECLENSION
+# input:    
+# output:
+
+
+# 55 Noun stems
 NMap = {
     ("puellae",      "девочка",      "girl"                      ), \
     ("terrae",       "земля",        "land"                      ), \
@@ -132,7 +153,7 @@ LatinV_perf = [x[2] for x in LatinV]
 LatinV_conj = [x[3] for x in LatinV]
 LatinV_eng = [x[4] for x in LatinV]
 LatinV_rus_impf = [x[5] for x in LatinV]
-LatinV_rus-perf = [x[6] for x in LatinV]
+LatinV_rus_perf = [x[6] for x in LatinV]
 
 def findConjI(word):
     return LatinV_conj[LatinV_inf.index(word)]
