@@ -6,21 +6,23 @@ translate between Latin and Russian via morphology and phonology
 ## Latin
 ### Verbs:
 
-Conjugations:<br>
-1: -o, -are, -āvī, -atus<br>
-2: -eo, -ēre, -ī, -(i)tus<br>
-3: -o, ere, ī, (i)tus<br>
-4: io, ire, (v)ī, -tus<br>
-5: io, ere, ī, tus          (3 IO)<br>
-<br><br>
+Conjugations:
 
-Indicative mood, Active voice:<br>
-    - (PRES) present<br>
-    - (IMPF) imperfect<br>
-    - (FUTR) future<br>
-    - (PERF) perfect<br>
-    - (PLUP) pluperfect<br>
-    - (FUTP) future perfect<br>
+| Conjugation | FST SG PRES | Infinitive | FST SG PERF | Supine |
+| ----------- | ----------- | ---------- | ----------- | ------ |
+| 1         | -o  | -are | -āvī | -atus 	|
+| 2         | -eo | -ēre | -ī   | -(i)tus 	|
+| 3         | -o  | -ere | -ī   | -(i)tus 	|
+| 4         | -io | -ire | -(v)ī| -tus 		|
+| 5 (3 IO)  | -io | -ere | -ī   | -tus      |
+
+Indicative mood, Active voice:
+- (PRES) present
+- (IMPF) imperfect
+- (FUTR) future
+- (PERF) perfect
+- (PLUP) pluperfect
+- (FUTP) future perfect
 
 Does not include:
 - Passive voice
@@ -32,13 +34,26 @@ Does not include:
 ---
 ### Nouns:
 
-Declensions:<br>
-1: -a, -ae<br>
-2: -um/us/r, -ī<br>
-3: ?, -is<br>
-4: us, ūs<br>
-5: ēs, ēī<br>
-<br><br>
----
+Declensions:
+
+| Declension | NOM SG | GEN SG |
+| ---------- | ------ | ------ |
+| 1 | -a        | -ae |
+| 2 | -um/us/r  | -ī  |
+| 3 | ?         | -is |
+| 4 | -us       | -ūs |
+| 5 | -ēs       | -ēī |
+
 Does not include:<br>
-locative
+- locative
+
+---
+### Adjectives:
+(declines like 3ii noun)
+
+Declensions:<br>
+| Declension | M | F | N | Root from |
+| ---------- | - | - | - | --------- |
+| 1/2   | -us | -a  | -um | F   |
+| 3     | -is | -is | -e  | M/F |
+| 3     | ?   | ?   | ?   | -is |
