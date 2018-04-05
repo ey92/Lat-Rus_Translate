@@ -12,7 +12,7 @@ Conjugations:<br>
 3: -o, ere, ī, (i)tus<br>
 4: io, ire, (v)ī, -tus<br>
 5: io, ere, ī, tus          (3 IO)<br>
-<br><br>
+<br>
 
 Indicative mood, Active voice:<br>
     - (PRES) present<br>
@@ -38,7 +38,7 @@ Declensions:<br>
 3: ?, -is<br>
 4: us, ūs<br>
 5: ēs, ēī<br>
-<br><br>
----
+<br>
+
 Does not include:<br>
 locative
