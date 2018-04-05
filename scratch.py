@@ -18,15 +18,15 @@ print(u'человек')
 u'\u0443'
 consonants.index(('в').decode('utf8'))
 def fooL(letter):
-	return letters.index(letter)
+    return letters.index(letter)
 # in: ч | out: ч
 
 def foo(word):
-	word = word.decode('utf8')
-	lst = []
-	for letter in word:
-		lst.append(fooL(letter))
-	return lst
+    word = word.decode('utf8')
+    lst = []
+    for letter in word:
+        lst.append(fooL(letter))
+    return lst
 print ','.join(map(str,foo(y)))
 
 "eram" in Latin.plupEndings.values()
@@ -41,5 +41,4 @@ ire , īvī , 0 , FST , SG , PRES
 esse, fuī, 0, TRD, PL, PLUP
 
 macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']
-
 
