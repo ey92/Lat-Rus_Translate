@@ -49,21 +49,32 @@ VMap = {
 # -------------------------------------------------------------
 # LATIN
 LatinV = [
-    ("eo",      "ire",      "īvī",      0), \
-    ("sum",     "esse",     "fuī",      0), \
-    ("possum",  "posse",    "potuī",    0), \
-    ("volo",    "velle",    "voluī",    0), \
-    ("nōlo",    "nōlle",    "nōluī",    0), \
-    ("fero",    "ferre",    "tulī",     0), \
-    ("amo",     "amare",    "amāvī",    1), \
-    ("paro",    "parare",   "parāvī",   1), \
-    ("dēleo",   "dēlēre",   "dēlēvī",   2), \
-    ("habeo",   "habēre",   "habuī",    2), \
-    ("peto",    "petere",   "petīvī",   3), \
-    ("dīco",    "dīcere",   "dīxī",     3), \
-    ("venio",   "venire",   "vēnī",     4), \
-    ("audio",   "audire",   "audīvī",   4), \
-    ("capio",   "capere",   "cēpī",     5) \
+    ("eo",          "ire",              "īvī",          0, "пойти",     "идти"), \
+    ("sum",         "esse",             "fuī",          0, "есть",      "быть"), \
+    ("possum",      "posse",            "potuī",        0, "мочь",      "смочь"), \
+    ("volo",        "velle",            "voluī",        0, "хотеть",    "захотеть"), \
+    ("nōlo",        "nōlle",            "nōluī",        0, "нехотеть",  "незахотеть"), \
+    ("fero",        "ferre",            "tulī",         0, "нести",     "понести"), \
+    ("amo",         "amare",            "amāvī",        1, "любить",    "полюбить"), \
+    ("cōgito",      "cōgitare",         "cōgitāvī",     1, "думать",    "подумать"), \
+    ("paro",        "parare",           "parāvī",       1, "готовить",  "подготовить"), \
+    ("rogo",        "rogare",           "rogāvī",       1, "спрашивать","спросить"), \
+    ("specto",      "spectare",         "spectāvī",     1, "смотреть",  "посмотреть"), \
+    ("sto",         "stare",            "stetī",        1, "стоять",    "постоя́ть"), \
+    ("dēleo",       "dēlēre",           "dēlēvī",       2, "уничтожать","уничтожить"), \
+    ("habeo",       "habēre",           "habuī",        2, "иметь",     "(no perf)"), \
+    ("video",       "vidēre",           "vidī",         2, "видеть",    "увидеть"), \
+    ("comprehendo", "comprehendere",    "comprehendī",  3, "понимать",  "понять"), \
+    ("dīco",        "dīcere",           "dīxī",         3, "говорить",  "сказать"), \
+    ("edo",         "edere",            "ēdī",          3, "есть",      "съесть"), \
+    ("peto",        "petere",           "petīvī",       3, "искать",    "поискать"), \
+    ("sīdo",        "sīdere",           "sīdī",         3, "сидеть",    "сесть"), \
+    ("vīvo",        "vīvere",           "vīxī",         3, "жить",      "прожить"), \
+    ("audio",       "audire",           "audīvī",       4, "слышать",   "услышать"), \
+    ("scio",        "scire",            "scīvī",        4, "знать",     "узнать"), \
+    ("venio",       "venire",           "vēnī",         4, "приходить", "прийти"), \
+    ("capio",       "capere",           "cēpī",         5, "брать",     "взять"), \
+    ("incipio",     "incipere",         "incēpī",       5, "начать",    "начинать"), \
 ]
 LatinV_fs = [x[0] for x in LatinV]
 LatinV_inf = [x[1] for x in LatinV]
@@ -86,44 +97,44 @@ def findPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
 LatinN = [
-    ("puella",  "puellae",  "1",    "F"), \
-    ("terra",   "terrae",   "1",    "F"), \
-    ("femina",  "feminae",  "1",    "F"), \
-    ("agricola","agricolae","1",    "M"), \
-    ("puer",    "puerī",    "2",    "M"), \
-    ("vir",     "virī",     "2",    "M"), \
-    ("filius",  "filiī",    "2",    "M"), \
-    ("modus",   "modī",     "2",    "M"), \
-    ("annus",   "annī",     "2",    "M"), \
-    ("mūrus",   "mūrī",     "2",    "M"), \
-    ("servus",  "servī",    "2",    "M"), \
-    ("liber",   "librī",    "2",    "M"), \
-    ("bellum",  "bellī",    "2",    "N"), \
-    ("dōnus",   "dōnī",     "2",    "N"), \
-    ("homō",    "hominis",  "3  ",  "M"), \
-    ("rex",     "regis",    "3  ",  "M"), \
-    ("consul",  "consulis", "3  ",  "M"), \
-    ("pānis",   "pānis",    "3  ",  "M"), \
-    ("laus",    "laudis",   "3  ",  "F"), \
-    ("jūs",     "jūris",    "3  ",  "N"), \
-    ("flūmen",  "flūminis", "3  ",  "N"), \
-    ("tempus",  "temporis", "3  ",  "N"), \
-    ("nōmen",   "nōminis",  "3  ",  "N"), \
-    ("pōns",    "pōntis",   "3i ",  "M"), \
-    ("mēnsis",  "mēnsis",   "3i ",  "M"), \
-    ("nox",     "noctis",   "3i ",  "F"), \
-    ("mors",    "mortis",   "3i ",  "F"), \
-    ("urbs",    "urbis",    "3i ",  "F"), \
-    ("turris",  "turris",   "3i ",  "F"), \
-    ("cīvis",   "cīvis",    "3ii",  "MF"), \
-    ("nāvis",   "nāvis",    "3ii",  "F"), \
-    ("pārs",    "pārtis",   "3ii",  "F"), \
-    ("clāvis",  "clāvis",   "3ii",  "F"), \
-    ("animal",  "animālis", "3ii",  "N"), \
-    ("mare",    "maris",    "3ii",  "N"), \
-    ("manus",   "manūs",    "4",    "F"), \
-    ("portus",  "portūs",   "4",    "F"), \
-    ("cornū",   "cornūs",   "4",    "N"), \
-    ("rēs",     "reī",      "5",    "F"), \
-    ("diēs",    "diēī",     "5",    "M")
+    ("puella",  "puellae",  "1",    "F",    "girl"  ), \
+    ("terra",   "terrae",   "1",    "F",    "land"  ), \
+    ("femina",  "feminae",  "1",    "F",    "woman" ), \
+    ("agricola","agricolae","1",    "M",    "farmer"), \
+    ("puer",    "puerī",    "2",    "M",    "boy"   ), \
+    ("vir",     "virī",     "2",    "M",    "man"   ), \
+    ("filius",  "filiī",    "2",    "M",    "son"   ), \
+    ("modus",   "modī",     "2",    "M",    "measure, manner"   ), \
+    ("annus",   "annī",     "2",    "M",    "year"  ), \
+    ("mūrus",   "mūrī",     "2",    "M",    "wall"  ), \
+    ("servus",  "servī",    "2",    "M",    "slave" ), \
+    ("liber",   "librī",    "2",    "M",    "book"  ), \
+    ("bellum",  "bellī",    "2",    "N",    "war"   ), \
+    ("dōnus",   "dōnī",     "2",    "N",    "gift"  ), \
+    ("homō",    "hominis",  "3  ",  "M",    "human, person" ), \
+    ("rex",     "regis",    "3  ",  "M",    "king"  ), \
+    ("consul",  "consulis", "3  ",  "M",    "consul"), \
+    ("pānis",   "pānis",    "3  ",  "M",    "bread" ), \
+    ("laus",    "laudis",   "3  ",  "F",    "praise"), \
+    ("jūs",     "jūris",    "3  ",  "N",    "law"   ), \
+    ("flūmen",  "flūminis", "3  ",  "N",    "river" ), \
+    ("tempus",  "temporis", "3  ",  "N",    "time"  ), \
+    ("nōmen",   "nōminis",  "3  ",  "N",    "name"  ), \
+    ("pōns",    "pōntis",   "3i ",  "M",    "bridge"), \
+    ("mēnsis",  "mēnsis",   "3i ",  "M",    "month" ), \
+    ("nox",     "noctis",   "3i ",  "F",    "night" ), \
+    ("mors",    "mortis",   "3i ",  "F",    "death" ), \
+    ("urbs",    "urbis",    "3i ",  "F",    "city"  ), \
+    ("turris",  "turris",   "3i ",  "F",    "tower" ), \
+    ("cīvis",   "cīvis",    "3ii",  "MF",   "citizen"   ), \
+    ("nāvis",   "nāvis",    "3ii",  "F",    "ship"  ), \
+    ("pārs",    "pārtis",   "3ii",  "F",    "part"  ), \
+    ("clāvis",  "clāvis",   "3ii",  "F",    "key"   ), \
+    ("animal",  "animālis", "3ii",  "N",    "animal"), \
+    ("mare",    "maris",    "3ii",  "N",    "sea"   ), \
+    ("manus",   "manūs",    "4",    "F",    "hand"  ), \
+    ("portus",  "portūs",   "4",    "F",    "harbor, port"  ), \
+    ("cornū",   "cornūs",   "4",    "N",    "horn"  ), \
+    ("rēs",     "reī",      "5",    "F",    "thing" ), \
+    ("diēs",    "diēī",     "5",    "M",    "day"   ),
 ]
