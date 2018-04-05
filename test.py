@@ -671,6 +671,7 @@ def testrevDAS():
 	print Latin.reverseDecline("cornū")
 	print ("* "); print Latin.reverseDecline("rēī")
 	print Latin.reverseDecline("rē")
+	print ("voc* "); print Latin.reverseDecline("serve")
 
 def testrevGenP():
 	print Latin.reverseDecline("puellārum")
@@ -719,6 +720,17 @@ def testrevAccS():
 	print ("* "); print Latin.reverseDecline("cornū")
 	print Latin.reverseDecline("rem")
 
+def testrevNomS():
+	print Latin.reverseDecline("puella")
+	print Latin.reverseDecline("puer")
+	print Latin.reverseDecline("servus")
+	print Latin.reverseDecline("bellum")
+	print Latin.reverseDecline("homō")
+	print Latin.reverseDecline("animal")
+	print Latin.reverseDecline("manus")
+	print Latin.reverseDecline("cornū")
+	print Latin.reverseDecline("rēs")
+
 # test1D()
 # print("---------")
 # test2D()
@@ -740,3 +752,5 @@ print("---------")
 testrevNomAccP()
 print("---------")
 testrevAccS()
+print("---------")
+testrevNomS()

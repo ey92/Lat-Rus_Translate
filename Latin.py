@@ -1158,6 +1158,8 @@ def findDeclNomAccP(root):
 	
 	elif root[-1] == "a": 		# 2nd,3rd decl N nom/acc pl
 		gen = root[:-1]+"ī" 	# 2nd decl
+		if root in Roots.LatinN_ns:
+			return findDeclNomS(root)
 		if not (gen in Roots.LatinN_gs): 	# in 3rd decl
 			gen = root[:-1]+"is"
 
@@ -1273,10 +1275,10 @@ def findDeclDAblS(root):
 	# 3rd decl
 	elif root[-1:] == "e":					# 3rd decl cons and i stem abl
 		gen = root[:-1]+"is"
-		if not(gen in Roots.LatinN_gs): 	# could also be 2nd decl voc
-			gen = root[:-1]+"us"
-			case = "VOC"
 		case = "ABL"
+		if not(gen in Roots.LatinN_gs): 	# could also be 2nd decl voc
+			case = "VOC"
+			gen = root[:-1]+"ī"
 	elif root[-2:] == "ī": 		# 3rd decl i stem
 		gen = root[:-2]+"is"
 		if not (gen in Roots.LatinN_gs): 	# could also be 2nd decl nom pl
@@ -1313,8 +1315,11 @@ def findDeclDAblP(root):
 	return [nom,gen,case,num]
 
 def reverseDecline(word):
+	# NOM SG
+	if word in Roots.LatinN_ns:
+		return findDeclNomS(word)
 	# DAT/ABL PL
-	if (len(word) > 3 and word [-3:] == "īs") or (len(word) > 4 and word[-4:] == "ibus") or (len(word) > 5 and word[-5:] == "ēbus"):
+	elif (len(word) > 3 and word [-3:] == "īs") or (len(word) > 4 and word[-4:] == "ibus") or (len(word) > 5 and word[-5:] == "ēbus"):
 		return findDeclDAblP(word)
 	# DAT/ABL SG
 	elif word[-2:] in ['ā','ē','ī','ō','ū'] or word[-1] == "e" or (len(word) > 2 and word[-3:] == "uī"):
