@@ -1,27 +1,66 @@
 # -*- coding: utf-8 -*-
 # 20 Noun stems
 NMap = {
-    "man,person":"человек", \
-    "time":"время", \
-    "hand,arm,handwriting":"рука", \
-    "affair,business,thing,matter":"дело", \
-    "time":"раз", \
-    "eye":"глаз", \
-    "day,afternoon":"день", \
-    "life,existence":"жизнь", \
-    "here":"тут", \
-    "head":"голова", \
-    "friend":"друг", \
-    "house,home,household":"дом", \
-    "word,speech":"слово", \
-    "place,site,region,area":"место", \
-    "face,right side,person":"лицо", \
-    "side,party,land,place,part":"сторона", \
-    "foot,leg":"нога", \
-    "work,job":"работа", \
-    "end,ending":"конец", \
-    "door":"дверь" \
+    ("puellae",      "девочка",      "girl"                      ), \
+    ("terrae",       "земля",        "land"                      ), \
+    ("feminae",      "женщина",      "woman"                     ), \
+    ("agricolae",    "земледелец",   "farmer"                    ), \
+    ("puerī",        "мальчик",      "boy"                       ), \
+    ("virī",         "мужчина",      "man"                       ), \
+    ("filiī",        "сын",          "son"                       ), \
+    ("modī",         "способ",       "measure, manner"           ), \
+    ("annī",         "год",          "year"                      ), \
+    ("mūrī",         "стена",        "wall"                      ), \
+    ("servī",        "раб",          "slave, servant"            ), \
+    ("librī",        "книга",        "book"                      ), \
+    ("bellī",        "война",        "war"                       ), \
+    ("dōnī",         "подарок",      "gift"                      ), \
+    ("hominis",      "человек",      "human, person"             ), \
+    ("regis",        "царь",         "king"                      ), \
+    ("consulis",     "консул",       "consul"                    ), \
+    ("pānis",        "хлеб",         "bread"                     ), \
+    ("laudis",       "похвала",      "praise"                    ), \
+    ("jūris",        "право",        "law"                       ), \
+    ("flūminis",     "река",         "river"                     ), \
+    ("temporis",     "время",        "time"                      ), \
+    ("nōminis",      "имя",          "name"                      ), \
+    ("pōntis",       "мост",         "bridge"                    ), \
+    ("mēnsis",       "месяц",        "month"                     ), \
+    ("noctis",       "ночь",         "night"                     ), \
+    ("mortis",       "смерть",       "death"                     ), \
+    ("urbis",        "город",        "city"                      ), \
+    ("turris",       "башня",        "tower"                     ), \
+    ("cīvis",        "гражданин",    "citizen"                   ), \
+    ("nāvis",        "корабль",      "ship"                      ), \
+    ("pārtis",       "доля",         "part"                      ), \
+    ("clāvis",       "ключ",         "key"                       ), \
+    ("animālis",     "животное",     "animal"                    ), \
+    ("maris",        "море",         "sea"                       ), \
+    ("manūs",        "рука",         "hand"                      ), \
+    ("portūs",       "порт",         "harbor, port"              ), \
+    ("cornūs",       "рог",          "horn"                      ), \
+    ("reī",          "дело",         "thing, matter"             ), \
+    ("bonī",         "вещь",         "possession"                ), \
+    ("iterātiōnis",  "раз",          "iteration"                 ), \
+    ("oculī",        "глаз",         "eye"                       ), \
+    ("vītae",        "жизнь",        "life,existence"            ), \
+    ("capitis",      "голова",       "head"                      ), \
+    ("amicī",        "друг",         "friend"                    ), \
+    ("domī",         "дом",          "house,home,household"      ), \
+    ("verbī",        "слово",        "word,speech"               ), \
+    ("locī",         "место",        "place,site,region,area"    ), \
+    ("faciēī",       "лицо",         "face,person"               ), \
+    ("patriae",      "сторона",      "side,party,land,place,part"), \
+    ("pedis",        "нога",         "foot,leg"                  ), \
+    ("laboris",      "работа",       "work,job"                  ), \
+    ("fīnis",        "конец",        "end,ending"                ), \
+    ("jānuae",       "дверь",        "door"                      ), \
+    ("diēī",         "день",         "day"                       ) \
 }
+NMap_lat = [x[0] for x in NMap]
+NMap_rus = [x[1] for x in NMap]
+NMap_eng = [x[2] for x in NMap]
+
 
 # 26 Verb stems
 VMap = [
@@ -58,6 +97,7 @@ VMap_eng = [x[2] for x in VMap]
 
 # -------------------------------------------------------------
 # LATIN
+# 26 Verb stems
 LatinV = [
     ("eo",          "ire",              "īvī",          0, "to go",             "пойти",     "идти"), \
     ("sum",         "esse",             "fuī",          0, "to be",             "есть",      "быть"), \
@@ -109,51 +149,67 @@ def findInfP(word):
 def findPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
+# 55 Noun stems
 LatinN = [
-    ("puella",  "puellae",  "1",    "F",    "girl",             "девочка"), \
-    ("terra",   "terrae",   "1",    "F",    "land",             "земля"), \
-    ("femina",  "feminae",  "1",    "F",    "woman",            "женщина"), \
-    ("agricola","agricolae","1",    "M",    "farmer",           "земледелец"), \
-    ("puer",    "puerī",    "2",    "M",    "boy",              "мальчик"), \
-    ("vir",     "virī",     "2",    "M",    "man",              "мужчина"), \
-    ("filius",  "filiī",    "2",    "M",    "son",              "сын"), \
-    ("modus",   "modī",     "2",    "M",    "measure, manner",  "способ"), \
-    ("annus",   "annī",     "2",    "M",    "year",             "год"), \
-    ("mūrus",   "mūrī",     "2",    "M",    "wall",             "стена"), \
-    ("servus",  "servī",    "2",    "M",    "slave, servant",   "раб"), \
-    ("liber",   "librī",    "2",    "M",    "book",             "книга"), \
-    ("bellum",  "bellī",    "2",    "N",    "war",              "война"), \
-    ("dōnus",   "dōnī",     "2",    "N",    "gift",             "подарок"), \
-    ("homō",    "hominis",  "3  ",  "M",    "human, person",    "человек"), \
-    ("rex",     "regis",    "3  ",  "M",    "king",             "царь"), \
-    ("consul",  "consulis", "3  ",  "M",    "consul",           "консул"), \
-    ("pānis",   "pānis",    "3  ",  "M",    "bread",            "хлеб"), \
-    ("laus",    "laudis",   "3  ",  "F",    "praise",           "похвала"), \
-    ("jūs",     "jūris",    "3  ",  "N",    "law",              "право"), \
-    ("flūmen",  "flūminis", "3  ",  "N",    "river",            "река"), \
-    ("tempus",  "temporis", "3  ",  "N",    "time",             "время"), \
-    ("nōmen",   "nōminis",  "3  ",  "N",    "name",             "имя"), \
-    ("pōns",    "pōntis",   "3i ",  "M",    "bridge",           "мост"), \
-    ("mēnsis",  "mēnsis",   "3i ",  "M",    "month",            "месяц"), \
-    ("nox",     "noctis",   "3i ",  "F",    "night",            "ночь"), \
-    ("mors",    "mortis",   "3i ",  "F",    "death",            "смерть"), \
-    ("urbs",    "urbis",    "3i ",  "F",    "city",             "город"), \
-    ("turris",  "turris",   "3i ",  "F",    "tower",            "башня"), \
-    ("cīvis",   "cīvis",    "3ii",  "M",    "citizen",          "гражданин"), \
-    ("nāvis",   "nāvis",    "3ii",  "F",    "ship",             "корабль"), \
-    ("pārs",    "pārtis",   "3ii",  "F",    "part",             "доля"), \
-    ("clāvis",  "clāvis",   "3ii",  "F",    "key",              "ключ"), \
-    ("animal",  "animālis", "3ii",  "N",    "animal",           "животное"), \
-    ("mare",    "maris",    "3ii",  "N",    "sea",              "море"), \
-    ("manus",   "manūs",    "4",    "F",    "hand",             "рука"), \
-    ("portus",  "portūs",   "4",    "F",    "harbor, port",     "порт"), \
-    ("cornū",   "cornūs",   "4",    "N",    "horn",             "рог"), \
-    ("rēs",     "reī",      "5",    "F",    "thing",            "вещь"), \
-    ("diēs",    "diēī",     "5",    "M",    "day",              "день") \
+    ("puella",      "puellae",      "1",    "F",    "девочка",      "girl"                      ), \
+    ("terra",       "terrae",       "1",    "F",    "земля",        "land"                      ), \
+    ("femina",      "feminae",      "1",    "F",    "женщина",      "woman"                     ), \
+    ("agricola",    "agricolae",    "1",    "M",    "земледелец",   "farmer"                    ), \
+    ("puer",        "puerī",        "2",    "M",    "мальчик",      "boy"                       ), \
+    ("vir",         "virī",         "2",    "M",    "мужчина",      "man"                       ), \
+    ("filius",      "filiī",        "2",    "M",    "сын",          "son"                       ), \
+    ("modus",       "modī",         "2",    "M",    "способ",       "measure, manner"           ), \
+    ("annus",       "annī",         "2",    "M",    "год",          "year"                      ), \
+    ("mūrus",       "mūrī",         "2",    "M",    "стена",        "wall"                      ), \
+    ("servus",      "servī",        "2",    "M",    "раб",          "slave, servant"            ), \
+    ("liber",       "librī",        "2",    "M",    "книга",        "book"                      ), \
+    ("bellum",      "bellī",        "2",    "N",    "война",        "war"                       ), \
+    ("dōnus",       "dōnī",         "2",    "N",    "подарок",      "gift"                      ), \
+    ("homō",        "hominis",      "3  ",  "M",    "человек",      "human, person"             ), \
+    ("rex",         "regis",        "3  ",  "M",    "царь",         "king"                      ), \
+    ("consul",      "consulis",     "3  ",  "M",    "консул",       "consul"                    ), \
+    ("pānis",       "pānis",        "3  ",  "M",    "хлеб",         "bread"                     ), \
+    ("laus",        "laudis",       "3  ",  "F",    "похвала",      "praise"                    ), \
+    ("jūs",         "jūris",        "3  ",  "N",    "право",        "law"                       ), \
+    ("flūmen",      "flūminis",     "3  ",  "N",    "река",         "river"                     ), \
+    ("tempus",      "temporis",     "3  ",  "N",    "время",        "time"                      ), \
+    ("nōmen",       "nōminis",      "3  ",  "N",    "имя",          "name"                      ), \
+    ("pōns",        "pōntis",       "3i ",  "M",    "мост",         "bridge"                    ), \
+    ("mēnsis",      "mēnsis",       "3i ",  "M",    "месяц",        "month"                     ), \
+    ("nox",         "noctis",       "3i ",  "F",    "ночь",         "night"                     ), \
+    ("mors",        "mortis",       "3i ",  "F",    "смерть",       "death"                     ), \
+    ("urbs",        "urbis",        "3i ",  "F",    "город",        "city"                      ), \
+    ("turris",      "turris",       "3i ",  "F",    "башня",        "tower"                     ), \
+    ("cīvis",       "cīvis",        "3ii",  "M",    "гражданин",    "citizen"                   ), \
+    ("nāvis",       "nāvis",        "3ii",  "F",    "корабль",      "ship"                      ), \
+    ("pārs",        "pārtis",       "3ii",  "F",    "доля",         "part"                      ), \
+    ("clāvis",      "clāvis",       "3ii",  "F",    "ключ",         "key"                       ), \
+    ("animal",      "animālis",     "3ii",  "N",    "животное",     "animal"                    ), \
+    ("mare",        "maris",        "3ii",  "N",    "море",         "sea"                       ), \
+    ("manus",       "manūs",        "4",    "F",    "рука",         "hand"                      ), \
+    ("portus",      "portūs",       "4",    "F",    "порт",         "harbor, port"              ), \
+    ("cornū",       "cornūs",       "4",    "N",    "рог",          "horn"                      ), \
+    ("rēs",         "reī",          "5",    "F",    "дело",         "thing, matter"             ), \
+    ("bonum",       "bonī",         "2",    "N",    "вещь",         "possession"                ), \
+    ("iterātiō",    "iterātiōnis",  "3  ",  "F",    "раз",          "iteration"                 ), \
+    ("oculus",      "oculī",        "2",    "M",    "глаз",         "eye"                       ), \
+    ("vīta",        "vītae",        "1",    "F",    "жизнь",        "life,existence"            ), \
+    ("caput",       "capitis",      "3  ",  "N",    "голова",       "head"                      ), \
+    ("amicus",      "amicī",        "2",    "M",    "друг",         "friend"                    ), \
+    ("domus",       "domī",         "2",    "M",    "дом",          "house,home,household"      ), \
+    ("verbum",      "verbī",        "2",    "N",    "слово",        "word,speech"               ), \
+    ("locus",       "locī",         "2",    "M",    "место",        "place,site,region,area"    ), \
+    ("faciēs",      "faciēī",       "5",    "F",    "лицо",         "face,person"               ), \
+    ("patria",      "patriae",      "1",    "F",    "сторона",      "side,party,land,place,part"), \
+    ("pēs",         "pedis",        "3  ",  "M",    "нога",         "foot,leg"                  ), \
+    ("labor",       "laboris",      "3  ",  "M",    "работа",       "work,job"                  ), \
+    ("fīnis",       "fīnis",        "3ii",  "F",    "конец",        "end,ending"                ), \
+    ("jānua",       "jānuae",       "1",    "F",    "дверь",        "door"                      ), \
+    ("diēs",        "diēī",         "5",    "M",    "день",         "day"                       ) \
 ]
 LatinN_ns = [x[0] for x in LatinN]
 LatinN_gs = [x[1] for x in LatinN]
 LatinN_decl = [x[2] for x in LatinN]
 LatinN_gender = [x[3] for x in LatinN]
-LatinN_eng = [x[4] for x in LatinN]
-LatinN_rus = [x[5] for x in LatinN]
+LatinN_rus = [x[4] for x in LatinN]
+LatinN_eng = [x[5] for x in LatinN]

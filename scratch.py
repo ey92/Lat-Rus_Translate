@@ -42,3 +42,20 @@ esse, fuī, 0, TRD, PL, PLUP
 
 macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']
 
+NMap = {
+	("bonum", 		"bonī", 		"2", 	"N",	"вещь", 	"possession"), \
+	("iterātiō", 	"iterātiōnis", 	"3  ",	"F",	"раз", 		"iteration"), \
+	("oculus", 		"oculī",		"2",	"M",	"глаз", 	"eye"), \
+	("vīta", 		"vītae",		"1",	"F",	"жизнь", 	"life,existence"), \
+	("caput", 		"capitis", 		"3  ",	"N",	"голова", 	"head"), \
+	("amicus",		"amicī",		"2",	"M",	"друг", 	"friend"), \
+	("domus",		"domī",			"2",	"M",	"дом", 		"house,home,household"), \
+	("verbum",		"verbī",		"2",	"N",	"слово", 	"word,speech"), \
+	("locus",		"locī",			"2",	"M",	"место", 	"place,site,region,area"), \
+	("faciēs",		"faciēī",		"5",	"F",	"лицо", 	"face,person"), \
+	("patria",		"patriae",		"1",	"F",	"сторона", 	"side,party,land,place,part"), \
+	("pēs",			"pedis",		"3  ",	"M",	"нога", 	"foot,leg"), \
+	("labor",		"laboris",		"3  ",	"M",	"работа", 	"work,job"), \
+	("fīnis",		"fīnis",		"3ii",	"F",	"конец", 	"end,ending"), \
+	("jānua",		"jānuae",		"1",	"F",	"дверь", 	"door") \
+}
