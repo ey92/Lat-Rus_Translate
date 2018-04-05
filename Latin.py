@@ -1083,11 +1083,11 @@ def decline(nom, gen, d, gender, case, num):
 
 def findDeclNomS(root):
 	num = "SG"
-	case = "ACC"
+	case = "NOM"
 	gen = ""
 	nom = ""
 
-	if nom in Roots.LatinN_ns:
+	if root in Roots.LatinN_ns:
 		nom = root
 
 	gen = Roots.LfindGenN(nom)
@@ -1106,7 +1106,7 @@ def findDeclAccS(root):
 	# 3rd/5th decl
 	elif root[-2:] == "em":
 		gen = root[:-2]+"ēī" 					# 5th decl
-		if not (gen in Roots.LatinN_gs) 		# 3rd decl
+		if not (gen in Roots.LatinN_gs): 		# 3rd decl
 			gen = root[:-2]+"is"
 
 	# 2nd/4th decl
@@ -1139,12 +1139,14 @@ def findDeclNomAccP(root):
 		gen = root[:-3]+"is" 				# 3rd decl
 		if not (gen in Roots.LatinN_gs): 	# 5th decl
 			gen = root[:-3]+"ēī"
+	elif root[-2:] == "ia":
+		gen = root[:-2]+"is" 	# 3rd decl i stem
 
 	# 4th decl
 	elif root[-3:] == "ūs":
 		gen = root 				# 4th decl nom/acc pl = gen sg
 	elif root[-2:] == "ua": 	# 4th decl N pl
-		gen = root[-2]+"ūs"
+		gen = root[:-2]+"ūs"
 
 	# 2nd decl
 	elif root[-2:] == "ī": 		# 2nd decl nom pl
@@ -1152,12 +1154,11 @@ def findDeclNomAccP(root):
 		gen = root 				# 2nd decl nom pl = gen sg
 	elif root[-3:] == "ōs": 	# 2nd decl acc pl
 		case = "ACC"
-		gen = root[-3:]+"ī"
+		gen = root[:-3]+"ī"
 	
-
 	elif root[-1] == "a": 		# 2nd,3rd decl N nom/acc pl
 		gen = root[:-1]+"ī" 	# 2nd decl
-		if not (gen in Roots.LatinN_gs) 	# in 3rd decl
+		if not (gen in Roots.LatinN_gs): 	# in 3rd decl
 			gen = root[:-1]+"is"
 
 	nom  = Roots.LfindNomG(gen)
@@ -1170,26 +1171,26 @@ def findDeclGenS(root):
 	nom = ""
 
 	# 1st decl
-	# if word[-2:] == "ae":
+	# if root[-2:] == "ae":
 		# 1st decl gen "ae" more common as 1st decl nom pl
 
 	# 4th decl
-	# elif word[-3:] == "ūs":
+	# elif root[-3:] == "ūs":
 		# 4th decl gen "ūs" more common as 4th decl nom pl
 
 	# 5th decl
-	if word[-4:] == "ēī":
+	if root[-4:] == "ēī":
 		gen = root
 
 	# 2nd decl
-	elif word[-2:] == "ī":
+	elif root[-2:] == "ī":
 		# 2nd decl gen "ī" more common as 2nd decl nom pl unless N
 		gen = root
 		if gen in Roots.LatinN_gs and not (Roots.LisNG(gen)): 	# if not N, go to 2nd decl nom pl
 			return findDeclNomAccP(root)
 
 	# 3rd decl
-	elif word[-2:] == "is":
+	elif root[-2:] == "is":
 		gen = root
 		if gen in Roots.LatinN_gs and (gen in Roots.LatinN_ns): 	# if is a nom sg, that is more common
 			return findDeclNomS(root)
@@ -1205,7 +1206,7 @@ def findDeclGenP(root):
 
 	# 1st decl
 	if root[-5:] == "ārum":
-		gen = root[:-5]+"a"
+		gen = root[:-5]+"ae"
 
 	# 2nd decl
 	elif root[-5:] == "ōrum":
@@ -1246,8 +1247,9 @@ def findDeclDAblS(root):
 	if root[-2:] == "ā":
 		gen = root[:-2]+"ae" 	# 1st decl gen
 		case = "ABL"
-	# elif root[-2:] == "ae":
+	elif root[-2:] == "ae":
 		# 1st decl dat "ae" more common as 1st decl nom pl
+		return findDeclNomAccP(root)
 
 	# 2nd decl
 	elif root[-2:] == "ō": 		# same ending dat/abl
@@ -1258,7 +1260,7 @@ def findDeclDAblS(root):
 		gen = root[:-2]+"ūs"
 		case = "ABL"
 	elif root[-3:] == "uī": 	# 4th decl dat
-		gen = root[:-2]+"ūs"
+		gen = root[:-3]+"ūs"
 		case = "DAT"
 
 	# 5th decl
@@ -1270,12 +1272,12 @@ def findDeclDAblS(root):
 
 	# 3rd decl
 	elif root[-1:] == "e":					# 3rd decl cons and i stem abl
-		gen = root[:-2]+"is"
+		gen = root[:-1]+"is"
 		if not(gen in Roots.LatinN_gs): 	# could also be 2nd decl voc
 			gen = root[:-1]+"us"
 			case = "VOC"
 		case = "ABL"
-	elif root[-1:] == "ī": 		# 3rd decl i stem
+	elif root[-2:] == "ī": 		# 3rd decl i stem
 		gen = root[:-2]+"is"
 		if not (gen in Roots.LatinN_gs): 	# could also be 2nd decl nom pl
 			return findDeclGenS(root)
@@ -1292,20 +1294,20 @@ def findDeclDAblP(root):
 	gen = ""
 	
 	# 1st or 2nd decl
-	if root[-2:] == "īs":
-		gen = root[:-2]+"ae" 		# 1st decl gen
+	if root[-3:] == "īs":
+		gen = root[:-3]+"ae" 		# 1st decl gen
 		if not (gen in Roots.LatinN_gs):
-			gen = root[:-2]+"ī" 	# 2nd decl gen
+			gen = root[:-3]+"ī" 	# 2nd decl gen
 
 	# 3rd or 4th decl
 	elif root[-4:] == "ibus":
 		gen = root[:-4]+"ūs" 		# 4th decl gen
 		if not (gen in Roots.LatinN_gs):
-			gen = root[:-2]+"is" 	# 3rd decl gen
+			gen = root[:-4]+"is" 	# 3rd decl gen
 
 	# 5th decl
-	elif root[-4:] == "ēbus":
-		gen = root[:-4]+"ēī" 		# 5th decl gen
+	elif root[-5:] == "ēbus":
+		gen = root[:-5]+"ēī" 		# 5th decl gen
 
 	nom  = Roots.LfindNomG(gen)
 	return [nom,gen,case,num]
