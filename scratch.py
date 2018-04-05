@@ -40,3 +40,4 @@ i: perf(12345)
 ire , īvī , 0 , FST , SG , PRES 
 esse, fuī, 0, TRD, PL, PLUP
 
+macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']

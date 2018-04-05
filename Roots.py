@@ -49,17 +49,21 @@ VMap = {
 # -------------------------------------------------------------
 # LATIN
 LatinV = [
-    ("eo","ire","īvī",0), \
-    ("sum","esse","fuī",0), \
-    ("possum","posse","potuī",0), \
-    ("volo","velle","voluī",0), \
-    ("nōlo","nōlle","nōluī",0), \
-    ("fero","ferre","tulī",0), \
-    ("amo","amare","amāvī",1), \
-    ("dēleo","dēlēre","dēlēvī",2), \
-    ("peto","petere","petīvī",3), \
-    ("venio","venire","vēnī",4), \
-    ("capio","capere","cēpī",5) \
+    ("eo",      "ire",      "īvī",      0), \
+    ("sum",     "esse",     "fuī",      0), \
+    ("possum",  "posse",    "potuī",    0), \
+    ("volo",    "velle",    "voluī",    0), \
+    ("nōlo",    "nōlle",    "nōluī",    0), \
+    ("fero",    "ferre",    "tulī",     0), \
+    ("amo",     "amare",    "amāvī",    1), \
+    ("paro",    "parare",   "parāvī",   1), \
+    ("dēleo",   "dēlēre",   "dēlēvī",   2), \
+    ("habeo",   "habēre",   "habuī",    2), \
+    ("peto",    "petere",   "petīvī",   3), \
+    ("dīco",    "dīcere",   "dīxī",     3), \
+    ("venio",   "venire",   "vēnī",     4), \
+    ("audio",   "audire",   "audīvī",   4), \
+    ("capio",   "capere",   "cēpī",     5) \
 ]
 LatinV_fs = [x[0] for x in LatinV]
 LatinV_inf = [x[1] for x in LatinV]
@@ -82,14 +86,44 @@ def findPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
 LatinN = [
-    ("puella","puellae","1","F"), \
-    ("agricola","agricolae","1","M"), \
-    ("puer","puerī","2","M"), \
-    ("filius","filiī","2","M"), \
-    ("mūrus","mūrī","2","M"), \
-    ("bellum","bellī","2","N"), \
-    ("manus","manūs","4","F"), \
-    ("cornū","cornūs","4","N"), \
-    ("rēs","reī","5","F"), \
-    ("diēs","diēī","5","N")
+    ("puella",  "puellae",  "1",    "F"), \
+    ("terra",   "terrae",   "1",    "F"), \
+    ("femina",  "feminae",  "1",    "F"), \
+    ("agricola","agricolae","1",    "M"), \
+    ("puer",    "puerī",    "2",    "M"), \
+    ("vir",     "virī",     "2",    "M"), \
+    ("filius",  "filiī",    "2",    "M"), \
+    ("modus",   "modī",     "2",    "M"), \
+    ("annus",   "annī",     "2",    "M"), \
+    ("mūrus",   "mūrī",     "2",    "M"), \
+    ("servus",  "servī",    "2",    "M"), \
+    ("liber",   "librī",    "2",    "M"), \
+    ("bellum",  "bellī",    "2",    "N"), \
+    ("dōnus",   "dōnī",     "2",    "N"), \
+    ("homō",    "hominis",  "3",    "M"), \
+    ("rex",     "regis",    "3",    "M"), \
+    ("consul",  "consulis", "3",    "M"), \
+    ("pānis",   "pānis",    "3",    "M"), \
+    ("jūs",     "jūris",    "3",    "N"), \
+    ("flūmen",  "flūminis", "3",    "N"), \
+    ("tempus",  "temporis", "3",    "N"), \
+    ("laus",    "laudis",   "3",    "F"), \
+    ("nōmen",   "nōminis",  "3",    "N"), \
+    ("pōns",    "pōntis",   "3i",   "M"), \
+    ("mēnsis",  "mēnsis",   "3i",   "M"), \
+    ("cīvis",   "cīvis",    "3i",   "MF"), \
+    ("nox",     "noctis",   "3i",   "F"), \
+    ("mors",    "mortis",   "3i",   "F"), \
+    ("urbs",    "urbis",    "3i",   "F"), \
+    ("turris",  "turris",   "3i",   "F"), \
+    ("nāvis",   "nāvis",    "3i",   "F"), \
+    ("pārs",    "pārtis",   "3i",   "F"), \
+    ("clāvis",  "clāvis",   "3i",   "F"), \
+    ("animal",  "animālis", "3i",   "N"), \
+    ("mare",    "maris",    "3i",   "N"), \
+    ("manus",   "manūs",    "4",    "F"), \
+    ("portus",  "portūs",   "4",    "F"), \
+    ("cornū",   "cornūs",   "4",    "N"), \
+    ("rēs",     "reī",      "5",    "F"), \
+    ("diēs",    "diēī",     "5",    "M")
 ]
