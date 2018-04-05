@@ -4,7 +4,7 @@
 translate between Latin and Russian via morphology and phonology
 
 ## Latin
-**Verbs:**
+### Verbs:
 
 Conjugations:<br>
 1: -o, -are, -āvī, -atus<br>
@@ -13,6 +13,7 @@ Conjugations:<br>
 4: io, ire, (v)ī, -tus<br>
 5: io, ere, ī, tus          (3 IO)<br>
 <br><br>
+
 Indicative mood, Active voice:<br>
     - (PRES) present<br>
     - (IMPF) imperfect<br>
@@ -20,7 +21,7 @@ Indicative mood, Active voice:<br>
     - (PERF) perfect<br>
     - (PLUP) pluperfect<br>
     - (FUTP) future perfect<br>
----
+
 Does not include:
 - Passive voice
 - Subjunctive mood
@@ -28,8 +29,8 @@ Does not include:
 - Gerunds/Gerundives
 - Participles
 
-<br><br>
-**Nouns:**
+---
+### Nouns:
 
 Declensions:<br>
 1: -a, -ae<br>
