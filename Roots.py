@@ -228,21 +228,30 @@ LatinN = [
     ("faciēs",      "faciēī",       "5",    "F",    "лицо",         "face,person"               ), \
     ("rēs",         "rēī",          "5",    "F",    "дело",         "thing, matter"             ) \
 ]
-LatinN_ns = [x[0] for x in LatinN]
-LatinN_gs = [x[1] for x in LatinN]
-LatinN_decl = [x[2] for x in LatinN]
-LatinN_gender = [x[3] for x in LatinN]
-LatinN_rus = [x[4] for x in LatinN]
-LatinN_eng = [x[5] for x in LatinN]
 
+LatinN_ns = [x[0] for x in LatinN]          # list of all Latin nomS
+LatinN_gs = [x[1] for x in LatinN]          # list of all Latin genS
+LatinN_decl = [x[2] for x in LatinN]        # list of all Latin decl
+LatinN_gender = [x[3] for x in LatinN]      # list of all Latin gender
+LatinN_rus = [x[4] for x in LatinN]         # list of all Russian equiv of Latin
+LatinN_eng = [x[5] for x in LatinN]         # list of all English equiv of Latin
+
+# returns nomS of genS provided
 def LfindNomG(word):
     return LatinN_ns[LatinN_gs.index(word)]
 
+# returns genS of nomS provided
 def LfindGenN(word):
     return LatinN_gs[LatinN_ns.index(word)]
 
+# returns decl of genS provided
 def LfindDeclG(word):
     return LatinN_decl[LatinN_gs.index(word)]
 
+# returns True if decl of genS provided is 3ii
 def Lis3iistemG(word):
     return LfindDeclG == "3ii"
+
+# returns True if gender of genS provided is N
+def LisNG(word):
+    return LatinN_gender[LatinN_gs.index(word)] == "N"
