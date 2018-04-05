@@ -1,60 +1,45 @@
 # Lat-Rus_Translate
-## CS 4744/Ling 4244 Computational Linguistics Final Prēoject
+## CS 4744/Ling 4244 Computational Linguistics Final Project
 ## Elizabeth Yam (ey92)
 translate between Latin and Russian via morphology and phonology
 
+[See what's included for Latin](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.md)
+
+[See what's included for Russian](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.md)
+
 ## Latin
-### Verbs:
 
-Conjugations:
+### CONJUGATION
+`Latin.conjugate()`
+- takes infinitive, perfective, type, number, person, tense
 
-| Conjugation | FST SG PRES | Infinitive | FST SG PERF | Supine |
-| ----------- | ----------- | ---------- | ----------- | ------ |
-| 1         | -o  | -are | -āvī | -atus 	|
-| 2         | -eo | -ēre | -ī   | -(i)tus 	|
-| 3         | -o  | -ere | -ī   | -(i)tus 	|
-| 4         | -io | -ire | -(v)ī| -tus 		|
-| 5 (3 IO)  | -io | -ere | -ī   | -tus      |
+input:    `amare, amāvi, 1, FST, SG, PRES`<br>
+output:   `amo`<br>
 
-Indicative mood, Active voice:
-- (PRES) present
-- (IMPF) imperfect
-- (FUTR) future
-- (PERF) perfect
-- (PLUP) pluperfect
-- (FUTP) future perfect
+### REVERSE CONJUGATION
+`Latin.reverseConjugate()`
+- takes Latin verb form
 
-Does not include:
-- Passive voice
-- Subjunctive mood
-- Imperative mood
-- Gerunds/Gerundives
-- Participles
+input:    `amant`<br>
+output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
+output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
 
----
-### Nouns:
+### DECLENSION
+`Latin.decline()`
+- takes nominativeS, genitiveS, declension d, number, person, tense
 
-Declensions:
+input:    `puella, puellae, 1, F, ACC, SG`<br>
+output:   `puellam`<br>
 
-| Declension | NOM SG | GEN SG |
-| ---------- | ------ | ------ |
-| 1 | -a        | -ae |
-| 2 | -um/us/r  | -ī  |
-| 3 | ?         | -is |
-| 4 | -us       | -ūs |
-| 5 | -ēs       | -ēī |
+### REVERSE DECLENSION
+`Latin.reverseDecline()`
+- takes Latin noun form
 
-Does not include:
-- locative
+input:    `puellīs`<br>
+output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
+
+[see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
 
 ---
-### Adjectives:
-(declines like 3ii noun)
 
-Declensions:
-
-| Declension | M | F | N | Root from |
-| ---------- | - | - | - | --------- |
-| 1/2   | -us | -a  | -um | F   |
-| 3     | -is | -is | -e  | M/F |
-| 3     | ?   | ?   | ?   | -is |
+## Russian
