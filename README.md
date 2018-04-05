@@ -5,6 +5,7 @@ translate between Latin and Russian via morphology and phonology
 
 ## Latin
 **Verbs:**
+
 Conjugations:<br>
 1: -o, -are, -āvī, -atus<br>
 2: -eo, -ēre, -ī, -(i)tus<br>
@@ -28,7 +29,8 @@ Does not include:
 - Participles
 
 <br><br>
-**Nouns:** <br>
+**Nouns:**
+
 Declensions:<br>
 1: -a, -ae<br>
 2: -um/us/r, -ī<br>
