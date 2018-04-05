@@ -155,19 +155,19 @@ LatinV_eng = [x[4] for x in LatinV]
 LatinV_rus_impf = [x[5] for x in LatinV]
 LatinV_rus_perf = [x[6] for x in LatinV]
 
-def findConjI(word):
+def LfindConjI(word):
     return LatinV_conj[LatinV_inf.index(word)]
 
-def findConjP(word):
+def LfindConjP(word):
     return LatinV_conj[LatinV_perf.index(word)]
 
-def findInfFS(word):
+def LfindInfFS(word):
     return LatinV_inf[LatinV_fs.index(word)]
 
-def findInfP(word):
+def LfindInfP(word):
     return LatinV_inf[LatinV_perf.index(word)]
 
-def findPerfI(word):
+def LfindPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
 # 55 Noun stems
@@ -226,7 +226,7 @@ LatinN = [
     ("cornū",       "cornūs",       "4",    "N",    "рог",          "horn"                      ), \
     ("diēs",        "diēī",         "5",    "M",    "день",         "day"                       ), \
     ("faciēs",      "faciēī",       "5",    "F",    "лицо",         "face,person"               ), \
-    ("rēs",         "reī",          "5",    "F",    "дело",         "thing, matter"             ) \
+    ("rēs",         "rēī",          "5",    "F",    "дело",         "thing, matter"             ) \
 ]
 LatinN_ns = [x[0] for x in LatinN]
 LatinN_gs = [x[1] for x in LatinN]
@@ -234,3 +234,15 @@ LatinN_decl = [x[2] for x in LatinN]
 LatinN_gender = [x[3] for x in LatinN]
 LatinN_rus = [x[4] for x in LatinN]
 LatinN_eng = [x[5] for x in LatinN]
+
+def LfindNomG(word):
+    return LatinN_ns[LatinN_gs.index(word)]
+
+def LfindGenN(word):
+    return LatinN_gs[LatinN_ns.index(word)]
+
+def LfindDeclG(word):
+    return LatinN_decl[LatinN_gs.index(word)]
+
+def Lis3iistemG(word):
+    return LfindDeclG == "3ii"

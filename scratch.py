@@ -44,3 +44,15 @@ macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']
 
 puella, puellae, 1, F, ABL, PL
 "puella", "puellae", "1", "F", "ABL", "PL"
+
+labor, laboris, 3, M, ACC, SG
+"labor", "laboris", "3", "M", "ACC", "SG"
+
+ā
+ī
+ū
+ēī
+īs
+ēs
+ēbus
+ūs

@@ -341,9 +341,9 @@ def findTense3P(root, per, num, perf):
 
 	if (perf):
 		perf = root[:-5]+"ī" 	# perf
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense3S(root, per, num, perf):
@@ -413,10 +413,10 @@ def findTense3S(root, per, num, perf):
 		if root[-4] == "e":
 			perf = root[:-4]+"ī"
 		# print(perf)
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
 		# print(inf)
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense2P(root, per, num, perf):
@@ -466,10 +466,10 @@ def findTense2P(root, per, num, perf):
 		if root[-6] == "e":
 			perf = root[:-6]+"ī"
 		# print(perf)
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
 		# print(inf)
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense2S(root, per, num, perf):
@@ -519,10 +519,10 @@ def findTense2S(root, per, num, perf):
 	if (perf):
 		perf = root[:-4]+"ī"
 		# print(perf)
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
 		# print(inf)
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense1P(root, per, num, perf):
@@ -580,10 +580,10 @@ def findTense1P(root, per, num, perf):
 		if root[-6] == "e":
 			perf = root[:-6]+"ī"
 		# print(perf)
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
 		# print(inf)
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTense1S(root, per, num, perf):
@@ -621,7 +621,7 @@ def findTense1S(root, per, num, perf):
 
 	elif root[-1] == "o":			#pres
 		tense = "PRES"
-		inf = Roots.findInfFS(root)
+		inf = Roots.LfindInfFS(root)
 
 	if (perf):
 		if tense == "PERF":
@@ -630,10 +630,10 @@ def findTense1S(root, per, num, perf):
 			perf = root[:-4]+"ī"
 		elif root[-3] == "e":
 			perf = root[:-3]+"ī"
-		inf = Roots.findInfP(perf)
+		inf = Roots.LfindInfP(perf)
 	else: 
 		# print(inf)
-		perf = Roots.findPerfI(inf)
+		perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def findTenseIrreg(root):
@@ -762,7 +762,7 @@ def findTenseIrreg(root):
 
 	num = form[-2:]
 	per = form[:-2]
-	perf = Roots.findPerfI(inf)
+	perf = Roots.LfindPerfI(inf)
 	return [inf,perf,per,num,tense]
 
 def reverseConjugate(word):
@@ -1081,4 +1081,86 @@ def decline(nom, gen, d, gender, case, num):
 # -------------------------------------------------------------
 # REVERSE DECLENSION
 
-# def reverseDecline(word):
+# def findDeclNomP(root):
+
+# def findDeclGenP(root):
+
+def findDeclDAblP(root):
+	num = "PL"
+	case = "DAT/ABL"
+	nom = ""
+	gen = ""
+	
+	# 1st or 2nd decl
+	if root[-2:] == "īs":
+		gen = root[:-2]+"ae" 		# 1st decl gen
+		if not (gen in Roots.LatinN_gs):
+			gen = root[:-2]+"ī" 	# 2nd decl gen
+
+	# 3rd or 4th decl
+	elif root[-4:] == "ibus":
+		gen = root[:-4]+"ūs" 		# 4th decl gen
+		if not (gen in Roots.LatinN_gs):
+			gen = root[:-2]+"is" 	# 3rd decl gen
+
+	# 5th decl
+	elif root[-4:] == "ēbus":
+		gen = root[:-4]+"ēī" 		# 5th decl gen
+	
+	nom  = Roots.LfindNomG(gen)
+	return [nom,gen,case,num]
+
+def findDeclDAblS(root):
+	num = "SG"
+	case = "DAT/ABL"
+	nom = ""
+	gen = ""
+
+	# 1st decl
+	if root[-2:] == "ā":
+		gen = root[:-2]+"ae" 	# 1st decl gen
+		case = "ABL"
+	# elif root[-2:] == "ae":
+		# 1st decl gen "ae" more common as 1st decl nom pl
+
+	# 2nd decl
+	elif root[-2:] == "ō": 		# same ending dat/abl
+		gen = root[:-2]+"ī" 	# 2nd decl gen
+
+	# 4th decl
+	elif root[-2:] == "ū": 		# 4th decl abl
+		gen = root[:-2]+"ūs"
+		case = "ABL"
+	elif root[-3:] == "uī": 	# 4th decl dat
+		gen = root[:-2]+"ūs"
+		case = "DAT"
+
+	# 5th decl
+	elif root[-2:] == "ē": 		# 5th decl abl
+		gen = root[:-2]+"ēī"
+		case = "ABL"
+	# elif root[-4:] == "ēī":
+		# 5th decl dat "ēī" more common as 5th decl gen sg
+
+	# 3rd decl
+	elif root[-1:] == "e":					# 3rd decl cons and i stem abl
+		gen = root[:-2]+"is"
+		case = "ABL"
+	elif root[-1:] == "ī": 		# 3rd decl i stem
+		gen = root[:-2]+"is"
+		if not (gen in Roots.LatinN_gs): 	# could also be 2nd decl nom pl
+			return findDeclNomP(root)
+		elif not Roots.Lis3iistemG(gen): 	# 3rd decl ii stem same ending dat/abl
+			case = "DAT" 		 			# 3rd decl cons and i stem dat
+
+	nom  = Roots.LfindNomG(gen)
+	return [nom,gen,case,num]
+
+def reverseDecline(word):
+	if (len(word) > 3 and word [-3:] == "īs") or (len(word) > 4 and word[-4:] == "ibus") or (len(word) > 5 and word[-5:] == "ēbus"):
+		return findDeclDAblP(word)
+	elif word[-2:] in ['ā','ē','ō','ū'] or word[-1] == "e" or (len(word) > 2 and word[-3:] == "uī"):
+		return findDeclDAblS(word)
+	elif (len(word) > 5 and word[-5:] in ["ārum","ērum","ōrum"]) or (len(word) > 3 and word[-3:] in ["ium","uum"]) or word[-2:] == "um":
+		return findDeclGenP(word)
+	# (len(word) > 3 and word[-:4] == "ēī")
