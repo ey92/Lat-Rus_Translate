@@ -900,8 +900,83 @@ def sndDecl(nom, gen, gender, num, case):
 			elif case == "VOC":
 				return gen
 
-# def trdDecl(nom, gen, gender, num, case):
+def trdDecl(nom, gen, t, gender, num, case):
 	# masculine and feminine share same forms; neuter is different
+	if gender == "N":
+		if num == "SG":
+			if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-2]+"ī"
+			elif case == "ACC":
+				return nom
+			elif case == "ABL":
+				if t[1] == 'i':
+					return gen[:-2]+"ī"
+				else:
+					return gen[:-2]+"e"
+			elif case == "VOC":
+				return nom
+		elif num == "PL":
+			if case == "NOM":
+				if t[1] == 'i':
+					return gen[:-2]+"ia"
+				else:
+					return gen[:-2]+"a"
+			elif case == "GEN":
+				if t[0] == 'i':
+					return gen[:-2]+"ium"
+				else:
+					return gen[:-2]+"um"
+			elif case == "DAT":
+				return gen[:-2]+"ibus"
+			elif case == "ACC":
+				if t[1] == 'i':
+					return gen[:-2]+"ia"
+				else:
+					return gen[:-2]+"a"
+			elif case == "ABL":
+				return gen[:-2]+"ibus"
+			elif case == "VOC":
+				if t[1] == 'i':
+					return gen[:-2]+"ia"
+				else:
+					return gen[:-2]+"a"
+	else:
+		if num == "SG":
+			if case == "NOM":
+				return nom
+			elif case == "GEN":
+				return gen
+			elif case == "DAT":
+				return gen[:-2]+"ī"
+			elif case == "ACC":
+				return gen[:-2]+"em"
+			elif case == "ABL":
+				if t[1] == 'i':
+					return gen[:-2]+"ī"
+				else:
+					return gen[:-2]+"e"
+			elif case == "VOC":
+				return nom
+		elif num == "PL":
+			if case == "NOM":
+				return gen[:-2]+"ēs"
+			elif case == "GEN":
+				if t[0] == 'i':
+					return gen[:-2]+"ium"
+				else:
+					return gen[:-2]+"um"
+			elif case == "DAT":
+				return gen[:-2]+"ibus"
+			elif case == "ACC":
+				return gen[:-2]+"ēs"
+			elif case == "ABL":
+				return gen[:-2]+"ibus"
+			elif case == "VOC":
+				return gen[:-2]+"ēs"
 
 def forDecl(nom, gen, gender, num, case):
 	# masculine and feminine share same forms; neuter is different
@@ -996,8 +1071,8 @@ def decline(nom, gen, d, gender, case, num):
 		return fstDecl(nom,gen,gender,num,case)
 	elif d == '2':
 		return sndDecl(nom,gen,gender,num,case)
-	# elif d == '3':
-		# return trdDecl(nom,gen,d,num,case)
+	elif d[0] == '3':
+		return trdDecl(nom,gen,d[1:],gender,num,case)
 	elif d == '4':
 		return forDecl(nom,gen,gender,num,case)
 	elif d == '5':

@@ -100,27 +100,27 @@ LatinN = [
     ("liber",   "librī",    "2",    "M"), \
     ("bellum",  "bellī",    "2",    "N"), \
     ("dōnus",   "dōnī",     "2",    "N"), \
-    ("homō",    "hominis",  "3",    "M"), \
-    ("rex",     "regis",    "3",    "M"), \
-    ("consul",  "consulis", "3",    "M"), \
-    ("pānis",   "pānis",    "3",    "M"), \
-    ("jūs",     "jūris",    "3",    "N"), \
-    ("flūmen",  "flūminis", "3",    "N"), \
-    ("tempus",  "temporis", "3",    "N"), \
-    ("laus",    "laudis",   "3",    "F"), \
-    ("nōmen",   "nōminis",  "3",    "N"), \
-    ("pōns",    "pōntis",   "3i",   "M"), \
-    ("mēnsis",  "mēnsis",   "3i",   "M"), \
-    ("cīvis",   "cīvis",    "3i",   "MF"), \
-    ("nox",     "noctis",   "3i",   "F"), \
-    ("mors",    "mortis",   "3i",   "F"), \
-    ("urbs",    "urbis",    "3i",   "F"), \
-    ("turris",  "turris",   "3i",   "F"), \
-    ("nāvis",   "nāvis",    "3i",   "F"), \
-    ("pārs",    "pārtis",   "3i",   "F"), \
-    ("clāvis",  "clāvis",   "3i",   "F"), \
-    ("animal",  "animālis", "3i",   "N"), \
-    ("mare",    "maris",    "3i",   "N"), \
+    ("homō",    "hominis",  "3  ",  "M"), \
+    ("rex",     "regis",    "3  ",  "M"), \
+    ("consul",  "consulis", "3  ",  "M"), \
+    ("pānis",   "pānis",    "3  ",  "M"), \
+    ("laus",    "laudis",   "3  ",  "F"), \
+    ("jūs",     "jūris",    "3  ",  "N"), \
+    ("flūmen",  "flūminis", "3  ",  "N"), \
+    ("tempus",  "temporis", "3  ",  "N"), \
+    ("nōmen",   "nōminis",  "3  ",  "N"), \
+    ("pōns",    "pōntis",   "3i ",  "M"), \
+    ("mēnsis",  "mēnsis",   "3i ",  "M"), \
+    ("nox",     "noctis",   "3i ",  "F"), \
+    ("mors",    "mortis",   "3i ",  "F"), \
+    ("urbs",    "urbis",    "3i ",  "F"), \
+    ("turris",  "turris",   "3i ",  "F"), \
+    ("cīvis",   "cīvis",    "3ii",  "MF"), \
+    ("nāvis",   "nāvis",    "3ii",  "F"), \
+    ("pārs",    "pārtis",   "3ii",  "F"), \
+    ("clāvis",  "clāvis",   "3ii",  "F"), \
+    ("animal",  "animālis", "3ii",  "N"), \
+    ("mare",    "maris",    "3ii",  "N"), \
     ("manus",   "manūs",    "4",    "F"), \
     ("portus",  "portūs",   "4",    "F"), \
     ("cornū",   "cornūs",   "4",    "N"), \
