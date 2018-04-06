@@ -755,7 +755,7 @@ def testrevNomS():
 # print("---------")
 # testrevNomS()
 
-def test1DA12():
+def testDA12():
 		print Latin.declineA('pulcher','pulchra','12','F','NOM','SG')
 		print Latin.declineA('pulcher','pulchra','12','F','GEN','SG')
 		print Latin.declineA('pulcher','pulchra','12','F','DAT','SG')
@@ -835,7 +835,7 @@ def test1DA12():
 		print Latin.declineA('bonus','bona','12','N','ABL','PL')
 		print Latin.declineA('bonus','bona','12','N','VOC','PL')
 
-def test1DA3():
+def testDA3():
 	print Latin.declineA('ācer','ācris','3a','F','NOM','SG')
 	print Latin.declineA('ācer','ācris','3a','F','GEN','SG')
 	print Latin.declineA('ācer','ācris','3a','F','DAT','SG')
@@ -915,6 +915,6 @@ def test1DA3():
 	print Latin.declineA('fēlīx','fēlicis','3b','N','ABL','PL')
 	print Latin.declineA('fēlīx','fēlicis','3b','N','VOC','PL')
 
-# test1DA12()
+# testDA12()
 # print("---------")
-test1DA3()
+# testDA3()

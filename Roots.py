@@ -1,27 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# LATIN
-
-# CONJUGATION
-# input:    Latin.conjugate("amare","amāvi","1","FST","SG","PRES")
-# output:   amo
-
-# REVERSE CONJUGATION
-# input:    Latin.reverseConjugate("amant")
-# output:   ['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']
-# output2:  ['amare', 'amāvi', 'TRD', 'PL', 'PRES']
-
-# DECLENSION
-# input:    Latin.decline("puella","puellae","1","F","ACC","SG")
-# output:   puellam
-
-# REVERSE DECLENSION
-# input:    
-# output:
-
-
 # 55 Noun stems
-NMap = {
+NMap = [
     ("puellae",      "девочка",      "girl"                      ), \
     ("terrae",       "земля",        "land"                      ), \
     ("feminae",      "женщина",      "woman"                     ), \
@@ -77,7 +57,8 @@ NMap = {
     ("fīnis",        "конец",        "end,ending"                ), \
     ("jānuae",       "дверь",        "door"                      ), \
     ("diēī",         "день",         "day"                       ) \
-}
+]
+
 NMap_lat = [x[0] for x in NMap]
 NMap_rus = [x[1] for x in NMap]
 NMap_eng = [x[2] for x in NMap]
@@ -112,6 +93,7 @@ VMap = [
     ("capere",           "брать",       "to take"           ), \
     ("incipere",         "начать",      "to begin"          ) \
 ]
+
 VMap_lat = [x[0] for x in VMap]
 VMap_rus = [x[1] for x in VMap]
 VMap_eng = [x[2] for x in VMap]
@@ -147,6 +129,7 @@ LatinV = [
     ("capio",       "capere",           "cēpī",         5, "to take",           "брать",     "взять"), \
     ("incipio",     "incipere",         "incēpī",       5, "to begin",          "начать",    "начинать") \
 ]
+
 LatinV_fs = [x[0] for x in LatinV]
 LatinV_inf = [x[1] for x in LatinV]
 LatinV_perf = [x[2] for x in LatinV]
