@@ -5,7 +5,7 @@ As my final project for this class, I am creating a program to translate between
 
 This translator was created to do a direct, word-for-word literal translation between Latin and Russian. <br>
 
-It doesn't into account context or identify special phrasal constructions. It is only concerned with the indicative mood and active voice for verbs. Nouns are not declined into the locative case. Adjectives used substantively will not be detected as being used in such a way. <br>
+It doesn't into account context or identify special phrasal constructions. It is only concerned with the indicative mood and active voice for verbs. Nouns are not declined into the locative case. Adjectives used substantively will not be detected as being used in such a way. Additionally, there are no adverbs, auxiliary verbus, modals, comparatives, or superlatives.<br>
 
 [Roots.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Roots.py) has all of the words included in the translator's dictionary. It can attempt to conjugate verbs and decline nouns/adjectives when given the parameters needed, but cannot deconstruct (and therefore translate) words not already in the dictionary.<br>
 

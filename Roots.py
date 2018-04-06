@@ -241,12 +241,12 @@ def LisNG(word):
 
 # 8 Adjectives
 LatinA = [
-    ('bonus', 'bona', '12'), \
-    ('miser', 'misera', '12'), \
-    ('pulcher', 'pulchra', '12'), \
-    ('ācer', 'ācris', '3a'), \
-    ('fortis', 'fortis', '3a'), \
-    ('prūdens', 'prūdentis', '3b'), \
-    ('amāns', 'amantis', '3b'), \
-    ('fēlīx', 'fēlicis', '3b'), \
+    ('bonus',   'bona',     '12',   'хороший',          'good'          ), \
+    ('miser',   'misera',   '12',   'жалкий',           'miserable'     ), \
+    ('pulcher', 'pulchra',  '12',   'красивы',          'beautiful'     ), \
+    ('ācer',    'ācris',    '3a',   'острый',           'sharp'         ), \
+    ('fortis',  'fortis',   '3a',   'крепкий',          'strong, brave' ), \
+    ('amāns',   'amantis',  '3b',   'любящий',          'loving'        ), \
+    ('fēlīx',   'fēlicis',  '3b',   'счастливый',       'lucky, happy'  ), \
+    ('prūdens', 'prūdentis','3b',   'благоразумный',    'wise'          ), \
 ]
