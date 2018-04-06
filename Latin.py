@@ -1339,3 +1339,49 @@ def reverseDecline(word):
 	# NOM SG
 	else:
 		return findDeclNomS(word)
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# ADJECTIVES
+# -------------------------------------------------------------
+# DECLENSION
+
+def declineA(nomM, root, d, gender, case, num):
+	if d == "12":
+		if gender == "F":
+			d = "1"
+			nom = root[:-1]+"a"
+			gen = root[:-1]+"ae"
+			return decline(nom,gen,d,gender,case,num)
+		else:
+			d = "2"
+			if gender == "M":
+				gen = root[:-1]+"ī"
+				return decline(nomM,gen,d,gender,case,num)
+			elif gender == "N":
+				nom = root[:-1]+"um"
+				gen = root[:-1]+"ī"
+				return decline(nom,gen,d,gender,case,num)
+	elif d == "3a":
+		if gender == "N":
+			d = "3ii"
+			nom = root[:-2]+"e"
+			gen = root
+			return decline(nom,gen,d,gender,case,num)
+		else:
+			d = "3ii"
+			gen = root
+			if gender == 'F':
+				nom = root
+			elif gender == 'M':
+				nom = nomM
+			return decline(nom,gen,d,gender,case,num)
+	elif d == "3b":
+		if gender == "N":
+			d = "3ii"
+			nom = nomM
+			gen = root
+			return decline(nom,gen,d,gender,case,num)
+		else:
+			d = "3ii"
+			return decline(nomM,root,d,gender,case,num)

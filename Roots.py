@@ -255,3 +255,14 @@ def Lis3iistemG(word):
 # returns True if gender of genS provided is N
 def LisNG(word):
     return LatinN_gender[LatinN_gs.index(word)] == "N"
+
+LatinA = [
+    ('bonus', 'bona', '12'), \
+    ('miser', 'misera', '12'), \
+    ('pulcher', 'pulchra', '12'), \
+    ('ācer', 'ācris', '3a'), \
+    ('fortis', 'fortis', '3a'), \
+    ('prūdens', 'prūdentis', '3b'), \
+    ('amāns', 'amantis', '3b'), \
+    ('fēlīx', 'fēlicis', '3b'), \
+]

@@ -50,6 +50,6 @@ Declensions:
 
 | Declension | M | F | N | Root from |
 | ---------- | - | - | - | --------- |
-| 1/2   | -us | -a  | -um | F   |
-| 3     | -is | -is | -e  | M/F |
-| 3     | ?   | ?   | ?   | -is |
+| 1/2   | -us/r | -a  | -um | F   |
+| 3a    | -is   | -is | -e  | M/F |
+| 3b    | ?     | ?   | ?   | -is |

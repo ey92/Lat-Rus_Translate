@@ -48,6 +48,8 @@ puella, puellae, 1, F, ABL, PL
 labor, laboris, 3, M, ACC, SG
 "labor", "laboris", "3", "M", "ACC", "SG"
 
+'pulcher','pulchra','12','N','ABL','SG'
+
 ārum
 ī
 ā

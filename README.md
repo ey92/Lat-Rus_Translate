@@ -10,6 +10,21 @@ translate between Latin and Russian via morphology and phonology
 ## Latin
 
 ### Verbs
+#### CONJUGATION
+`Latin.conjugate()`
+- takes infinitive, perfective, type, number, person, tense
+
+input:    `amare, amāvi, 1, FST, SG, PRES`<br>
+output:   `amo`<br>
+
+#### REVERSE CONJUGATION
+`Latin.reverseConjugate()`
+- takes Latin verb form
+
+input:    `amant`<br>
+output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
+output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
+
 #### Verb Parameters
 
 | Parameter | Meaning |
@@ -26,35 +41,7 @@ translate between Latin and Russian via morphology and phonology
 | PLUP  | pluperfect tense      |
 | FUTP  | future perfect tense  |
 
-#### CONJUGATION
-`Latin.conjugate()`
-- takes infinitive, perfective, type, number, person, tense
-
-input:    `amare, amāvi, 1, FST, SG, PRES`<br>
-output:   `amo`<br>
-
-#### REVERSE CONJUGATION
-`Latin.reverseConjugate()`
-- takes Latin verb form
-
-input:    `amant`<br>
-output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
-output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
-
 ### Nouns
-#### Noun Parameters
-
-| Parameter | Meaning |
-| --------- | ------- |
-| SG  | singular       |
-| PL  | plural         |
-| NOM | nominative case|
-| GEN | genitive case  |
-| DAT | dative case    |
-| ACC | accusative case|
-| ABL | ablative case  |
-| VOC | vocative case  |
-
 #### DECLENSION
 `Latin.decline()`
 - takes nominativeS, genitiveS, declension d, number, person, tense
@@ -68,6 +55,19 @@ output:   `puellam`<br>
 
 input:    `puellīs`<br>
 output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
+
+#### Noun Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| ABL | ablative case   |
+| VOC | vocative case   |
 
 [see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
 
