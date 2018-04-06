@@ -14,14 +14,14 @@ translate between Latin and Russian via morphology and phonology
 `Latin.conjugate()`
 - takes infinitive, perfective, type, number, person, tense
 
-input:    `amare, amāvi, 1, FST, SG, PRES`<br>
+ input:   `amare, amāvi, 1, FST, SG, PRES`<br>
 output:   `amo`<br>
 
 #### REVERSE CONJUGATION
 `Latin.reverseConjugate()`
 - takes Latin verb form
 
-input:    `amant`<br>
+ input:    `amant`<br>
 output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
 output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
 
@@ -44,16 +44,16 @@ output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
 ### Nouns
 #### DECLENSION
 `Latin.decline()`
-- takes nominativeS, genitiveS, declension d, number, person, tense
+- takes nominativeS, genitiveS, declension d, gender, case, number
 
-input:    `puella, puellae, 1, F, ACC, SG`<br>
+ input:   `puella, puellae, 1, F, ACC, SG`<br>
 output:   `puellam`<br>
 
 #### REVERSE DECLENSION
 `Latin.reverseDecline()`
 - takes Latin noun form
 
-input:    `puellīs`<br>
+ input:    `puellīs`<br>
 output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
 
 #### Noun Parameters
@@ -68,6 +68,21 @@ output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
 | ACC | accusative case |
 | ABL | ablative case   |
 | VOC | vocative case   |
+
+### Adjectives
+#### DECLENSION
+`Latin.declineA()`
+- takes nomM, genitive/nomF (root), declension d, gender, case, number
+
+ input: `ācer, ācris, 3a, N, GEN, PL`<br>
+output: `acrium`<br>
+
+#### REVERSE DECLENSION
+`Latin.reverseDeclineA()`
+- takes Latin adjective form
+
+ input:<br>
+output:<br>
 
 [see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
 

@@ -1065,7 +1065,7 @@ def fthDecl(nom, gen, gender, num, case):
 		elif case == "VOC":
 			return gen[:-3]+"ēs"
 
-# takes nominativeS, genitiveS, declension d, number, person, tense
+# takes nominativeS, genitiveS, declension d, gender, case, number
 def decline(nom, gen, d, gender, case, num):
 	if d == '1':
 		return fstDecl(nom,gen,gender,num,case)
@@ -1346,6 +1346,7 @@ def reverseDecline(word):
 # -------------------------------------------------------------
 # DECLENSION
 
+# takes nomM, genitive/nomF (root), declension d, gender, case, number
 def declineA(nomM, root, d, gender, case, num):
 	if d == "12":
 		if gender == "F":

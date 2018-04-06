@@ -256,6 +256,7 @@ def Lis3iistemG(word):
 def LisNG(word):
     return LatinN_gender[LatinN_gs.index(word)] == "N"
 
+# 8 Adjectives
 LatinA = [
     ('bonus', 'bona', '12'), \
     ('miser', 'misera', '12'), \

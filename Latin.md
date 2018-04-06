@@ -44,7 +44,6 @@ Does not include:
 
 ---
 ### Adjectives:
-(declines like 3ii noun)
 
 Declensions:
 
@@ -53,3 +52,6 @@ Declensions:
 | 1/2   | -us/r | -a  | -um | F   |
 | 3a    | -is   | -is | -e  | M/F |
 | 3b    | ?     | ?   | ?   | -is |
+
+1/2 decline like norm 1/2 nouns
+3a and 3b decline like 3ii nouns
