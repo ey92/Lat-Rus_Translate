@@ -1,3 +1,4 @@
+# Elizabeth Yam ey92
 # -*- coding: utf-8 -*-
 vowLow = [u'а', u'е', u'ё', u'и', u'о', u'у', u'ы', u'э', u'ю', u'я']
 vowCap = [u'А', u'Е', u'Ё', u'И', u'О', u'У', u'Ы', u'Э', u'Ю', u'Я']

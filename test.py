@@ -1,3 +1,4 @@
+# Elizabeth Yam ey92
 # -*- coding: utf-8 -*-
 import Latin
 def testpres():
@@ -934,10 +935,23 @@ def testrevDASA():
 	print Latin.reverseDeclineA('ācrī')
 	print Latin.reverseDeclineA('fēlicī')
 
+def testrevGenPA():
+	print Latin.reverseDeclineA('pulchrārum')
+	print Latin.reverseDeclineA('pulchrōrum')
+	print("---------")
+	print Latin.reverseDeclineA('bonārum')
+	print Latin.reverseDeclineA('bonōrum')
+	print("---------")
+	print("---------")
+	print Latin.reverseDeclineA('ācrium')
+	print Latin.reverseDeclineA('fēlicium')
+
 # testDA12()
 # print("---------")
 # testDA3()
 
 # testrevDAPA()
 # print("---------")
-testrevDASA()
+# testrevDASA()
+# print("---------")
+testrevGenPA()

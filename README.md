@@ -1,3 +1,4 @@
+[comment]: <> (Elizabeth Yam ey92)
 # Lat-Rus_Translate (Latin/Russian Literal Translator)
 ## CS 4744/Ling 4244 Computational Linguistics Final Project (1mo)
 ## Elizabeth Yam (ey92)
