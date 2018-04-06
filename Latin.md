@@ -61,7 +61,7 @@ Declensions:
 
 #### Latin Nouns
 
-| NOM SG | GEN SG | Decl | Gender | Russian | English |
+| NOM SG | GEN SG | Decl | Gender | Russian NOM SG | English |
 | ------ | ------ | ---- | ------ | ------- | ------- |
 |"agricola"|    "agricolae"|    "1"|    "M"|    "земледелец"|   "farmer"                    | 
 |"femina"|      "feminae"|      "1"|    "F"|    "женщина"|      "woman"                     | 
@@ -121,14 +121,14 @@ Declensions:
 
 #### Latin Verbs
 
-| FST SG PRES | Infinitive | FST SG PERF | Conjugation<br>(0 for irregular) | English | Russian Imperfective | Russian Perfective |
+| FST SG PRES | Infinitive | FST SG PERF | Conj<br>(0 = irreg) | English | Russian Imperf Inf | Russian Perf Inf |
 | ----------- | ----- | ---------------- | --------- | ------ | ------------------ | --------- |
 |"eo"|          "ire"|              "īvī"|          0| "to go"|             "пойти"|     "идти"|
 |"sum"|         "esse"|             "fuī"|          0| "to be"|             "есть"|      "быть"|
 |"possum"|      "posse"|            "potuī"|        0| "to be able"|        "мочь"|      "смочь"|
 |"volo"|        "velle"|            "voluī"|        0| "to want"|           "хотеть"|    "захотеть"|
 |"nōlo"|        "nōlle"|            "nōluī"|        0| "to not want"|       "нехотеть"|  "незахотеть"|
-|"fero"|        "ferre"|            "tulī"|         0| "to bring| carry"|   "нести"|     "понести"|
+|"fero"|        "ferre"|            "tulī"|         0| "to bring, carry"|   "нести"|     "понести"|
 |"amo"|         "amare"|            "amāvī"|        1| "to love"|           "любить"|    "полюбить"|
 |"cōgito"|      "cōgitare"|         "cōgitāvī"|     1| "to think"|          "думать"|    "подумать"|
 |"paro"|        "parare"|           "parāvī"|       1| "to prepare"|        "готовить"|  "подготовить"|

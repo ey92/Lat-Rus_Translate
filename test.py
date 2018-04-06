@@ -915,6 +915,29 @@ def testDA3():
 	print Latin.declineA('fēlīx','fēlicis','3b','N','ABL','PL')
 	print Latin.declineA('fēlīx','fēlicis','3b','N','VOC','PL')
 
+def testrevDAPA():
+	print Latin.reverseDeclineA('pulchrīs')
+	print Latin.reverseDeclineA('bonīs')
+	print("---------")
+	print Latin.reverseDeclineA('ācribus')
+	print Latin.reverseDeclineA('fēlicibus')
+
+def testrevDASA():
+	print ("* "); print Latin.reverseDeclineA('pulchrae')
+	print Latin.reverseDeclineA('pulchrā')
+	print Latin.reverseDeclineA('pulchrō')
+	print("---------")
+	print Latin.reverseDeclineA('bonā')
+	print Latin.reverseDeclineA('bonō')
+	print("---------")
+	print("---------")
+	print Latin.reverseDeclineA('ācrī')
+	print Latin.reverseDeclineA('fēlicī')
+
 # testDA12()
 # print("---------")
 # testDA3()
+
+# testrevDAPA()
+# print("---------")
+testrevDASA()

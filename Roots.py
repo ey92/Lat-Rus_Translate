@@ -250,3 +250,18 @@ LatinA = [
     ('fēlīx',   'fēlicis',  '3b',   'счастливый',       'lucky, happy'  ), \
     ('prūdens', 'prūdentis','3b',   'благоразумный',    'wise'          ), \
 ]
+
+LatinA_nm = [x[0] for x in LatinA]          # list of all Latin nomS
+LatinA_fr = [x[1] for x in LatinA]          # list of all Latin genS
+LatinA_decl = [x[2] for x in LatinA]        # list of all Latin decl
+LatinA_rus = [x[3] for x in LatinA]         # list of all Latin gender
+LatinA_eng = [x[4] for x in LatinA]         # list of all Russian equiv of Latin
+
+def LfindMascR(word):
+    return LatinA_nm[LatinA_fr.index(word)]    
+
+def LfindRootNM(word):
+    return LatinA_fr[LatinA_nm.index(word)]
+
+def LfindDeclR(word):
+    return LatinA_decl[LatinA_fr.index(word)]

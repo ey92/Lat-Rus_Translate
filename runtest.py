@@ -150,7 +150,18 @@ def latinDeconstructVerbs():
 
 	return cont()
 
-# def latinDeconstructAdj():
+def latinDeconstructAdj():
+	# deconstruct adjective
+	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
+	params = processInput(params)
+	while len(params) != 1 or not(checkStr(params)):
+		print(len(params))
+		print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
+		params = processInput(params)
+	print Latin.reverseDeclineA(params[0])
+
+	return cont()
 
 def latinDeconstruct():
 	print("What part of speech is the form you want to deconstruct?\n1) Noun\n2) Verb\n3) Adjective\n4) Return to previous menu")
@@ -188,12 +199,19 @@ def latinDeconstruct():
 				return val	
 
 	# Deconstruct Adjective
-	# elif choice3 == 3:
-		# deconstruct adjective
+	elif choice3 == 3:
+		val = 2
+		while (val in [1,2]):
+			val = latinDeconstructAdj()
+			if val == 1:
+				return 2
+			elif val == 2:
+				val = latinDeconstructAdj()
+			elif val == None:
+				return val	
 
 	elif choice3 == 4:
 		return 1
-
 
 def latinMenu():
 	print("What do you want to do?\n1) Construct Latin forms\n2) Deconstruct Latin forms\n3) Return to previous menu")

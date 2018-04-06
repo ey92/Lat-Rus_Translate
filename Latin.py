@@ -1334,7 +1334,7 @@ def reverseDecline(word):
 	elif (len(word) > 2 and word[-3:] in ["ās","ōs","ēs","ūs"]) or word[-2:] in ["ae","ua","ī"] or word[-1] == "a":
 		return findDeclNomAccP(word)
 	# ACC SG
-	elif word[-2:] in ["am","um","is","em"]:
+	elif word[-2:] in ["am","um","em"]:
 		return findDeclAccS(word)
 	# NOM SG
 	else:
@@ -1386,3 +1386,251 @@ def declineA(nomM, root, d, gender, case, num):
 		else:
 			d = "3ii"
 			return decline(nomM,root,d,gender,case,num)
+
+# -------------------------------------------------------------
+# REVERSE DECLENSION
+
+def findDeclNomSA(root, gender):
+	num = "SG"
+	case = "NOM"
+	gender = "F/M/N" if gender == None else gender
+	rt = ""
+	nom = ""
+
+	if root in Roots.LatinA_fr:
+		rt = root
+		nom = Roots.LfindMascR(rt)
+	elif root in Roots.LatinN_ns:
+		nom = root
+		rt = Roots.LfindRootNM(nom)
+	elif root[-2:] == "um":
+		rt = root[:-2]+"a"
+		gender = "N"
+	elif root[-1] == "e":
+		rt = root[:-1]+"is"
+		gender = "N"
+	
+	return [nom,rt,case,num, gender]
+
+def findDeclAccSA(root, gender):
+	num = "SG"
+	case = "ACC"
+	gender = "F/M/N" if gender == None else gender
+	rt = ""
+	nom = ""
+
+	# 1st decl
+	if root[-2:] == "am":
+		rt = root[:-1]
+		gender = 'F'
+
+	# 3rd decl
+	elif root[-2:] == "em":
+		rt = root[:-2]+"is"	# 3rd decl
+
+	# 2nd decl
+	elif root[-2:] == "um":
+		rt = root[:-2]+"a" 			# if M, must be 2nd decl acc sg
+		if gender[0] != 'M': 		# could be nom sg N
+			case = "NOM/ACC"
+			if len(gender) > 1:
+				gender = 'M/N'
+
+	nom  = Roots.LfindMascR(rt)
+	return [nom,rt,case,num, gender]
+
+def findDeclNomAccPA(root, gender):
+	num = "PL"
+	case = "NOM/ACC"
+	gender = "F/M/N" if gender == None else gender
+	rt = ""
+	nom = ""
+
+	# 1st decl
+	if root[-2:] == "ae": 		# 1st decl nom pl
+		case = "NOM"
+		rt = root[:-1]
+		gender = "F"
+	elif root[-3:] == "ās": 	# 1st decl acc pl
+		case = "ACC"
+		rt = root[:-3]+"a"
+		gender = "F"
+
+	# 3rd decl
+	elif root[-3:] == "ēs":
+		rt = root[:-3]+"is" 	# 3rd decl
+		if len(gender) > 1:
+			gender = "F/M"
+	elif root[-2:] == "ia":
+		rt = root[:-2]+"is" 	# 3rd decl i stem
+		gender = "N"
+
+	# 2nd decl
+	elif root[-2:] == "ī": 		# 2nd decl nom pl
+		case = "NOM"
+		rt = root[:-2]+"a"		# 2nd decl nom pl = rt sg
+		gender = "M"
+	elif root[-3:] == "ōs": 	# 2nd decl acc pl
+		case = "ACC"
+		rt = root[:-3]+"a"
+		gender = "M"
+	
+	elif root[-1] == "a": 		# 2nd decl nom/acc pl N
+		if gender[0] == 'N':
+			rt = root 		 		# 2nd decl
+		else: 					# 1st decl nom sg F more common
+			return findDeclNomSA(root)
+		
+	nom  = Roots.LfindMascR(rt)
+	return [nom,rt,case,num,gender]
+
+def findDeclGenSA(root, gender):
+	num = "SG"
+	case = "GEN"
+	gender = "F/M/N" if gender == None else gender
+	gen = ""
+	nom = ""
+
+	# 1st decl
+	# if root[-2:] == "ae":
+		# 1st decl gen "ae" more common as 1st decl nom pl
+
+	# 2nd decl
+	if root[-2:] == "ī":
+		# 3rd decl dat/abl "ī" should have already been taken care of
+		# 2nd decl gen "ī" more common as 2nd decl nom pl unless N
+		if gender[0] == "N":
+			gen = root[:-2]+"a"
+		else: 	# if not N, go to 2nd decl nom pl
+			return findDeclNomAccPA(root,gender)
+
+	# 3rd decl
+	elif root[-2:] == "is":
+		gen = root
+		if gen in Roots.LatinN_gs and (gen in Roots.LatinN_ns): 	# if is a nom sg, that is more common
+			return findDeclNomSA(root)
+
+	nom  = Roots.LfindMascR(gen)
+	return [nom,gen,case,num]
+
+def findDeclGenPA(root, gender):
+	num = "PL"
+	case = "GEN"
+	gender = "F/M/N" if gender == None else gender
+	gen = ""
+	nom = ""
+
+	# 1st decl
+	if root[-5:] == "ārum":
+		gen = root[:-5]+"a"
+		gender = "F"
+
+	# 2nd decl
+	elif root[-5:] == "ōrum":
+		gen = root[:-5]+"a"
+		if gender[0] == 'F':
+			gender = "M/N"
+
+	# 3rd decl
+	elif root[-3:] == "ium":
+		gen = root[:-3]+"is"
+
+	nom  = Roots.LfindMascR(gen)
+	return [nom,gen,case,num,gender]
+
+def findDeclDAblSA(root, gender):
+	num = "SG"
+	case = "DAT/ABL"
+	gender = "F/M/N" if gender == None else gender
+	nom = ""
+	rt = ""
+
+	# 1st decl
+	if root[-2:] == "ā":
+		rt = root[:-2]+"a" 	# 1st decl rt
+		case = "ABL"
+		gender = "F"
+	elif root[-2:] == "ae":
+		# 1st decl dat "ae" more common as 1st decl nom pl
+		return findDeclNomAccPA(root)
+
+	# 2nd decl
+	elif root[-2:] == "ō": 		# same ending dat/abl
+		rt = root[:-2]+"a" 	# 2nd decl rt
+		if gender[0] == 'F':
+			gender = "M/N"
+
+	# 3rd decl
+	elif root[-2:] == "ī": 		# 3rd decl i stem
+		rt = root[:-2]+"is"
+		if not (rt in Roots.LatinA_fr): 	# could also be 2nd decl nom pl
+			return findDeclGenSA(root,gender)
+
+	nom  = Roots.LfindMascR(rt)
+	return [nom,rt,case,num, gender]
+
+def findDeclDAblPA(root, gender):
+	num = "PL"
+	case = "DAT/ABL"
+	gender = "F/M/N" if gender == None else gender
+	nom = ""
+	rt = ""
+	
+	# 1st or 2nd decl
+	if root[-3:] == "īs":
+		rt = root[:-3]+"a" 		# 1st/2nd decl root
+
+	# 3rd decl
+	elif root[-4:] == "ibus":
+		rt = root[:-4]+"is" 	# 3rd decl rt
+
+	nom  = Roots.LfindMascR(rt)
+	return [nom,rt,case,num,gender]
+
+def reverseDeclineA(word, gender=None):
+	# NOM SG
+	if word in Roots.LatinN_ns:
+		return findDeclNomSA(word,gender)
+	# DAT/ABL PL
+	elif (len(word) > 3 and word [-3:] == "īs") or (len(word) > 4 and word[-4:] == "ibus"):
+		return findDeclDAblPA(word,gender)
+	# DAT/ABL SG
+	elif word[-2:] in ['ā','ī','ō']:
+		return findDeclDAblSA(word,gender)
+	# GEN PL
+	elif (len(word) > 5 and word[-5:] in ["ārum","ōrum"]) or (len(word) > 3 and word[-3:] in ["ium"]):
+		return findDeclGenPA(word,gender)
+	# GEN SG
+	elif word[-2:] == "ī" or word[-2:] == "is":
+		return findDeclGenSA(word,gender)
+	# NOM/ACC PL
+	elif (len(word) > 2 and word[-3:] in ["ās","ōs","ēs"]) or word[-2:] in ["ae","ī"] or word[-1] == "a":
+		return findDeclNomAccPA(word,gender)
+	# ACC SG
+	elif word[-2:] in ["am","um","em"]:
+		return findDeclAccSA(word,gender)
+	# NOM SG
+	else:
+		return findDeclNomSA(word,gender)
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# NOUNS AND ADJECTIVES
+# -------------------------------------------------------------
+# DECLINE NOUNS AND ADJECTIVES
+
+def declineAN(nom, root, d, gender, case, num, AN):
+	if AN == 'A':
+		return declineA(nom,root,d,gender,case,num)
+	elif AN == 'N':
+		return decline(nom,root,d,gender,case,num)
+
+# REVERSE NOUNS AND ADJECTIVES
+def reversedeclineAN(word):
+	try:
+		return reverseDecline(word)+['N']
+	except:
+		try:
+			return reverseDeclineA(word)+['A']
+		except:
+			return None

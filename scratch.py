@@ -49,6 +49,7 @@ labor, laboris, 3, M, ACC, SG
 "labor", "laboris", "3", "M", "ACC", "SG"
 
 'pulcher','pulchra','12','N','ABL','SG'
+ pulcher , pulchra , 12 , N , ABL , SG 
 
 ārum
 ī
