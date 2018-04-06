@@ -10,6 +10,22 @@ translate between Latin and Russian via morphology and phonology
 ## Latin
 
 ### Verbs
+#### Verb Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| FST   | first-person          |
+| SND   | second-person         |
+| TRD   | third-person          |
+| SG    | singular              |
+| PL    | plural                |
+| PRES  | present tense         |
+| IMPF  | imperfect tense       |
+| FUTR  | future tense          |
+| PERF  | perfect tense         |
+| PLUP  | pluperfect tense      |
+| FUTP  | future perfect tense  |
+
 #### CONJUGATION
 `Latin.conjugate()`
 - takes infinitive, perfective, type, number, person, tense
@@ -26,6 +42,19 @@ output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
 output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
 
 ### Nouns
+#### Noun Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| SG  | singular       |
+| PL  | plural         |
+| NOM | nominative case|
+| GEN | genitive case  |
+| DAT | dative case    |
+| ACC | accusative case|
+| ABL | ablative case  |
+| VOC | vocative case  |
+
 #### DECLENSION
 `Latin.decline()`
 - takes nominativeS, genitiveS, declension d, number, person, tense
