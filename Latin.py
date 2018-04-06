@@ -794,8 +794,8 @@ def reverseConjugate(word):
 			return findTense3S(word,per,num,perf)
 
 	# unicode macron issues
-	# elif word[-1] == "o" or word[-1] == "m" or word[-2] == "ī":
-	else:
+	elif word[-1] == "o" or word[-1] == "m" or word[-2] == "ī":
+	# else:
 		per = "FST"
 		num = "SG"
 		return findTense1S(word,per,num,perf)
@@ -1398,10 +1398,21 @@ def findDeclNomSA(root, gender):
 	rt = ""
 	nom = ""
 
+	# can tell gender if 1st/2nd decl
+	if root[-1] == 'a':
+		gender = 'F'
+	elif root[-2:] == 'us':
+		gender = 'M'
+	elif root[-2:] == 'um':
+		gender = 'N'
+		root = root[:-2]+"a"
+	elif root[-1] == 'r' and (Roots.LfindDeclNM(root) == '12'):
+		gender = 'M'
+
 	if root in Roots.LatinA_fr:
 		rt = root
 		nom = Roots.LfindMascR(rt)
-	elif root in Roots.LatinN_ns:
+	elif root in Roots.LatinA_nm:
 		nom = root
 		rt = Roots.LfindRootNM(nom)
 	elif root[-2:] == "um":
@@ -1480,7 +1491,7 @@ def findDeclNomAccPA(root, gender):
 		if gender[0] == 'N':
 			rt = root 		 		# 2nd decl
 		else: 					# 1st decl nom sg F more common
-			return findDeclNomSA(root)
+			return findDeclNomSA(root,gender)
 		
 	nom  = Roots.LfindMascR(rt)
 	return [nom,rt,case,num,gender]
@@ -1512,7 +1523,7 @@ def findDeclGenSA(root, gender):
 			return findDeclNomSA(root)
 
 	nom  = Roots.LfindMascR(gen)
-	return [nom,gen,case,num]
+	return [nom,gen,case,num,gender]
 
 def findDeclGenPA(root, gender):
 	num = "PL"
@@ -1590,7 +1601,7 @@ def findDeclDAblPA(root, gender):
 
 def reverseDeclineA(word, gender=None):
 	# NOM SG
-	if word in Roots.LatinN_ns:
+	if word in Roots.LatinA_nm:
 		return findDeclNomSA(word,gender)
 	# DAT/ABL PL
 	elif (len(word) > 3 and word [-3:] == "īs") or (len(word) > 4 and word[-4:] == "ibus"):

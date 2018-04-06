@@ -31,7 +31,7 @@ def cont():
 		# choice0 = 0
 		return 'y'
 	elif choice4 in ACHOICES:
-		return 2
+		return 'a'
 	else:
 		sys.exit(0)
 
@@ -76,10 +76,10 @@ def latinConstructAdj():
 	return cont()
 
 def latinConstruct():
-	print("What part of speech do you want to make?\n1) Nouns\n2) Verbs\n3) Adjectives\n4) Return to previous menu")
-	choice2 = raw_input().strip()
+	choice2 = 0
 	while checkInt(choice2) and (int(choice2) < 1 or int(choice2) > 4):
-		print("That's not a choice")
+		if choice2 != 0:
+			print("That's not a choice")
 		print("What part of speech do you want to make?\n1) Nouns\n2) Verbs\n3) Adjectives\n4) Return to previous menu")
 		choice2 = raw_input().strip()
 	choice2 = int(choice2)
@@ -87,12 +87,12 @@ def latinConstruct():
 	# Construct Nouns
 	if choice2 == 1:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinConstructNouns()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
-				val = latinConstructNouns()
+			if val == 'a':
+				val = 2
 			elif val == None:
 				return val	
 
@@ -100,11 +100,11 @@ def latinConstruct():
 	elif choice2 == 2:
 	# if choice2 == 2:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinConstructVerbs()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinConstructVerbs()
 			elif val == None:
 				return val	
@@ -112,11 +112,11 @@ def latinConstruct():
 	# Construct Adjectives
 	elif choice2 == 3:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinConstructAdj()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinConstructAdj()
 			elif val == None:
 				return val
@@ -169,7 +169,8 @@ def latinDeconstruct():
 	choice3 = raw_input().strip()
 
 	while checkInt(choice3) and (int(choice3) < 1 or int(choice3) > 4):
-		print("That's not a choice")
+		if choice3 != 0:
+			print("That's not a choice")
 		print("What part of speech is the form you want to deconstruct?\n1) Noun\n2) Verb\n3) Adjective\n4) Return to previous menu")
 		choice3 = raw_input().strip()
 	choice3 = int(choice3)
@@ -177,11 +178,11 @@ def latinDeconstruct():
 	# Deconstruct Noun
 	if choice3 == 1:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinDeconstructNouns()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinDeconstructNouns()
 			elif val == None:
 				return val	
@@ -190,11 +191,11 @@ def latinDeconstruct():
 	elif choice3 == 2:
 	# if choice3 == 2:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinDeconstructVerbs()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinDeconstructVerbs()
 			elif val == None:
 				return val	
@@ -202,11 +203,11 @@ def latinDeconstruct():
 	# Deconstruct Adjective
 	elif choice3 == 3:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinDeconstructAdj()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinDeconstructAdj()
 			elif val == None:
 				return val	
@@ -215,23 +216,23 @@ def latinDeconstruct():
 		return 1
 
 def latinMenu():
-	print("What do you want to do?\n1) Construct Latin forms\n2) Deconstruct Latin forms\n3) Return to previous menu")
-	choice1 = raw_input().strip()
-	
+	choice1 = 0
 	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 3):
-		print("That's not a choice")
+		if choice1 != 0:
+			print("That's not a choice")
 		print("What do you want to do?\n1) Construct Latin forms\n2) Deconstruct Latin forms\n3) Return to previous menu")
 		choice1 = raw_input().strip()
 	choice1 = int(choice1)
+	print('choice1 is '+str(choice1))
 		
 	# Construct Latin forms
 	if choice1 == 1:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinConstruct()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinConstruct()
 			elif val == None:
 				return val	
@@ -239,17 +240,17 @@ def latinMenu():
 	# Deconstruct Latin forms
 	elif choice1 == 2:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinDeconstruct()
-			if val == 1:
+			if val == 'y':
 				return 2
-			elif val == 2:
+			elif val == 'a':
 				val = latinDeconstruct()
 			elif val == None:
 				return val
 		
 	elif choice1 == 3:
-		return 1
+		return 'a'
 
 def main():
 	print("Latin/Russian Translator\n")
@@ -272,12 +273,10 @@ def main():
 	# elif choice0 == 3:
 	if choice0 == 3:
 		val = 2
-		while (val in [1,2]):
+		while (True):
 			val = latinMenu()
-			if val == 1:
+			if val == 'y' or val == 'a':
 				return 'y'
-			elif val == 2:
-				val = latinMenu()
 			elif val == None:
 				return val
 	

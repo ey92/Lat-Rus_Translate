@@ -266,3 +266,6 @@ def LfindRootNM(word):
 
 def LfindDeclR(word):
     return LatinA_decl[LatinA_fr.index(word)]
+
+def LfindDeclNM(word):
+    return LatinA_decl[LatinA_nm.index(word)]
