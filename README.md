@@ -87,9 +87,38 @@ output: `acrium`<br>
 #### REVERSE DECLENSION
 `Latin.reverseDeclineA()`
 - takes Latin adjective form
+- optional gender parameter (if known)
 
-input:<br>
-output:<br>
+input:  `fortibus`<br>
+output: `['fortis', 'fortis', 'DAT/ABL', 'PL', 'F/M/N']`<br>
+
+input2a:  `pulchrum`<br>
+output2a: `['pulcher', 'pulchra', 'NOM/ACC', 'SG', 'M/N']`<br>
+
+input2b:  `pulchrum, M`<br>
+output2b: `['pulcher', 'pulchra', 'ACC', 'SG', 'M']`<br>  
+
+input3a:  `bona`<br>
+output3a: `['bonus', 'bona', 'NOM', 'SG', 'F']`<br>
+
+input3b:  `bona, N`<br>
+output3b: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
+
+
+#### Adjective Parameters
+| Parameter | Meaning |
+| --------- | ------- |
+| F   | feminine gender |
+| M   | masculine gender|
+| N   | neuter gender   |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| ABL | ablative case   |
+| VOC | vocative case   |
 
 [see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
 

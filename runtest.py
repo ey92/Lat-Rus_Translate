@@ -155,12 +155,13 @@ def latinDeconstructAdj():
 	# deconstruct adjective
 	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 	params = processInput(params)
-	while len(params) != 1 or not(checkStr(params)):
+	while not (len(params) in [1,2]) or not(checkStr(params)):
 		print(len(params))
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)
-	print Latin.reverseDeclineA(params[0])
+		params += ['']
+	print Latin.reverseDeclineA(params[0], params[1])
 
 	return cont()
 
