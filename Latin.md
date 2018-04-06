@@ -160,5 +160,5 @@ Declensions:
 |'ācer'|	 'ācris'|	 '3a'| 'острый'			| 'sharp'         |
 |'fortis'|	 'fortis'|	 '3a'| 'крепкий'		| 'strong, brave' |
 |'amāns'|	 'amantis'|	 '3b'| 'любящий'		| 'loving'        |
-|'fēlīx'|	 'fēlicis',	 '3b'| 'счастливый'		| 'lucky, happy'  |
+|'fēlīx'|	 'fēlicis'|	 '3b'| 'счастливый'		| 'lucky, happy'  |
 |'prūdens'|	 'prūdentis'|'3b'| 'благоразумный'	| 'wise'          |
