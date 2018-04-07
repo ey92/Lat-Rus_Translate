@@ -1,4 +1,4 @@
-[comment]: <> (Elizabeth Yam ey92)
+<!---Elizabeth Yam ey92-->
 ## Latin
 ### Verbs:
 
@@ -54,8 +54,13 @@ Declensions:
 | 3a    | -is   | -is | -e  | M/F |
 | 3b    | ?     | ?   | ?   | -is |
 
-1/2 decline like norm 1/2 nouns
-3a and 3b decline like 3ii nouns
+1/2 decline like norm 1/2 nouns<br>
+3a and 3b decline like 3ii nouns<br>
+
+Does not include:
+- comparatives
+- superlatives
+- adverbs
 
 ---
 ### Words in dictionary:

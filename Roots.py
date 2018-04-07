@@ -99,6 +99,34 @@ VMap_lat = [x[0] for x in VMap]
 VMap_rus = [x[1] for x in VMap]
 VMap_eng = [x[2] for x in VMap]
 
+# Pronoun mapping
+LatinPN = ['ego','meī','mihi','mē','mē','tu','tuī','tibi','tē','tē','nōs','nostrum','nōbis','nōs','nōbis','vōs','vestrum','vōbis','vōs','vōbis','is','ea','id','ēius','ēius','ēius','eī','eī','eī','eum','eam','id','eō','eā','eō','eī','eae','ea','eōrum','earum','eōrum','eīs','eīs','eīs','eōs','eās','ea','eīs','eīs','eīs']
+RussianPN = [['я'],['меня'],['мне'],['меня'],['мне','мной'],['ты'],['тебя'],['тебе'],['тебя'],['тебе','тобой'],['мы'],['нас'],['нам'],['нас'],['нас','нами'],['вы'],['вас'],['вам'],['вас'],['вас','вами'],['он'],['его'],['ему'],['его'],['нём','им'],['она'],['её'],['ей'],['её'],['ней','ей'],['оно'],['его'],['ему'],['его'],['нём','им'],['они'],['их'],['им'],['их'],['них','ими'],['они'],['их'],['им'],['их'],['них','ими'],['они'],['их'],['им'],['их'],['них','ими'],]
+PNMap = zip(LatinPN, RussianPN)
+def PNL2R(word):
+    return RussianPN[LatinPN.index(word)]
+
+def PNR2L(word):
+    ind = -1
+    for e in RussianPN:
+        if word in e:
+            ind = RussianPN.index(e)
+    if ind == -1:
+        return None
+    else:
+        return LatinPN[ind]
+
+
+# PNDict = {}
+# for e in PNMap:
+#     if e[0] in PNDict.keys():
+#         PNDict[e[0]].append(e[1])
+#     else:
+#         PNDict[e[0]] = [e[1]]
+# form = irePres.keys()[irePres.values().index(root)]
+
+PrepMap = {}
+
 # -------------------------------------------------------------
 # LATIN
 # 26 Verb stems
