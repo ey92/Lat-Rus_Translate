@@ -8,7 +8,7 @@ Conjugations:
 | ----------- | ---------- | ----------- | ----------- | ------ | --------- |
 | 1c  | жить     | живут   | прожить   | проживут  | 1c |
 | 1v  | читать   | читают  | прочитать | прочитают | 1v |
-| 2c  | говорить | говорят | сказать   | скажут    | 1c |
+| 2v  | говорить | говорят | сказать   | скажут    | 1c |
 | 2c  | учить    | учат    | обучить   | обучат    | 2c |
 
 Indicative mood Active voice:
@@ -17,7 +17,7 @@ Indicative mood Active voice:
 - (FUTR) future
 - (PERF) perfect
 - (FUTP) future perfect
-- <no pluperfect>
+- \<no pluperfect\>
 
 Does not include:
 - Passive voice
