@@ -250,12 +250,15 @@ def irregular(inf, per, num, tense):
 		return ferreConj[tense][form]
 
 # takes infinitive, number, person, tense
-def conjugate(inf, per, num, tense):
-	# perf = perfective fst sg
-	perf = Roots.LfindPerfI(inf)
+def conjugate(inf, per, num, tense, t=None, perf=None):
+	try:
+		# perf = perfective fst sg
+		perf = Roots.LfindPerfI(inf) if perf == None else perf
 
-	# t = conjugation
-	t = Roots.LfindConjI(inf)
+		# t = conjugation
+		t = Roots.LfindConjI(inf) if t == None else t
+	except:
+		return 'Conjugation or perfective form doens\'t exist'
 
 	# active  voice
 	if inf in irreg:
@@ -812,7 +815,7 @@ def reverseConjugate(word):
 # -------------------------------------------------------------
 # DECLENSION
 
-def fstDecl(nom, gen, gender, num, case):
+def fstDecl(nom, gen, gender, case, num):
 	# always feminine or masculine, same forms for both
 	if num == "SG":
 		if case == "NOM":
@@ -842,7 +845,7 @@ def fstDecl(nom, gen, gender, num, case):
 		elif case == "VOC":
 			return gen
 
-def sndDecl(nom, gen, gender, num, case):
+def sndDecl(nom, gen, gender, case, num):
 	# always masculine or neuter	
 	if gender == "N":
 		if num == "SG":
@@ -907,7 +910,7 @@ def sndDecl(nom, gen, gender, num, case):
 			elif case == "VOC":
 				return gen
 
-def trdDecl(nom, gen, t, gender, num, case):
+def trdDecl(nom, gen, t, gender, case, num):
 	# masculine and feminine share same forms; neuter is different
 	if gender == "N":
 		if num == "SG":
@@ -985,7 +988,7 @@ def trdDecl(nom, gen, t, gender, num, case):
 			elif case == "VOC":
 				return gen[:-2]+"ēs"
 
-def forDecl(nom, gen, gender, num, case):
+def forDecl(nom, gen, gender, case, num):
 	# masculine and feminine share same forms; neuter is different
 	if gender == "N":
 		if num == "SG":
@@ -1042,7 +1045,7 @@ def forDecl(nom, gen, gender, num, case):
 			elif case == "VOC":
 				return gen[:-2]+"ūs"
 
-def fthDecl(nom, gen, gender, num, case):
+def fthDecl(nom, gen, gender, case, num):
 	# mostly feminine, but masculine shares same forms; no neuter
 	# i with macron (ī) is treated as 2 characters
 	if num == "SG":
@@ -1072,18 +1075,24 @@ def fthDecl(nom, gen, gender, num, case):
 		elif case == "VOC":
 			return gen[:-3]+"ēs"
 
-# takes nominativeS, genitiveS, declension d, gender, case, number
-def decline(nom, gen, d, gender, case, num):
+# takes nominativeS, genitiveS, case, number, declension d, gender
+def decline(nom, gen, case, num, d=None, gender=None):
+	try:
+		d = Roots.LfindDeclG(gen) if d == None else d
+		gender = Roots.LfindGenderG(gen) if gender == None else gender
+	except:
+		return 'Declension or gender doesn\'t exist'
+
 	if d == '1':
-		return fstDecl(nom,gen,gender,num,case)
+		return fstDecl(nom,gen,gender,case,num)
 	elif d == '2':
-		return sndDecl(nom,gen,gender,num,case)
+		return sndDecl(nom,gen,gender,case,num)
 	elif d[0] == '3':
-		return trdDecl(nom,gen,d[1:],gender,num,case)
+		return trdDecl(nom,gen,d[1:],gender,case,num)
 	elif d == '4':
-		return forDecl(nom,gen,gender,num,case)
+		return forDecl(nom,gen,gender,case,num)
 	elif d == '5':
-		return fthDecl(nom,gen,gender,num,case)
+		return fthDecl(nom,gen,gender,case,num)
 
 # -------------------------------------------------------------
 # REVERSE DECLENSION
@@ -1355,27 +1364,32 @@ def reverseDecline(word):
 
 # takes nomM, genitive/nomF (root), declension d, gender, case, number
 def declineA(nomM, root, d, gender, case, num):
+	print(d)
+	print(gender)
+	print(case)
+	print(num)
 	if d == "12":
 		if gender == "F":
 			d = "1"
 			nom = root[:-1]+"a"
 			gen = root[:-1]+"ae"
-			return decline(nom,gen,d,gender,case,num)
+			return decline(nom,gen,case,num,d,gender)
 		else:
 			d = "2"
 			if gender == "M":
 				gen = root[:-1]+"ī"
-				return decline(nomM,gen,d,gender,case,num)
+				return decline(nomM,gen,case,num,d,gender)
 			elif gender == "N":
+				print('hi')
 				nom = root[:-1]+"um"
 				gen = root[:-1]+"ī"
-				return decline(nom,gen,d,gender,case,num)
+				return decline(nom,gen,case,num,d,gender)
 	elif d == "3a":
 		if gender == "N":
 			d = "3ii"
 			nom = root[:-2]+"e"
 			gen = root
-			return decline(nom,gen,d,gender,case,num)
+			return decline(nom,gen,case,num,d,gender)
 		else:
 			d = "3ii"
 			gen = root
@@ -1383,16 +1397,16 @@ def declineA(nomM, root, d, gender, case, num):
 				nom = root
 			elif gender == 'M':
 				nom = nomM
-			return decline(nom,gen,d,gender,case,num)
+			return decline(nom,gen,case,num,d,gender)
 	elif d == "3b":
 		if gender == "N":
 			d = "3ii"
 			nom = nomM
 			gen = root
-			return decline(nom,gen,d,gender,case,num)
+			return decline(nom,gen,case,num,d,gender)
 		else:
 			d = "3ii"
-			return decline(nomM,root,d,gender,case,num)
+			return decline(nomM,root,case,num,d,gender)
 
 # -------------------------------------------------------------
 # REVERSE DECLENSION
@@ -1639,9 +1653,9 @@ def reverseDeclineA(word, gender=None):
 
 def declineAN(nom, root, d, gender, case, num, AN):
 	if AN == 'A':
-		return declineA(nom,root,d,gender,case,num)
+		return declineA(nom,root,case,num,d,gender)
 	elif AN == 'N':
-		return decline(nom,root,d,gender,case,num)
+		return decline(nom,root,case,num,d,gender)
 
 # REVERSE NOUNS AND ADJECTIVES
 def reversedeclineAN(word):

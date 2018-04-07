@@ -38,30 +38,41 @@ def cont():
 
 def latinConstructNouns():
 	# make nouns
-	params = str(raw_input("Please enter the nominativeS form, genitiveS form, declension, gender, number, and case, separated by commas\n")).strip()
-	params = processInput(params)
-	while len(params) != 6 or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
-		params = str(raw_input("Please enter the nominativeS form, genitiveS form, declension, gender, number, and case, separated by commas\n")).strip()
+	params = []
+	while not (len(params) in [4,6]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the nominativeS form, genitiveS form, case, number, [declension, gender], separated by commas\n")).strip()
 		params = processInput(params)
 
-	# pad declension param with spaces
-	if len(params[3]) < 3:
-		params[3]+='  '
-	print Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
+	if len(params) == 4:
+		result =  Latin.decline(params[0], params[1], params[2], params[3])
+
+	else:
+		# pad declension param with spaces
+		if len(params[2]) < 3:
+			params[2]+='  '
+		result = Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
 	
+	print(result)
 	return cont()
 
 def latinConstructVerbs():
 	# make verbs
 	params = []
-	while len(params) != 4 or not(checkStr(params)):
+	while not (len(params) in [4,6]) or not(checkStr(params)):
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
-		params = str(raw_input("Please enter the infinitive form, person, number, and tense, separated by commas\n")).strip()
+		params = str(raw_input("Please enter the infinitive form, person, number, and tense, [conjugation, perfective form], separated by commas\n")).strip()
 		params = processInput(params)
-	print Latin.conjugate(params[0], params[1], params[2], params[3])
 
+	if len(params) == 4:
+		result = Latin.conjugate(params[0], params[1], params[2], params[3])
+
+	else:
+		result = Latin.conjugate(params[0], params[1], params[2], params[3], params[4], params[5])
+
+	print(result)
 	return cont()
 
 def latinConstructAdj():
@@ -124,7 +135,7 @@ def latinConstruct():
 
 	# Return to previous menu
 	elif choice2 == 4:
-		return 1
+		return 'y'
 
 def latinDeconstructNouns():
 	# deconstruct noun
@@ -215,7 +226,7 @@ def latinDeconstruct():
 				return val	
 
 	elif choice3 == 4:
-		return 1
+		return 'y'
 
 def latinMenu():
 	choice1 = 0
@@ -225,7 +236,6 @@ def latinMenu():
 		print("What do you want to do?\n1) Construct Latin forms\n2) Deconstruct Latin forms\n3) Return to previous menu")
 		choice1 = raw_input().strip()
 	choice1 = int(choice1)
-	print('choice1 is '+str(choice1))
 		
 	# Construct Latin forms
 	if choice1 == 1:
@@ -250,6 +260,105 @@ def latinMenu():
 				val = latinDeconstruct()
 			elif val == None:
 				return val
+		
+	elif choice1 == 3:
+		return 'a'
+
+def russianConstructVerbs():
+	# make verbs
+	params = []
+	while not (len(params) in [5]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the infinitive form, person, number, gender, and tense, separated by commas\n")).strip()
+		params = processInput(params)
+
+		print Russian.conjugate(params[0], params[1], params[2], params[3], params[4])
+
+	return cont()
+
+def russianConstruct():
+	choice2 = 0
+	while checkInt(choice2) and (int(choice2) < 1 or int(choice2) > 4):
+		if choice2 != 0:
+			print("That's not a choice")
+		print("What part of speech do you want to make?\n1) Nouns\n2) Verbs\n3) Adjectives\n4) Return to previous menu")
+		choice2 = raw_input().strip()
+	choice2 = int(choice2)
+
+	# Construct Nouns
+	# if choice2 == 1:
+	# 	val = 2
+	# 	while (True):
+	# 		val = russianConstructNouns()
+	# 		if val == 'y':
+	# 			return 2
+	# 		if val == 'a':
+	# 			val = 2
+	# 		elif val == None:
+	# 			return val	
+
+	# Construct Verbs
+	# elif choice2 == 2:
+	if choice2 == 2:
+		val = 2
+		while (True):
+			val = russianConstructVerbs()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = 2
+			elif val == None:
+				return val	
+
+	# Construct Adjectives
+	# elif choice2 == 3:
+	# 	val = 2
+	# 	while (True):
+	# 		val = russianConstructAdj()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = 2
+	# 		elif val == None:
+	# 			return val
+
+	# Return to previous menu
+	elif choice2 == 4:
+		return 'y'
+
+def russianMenu():
+	choice1 = 0
+	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 3):
+		if choice1 != 0:
+			print("That's not a choice")
+		print("What do you want to do?\n1) Construct Russian forms\n2) Deconstruct Russian forms\n3) Return to previous menu")
+		choice1 = raw_input().strip()
+	choice1 = int(choice1)
+		
+	# Construct Russian forms
+	if choice1 == 1:
+		val = 2
+		while (True):
+			val = russianConstruct()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = russianConstruct()
+			elif val == None:
+				return val	
+
+	# Deconstruct Russian forms
+	# elif choice1 == 2:
+	# 	val = 2
+	# 	while (True):
+	# 		val = russianDeconstruct()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = russianDeconstruct()
+	# 		elif val == None:
+	# 			return val
 		
 	elif choice1 == 3:
 		return 'a'
@@ -283,9 +392,14 @@ def main():
 				return val
 	
 	# Russian
-	# elif choice0 == 4:
-		#do something
-		# return russianMenu()
+	elif choice0 == 4:
+		val = 2
+		while (True):
+			val = russianMenu()
+			if val == 'y' or val == 'a':
+				return 'y'
+			elif val == None:
+				return val
 
 	# Quit
 	elif choice0 == 5:

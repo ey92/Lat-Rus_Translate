@@ -44,10 +44,10 @@ esse, TRD, PL, PLUP
 
 macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']
 
-puella, puellae, 1, F, ABL, PL
+puella, puellae, ABL, PL, 1, F
 "puella", "puellae", "1", "F", "ABL", "PL"
 
-labor, laboris, 3, M, ACC, SG
+labor, laboris, ACC, SG, 3, M
 "labor", "laboris", "3", "M", "ACC", "SG"
 
 'pulcher','pulchra','12','N','ABL','SG'
@@ -69,3 +69,21 @@ labor, laboris, 3, M, ACC, SG
 ['ю','ешь','ет','ем','ете','ют']
 ['у','ищь','ит','им','ите','ат']
 ['ю','ишь','ит','им','ите','ат']
+
+'читать','SND','PL','','PRES'
+читать, SND, PL, , PRES
+
+'прочитать','SND','PL','','PRES'
+прочитать , SND , PL , , PRES
+
+'сказать','','PL','F','PERF'
+сказать , , PL , F , PERF 
+
+'говорить','','PL','F','PERF'
+говорить , , PL , F , PERF
+
+'жить','FST','SG','','FUTR'
+жить , FST , SG , , FUTR
+
+'прожить','FST','SG','','FUTR'
+прожить , FST , SG ,  , FUTR

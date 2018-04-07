@@ -25,3 +25,8 @@ Does not include:
 - Imperative mood
 - Gerunds/Gerundives
 - Participles
+
+---
+### Words in dictionary:
+
+#### Russian Verbs

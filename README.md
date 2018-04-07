@@ -19,9 +19,13 @@ It doesn't into account context or identify special phrasal constructions. It is
 ### Verbs
 #### CONJUGATION
 `Latin.conjugate()`
-- takes infinitive, perfective, type, number, person, tense
+- takes infinitive, number, person, tense
+- if verb not in dictionary, add perfective and conjugation as last 2 parameters
 
 input:    `amare, FST, SG, PRES`<br>
+output:   `amo`<br>
+
+input:    `amare, amāvi, 1, FST, SG, PRES`<br>
 output:   `amo`<br>
 
 #### REVERSE CONJUGATION
@@ -51,9 +55,13 @@ output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
 ### Nouns
 #### DECLENSION
 `Latin.decline()`
-- takes nominativeS, genitiveS, declension d, gender, case, number
+- takes nominativeS, genitiveS, case, number
+- if noun not in dictionary, add declension and gender as last 2 parameters
 
-input:    `puella, puellae, 1, F, ACC, SG`<br>
+input:    `puella, puellae, ACC, SG`<br>
+output:   `puellam`<br>
+
+input:    `puella, puellae, ACC, SG, 1, F`<br>
 output:   `puellam`<br>
 
 #### REVERSE DECLENSION
@@ -92,17 +100,17 @@ output: `acrium`<br>
 input:  `fortibus`<br>
 output: `['fortis', 'fortis', 'DAT/ABL', 'PL', 'F/M/N']`<br>
 
-input2a:  `pulchrum`<br>
-output2a: `['pulcher', 'pulchra', 'NOM/ACC', 'SG', 'M/N']`<br>
+input:  `pulchrum`<br>
+output: `['pulcher', 'pulchra', 'NOM/ACC', 'SG', 'M/N']`<br>
 
-input2b:  `pulchrum, M`<br>
-output2b: `['pulcher', 'pulchra', 'ACC', 'SG', 'M']`<br>  
+input:  `pulchrum, M`<br>
+outputb: `['pulcher', 'pulchra', 'ACC', 'SG', 'M']`<br>  
 
-input3a:  `bona`<br>
-output3a: `['bonus', 'bona', 'NOM', 'SG', 'F']`<br>
+input:  `bona`<br>
+output: `['bonus', 'bona', 'NOM', 'SG', 'F']`<br>
 
-input3b:  `bona, N`<br>
-output3b: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
+input:  `bona, N`<br>
+output: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
 
 
 #### Adjective Parameters
@@ -125,5 +133,56 @@ output3b: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
 ---
 
 ## Russian
+
+### Verbs
+#### CONJUGATION
+`Russian.conjugate()`
+- takes (either) infinitive, person, number, gender(matters sometimes), tense
+
+input: 	  `читать, SND, PL, , PRES`<br>
+output:   `читаете`<br>
+
+input: 	  `прочитать , SND , PL , , PRES`<br>
+output:   `читаете`<br>
+
+input: 	  `сказать , , PL , F , PERF `<br>
+output:   `сказали`<br>
+
+input: 	  `говорить , , PL , F , PERF`<br>
+output:   `сказали`<br>
+
+input: 	  `жить , FST , SG , , FUTR`<br>
+output:   `буду_жить`<br>
+
+input: 	  `прожить , FST , SG ,  , FUTR`<br>
+output:   `буду_жить`<br>
+
+
+#### REVERSE CONJUGATION
+`Russian.reverseConjugate()`
+- takes Latin verb form
+
+input:    <br>
+output:   <br>
+output2:  <br>
+
+#### Verb Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| M     | masculine	gender		|
+| F 	| feminine gender		|
+| N 	| neuter gender 		|
+| FST   | first-person          |
+| SND   | second-person         |
+| TRD   | third-person          |
+| SG    | singular              |
+| PL    | plural                |
+| PRES  | present tense         |
+| IMPF  | imperfect tense       |
+| FUTR  | future tense          |
+| PERF  | perfect tense         |
+| PLUP  | pluperfect tense      |
+| FUTP  | future perfect tense  |
 
 [see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)

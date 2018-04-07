@@ -285,9 +285,17 @@ def LfindNomG(word):
 def LfindGenN(word):
     return LatinN_gs[LatinN_ns.index(word)]
 
+# returns declension of genS provided
+def LfindDeclG(word):
+    return LatinN_decl[LatinN_gs.index(word)]
+
 # returns decl of genS provided
 def LfindDeclG(word):
     return LatinN_decl[LatinN_gs.index(word)]
+
+# returns gender of genS provided
+def LfindGenderG(word):
+    return LatinN_gender[LatinN_gs.index(word)]
 
 # returns True if decl of genS provided is 3ii
 def Lis3iistemG(word):
