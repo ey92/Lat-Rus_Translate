@@ -25,7 +25,7 @@ It doesn't into account context or identify special phrasal constructions. It is
 input:    `amare, FST, SG, PRES`<br>
 output:   `amo`<br>
 
-input:    `amare, FST, SG, PRES, 1, amāvi`<br>
+input:    `amare, FST, SG, PRES, 1, amāvī`<br>
 output:   `amo`<br>
 
 #### REVERSE CONJUGATION
@@ -34,7 +34,7 @@ output:   `amo`<br>
 
 input:    `amant`<br>
 output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
-output2:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']`<br>
+output:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']` (unicode translated)<br>
 
 #### Verb Parameters
 
@@ -142,19 +142,19 @@ output: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
 input: 	  `читать, SND, PL, , PRES`<br>
 output:   `читаете`<br>
 
-input: 	  `прочитать , SND , PL , , PRES`<br>
+input: 	  `прочитать, SND, PL, , PRES`<br>
 output:   `читаете`<br>
 
-input: 	  `сказать , , PL , F , PERF `<br>
+input: 	  `сказать, , PL, F, PERF `<br>
 output:   `сказали`<br>
 
-input: 	  `говорить , , PL , F , PERF`<br>
+input: 	  `говорить, , PL, F, PERF`<br>
 output:   `сказали`<br>
 
-input: 	  `жить , FST , SG , , FUTR`<br>
+input: 	  `жить, FST, SG, , FUTR`<br>
 output:   `буду_жить`<br>
 
-input: 	  `прожить , FST , SG ,  , FUTR`<br>
+input: 	  `прожить, FST, SG,  , FUTR`<br>
 output:   `буду_жить`<br>
 
 
