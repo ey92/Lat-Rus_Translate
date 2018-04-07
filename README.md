@@ -160,7 +160,7 @@ output:   `буду_жить`<br>
 
 #### REVERSE CONJUGATION
 `Russian.reverseConjugate()`
-- takes Latin verb form
+- takes Russian verb form
 
 input:    <br>
 output:   <br>
