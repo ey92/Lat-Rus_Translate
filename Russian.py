@@ -19,7 +19,8 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
-VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL','M','F','N']
+VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
+PAST_VERB_KEYS = ['M','F','N','PL']
 
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
@@ -27,11 +28,13 @@ endings1clst = ['у','ёшь','ёт','ём','ёте','ут']
 endings1cplst = ['у','ешь','ет','ем','ете','ут']
 endings2vlst = ['ю','ишь','ит','им','ите','ят']
 endings2clst = ['у','ишь','ит','им','ите','ат']
+endingsPastlst = ['л','ла','ло','ли']
 endings1v = dict(zip(VERB_FORM_KEYS,endings1vlst))
 endings1c = dict(zip(VERB_FORM_KEYS,endings1clst))
 endings1cp = dict(zip(VERB_FORM_KEYS,endings1cplst))
 endings2v = dict(zip(VERB_FORM_KEYS,endings2vlst))
 endings2c = dict(zip(VERB_FORM_KEYS,endings2clst))
+endingsPast = dict(zip(PAST_VERB_KEYS,endingsPastlst))
 
 def takeRaw(word):
 	return word.decode('utf8')
@@ -109,7 +112,14 @@ def nonPastTense(inf, t, per, num, perf):
 
 	return stem+end
 
-# def pastTense(inf, t, gender, num, perf):
+def pastTense(inf, t, gender, num, perf):
+	form = num if num=='PL' else gender
+	end = endingsPast[form]
+
+	# stem for past tense is infinitive without 'ть' ending
+	stem = inf[:-4]
+
+	return stem+end
 
 # def futureTense(inf, t, per, num):
 
