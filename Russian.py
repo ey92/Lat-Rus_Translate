@@ -21,7 +21,6 @@ NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
 VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 PAST_VERB_KEYS = ['M','F','N','PL']
-
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
 endings1clst = ['у','ёшь','ёт','ём','ёте','ут']
@@ -29,12 +28,14 @@ endings1cplst = ['у','ешь','ет','ем','ете','ут']
 endings2vlst = ['ю','ишь','ит','им','ите','ят']
 endings2clst = ['у','ишь','ит','им','ите','ат']
 endingsPastlst = ['л','ла','ло','ли']
+endingsFuturelst = ['буду_','будешь_','будет_','будем_','будете_','будут_']
 endings1v = dict(zip(VERB_FORM_KEYS,endings1vlst))
 endings1c = dict(zip(VERB_FORM_KEYS,endings1clst))
 endings1cp = dict(zip(VERB_FORM_KEYS,endings1cplst))
 endings2v = dict(zip(VERB_FORM_KEYS,endings2vlst))
 endings2c = dict(zip(VERB_FORM_KEYS,endings2clst))
 endingsPast = dict(zip(PAST_VERB_KEYS,endingsPastlst))
+endingsFuture = dict(zip(VERB_FORM_KEYS,endingsFuturelst))
 
 def takeRaw(word):
 	return word.decode('utf8')
@@ -121,7 +122,9 @@ def pastTense(inf, t, gender, num, perf):
 
 	return stem+end
 
-# def futureTense(inf, t, per, num):
+def futureTense(inf, t, per, num):
+	form = per+num
+	return endingsFuture[form]+inf
 
 # takes either infinitive form, person, number, and tense
 def conjugate (inf, per, num, gender, tense):
