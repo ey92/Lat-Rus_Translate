@@ -218,7 +218,7 @@ def futureperfectTense(perf, t, per, num):
 	end = futpEndings[per+num]
 	return stem+end
 
-def irregular(inf, perf, per, num, tense):
+def irregular(inf, per, num, tense):
 	form = per+num
 	if inf == "ire":
 		return ireConj[tense][form]
@@ -249,12 +249,18 @@ def irregular(inf, perf, per, num, tense):
 	if inf == "ferre":
 		return ferreConj[tense][form]
 
-# takes infinitive, perfective, type, number, person, tense
-def conjugate(inf, perf, t, per, num, tense):
+# takes infinitive, number, person, tense
+def conjugate(inf, per, num, tense):
+	# perf = perfective fst sg
+	perf = Roots.LfindPerfI(inf)
+
+	# t = conjugation
+	t = Roots.LfindConjI(inf)
+
 	# active  voice
 	if inf in irreg:
 		# print('hi')
-		return irregular(inf,perf,per,num,tense)
+		return irregular(inf,per,num,tense)
 	elif tense == "PRES":
 		# print('hi1')
 		return presentTense(inf,t,per,num)
