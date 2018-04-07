@@ -12,7 +12,7 @@ It doesn't into account context or identify special phrasal constructions. It is
 
 [See what's included for Latin](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.md)
 
-![See what's included for Russian](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.md)
+[See what's included for Russian](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.md)
 
 ## Latin
 
@@ -21,7 +21,7 @@ It doesn't into account context or identify special phrasal constructions. It is
 `Latin.conjugate()`
 - takes infinitive, perfective, type, number, person, tense
 
-input:    `amare, amāvi, 1, FST, SG, PRES`<br>
+input:    `amare, FST, SG, PRES`<br>
 output:   `amo`<br>
 
 #### REVERSE CONJUGATION
@@ -126,4 +126,4 @@ output3b: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
 
 ## Russian
 
-![see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)
+[see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)
