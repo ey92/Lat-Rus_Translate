@@ -109,12 +109,12 @@ def nonPastTense(inf, t, per, num, perf):
 
 	return stem+end
 
-# def pastTense(inf, t, per, num, perf):
+# def pastTense(inf, t, gender, num, perf):
 
 # def futureTense(inf, t, per, num):
 
 # takes either infinitive form, person, number, and tense
-def conjugate (inf, per, num, tense):
+def conjugate (inf, per, num, gender, tense):
 
 	# PRES,IMPF,FUTR need impf inf
 	if tense in ['PRES','IMPF','FUTR']:
@@ -130,9 +130,9 @@ def conjugate (inf, per, num, tense):
 			t = Roots.RfindIConjIInf(inf)
 
 			if tense == 'PRES':
-				return nonPastTense(inf,t,per,num, perf)
+				return nonPastTense(inf,t,per,num,perf)
 			elif tense == 'IMPF':
-				return pastTense(inf,t,per,num, perf)
+				return pastTense(inf,t,gender,num,perf)
 			elif tense == 'FUTR':
 				return futureTense(inf,t,per,num)
 
@@ -150,6 +150,6 @@ def conjugate (inf, per, num, tense):
 			t = Roots.RfindPConjPInf(inf)
 
 			if tense == 'PERF':
-				return pastTense(inf,t,per,num, perf)
+				return pastTense(inf,t,gender,num,perf)
 			elif tense == 'FUTP':
-				return nonPastTense(inf,t,per,num, perf)
+				return nonPastTense(inf,t,per,num,perf)
