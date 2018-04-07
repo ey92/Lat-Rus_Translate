@@ -23,7 +23,7 @@ NUM_CONS = len(cons)
 NUM_CONS_CAP = len(consCap)
 NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
-VERB_FORM_KEYS = ['FSTSG', 'TRDPL', 'TRDSG', 'SNDPL', 'SNDSG', 'FSTPL']
+VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 
 # irregular verb conjugations
 irreg = ["ire","esse","posse","velle","nolle","ferre"]

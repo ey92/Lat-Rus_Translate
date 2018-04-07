@@ -67,32 +67,32 @@ NMap_eng = [x[2] for x in NMap]
 
 # 26 Verb stems
 VMap = [
-    ("ire",              "пойти",       "to go"             ), \
-    ("esse",             "есть",        "to be"             ), \
-    ("posse",            "мочь",        "to be able"        ), \
-    ("velle",            "хотеть",      "to want"           ), \
-    ("nōlle",            "нехотеть",    "to not want"       ), \
-    ("ferre",            "нести",       "to bring, carry"   ), \
-    ("amare",            "любить",      "to love"           ), \
-    ("cōgitare",         "думать",      "to think"          ), \
-    ("parare",           "готовить",    "to prepare"        ), \
-    ("rogare",           "спрашивать",  "to ask"            ), \
-    ("spectare",         "смотреть",    "to watch"          ), \
-    ("stare",            "стоять",      "to stand"          ), \
-    ("dēlēre",           "уничтожать",  "to destroy"        ), \
-    ("habēre",           "иметь",       "to have"           ), \
-    ("vidēre",           "видеть",      "to see"            ), \
-    ("comprehendere",    "понимать",    "to understand"     ), \
-    ("dīcere",           "говорить",    "to say"            ), \
-    ("edere",            "есть",        "to eat"            ), \
-    ("petere",           "искать",      "to seek"           ), \
-    ("sīdere",           "сидеть",      "to sit"            ), \
-    ("vīvere",           "жить",        "to live"           ), \
-    ("audire",           "слышать",     "to hear"           ), \
-    ("scire",            "знать",       "to know"           ), \
-    ("venire",           "приходить",   "to come"           ), \
-    ("capere",           "брать",       "to take"           ), \
-    ("incipere",         "начать",      "to begin"          ) \
+    ('ire',              'пойти',       'to go'             ), \
+    ('esse',             'есть',        'to be'             ), \
+    ('posse',            'мочь',        'to be able'        ), \
+    ('velle',            'хотеть',      'to want'           ), \
+    ('nōlle',            'нехотеть',    'to not want'       ), \
+    ('ferre',            'нести',       'to bring, carry'   ), \
+    ('amare',            'любить',      'to love'           ), \
+    ('cōgitare',         'думать',      'to think'          ), \
+    ('parare',           'готовить',    'to prepare'        ), \
+    ('rogare',           'спрашивать',  'to ask'            ), \
+    ('spectare',         'смотреть',    'to watch'          ), \
+    ('stare',            'стоять',      'to stand'          ), \
+    ('dēlēre',           'уничтожать',  'to destroy'        ), \
+    ('habēre',           'иметь',       'to have'           ), \
+    ('vidēre',           'видеть',      'to see'            ), \
+    ('comprehendere',    'понимать',    'to understand'     ), \
+    ('dīcere',           'говорить',    'to say'            ), \
+    ('edere',            'есть',        'to eat'            ), \
+    ('petere',           'искать',      'to seek'           ), \
+    ('sīdere',           'сидеть',      'to sit'            ), \
+    ('vīvere',           'жить',        'to live'           ), \
+    ('audire',           'слышать',     'to hear'           ), \
+    ('scire',            'знать',       'to know'           ), \
+    ('venire',           'приходить',   'to come'           ), \
+    ('capere',           'брать',       'to take'           ), \
+    ('incipere',         'начать',      'to begin'          ) \
 ]
 
 VMap_lat = [x[0] for x in VMap]
@@ -129,34 +129,38 @@ PrepMap = {}
 
 # -------------------------------------------------------------
 # LATIN
-# 26 Verb stems
+# 30 Verb stems
 LatinV = [
-    ("eo",          "ire",              "īvī",          0, "to go",             "пойти",     "идти"), \
-    ("sum",         "esse",             "fuī",          0, "to be",             "есть",      "быть"), \
-    ("possum",      "posse",            "potuī",        0, "to be able",        "мочь",      "смочь"), \
-    ("volo",        "velle",            "voluī",        0, "to want",           "хотеть",    "захотеть"), \
-    ("nōlo",        "nōlle",            "nōluī",        0, "to not want",       "нехотеть",  "незахотеть"), \
-    ("fero",        "ferre",            "tulī",         0, "to bring, carry",   "нести",     "понести"), \
-    ("amo",         "amare",            "amāvī",        1, "to love",           "любить",    "полюбить"), \
-    ("cōgito",      "cōgitare",         "cōgitāvī",     1, "to think",          "думать",    "подумать"), \
-    ("paro",        "parare",           "parāvī",       1, "to prepare",        "готовить",  "подготовить"), \
-    ("rogo",        "rogare",           "rogāvī",       1, "to ask",            "спрашивать","спросить"), \
-    ("specto",      "spectare",         "spectāvī",     1, "to watch",          "смотреть",  "посмотреть"), \
-    ("sto",         "stare",            "stetī",        1, "to stand",          "стоять",    "постоя́ть"), \
-    ("dēleo",       "dēlēre",           "dēlēvī",       2, "to destroy",        "уничтожать","уничтожить"), \
-    ("habeo",       "habēre",           "habuī",        2, "to have",           "иметь",     "(no perf)"), \
-    ("video",       "vidēre",           "vidī",         2, "to see",            "видеть",    "увидеть"), \
-    ("comprehendo", "comprehendere",    "comprehendī",  3, "to understand",     "понимать",  "понять"), \
-    ("dīco",        "dīcere",           "dīxī",         3, "to say",            "говорить",  "сказать"), \
-    ("edo",         "edere",            "ēdī",          3, "to eat",            "есть",      "съесть"), \
-    ("peto",        "petere",           "petīvī",       3, "to seek",           "искать",    "поискать"), \
-    ("sīdo",        "sīdere",           "sīdī",         3, "to sit",            "сидеть",    "сесть"), \
-    ("vīvo",        "vīvere",           "vīxī",         3, "to live",           "жить",      "прожить"), \
-    ("audio",       "audire",           "audīvī",       4, "to hear",           "слышать",   "услышать"), \
-    ("scio",        "scire",            "scīvī",        4, "to know",           "знать",     "узнать"), \
-    ("venio",       "venire",           "vēnī",         4, "to come",           "приходить", "прийти"), \
-    ("capio",       "capere",           "cēpī",         5, "to take",           "брать",     "взять"), \
-    ("incipio",     "incipere",         "incēpī",       5, "to begin",          "начать",    "начинать") \
+    ('eo',          'ire',              'īvī',          '0', 'to go',             'пойти',     'идти'), \
+    ('sum',         'esse',             'fuī',          '0', 'to be',             'есть',      'быть'), \
+    ('possum',      'posse',            'potuī',        '0', 'to be able',        'мочь',      'смочь'), \
+    ('volo',        'velle',            'voluī',        '0', 'to want',           'хотеть',    'захотеть'), \
+    ('nōlo',        'nōlle',            'nōluī',        '0', 'to not want',       'нехотеть',  'незахотеть'), \
+    ('fero',        'ferre',            'tulī',         '0', 'to bring, carry',   'нести',     'понести'), \
+    ('amo',         'amare',            'amāvī',        '1', 'to love',           'любить',    'полюбить'), \
+    ('ambulo',      'ambulare',         'ambulāvī',     '1', 'to walk',           'гулять',    'погулять'), \
+    ('cōgito',      'cōgitare',         'cōgitāvī',   '1', 'to think',          'думать',    'подумать'), \
+    ('paro',        'parare',           'parāvī',       '1', 'to prepare',        'готовить',  'подготовить'), \
+    ('rogo',        'rogare',           'rogāvī',       '1', 'to ask',            'спрашивать','спросить'), \
+    ('specto',      'spectare',         'spectāvī',   '1', 'to watch',          'смотреть',  'посмотреть'), \
+    ('sto',         'stare',            'stetī',      '1', 'to stand',          'стоять',    'постоя́ть'), \
+    ('dēleo',       'dēlēre',           'dēlēvī',       '2', 'to destroy',        'уничтожать','уничтожить'), \
+    ('doceo',       'docēre',           'docuī',        '2', 'to teach',          'учить',     'обучить'), \
+    ('habeo',       'habēre',           'habuī',        '2', 'to have',           'иметь',     '(no perf)'), \
+    ('video',       'vidēre',           'vidī',         '2', 'to see',            'видеть',    'увидеть'), \
+    ('comprehendo', 'comprehendere',    'comprehendī',  '3', 'to understand',     'понимать',  'понять'), \
+    ('dīco',        'dīcere',           'dīxī',         '3', 'to say',            'говорить',  'сказать'), \
+    ('edo',         'edere',            'ēdī',          '3', 'to eat',            'есть',      'съесть'), \
+    ('lego',        'legere',           'lēgī',         '3', 'to read',           'читать',    'прочитать'), \
+    ('peto',        'petere',           'petīvī',     '3', 'to seek',           'искать',    'поискать'), \
+    ('scrībō',      'scrībere',         'scrīpsī',      '3', 'to write',          'писать',    'написать'), \
+    ('sīdo',        'sīdere',           'sīdī',         '3', 'to sit',            'сидеть',    'сесть'), \
+    ('vīvo',        'vīvere',           'vīxī',         '3', 'to live',           'жить',      'прожить'), \
+    ('audio',       'audire',           'audīvī',       '4', 'to hear',           'слышать',   'услышать'), \
+    ('scio',        'scire',            'scīvī',        '4', 'to know',           'знать',     'узнать'), \
+    ('venio',       'venire',           'vēnī',         '4', 'to come',           'приходить', 'прийти'), \
+    ('capio',       'capere',           'cēpī',         '5', 'to take',           'брать',     'взять'), \
+    ('incipio',     'incipere',         'incēpī',       '5', 'to begin',          'начать',    'начинать') \
 ]
 
 LatinV_fs = [x[0] for x in LatinV]
@@ -297,3 +301,41 @@ def LfindDeclR(word):
 
 def LfindDeclNM(word):
     return LatinA_decl[LatinA_nm.index(word)]
+
+# -------------------------------------------------------------
+# RUSSIAN
+# 7 Verb stems
+RussianV = [
+    ('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v'), \
+    ('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v'), \
+    ('жить',       'живут',      '1c',  'прожить',      'проживут',     '1c'), \
+    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), \
+    ('говорить',   'говорят',    '2c',  'сказать',      'скажут',       '1c'), \
+    ('смотреть',   'смотрят',    '2c',  'посмотреть',   'посмотрят',    '2c'), \
+    ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c'), \
+]
+
+RussianV_impf_inf = [x[0] for x in RussianV]
+RussianV_impf_3p = [x[1] for x in RussianV]
+RussianV_impf_conj = [x[2] for x in RussianV]
+RussianV_perf_inf = [x[3] for x in RussianV]
+RussianV_perf_3p = [x[4] for x in RussianV]
+RussianV_perf_conj = [x[5] for x in RussianV]
+
+def RfindPInfI(word):
+    return RussianV_perf_inf[RussianV_impf_inf.index(word)]
+
+def RfindIInfP(word):
+    return RussianV_impf_inf[RussianV_perf_inf.index(word)]
+
+def RfindI3PIInf(word):
+    return RussianV_impf_3p[RussianV_impf_inf.index(word)]
+
+def RfindP3PPInf(word):
+    return RussianV_perf_3p[RussianV_perf_inf.index(word)]
+
+def RfindIConjIInf(word):
+    return RussianV_impf_conj[RussianV_impf_inf.index(word)]
+
+def RfindPConjPInf(word):
+    return RussianV_perf_conj[RussianV_perf_inf.index(word)]
