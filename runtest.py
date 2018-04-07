@@ -53,13 +53,13 @@ def latinConstructNouns():
 
 def latinConstructVerbs():
 	# make verbs
-	params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n")).strip()
-	params = processInput(params)
-	while len(params) != 6 or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
-		params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n")).strip()
+	params = []
+	while len(params) != 4 or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the infinitive form, person, number, and tense, separated by commas\n")).strip()
 		params = processInput(params)
-	print Latin.conjugate(params[0], params[1], params[2], params[3], params[4], params[5])
+	print Latin.conjugate(params[0], params[1], params[2], params[3])
 
 	return cont()
 
