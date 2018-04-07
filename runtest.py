@@ -1,6 +1,7 @@
 # Elizabeth Yam ey92
 import sys
 import Latin
+import Russian
 
 YCHOICES = ['y','yes']
 NCHOICES = ['n','no']

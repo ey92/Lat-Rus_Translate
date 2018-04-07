@@ -3,14 +3,14 @@
 import Roots
 
 # vowels, consonants, letters
-vowLow = ['a', 'e', 'i', 'o', 'u', 'ā', 'ē', 'ī', 'ō', 'ū']
-vowCap = ['A', 'E', 'I', 'O', 'U', 'Ā', 'Ē', 'Ī', 'Ō', 'Ū']
-macronLow = ['ā', 'ē', 'ī', 'ō', 'ū']
-macronCap = ['Ā', 'Ē', 'Ī', 'Ō', 'Ū']
+vowLow = ['a','e','i','o','u','ā','ē','ī','ō','ū']
+vowCap = ['A','E','I','O','U','Ā','Ē','Ī','Ō','Ū']
+macronLow = ['ā','ē','ī','ō','ū']
+macronCap = ['Ā','Ē','Ī','Ō','Ū']
 macrons = macronLow+macronCap
 vow = vowLow+vowCap
-consLow = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'z']
-consCap = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z']
+consLow = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z']
+consCap = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','X','Z']
 cons = consLow+consCap
 lettersLow = vowLow+consLow
 lettersCap = vowCap+consCap

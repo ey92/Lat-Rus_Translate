@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 import Roots
 
-vowLow = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
-vowCap = ['А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я']
+vowLow = ['а','е','ё','и','о','у','ы','э','ю','я']
+vowCap = ['А','Е','Ё','И','О','У','Ы','Э','Ю','Я']
 vow = vowLow+vowCap
-consLow = ['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ь']
-consCap = ['Б', 'В', 'Г', 'Д', 'Ж', 'З', 'Й', 'К', 'Л', 'М', 'Н', 'П', 'Р', 'С', 'Т', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ь']
+consLow = ['б','в','г','д','ж','з','й','к','л','м','н','п','р','с','т','ф','х','ц','ч','ш','щ','ъ','ь']
+consCap = ['Б','В','Г','Д','Ж','З','Й','К','Л','М','Н','П','Р','С','Т','Ф','Х','Ц','Ч','Ш','Щ','Ъ','Ь']
+consPal = ['ж','ц','ч','ш','щ']
 cons = consLow+consCap
 lettersLow = vowLow+consLow
 lettersCap = vowCap+consCap
@@ -23,12 +24,14 @@ VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL','M','F','
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
 endings1clst = ['у','ёшь','ёт','ём','ёте','ут']
+endings1cplst = ['у','ешь','ет','ем','ете','ут']
 endings2vlst = ['ю','ишь','ит','им','ите','ят']
-endings2clst = ['у','ищь','ит','им','ите','ат']
-endings1v = dict(zip(VERB_FORM_KEYS,endingsNPvlst))
-endings1c = dict(zip(VERB_FORM_KEYS,endingsNPclst))
-endings2v = dict(zip(VERB_FORM_KEYS,endingsPvlst))
-endings2c = dict(zip(VERB_FORM_KEYS,endingsPclst))
+endings2clst = ['у','ишь','ит','им','ите','ат']
+endings1v = dict(zip(VERB_FORM_KEYS,endings1vlst))
+endings1c = dict(zip(VERB_FORM_KEYS,endings1clst))
+endings1cp = dict(zip(VERB_FORM_KEYS,endings1cplst))
+endings2v = dict(zip(VERB_FORM_KEYS,endings2vlst))
+endings2c = dict(zip(VERB_FORM_KEYS,endings2clst))
 
 def takeRaw(word):
 	return word.decode('utf8')
@@ -70,7 +73,6 @@ def toLower(word):
 
 def nonPastTense(inf, t, per, num, perf):
 	form = per+num
-	root = Roots.Rf
 	end = ''
 
 	if perf:
@@ -92,7 +94,10 @@ def nonPastTense(inf, t, per, num, perf):
 			end = endings1v[form]
 		# if cons stem
 		elif t[1] == 'c':
-			end = endings1c[form]
+			if stem[-2:] in consPal:
+				end = endings1cp[form]
+			else:
+				end = endings1c[form]
 	# if 2nd conj
 	elif t[0] == '2':
 		# if vowel stem
@@ -108,9 +113,9 @@ def nonPastTense(inf, t, per, num, perf):
 
 # def futureTense(inf, t, per, num):
 
-
+# takes either infinitive form, person, number, and tense
 def conjugate (inf, per, num, tense):
-	
+
 	# PRES,IMPF,FUTR need impf inf
 	if tense in ['PRES','IMPF','FUTR']:
 		perf = False
@@ -140,7 +145,7 @@ def conjugate (inf, per, num, tense):
 			inf = Roots.RfindPInfI(inf)
 
 		# inf perf inf
-		if perf in Roots.RussianV_perf_inf:
+		if inf in Roots.RussianV_perf_inf:
 			# t = conjugation
 			t = Roots.RfindPConjPInf(inf)
 
