@@ -166,3 +166,12 @@ def conjugate (inf, per, num, gender, tense):
 				return pastTense(inf,t,gender,num,perf)
 			elif tense == 'FUTP':
 				return nonPastTense(inf,t,per,num,perf)
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# NOUNS
+# -------------------------------------------------------------
+# DECLENSION
+
+# takes nomS, case, number
+# def decline(nom, case, num, d=None, gender=None):

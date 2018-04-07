@@ -25,7 +25,7 @@ It doesn't into account context or identify special phrasal constructions. It is
 input:    `amare, FST, SG, PRES`<br>
 output:   `amo`<br>
 
-input:    `amare, amāvi, 1, FST, SG, PRES`<br>
+input:    `amare, FST, SG, PRES, 1, amāvi`<br>
 output:   `amo`<br>
 
 #### REVERSE CONJUGATION
