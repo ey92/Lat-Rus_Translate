@@ -6,9 +6,11 @@ Conjugations:
 
 | Imperfective<br>Conjugation | Imperfective<br>Infinitive | TRD PL PRES/<br>Non-past | Perfective<br>Infinitive | TRD PL FUTP/<br>Non-past | Perfective<br>Conjugation |
 | ----------- | ---------- | ----------- | ----------- | ------ | --------- |
-| 1c  | жить     | живут   | прожить   | проживут  | 1c |
+| irregular  | жить     | живут   | прожить   | проживут  | irregular |
+| 1c  | искать   | ищут    | поискать  | поищут    | 1c |
 | 1v  | читать   | читают  | прочитать | прочитают | 1v |
 | 2v  | говорить | говорят | сказать   | скажут    | 1c |
+| 2v  | смотреть | смотрят | посмотреть| посмотрят | 2v |
 | 2c  | учить    | учат    | обучить   | обучат    | 2c |
 
 Indicative mood Active voice:
