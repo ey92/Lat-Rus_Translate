@@ -309,6 +309,8 @@ def pastFindForm(root):
 
 	return [inf,pinf,per,num,gender,tense]
 
+# def revIrregular(root):
+
 def reverseConjugate(word):
 	if '_' in word:
 		return futrFindForm(word)

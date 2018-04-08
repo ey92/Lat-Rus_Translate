@@ -327,6 +327,70 @@ def russianConstruct():
 	elif choice2 == 4:
 		return 'y'
 
+def russianDeconstructVerbs():
+	# deconstruct verb
+	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
+	params = processInput(params)
+	while len(params) != 1 or not(checkStr(params)):
+		print(len(params))
+		print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
+		params = processInput(params)
+	print Russian.reverseConjugate(params[0])
+
+	return cont()
+
+def russianDeconstruct():
+	print("What part of speech is the form you want to deconstruct?\n1) Noun\n2) Verb\n3) Adjective\n4) Return to previous menu")
+	choice3 = raw_input().strip()
+
+	while checkInt(choice3) and (int(choice3) < 1 or int(choice3) > 4):
+		if choice3 != 0:
+			print("That's not a choice")
+		print("What part of speech is the form you want to deconstruct?\n1) Noun\n2) Verb\n3) Adjective\n4) Return to previous menu")
+		choice3 = raw_input().strip()
+	choice3 = int(choice3)
+
+	# Deconstruct Noun
+	# if choice3 == 1:
+	# 	val = 2
+	# 	while (True):
+	# 		val = russianDeconstructNouns()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = russianDeconstructNouns()
+	# 		elif val == None:
+	# 			return val	
+	
+	# Deconstruct Verb
+	# elif choice3 == 2:
+	if choice3 == 2:
+		val = 2
+		while (True):
+			val = russianDeconstructVerbs()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = russianDeconstructVerbs()
+			elif val == None:
+				return val	
+
+	# Deconstruct Adjective
+	# elif choice3 == 3:
+	# 	val = 2
+	# 	while (True):
+	# 		val = russianDeconstructAdj()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = russianDeconstructAdj()
+	# 		elif val == None:
+	# 			return val	
+
+	elif choice3 == 4:
+		return 'y'
+
 def russianMenu():
 	choice1 = 0
 	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 3):
@@ -349,16 +413,16 @@ def russianMenu():
 				return val	
 
 	# Deconstruct Russian forms
-	# elif choice1 == 2:
-	# 	val = 2
-	# 	while (True):
-	# 		val = russianDeconstruct()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = russianDeconstruct()
-	# 		elif val == None:
-	# 			return val
+	elif choice1 == 2:
+		val = 2
+		while (True):
+			val = russianDeconstruct()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = russianDeconstruct()
+			elif val == None:
+				return val
 		
 	elif choice1 == 3:
 		return 'a'

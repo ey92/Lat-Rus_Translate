@@ -162,9 +162,25 @@ output:   `буду_жить`<br>
 `Russian.reverseConjugate()`
 - takes Russian verb form
 
-input:    <br>
-output:   <br>
-output2:  <br>
+input:    `ищет`<br>
+output:   `['\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c', '\xd0\xbf\xd0\xbe\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c', 'TRD', 'SG', '', 'PRES']`<br>
+output2:  `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']` (unicode decoded)<br>
+
+input:    `посмотрите`<br>
+output:   `['\xd1\x81\xd0\xbc\xd0\xbe\xd1\x82\xd1\x80\xd0\xb5\xd1\x82\xd1\x8c', '\xd0\xbf\xd0\xbe\xd1\x81\xd0\xbc\xd0\xbe\xd1\x82\xd1\x80\xd0\xb5\xd1\x82\xd1\x8c', 'SND', 'PL', '', 'FUTP']`<br>
+output2:  `['смотреть', 'посмотреть', 'SND', 'PL', '', 'FUTP']` (unicode decoded)<br>
+
+input:    `искал`<br>
+output:   `['\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c', '\xd0\xbf\xd0\xbe\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c', 'FST/SND/TRD', 'SG', 'M', 'IMPF']`<br>
+output2:  `['искать', 'поискать', 'FST/SND/TRD', 'SG', 'M', 'IMPF']` (unicode decoded)<br>
+
+input:    `обучили`<br>
+output:   `['\xd1\x83\xd1\x87\xd0\xb8\xd1\x82\xd1\x8c', '\xd0\xbe\xd0\xb1\xd1\x83\xd1\x87\xd0\xb8\xd1\x82\xd1\x8c', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']`<br>
+output2:  `['учить', 'обучить', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']` (unicode decoded)<br>
+
+input:    `буду_читать`<br>
+output:   `['\xd1\x87\xd0\xb8\xd1\x82\xd0\xb0\xd1\x82\xd1\x8c', '\xd0\xbf\xd1\x80\xd0\xbe\xd1\x87\xd0\xb8\xd1\x82\xd0\xb0\xd1\x82\xd1\x8c', 'FST', 'SG', '', 'FUTR']`<br>
+output2:  `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']` (unicode decoded)<br>
 
 #### Verb Parameters
 
