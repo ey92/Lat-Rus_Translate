@@ -170,7 +170,152 @@ def conjugate (inf, per, num, gender, tense):
 # -------------------------------------------------------------
 # REVERSE CONJUGATION
 
-# def reverseConjugate(word):
+def findRoot(stem):
+	P3 = ''
+	inf = ''
+	pinf = ''
+	perf = False
+
+	# stem ends in palalatalized consonant
+	P3form = 'TRDPL'
+	if stem[-2:] in (consPal):
+		# try 1st conj
+		P3 = stem+endings1c[P3form]
+		# try 2nd conj
+		if not P3 in Roots.RussianV_3p:
+			P3 = stem+endings2c[P3form]
+
+	# stem ends in non-palatalized consonant
+	else:
+		# try 1st conj
+		P3 = stem+endings1v[P3form]
+		# try 2nd conj
+		if not P3 in Roots.RussianV_3p:
+			P3 = stem+endings2v[P3form]
+
+	if P3 in Roots.RussianV_impf_3p:
+		inf = Roots.RfindIInf3PI(P3)
+		pinf = Roots.RfindPInfI(inf)
+		perf = False
+	elif P3 in Roots.RussianV_perf_3p:
+		pinf = Roots.RfindPInf3PP(P3)
+		inf = Roots.RfindIInfP(pinf)
+		perf = True
+
+	return (inf,pinf,perf)
+
+# finds per/num form and inf
+def findForm(root):
+	per = ''
+	num = ''
+	stem = ''
+
+	# 1S
+	if root[-2:] in ['у','ю']:
+		per = 'FST'
+		num = 'SG'
+		stem = root[:-2]
+
+	# 2S
+	elif root[-4:] == 'шь':
+		per = 'SND'
+		num = 'SG'
+		stem = root[:-6]
+
+	# 3S
+	elif root[-4:] in ['ет','ит','ёт']:
+		per = 'TRD'
+		num = 'SG'
+		stem = root[:-4]
+
+	# 1P
+	elif root[-2:] == 'м':
+		per = 'FST'
+		num = 'PL'
+		stem = root[:-4]
+
+	# 2P
+	elif root[-4:] == 'те':
+		per = 'SND'
+		num = 'PL'
+		stem = root[:-6]
+
+	# 3P
+	elif root[-4:] in ['ут','ат','ют','ят']:
+		per = 'TRD'
+		num = 'PL'
+		stem = root[:-4]
+
+	(inf,pinf,perf) = findRoot(stem)
+	return (inf,pinf,per,num,perf)
+
+def futrFindForm(root):
+	gender = ''
+	tense = 'FUTR'
+	ind = root.index('_')
+	pref = root[:ind]
+	
+	(inf,pinf,per,num,perf) = findForm(pref)
+	inf = root[ind+1:] 
+	
+	pinf = Roots.RfindPInfI(inf)
+	return [inf,pinf,per,num,gender,tense]
+
+def nonpastFindForm(root):
+	gender = ''
+	(inf,pinf,per,num,perf) = findForm(root)
+
+	tense = 'FUTP' if perf else 'PRES'
+
+	return [inf,pinf,per,num,gender,tense]
+
+def pastFindForm(root):
+	per = 'FST/SND/TRD'
+	gender = ''
+	num = ''
+	stem = ''
+	tense = ''
+	inf = ''
+	pinf = ''
+	
+	if root[-2:] == 'л':
+		gender = 'M'
+		num = 'SG'
+		stem = root[:-2]
+	elif root[-4:] == 'ла':
+		gender = 'F'
+		num = 'SG'
+		stem = root[:-4]
+	elif root[-4:] == 'ло':
+		gender = 'N'
+		num = 'SG'
+		stem = root[:-4]
+	elif root[-4:] == 'ли':
+		gender = 'M/F/N'
+		num = 'PL'
+		stem = root[:-4]
+
+	inf = stem+'ть'
+	if inf not in Roots.RussianV_inf:
+		inf = stem+'ти'
+
+	if inf in Roots.RussianV_impf_inf:
+		tense = 'IMPF'
+		pinf = Roots.RfindPInfI(inf)
+	elif inf in Roots.RussianV_perf_inf:
+		tense = 'PERF'
+		pinf = inf
+		inf = Roots.RfindIInfP(pinf)
+
+	return [inf,pinf,per,num,gender,tense]
+
+def reverseConjugate(word):
+	if '_' in word:
+		return futrFindForm(word)
+	elif word[-2:] in ['у','ю','м'] or word[-4:] in ['шь','ет','ит','ёт','те','ут','ат','ют','ят']:
+		return nonpastFindForm(word)
+	elif word[-2:] == 'л' or word[-4:] in ['ла','ло','ли']:
+		return pastFindForm(word)
 
 # -------------------------------------------------------------
 # -------------------------------------------------------------

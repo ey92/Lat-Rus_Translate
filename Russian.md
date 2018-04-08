@@ -4,7 +4,7 @@
 
 Conjugations:
 
-| Imperfective<br>Conjugation | Imperfective<br>Infinitive | TRD PL PRES/Non-past | Perfective<br>Infinitive | TRD PL FUTP/Non-past | Perfective Conjugation |
+| Imperfective<br>Conjugation | Imperfective<br>Infinitive | TRD PL PRES/<br>Non-past | Perfective<br>Infinitive | TRD PL FUTP/<br>Non-past | Perfective<br>Conjugation |
 | ----------- | ---------- | ----------- | ----------- | ------ | --------- |
 | 1c  | жить     | живут   | прожить   | проживут  | 1c |
 | 1v  | читать   | читают  | прочитать | прочитают | 1v |

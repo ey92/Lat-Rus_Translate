@@ -341,8 +341,9 @@ def LfindDeclNM(word):
 RussianV = [
     ('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v'), \
     ('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v'), \
-    ('жить',       'живут',      '1c',  'прожить',      'проживут',     '1c'), \
-    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), \
+    ('искать',     'ищут',       '1c',  'поискать',     'поищут',       '1c'), \
+    ('жить',       'живут',      '1c',  'прожить',      'проживут',     '1c'), #irregular\
+    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), #irregular\
     ('говорить',   'говорят',    '2v',  'сказать',      'скажут',       '1c'), \
     ('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v'), \
     ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c'), \
@@ -354,12 +355,20 @@ RussianV_impf_conj = [x[2] for x in RussianV]
 RussianV_perf_inf = [x[3] for x in RussianV]
 RussianV_perf_3p = [x[4] for x in RussianV]
 RussianV_perf_conj = [x[5] for x in RussianV]
+RussianV_inf = RussianV_impf_inf+RussianV_perf_inf
+RussianV_3p = RussianV_impf_3p+RussianV_perf_3p
 
 def RfindPInfI(word):
     return RussianV_perf_inf[RussianV_impf_inf.index(word)]
 
 def RfindIInfP(word):
     return RussianV_impf_inf[RussianV_perf_inf.index(word)]
+
+def RfindIInf3PI(word):
+    return RussianV_impf_inf[RussianV_impf_3p.index(word)]
+
+def RfindPInf3PP(word):
+    return RussianV_perf_inf[RussianV_perf_3p.index(word)]
 
 def RfindI3PIInf(word):
     return RussianV_impf_3p[RussianV_impf_inf.index(word)]
