@@ -1398,7 +1398,6 @@ def declineA(nomM, root, d, gender, case, num):
 				gen = root[:-1]+"ī"
 				return decline(nomM,gen,case,num,d,gender)
 			elif gender == "N":
-				print('hi')
 				nom = root[:-1]+"um"
 				gen = root[:-1]+"ī"
 				return decline(nom,gen,case,num,d,gender)

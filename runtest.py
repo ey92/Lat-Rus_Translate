@@ -8,8 +8,11 @@ NCHOICES = ['n','no']
 ACHOICES = ['a','again']
 YNCHOICES = YCHOICES+NCHOICES+ACHOICES
 
-def processInput(string):
-	return [p.strip() for p in string.split(',')]
+def processInput(string, latin=True):
+	if latin:
+		return [Latin.toMacron(p.strip()) for p in string.split(',')]
+	else:
+		return [p.strip() for p in string.split(',')]
 
 def checkStr(lst):
 	for e in lst:
@@ -43,7 +46,7 @@ def latinConstructNouns():
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the nominativeS form, genitiveS form, case, number, [declension, gender], separated by commas\n")).strip()
-		params = processInput(params)
+		params = processInput(params,True)
 
 	if len(params) == 4:
 		result =  Latin.decline(params[0], params[1], params[2], params[3])
@@ -64,7 +67,7 @@ def latinConstructVerbs():
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the infinitive form, person, number, and tense, [conjugation, perfective form], separated by commas\n")).strip()
-		params = processInput(params)
+		params = processInput(params,True)
 
 	if len(params) == 4:
 		result = Latin.conjugate(params[0], params[1], params[2], params[3])
@@ -77,12 +80,12 @@ def latinConstructVerbs():
 
 def latinConstructAdj():
 	# make adjectives
-	params = str(raw_input("Please enter the nominativeM, genitive/nomF (root), declension, gender, case, number, separated by commas\n")).strip()
-	params = processInput(params)
+	params = []
 	while len(params) != 6 or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n")).strip()
-		params = processInput(params)
+		params = processInput(params,True)
 	print Latin.declineA(params[0], params[1], params[2], params[3], params[4], params[5])
 
 	return cont()
@@ -139,37 +142,36 @@ def latinConstruct():
 
 def latinDeconstructNouns():
 	# deconstruct noun
-	params = str(raw_input("Please enter the noun you want to deconstruct\n")).strip()
-	params = processInput(params)
+	params = []
 	while len(params) != 1 or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
-		params = processInput(params)
+		params = processInput(params,True)
 	print Latin.reverseDecline(params[0])
 
 	return cont()
 
 def latinDeconstructVerbs():
 	# deconstruct verb
-	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
-	params = processInput(params)
+	params = []
 	while len(params) != 1 or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
-		params = processInput(params)
-	print('hi')
+		params = processInput(params,True)
 	print Latin.reverseConjugate(params[0])
 
 	return cont()
 
 def latinDeconstructAdj():
 	# deconstruct adjective
-	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
-	params = processInput(params)
+	params = []
 	while not (len(params) in [1,2]) or not(checkStr(params)):
-		print("Sorry, not the right number of parameters or they aren't all strings.")
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
-		params = processInput(params)
+		params = processInput(params,True)
 		params += ['']
 	print Latin.reverseDeclineA(params[0], params[1])
 
