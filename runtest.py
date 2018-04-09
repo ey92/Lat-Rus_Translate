@@ -142,7 +142,6 @@ def latinDeconstructNouns():
 	params = str(raw_input("Please enter the noun you want to deconstruct\n")).strip()
 	params = processInput(params)
 	while len(params) != 1 or not(checkStr(params)):
-		print(len(params))
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)
@@ -155,10 +154,10 @@ def latinDeconstructVerbs():
 	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 	params = processInput(params)
 	while len(params) != 1 or not(checkStr(params)):
-		print(len(params))
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)
+	print('hi')
 	print Latin.reverseConjugate(params[0])
 
 	return cont()
@@ -168,7 +167,6 @@ def latinDeconstructAdj():
 	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 	params = processInput(params)
 	while not (len(params) in [1,2]) or not(checkStr(params)):
-		print(len(params))
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)

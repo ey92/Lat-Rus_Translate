@@ -133,17 +133,22 @@ def toLower(word):
 	toUpper(word)
 
 def toMacron(string):
-	for i in len(string):
+	res = ''
+	for i in range(len(string)):
 		if string[i] == 'A':
-			string[i] = 'ā'
+			res+='ā'
 		elif string[i] == 'E':
-			string[i] = 'ē'
+			res+='ē'
 		elif string[i] == 'I':
-			string[i] = 'ī'
+			res+='ī'
 		elif string[i] == 'O':
-			string[i] = 'ō'
+			res+='ō'
 		elif string[i] == 'U':
-			string[i] = 'ū'
+			res+='ū'
+		else:
+			res+=string[i]
+		res = res.replace('\\\\', '\\')
+	return res
 
 # -------------------------------------------------------------
 # -------------------------------------------------------------
