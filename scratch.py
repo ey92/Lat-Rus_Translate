@@ -50,17 +50,11 @@ labor, laboris, ACC, SG, 3, M
 'pulcher','pulchra','12','N','ABL','SG'
  pulcher , pulchra , 12 , N , ABL , SG 
 
-ārum
-ī
 ā
+ī
 ū
-ēī
-īs
-ēs
-ēbus
-ūs
-ōrum
-ōs
+ē
+ō
 
 ['у','ёшь','ёт','ём','ёте','ут']
 ['ю','ешь','ет','ем','ете','ют']
@@ -86,9 +80,24 @@ labor, laboris, ACC, SG, 3, M
 прожить , FST , SG ,  , FUTR
 
 Irregular verbs: 
-мочь, дать, есть, взять, брать, 
+мочь, дать, есть, взять/брать, 
 закрыть, класть, ждать, жить, 
 ехать, идти, писать, хотеть and their derivatives.
 
+писать,закрыть is handled by going to 3P for root
 
 ['\xd1\x87\xd0\xb8\xd1\x82\xd0\xb0\xd1\x82\xd1\x8c','\xd0\xbf\xd1\x80\xd0\xbe\xd1\x87\xd0\xb8\xd1\x82\xd0\xb0\xd1\x82\xd1\x8c','\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c','\xd0\xbf\xd0\xbe\xd0\xb8\xd1\x81\xd0\xba\xd0\xb0\xd1\x82\xd1\x8c','\xd1\x81\xd0\xbc\xd0\xbe\xd1\x82\xd1\x80\xd0\xb5\xd1\x82\xd1\x8c','\xd0\xbf\xd0\xbe\xd1\x81\xd0\xbc\xd0\xbe\xd1\x82\xd1\x80\xd0\xb5\xd1\x82\xd1\x8c','\xd1\x83\xd1\x87\xd0\xb8\xd1\x82\xd1\x8c','\xd0\xbe\xd0\xb1\xd1\x83\xd1\x87\xd0\xb8\xd1\x82\xd1\x8c']
+
+'ждать','жить','ехать','идти','хотеть'
+'класть', 'положить' - положи́ть is regular
+
+klastPreslst = ['кладу','кладёшь','кладёт','кладём','кладёте','кладут']
+klastFutplst = ['положу','положишь','положит','положим','положите','положат']
+klastImpflst = ['клал','клала','клало','клали']
+klastPerflst = ['положил','положила','положило','положили',]
+klastPres = dict(zip(VERB_FORM_KEYS,klastPreslst))
+klastFutp = dict(zip(VERB_FORM_KEYS,klastFutplst))
+klastImpf = dict(zip(PAST_VERB_KEYS,klastImpflst))
+klastPerf = dict(zip(PAST_VERB_KEYS,klastPerflst))
+klastAll = klastPreslst+klastFutplst+klastImpflst+klastPerflst
+

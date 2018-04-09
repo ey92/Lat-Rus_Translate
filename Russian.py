@@ -21,6 +21,60 @@ NUM_LETTERS = len(letters)
 NUM_LETTERS_CAP = len(lettersCap)
 VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 PAST_VERB_KEYS = ['M','F','N','PL']
+
+# irregular verb conjugations
+irreg = ['мочь','дать','есть','брать','класть','ждать','жить','ехать','идти','хотеть']
+mochPreslst = ['могу','можешь','может','можем','можете','могут']
+mochFutplst = ['смогу','сможешь','сможет','сможем','сможете','смогут']
+mochImpflst = ['мог','могла','могло','могли']
+mochPerflst = ['смог','смогла','смогло','смогли']
+mochPres = dict(zip(VERB_FORM_KEYS,mochPreslst))
+mochFutp = dict(zip(VERB_FORM_KEYS,mochFutplst))
+mochImpf = dict(zip(PAST_VERB_KEYS,mochImpflst))
+mochPerf = dict(zip(PAST_VERB_KEYS,mochPerflst))
+mochAll = mochPreslst+mochFutplst+mochImpflst+mochPerflst
+
+datPreslst = ['даю','даёшь','даёт','даём','даёте','дают']
+datFutplst = ['дам','дашь','даст','дадим','дадите','дадут']
+datImpflst = ['давал','давала','давало','давали']
+datPerflst = ['дал','дала','дало','дали']
+datPres = dict(zip(VERB_FORM_KEYS,datPreslst))
+datFutp = dict(zip(VERB_FORM_KEYS,datFutplst))
+datImpf = dict(zip(PAST_VERB_KEYS,datImpflst))
+datPerf = dict(zip(PAST_VERB_KEYS,datPerflst))
+datAll = datPreslst+datFutplst+datImpflst+datPerflst
+
+estPreslst = ['ем','ешь','ест','едим','едите','едят']
+estFutplst = ['съем','съешь','съест','съедим','съедите','съедят']
+estImpflst = ['ел','ела','ело','ели']
+estPerflst = ['съел','съели','съела','съело']
+estPres = dict(zip(VERB_FORM_KEYS,estPreslst))
+estFutp = dict(zip(VERB_FORM_KEYS,estFutplst))
+estImpf = dict(zip(PAST_VERB_KEYS,estImpflst))
+estPerf = dict(zip(PAST_VERB_KEYS,estPerflst))
+estAll = estPreslst+estFutplst+estImpflst+estPerfls
+
+bratPreslst = ['беру','берёшь','берёт','берём','берёте','берут']
+bratFutplst = ['возьму','возьмёшь','возьмёт','возьмём','возьмёте','возьмут']
+bratImpflst = ['брал','брала','брало','брали']
+bratPerflst = ['взял','взяла','взяло','взяли']
+bratPres = dict(zip(VERB_FORM_KEYS,bratPreslst))
+bratFutp = dict(zip(VERB_FORM_KEYS,bratFutplst))
+bratImpf = dict(zip(PAST_VERB_KEYS,bratImpflst))
+bratPerf = dict(zip(PAST_VERB_KEYS,bratPerflst))
+bratAll = bratPreslst+bratFutplst+bratImpflst+bratPerflst
+
+klastPreslst = ['кладу','кладёшь','кладёт','кладём','кладёте','кладут']
+klastFutplst = ['положу','положишь','положит','положим','положите','положат']
+klastImpflst = ['клал','клала','клало','клали']
+klastPerflst = ['положил','положила','положило','положили',]
+klastPres = dict(zip(VERB_FORM_KEYS,klastPreslst))
+klastFutp = dict(zip(VERB_FORM_KEYS,klastFutplst))
+klastImpf = dict(zip(PAST_VERB_KEYS,klastImpflst))
+klastPerf = dict(zip(PAST_VERB_KEYS,klastPerflst))
+klastAll = klastPreslst+klastFutplst+klastImpflst+klastPerflst
+
+
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
 endings1clst = ['у','ёшь','ёт','ём','ёте','ут']
