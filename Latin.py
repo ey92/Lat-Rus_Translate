@@ -821,7 +821,7 @@ def reverseConjugate(word):
 			return findTense3S(word,per,num,perf)
 
 	# unicode macron issues
-	elif word[-1] == "o" or word[-1] == "m" or word[-2] == "ī":
+	elif word[-1] == "o" or word[-1] == "m" or word[-2:] == "ī":
 	# else:
 		per = "FST"
 		num = "SG"
