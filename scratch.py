@@ -12,9 +12,6 @@ print(consonants[0].encode('utf8'))
 a = u'человек'
 print a.encode('utf8')
 print(u'человек')
-# https://stackoverflow.com/questions/16218274/convert-unicode-cyrillic-symbols-to-string-in-python
-# https://en.openrussian.org/list/nouns
-# https://en.openrussian.org/list/verbs
 
 '\xd1\x83'
 u'\u0443'

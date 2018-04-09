@@ -132,6 +132,19 @@ def toLowerL(letter):
 def toLower(word):
 	toUpper(word)
 
+def toMacron(string):
+	for i in len(string):
+		if string[i] == 'A':
+			string[i] = 'ā'
+		elif string[i] == 'E':
+			string[i] = 'ē'
+		elif string[i] == 'I':
+			string[i] = 'ī'
+		elif string[i] == 'O':
+			string[i] = 'ō'
+		elif string[i] == 'U':
+			string[i] = 'ū'
+
 # -------------------------------------------------------------
 # -------------------------------------------------------------
 # VERBS

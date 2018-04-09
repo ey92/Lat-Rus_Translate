@@ -34,7 +34,7 @@ output:   `amo`<br>
 
 input:    `amant`<br>
 output:   `['amare', 'am\xc4\x81v\xc4\xab', 'TRD', 'PL', 'PRES']`<br>
-output:  `['amare', 'amāvi', 'TRD', 'PL', 'PRES']` (unicode translated)<br>
+output:  `['amare', 'amāvī', 'TRD', 'PL', 'PRES']` (unicode translated)<br>
 
 #### Verb Parameters
 
