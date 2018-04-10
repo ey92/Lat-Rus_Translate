@@ -21,9 +21,21 @@ def printList(lst):
 		s += ']'
 		print(s)
 
-def processInput(string, latin=False):
+def processInput(string, latin=False, verb=False):
 	if latin:
-		return [Latin.toMacron(p.strip()) for p in string.split(',')]
+		lst = []
+		inds = []
+		string = string.split(',')
+		if verb:
+			inds = [0,5]
+		else:
+			inds = [0,1]
+		for i in range(len(string)):
+			if i in inds:
+				lst.append(Latin.toMacron(string[i].strip()))
+			else:
+				lst.append(string[i].strip())
+		return lst
 	else:
 		return [p.strip() for p in string.split(',')]
 
@@ -59,15 +71,15 @@ def latinConstructNouns():
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the nominativeS form, genitiveS form, case, number, [declension, gender], separated by commas\n")).strip()
-		params = processInput(params,True)
+		params = processInput(params,True, False)
 
 	if len(params) == 4:
 		result =  Latin.decline(params[0], params[1], params[2], params[3])
 
 	else:
 		# pad declension param with spaces
-		if len(params[2]) < 3:
-			params[2]+='  '
+		if len(params[4]) < 3:
+			params[4]+='  '
 		result = Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
 	
 	print(result)
@@ -80,7 +92,7 @@ def latinConstructVerbs():
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the infinitive form, person, number, and tense, [conjugation, perfective form], separated by commas\n")).strip()
-		params = processInput(params,True)
+		params = processInput(params,True,True)
 
 	if len(params) == 4:
 		result = Latin.conjugate(params[0], params[1], params[2], params[3])
@@ -98,7 +110,7 @@ def latinConstructAdj():
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n")).strip()
-		params = processInput(params,True)
+		params = processInput(params,True,False)
 	print Latin.declineA(params[0], params[1], params[2], params[3], params[4], params[5])
 
 	return cont()
