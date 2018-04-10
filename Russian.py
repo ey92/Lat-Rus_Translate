@@ -67,13 +67,62 @@ bratAll = bratPreslst+bratFutplst+bratImpflst+bratPerflst
 klastPreslst = ['кладу','кладёшь','кладёт','кладём','кладёте','кладут']
 klastFutplst = ['положу','положишь','положит','положим','положите','положат']
 klastImpflst = ['клал','клала','клало','клали']
-klastPerflst = ['положил','положила','положило','положили',]
+klastPerflst = ['положил','положила','положило','положили']
 klastPres = dict(zip(VERB_FORM_KEYS,klastPreslst))
 klastFutp = dict(zip(VERB_FORM_KEYS,klastFutplst))
 klastImpf = dict(zip(PAST_VERB_KEYS,klastImpflst))
 klastPerf = dict(zip(PAST_VERB_KEYS,klastPerflst))
 klastAll = klastPreslst+klastFutplst+klastImpflst+klastPerflst
 
+zhdatPreslst = ['жду','ждёшь','ждёт','ждём','ждёте','ждут']
+zhdatFutplst = ['подожду','подождёшь','подождёт','подождём','подождёте','подождут']
+zhdatImpflst = ['ждал','ждала','ждало','ждали']
+zhdatPerflst = ['подождал','подождала','подождало','подождали']
+zhdatPres = dict(zip(VERB_FORM_KEYS,zhdatPreslst))
+zhdatFutp = dict(zip(VERB_FORM_KEYS,zhdatFutplst))
+zhdatImpf = dict(zip(PAST_VERB_KEYS,zhdatImpflst))
+zhdatPerf = dict(zip(PAST_VERB_KEYS,zhdatPerflst))
+zhdatAll = zhdatPreslst+zhdatFutplst+zhdatImpflst+zhdatPerflst
+
+zhitPreslst = ['живу','живёшь','живёт','живём','живёте','живут']
+zhitFutplst = ['проживу','проживёшь','проживёт','проживём','проживёте','проживут']
+zhitImpflst = ['жил','жила','жило','жили']
+zhitPerflst = ['прожил','прожила','прожило','прожили']
+zhitPres = dict(zip(VERB_FORM_KEYS,zhitPreslst))
+zhitFutp = dict(zip(VERB_FORM_KEYS,zhitFutplst))
+zhitImpf = dict(zip(PAST_VERB_KEYS,zhitImpflst))
+zhitPerf = dict(zip(PAST_VERB_KEYS,zhitPerflst))
+zhitAll = zhitPreslst+zhitFutplst+zhitImpflst+zhitPerflst
+
+exatPreslst = ['еду','едешь','едет','едем','едете','едут']
+exatFutplst = ['поеду','поедешь','поедет','поедем','поедете','поедут']
+exatImpflst = ['ехал','ехала','ехало','ехали']
+exatPerflst = ['поехал','поехала','поехало','поехали']
+exatPres = dict(zip(VERB_FORM_KEYS,exatPreslst))
+exatFutp = dict(zip(VERB_FORM_KEYS,exatFutplst))
+exatImpf = dict(zip(PAST_VERB_KEYS,exatImpflst))
+exatPerf = dict(zip(PAST_VERB_KEYS,exatPerflst))
+exatAll = exatPreslst+exatFutplst+exatImpflst+exatPerflst
+
+idtiPreslst = ['иду','идёшь','идёт','идём','идёте','идут']
+idtiFutplst = ['пойду','пойдёшь','пойдёт','пойдём','пойдёте','пойдут']
+idtiImpflst = ['шёл','шла','шло','шли']
+idtiPerflst = ['пошёл','пошла','пошло','пошли']
+idtiPres = dict(zip(VERB_FORM_KEYS,idtiPreslst))
+idtiFutp = dict(zip(VERB_FORM_KEYS,idtiFutplst))
+idtiImpf = dict(zip(PAST_VERB_KEYS,idtiImpflst))
+idtiPerf = dict(zip(PAST_VERB_KEYS,idtiPerflst))
+idtiAll = idtiPreslst+idtiFutplst+idtiImpflst+idtiPerflst
+
+xotetPreslst = ['хочу','хочешь','хочет','хотим','хотите','хотят']
+xotetFutplst = ['захочу','захочешь','захочет','захотим','захотите','захотят']
+xotetImpflst = ['хотел','хотела','хотело','хотели']
+xotetPerflst = ['захотел','захотела','захотело','захотели']
+xotetPres = dict(zip(VERB_FORM_KEYS,xotetPreslst))
+xotetFutp = dict(zip(VERB_FORM_KEYS,xotetFutplst))
+xotetImpf = dict(zip(PAST_VERB_KEYS,xotetImpflst))
+xotetPerf = dict(zip(PAST_VERB_KEYS,xotetPerflst))
+xotetAll = xotetPreslst+xotetFutplst+xotetImpflst+xotetPerflst
 
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
