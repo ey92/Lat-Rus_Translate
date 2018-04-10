@@ -52,7 +52,7 @@ estPres = dict(zip(VERB_FORM_KEYS,estPreslst))
 estFutp = dict(zip(VERB_FORM_KEYS,estFutplst))
 estImpf = dict(zip(PAST_VERB_KEYS,estImpflst))
 estPerf = dict(zip(PAST_VERB_KEYS,estPerflst))
-estAll = estPreslst+estFutplst+estImpflst+estPerfls
+estAll = estPreslst+estFutplst+estImpflst+estPerflst
 
 bratPreslst = ['беру','берёшь','берёт','берём','берёте','берут']
 bratFutplst = ['возьму','возьмёшь','возьмёт','возьмём','возьмёте','возьмут']
