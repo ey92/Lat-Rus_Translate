@@ -32,6 +32,7 @@ mochPres = dict(zip(VERB_FORM_KEYS,mochPreslst))
 mochFutp = dict(zip(VERB_FORM_KEYS,mochFutplst))
 mochImpf = dict(zip(PAST_VERB_KEYS,mochImpflst))
 mochPerf = dict(zip(PAST_VERB_KEYS,mochPerflst))
+mochConj = {'PRES':mochPres,'FUTP':mochFutp,'IMPF':mochImpf,'PERF':mochPerf}
 mochAll = mochPreslst+mochFutplst+mochImpflst+mochPerflst
 
 datPreslst = ['даю','даёшь','даёт','даём','даёте','дают']
@@ -42,6 +43,7 @@ datPres = dict(zip(VERB_FORM_KEYS,datPreslst))
 datFutp = dict(zip(VERB_FORM_KEYS,datFutplst))
 datImpf = dict(zip(PAST_VERB_KEYS,datImpflst))
 datPerf = dict(zip(PAST_VERB_KEYS,datPerflst))
+datConj = {'PRES':datPres,'FUTP':datFutp,'IMPF':datImpf,'PERF':datPerf}
 datAll = datPreslst+datFutplst+datImpflst+datPerflst
 
 estPreslst = ['ем','ешь','ест','едим','едите','едят']
@@ -52,6 +54,7 @@ estPres = dict(zip(VERB_FORM_KEYS,estPreslst))
 estFutp = dict(zip(VERB_FORM_KEYS,estFutplst))
 estImpf = dict(zip(PAST_VERB_KEYS,estImpflst))
 estPerf = dict(zip(PAST_VERB_KEYS,estPerflst))
+estConj = {'PRES':estPres,'FUTP':estFutp,'IMPF':estImpf,'PERF':estPerf}
 estAll = estPreslst+estFutplst+estImpflst+estPerflst
 
 bratPreslst = ['беру','берёшь','берёт','берём','берёте','берут']
@@ -62,6 +65,7 @@ bratPres = dict(zip(VERB_FORM_KEYS,bratPreslst))
 bratFutp = dict(zip(VERB_FORM_KEYS,bratFutplst))
 bratImpf = dict(zip(PAST_VERB_KEYS,bratImpflst))
 bratPerf = dict(zip(PAST_VERB_KEYS,bratPerflst))
+bratConj = {'PRES':bratPres,'FUTP':bratFutp,'IMPF':bratImpf,'PERF':bratPerf}
 bratAll = bratPreslst+bratFutplst+bratImpflst+bratPerflst
 
 klastPreslst = ['кладу','кладёшь','кладёт','кладём','кладёте','кладут']
@@ -72,6 +76,7 @@ klastPres = dict(zip(VERB_FORM_KEYS,klastPreslst))
 klastFutp = dict(zip(VERB_FORM_KEYS,klastFutplst))
 klastImpf = dict(zip(PAST_VERB_KEYS,klastImpflst))
 klastPerf = dict(zip(PAST_VERB_KEYS,klastPerflst))
+klastConj = {'PRES':klastPres,'FUTP':klastFutp,'IMPF':klastImpf,'PERF':klastPerf}
 klastAll = klastPreslst+klastFutplst+klastImpflst+klastPerflst
 
 zhdatPreslst = ['жду','ждёшь','ждёт','ждём','ждёте','ждут']
@@ -82,6 +87,7 @@ zhdatPres = dict(zip(VERB_FORM_KEYS,zhdatPreslst))
 zhdatFutp = dict(zip(VERB_FORM_KEYS,zhdatFutplst))
 zhdatImpf = dict(zip(PAST_VERB_KEYS,zhdatImpflst))
 zhdatPerf = dict(zip(PAST_VERB_KEYS,zhdatPerflst))
+zhdatConj = {'PRES':zhdatPres,'FUTP':zhdatFutp,'IMPF':zhdatImpf,'PERF':zhdatPerf}
 zhdatAll = zhdatPreslst+zhdatFutplst+zhdatImpflst+zhdatPerflst
 
 zhitPreslst = ['живу','живёшь','живёт','живём','живёте','живут']
@@ -92,6 +98,7 @@ zhitPres = dict(zip(VERB_FORM_KEYS,zhitPreslst))
 zhitFutp = dict(zip(VERB_FORM_KEYS,zhitFutplst))
 zhitImpf = dict(zip(PAST_VERB_KEYS,zhitImpflst))
 zhitPerf = dict(zip(PAST_VERB_KEYS,zhitPerflst))
+zhitConj = {'PRES':zhitPres,'FUTP':zhitFutp,'IMPF':zhitImpf,'PERF':zhitPerf}
 zhitAll = zhitPreslst+zhitFutplst+zhitImpflst+zhitPerflst
 
 exatPreslst = ['еду','едешь','едет','едем','едете','едут']
@@ -102,6 +109,7 @@ exatPres = dict(zip(VERB_FORM_KEYS,exatPreslst))
 exatFutp = dict(zip(VERB_FORM_KEYS,exatFutplst))
 exatImpf = dict(zip(PAST_VERB_KEYS,exatImpflst))
 exatPerf = dict(zip(PAST_VERB_KEYS,exatPerflst))
+exatConj = {'PRES':exatPres,'FUTP':exatFutp,'IMPF':exatImpf,'PERF':exatPerf}
 exatAll = exatPreslst+exatFutplst+exatImpflst+exatPerflst
 
 idtiPreslst = ['иду','идёшь','идёт','идём','идёте','идут']
@@ -112,6 +120,7 @@ idtiPres = dict(zip(VERB_FORM_KEYS,idtiPreslst))
 idtiFutp = dict(zip(VERB_FORM_KEYS,idtiFutplst))
 idtiImpf = dict(zip(PAST_VERB_KEYS,idtiImpflst))
 idtiPerf = dict(zip(PAST_VERB_KEYS,idtiPerflst))
+idtiConj = {'PRES':idtiPres,'FUTP':idtiFutp,'IMPF':idtiImpf,'PERF':idtiPerf}
 idtiAll = idtiPreslst+idtiFutplst+idtiImpflst+idtiPerflst
 
 xotetPreslst = ['хочу','хочешь','хочет','хотим','хотите','хотят']
@@ -122,7 +131,14 @@ xotetPres = dict(zip(VERB_FORM_KEYS,xotetPreslst))
 xotetFutp = dict(zip(VERB_FORM_KEYS,xotetFutplst))
 xotetImpf = dict(zip(PAST_VERB_KEYS,xotetImpflst))
 xotetPerf = dict(zip(PAST_VERB_KEYS,xotetPerflst))
+xotetConj = {'PRES':xotetPres,'FUTP':xotetFutp,'IMPF':xotetImpf,'PERF':xotetPerf}
 xotetAll = xotetPreslst+xotetFutplst+xotetImpflst+xotetPerflst
+
+irregPres = mochPreslst+datPreslst+estPreslst+bratPreslst+klastPreslst+zhdatPreslst+zhitPreslst+exatPreslst+idtiPreslst+xotetPreslst
+irregFutp = mochFutplst+datFutplst+estFutplst+bratFutplst+klastFutplst+zhdatFutplst+zhitFutplst+exatFutplst+idtiFutplst+xotetFutplst
+irregImpf = mochImpflst+datImpflst+estImpflst+bratImpflst+klastImpflst+zhdatImpflst+zhitImpflst+exatImpflst+idtiImpflst+xotetImpflst
+irregPerf = mochPerflst+datPerflst+estPerflst+bratPerflst+klastPerflst+zhdatPerflst+zhitPerflst+exatPerflst+idtiPerflst+xotetPerflst
+irregAll = irregPres+irregFutp+irregImpf+irregPerf
 
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
@@ -229,11 +245,66 @@ def futureTense(inf, t, per, num):
 	form = per+num
 	return endingsFuture[form]+inf
 
+def irregular(inf, per, num, gender, tense):
+	if tense == 'FUTR':
+		return futureTense(inf,'ir',per,num)
+	
+	form = ''
+	if tense in ['IMPF','PERF']:
+		if num == 'SG':
+			form = gender
+		elif num == 'PL':
+			form = num
+	else:
+		form = per+num
+
+	if inf == 'мочь':
+		return mochConj[tense][form]
+	elif inf == 'дать':
+		return datConj[tense][form]
+	elif inf == 'есть':
+		return estConj[tense][form]
+	elif inf == 'брать':
+		return bratConj[tense][form]
+	elif inf == 'класть':
+		return klastConj[tense][form]
+	elif inf == 'ждать':
+		return zhdatConj[tense][form]
+	elif inf == 'жить':
+		return zhitConj[tense][form]
+	elif inf == 'ехать':
+		return exatConj[tense][form]
+	elif inf == 'идти':
+		return idtiConj[tense][form]
+	elif inf == 'хотеть':
+		return xotetConj[tense][form]
+
 # takes either infinitive form, person, number, and tense
 def conjugate (inf, per, num, gender, tense):
+	# check for irreg verbs
+	impf_inf = inf
+	if inf in Roots.RussianV_perf_inf:
+			impf_inf = Roots.RfindIInfP(inf)
+	if impf_inf in irreg:
+		return irregular(impf_inf,per,num,gender,tense)
 
-	# PRES,IMPF,FUTR need impf inf
-	if tense in ['PRES','IMPF','FUTR']:
+	# FUTR same for all verbs
+	# rqures impf inf
+	if tense == 'FUTR':
+		perf = False
+
+		# find impf inf if given perf inf
+		if inf in Roots.RussianV_perf_inf:
+			inf = Roots.RfindIInfP(inf)
+
+		# if impf inf
+		if inf in Roots.RussianV_impf_inf:
+			# t = conjugation
+			t = Roots.RfindIConjIInf(inf)
+			return futureTense(inf,t,per,num)
+
+	# PRES,IMPF need impf inf
+	elif tense in ['PRES','IMPF']:
 		perf = False
 
 		# find impf inf if given perf inf
@@ -249,8 +320,6 @@ def conjugate (inf, per, num, gender, tense):
 				return nonPastTense(inf,t,per,num,perf)
 			elif tense == 'IMPF':
 				return pastTense(inf,t,gender,num,perf)
-			elif tense == 'FUTR':
-				return futureTense(inf,t,per,num)
 
 	# PERF, FUTP tenses need PERF inf
 	elif tense in ['PERF','FUTP']:
