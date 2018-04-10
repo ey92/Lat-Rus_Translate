@@ -4,6 +4,9 @@ import Latin
 import Russian
 
 def printList(lst):
+	if lst == None:
+		return lst
+		
 	if len(lst) == 0:
 		print lst
 	elif len(lst) == 1:

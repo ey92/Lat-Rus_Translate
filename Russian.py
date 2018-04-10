@@ -23,7 +23,7 @@ VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 PAST_VERB_KEYS = ['M','F','N','PL']
 
 # irregular verb conjugations
-irreg = ['мочь','дать','есть','брать','класть','ждать','жить','ехать','идти','хотеть']
+irreg = ['мочь','давать','есть','брать','класть','ждать','жить','ехать','идти','хотеть']
 mochPreslst = ['могу','можешь','может','можем','можете','могут']
 mochFutplst = ['смогу','сможешь','сможет','сможем','сможете','смогут']
 mochImpflst = ['мог','могла','могло','могли']
@@ -260,7 +260,7 @@ def irregular(inf, per, num, gender, tense):
 
 	if inf == 'мочь':
 		return mochConj[tense][form]
-	elif inf == 'дать':
+	elif inf == 'давать':
 		return datConj[tense][form]
 	elif inf == 'есть':
 		return estConj[tense][form]
@@ -481,11 +481,301 @@ def pastFindForm(root):
 
 	return [inf,pinf,per,num,gender,tense]
 
-# def revIrregular(root):
+def revIrregular(root):
+	form = ''
+	tense = ''
+	gender = ''
+	per = ''
+	num = ''
+	if root in mochAll:
+		inf = 'мочь'
+		if root in mochPreslst:
+			tense = 'PRES'
+			form = mochPres.keys()[mochPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in mochFutplst:
+			tense = 'FUTP'
+			form = mochFutp.keys()[mochFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in mochImpflst:
+			tense = 'IMPF'
+			form = mochImpf.keys()[mochImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in mochPerflst:
+			tense = 'PERF'
+			form = mochPerf.keys()[mochPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in datAll:
+		inf = 'давать'
+		if root in datPreslst:
+			tense = 'PRES'
+			form = datPres.keys()[datPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in datFutplst:
+			tense = 'FUTP'
+			form = datFutp.keys()[datFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in datImpflst:
+			tense = 'IMPF'
+			form = datImpf.keys()[datImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in datPerflst:
+			tense = 'PERF'
+			form = datPerf.keys()[datPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in estAll:
+		inf = 'есть'
+		if root in estPreslst:
+			tense = 'PRES'
+			form = estPres.keys()[estPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in estFutplst:
+			tense = 'FUTP'
+			form = estFutp.keys()[estFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in estImpflst:
+			tense = 'IMPF'
+			form = estImpf.keys()[estImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in estPerflst:
+			tense = 'PERF'
+			form = estPerf.keys()[estPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in bratAll:
+		inf = 'брать'
+		if root in bratPreslst:
+			tense = 'PRES'
+			form = bratPres.keys()[bratPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in bratFutplst:
+			tense = 'FUTP'
+			form = bratFutp.keys()[bratFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in bratImpflst:
+			tense = 'IMPF'
+			form = bratImpf.keys()[bratImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in bratPerflst:
+			tense = 'PERF'
+			form = bratPerf.keys()[bratPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in klastAll:
+		inf = 'класть'
+		if root in klastPreslst:
+			tense = 'PRES'
+			form = klastPres.keys()[klastPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in klastFutplst:
+			tense = 'FUTP'
+			form = klastFutp.keys()[klastFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in klastImpflst:
+			tense = 'IMPF'
+			form = klastImpf.keys()[klastImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in klastPerflst:
+			tense = 'PERF'
+			form = klastPerf.keys()[klastPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in zhdatAll:
+		inf = 'ждать'
+		if root in zhdatPreslst:
+			tense = 'PRES'
+			form = zhdatPres.keys()[zhdatPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in zhdatFutplst:
+			tense = 'FUTP'
+			form = zhdatFutp.keys()[zhdatFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in zhdatImpflst:
+			tense = 'IMPF'
+			form = zhdatImpf.keys()[zhdatImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in zhdatPerflst:
+			tense = 'PERF'
+			form = zhdatPerf.keys()[zhdatPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in zhitAll:
+		inf = 'жить'
+		if root in zhitPreslst:
+			tense = 'PRES'
+			form = zhitPres.keys()[zhitPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in zhitFutplst:
+			tense = 'FUTP'
+			form = zhitFutp.keys()[zhitFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in zhitImpflst:
+			tense = 'IMPF'
+			form = zhitImpf.keys()[zhitImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in zhitPerflst:
+			tense = 'PERF'
+			form = zhitPerf.keys()[zhitPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in exatAll:
+		inf = 'ехать'
+		if root in exatPreslst:
+			tense = 'PRES'
+			form = exatPres.keys()[exatPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in exatFutplst:
+			tense = 'FUTP'
+			form = exatFutp.keys()[exatFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in exatImpflst:
+			tense = 'IMPF'
+			form = exatImpf.keys()[exatImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in exatPerflst:
+			tense = 'PERF'
+			form = exatPerf.keys()[exatPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in idtiAll:
+		inf = 'идти'
+		if root in idtiPreslst:
+			tense = 'PRES'
+			form = idtiPres.keys()[idtiPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in idtiFutplst:
+			tense = 'FUTP'
+			form = idtiFutp.keys()[idtiFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in idtiImpflst:
+			tense = 'IMPF'
+			form = idtiImpf.keys()[idtiImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in idtiPerflst:
+			tense = 'PERF'
+			form = idtiPerf.keys()[idtiPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+	elif root in xotetAll:
+		inf = 'хотеть'
+		if root in xotetPreslst:
+			tense = 'PRES'
+			form = xotetPres.keys()[xotetPres.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in xotetFutplst:
+			tense = 'FUTP'
+			form = xotetFutp.keys()[xotetFutp.values().index(root)]
+			num = form[-2:]
+			per = form[:-2]
+		elif root in xotetImpflst:
+			tense = 'IMPF'
+			form = xotetImpf.keys()[xotetImpf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+		elif root in xotetPerflst:
+			tense = 'PERF'
+			form = xotetPerf.keys()[xotetPerf.values().index(root)]
+			if form == 'PL':
+				num = form
+			else:
+				num = 'SG'
+				gender = form
+
+	perfinf = Roots.RfindPInfI(inf)
+	return [inf, perfinf, per, num, gender, tense]
 
 def reverseConjugate(word):
 	if '_' in word:
 		return futrFindForm(word)
+	elif word in irregAll:
+		return revIrregular(word)
 	elif word[-2:] in ['у','ю','м'] or word[-4:] in ['шь','ет','ит','ёт','те','ут','ат','ют','ят']:
 		return nonpastFindForm(word)
 	elif word[-2:] == 'л' or word[-4:] in ['ла','ло','ли']:

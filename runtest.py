@@ -10,6 +10,9 @@ ACHOICES = ['a','again']
 YNCHOICES = YCHOICES+NCHOICES+ACHOICES
 
 def printList(lst):
+	if lst == None:
+		print lst
+		
 	if len(lst) == 0:
 		print lst
 	elif len(lst) == 1:
