@@ -9,7 +9,19 @@ NCHOICES = ['n','no']
 ACHOICES = ['a','again']
 YNCHOICES = YCHOICES+NCHOICES+ACHOICES
 
-def processInput(string, latin=True):
+def printList(lst):
+	if len(lst) == 0:
+		print lst
+	elif len(lst) == 1:
+		print('['+lst[0]+']')
+	else:
+		s = '['+lst[0]
+		for i in range(1,len(lst)):
+			s += ', '+lst[i]
+		s += ']'
+		print(s)
+
+def processInput(string, latin=False):
 	if latin:
 		return [Latin.toMacron(p.strip()) for p in string.split(',')]
 	else:
@@ -149,7 +161,7 @@ def latinDeconstructNouns():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
-	print Latin.reverseDecline(params[0])
+	printList(Latin.reverseDecline(params[0]))
 
 	return cont()
 
@@ -161,7 +173,7 @@ def latinDeconstructVerbs():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
-	print Latin.reverseConjugate(params[0])
+	printList(Latin.reverseConjugate(params[0]))
 
 	return cont()
 
@@ -174,7 +186,7 @@ def latinDeconstructAdj():
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
 		params += ['']
-	print Latin.reverseDeclineA(params[0], params[1])
+	printList(Latin.reverseDeclineA(params[0], params[1]))
 
 	return cont()
 
@@ -337,7 +349,7 @@ def russianDeconstructVerbs():
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)
-	print Russian.reverseConjugate(params[0])
+	printList(Russian.reverseConjugate(params[0]))
 
 	return cont()
 
