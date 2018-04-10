@@ -669,122 +669,122 @@ def findTenseIrreg(root):
 	tense = ""
 	if root in ireAll:
 		inf = "ire"
-		if root in irePres:
+		if root in irePres.values():
 			tense = "PRES"
 			form = irePres.keys()[irePres.values().index(root)]
-		elif root in ireImpf:
+		elif root in ireImpf.values():
 			tense = "IMPF"
 			form = ireImpf.keys()[ireImpf.values().index(root)]
-		elif root in ireFutr:
+		elif root in ireFutr.values():
 			tense = "FUTR"
 			form = ireFutr.keys()[ireFutr.values().index(root)]
-		elif root in irePerf:
+		elif root in irePerf.values():
 			tense = "PERF"
 			form = irePerf.keys()[irePerf.values().index(root)]
-		elif root in irePlup:
+		elif root in irePlup.values():
 			tense = "PLUP"
 			form = irePlup.keys()[irePlup.values().index(root)]
-		elif root in ireFutp:
+		elif root in ireFutp.values():
 			tense = "FUTP"
 			form = ireFutp.keys()[ireFutp.values().index(root)]
 	elif root in esseAll:
 		inf = "esse"
-		if root in essePres:
+		if root in essePres.values():
 			tense = "PRES"
 			form = essePres.keys()[essePres.values().index(root)]
-		elif root in esseImpf:
+		elif root in esseImpf.values():
 			tense = "IMPF"
 			form = esseImpf.keys()[esseImpf.values().index(root)]
-		elif root in esseFutr:
+		elif root in esseFutr.values():
 			tense = "FUTR"
 			form = esseFutr.keys()[esseFutr.values().index(root)]
-		elif root in essePerf:
+		elif root in essePerf.values():
 			tense = "PERF"
 			form = essePerf.keys()[essePerf.values().index(root)]
-		elif root in essePlup:
+		elif root in essePlup.values():
 			tense = "PLUP"
 			form = essePlup.keys()[essePlup.values().index(root)]
-		elif root in esseFutp:
+		elif root in esseFutp.values():
 			tense = "FUTP"
 			form = esseFutp.keys()[esseFutp.values().index(root)]
 	elif root in posseAll:
 		inf = "posse"
-		if root in possePres:
+		if root in possePres.values():
 			tense = "PRES"
 			form = possePres.keys()[possePres.values().index(root)]
-		elif root in posseImpf:
+		elif root in posseImpf.values():
 			tense = "IMPF"
 			form = posseImpf.keys()[posseImpf.values().index(root)]
-		elif root in posseFutr:
+		elif root in posseFutr.values():
 			tense = "FUTR"
 			form = posseFutr.keys()[posseFutr.values().index(root)]
-		elif root in possePerf:
+		elif root in possePerf.values():
 			tense = "PERF"
 			form = possePerf.keys()[possePerf.values().index(root)]
-		elif root in possePlup:
+		elif root in possePlup.values():
 			tense = "PLUP"
 			form = possePlup.keys()[possePlup.values().index(root)]
-		elif root in posseFutp:
+		elif root in posseFutp.values():
 			tense = "FUTP"
 			form = posseFutp.keys()[posseFutp.values().index(root)]
 	elif root in velleAll:
 		inf = "velle"
-		if root in vellePres:
+		if root in vellePres.values():
 			tense = "PRES"
 			form = vellePres.keys()[vellePres.values().index(root)]
-		elif root in velleImpf:
+		elif root in velleImpf.values():
 			tense = "IMPF"
 			form = velleImpf.keys()[velleImpf.values().index(root)]
-		elif root in velleFutr:
+		elif root in velleFutr.values():
 			tense = "FUTR"
 			form = velleFutr.keys()[velleFutr.values().index(root)]
-		elif root in vellePerf:
+		elif root in vellePerf.values():
 			tense = "PERF"
 			form = vellePerf.keys()[vellePerf.values().index(root)]
-		elif root in vellePlup:
+		elif root in vellePlup.values():
 			tense = "PLUP"
 			form = vellePlup.keys()[vellePlup.values().index(root)]
-		elif root in velleFutp:
+		elif root in velleFutp.values():
 			tense = "FUTP"
 			form = velleFutp.keys()[velleFutp.values().index(root)]
 	elif root in nolleAll:
 		inf = "nōlle"
-		if root in nollePres:
+		if root in nollePres.values():
 			tense = "PRES"
 			form = nollePres.keys()[nollePres.values().index(root)]
-		elif root in nolleImpf:
+		elif root in nolleImpf.values():
 			tense = "IMPF"
 			form = nolleImpf.keys()[nolleImpf.values().index(root)]
-		elif root in nolleFutr:
+		elif root in nolleFutr.values():
 			tense = "FUTR"
 			form = nolleFutr.keys()[nolleFutr.values().index(root)]
-		elif root in nollePerf:
+		elif root in nollePerf.values():
 			tense = "PERF"
 			form = nollePerf.keys()[nollePerf.values().index(root)]
-		elif root in nollePlup:
+		elif root in nollePlup.values():
 			tense = "PLUP"
 			form = nollePlup.keys()[nollePlup.values().index(root)]
-		elif root in nolleFutp:
+		elif root in nolleFutp.values():
 			tense = "FUTP"
 			form = nolleFutp.keys()[nolleFutp.values().index(root)]
 	elif root in ferreAll:
 		inf = "ferre"
-		if root in ferrePres:
+		if root in ferrePres.values():
 			tense = "PRES"
 			form = ferrePres.keys()[ferrePres.values().index(root)]
-		elif root in ferreImpf:
+		elif root in ferreImpf.values():
 			tense = "IMPF"
 			form = ferreImpf.keys()[ferreImpf.values().index(root)]
-		elif root in ferreFutr:
+		elif root in ferreFutr.values():
 			tense = "FUTR"
 			form = ferreFutr.keys()[ferreFutr.values().index(root)]
-		elif root in ferrePerf:
+		elif root in ferrePerf.values():
 			tense = "PERF"
 			form = ferrePerf.keys()[ferrePerf.values().index(root)]
-		elif root in ferrePlup:
+		elif root in ferrePlup.values():
 			tense = "PLUP"
 			form = ferrePlup.keys()[ferrePlup.values().index(root)]
-		elif root in ferreFutp:
+		elif root in ferreFutp.values():
 			tense = "FUTP"
 			form = ferreFutp.keys()[ferreFutp.values().index(root)]
 
