@@ -864,6 +864,10 @@ def fstDecl(nom, gen, gender, case, num):
 			return gen
 
 def sndDecl(nom, gen, gender, case, num):
+	# some nouns are always plural
+	if Roots.LfindDeclG(gen)[2] == 'P':
+		num = 'PL'
+
 	# always masculine or neuter	
 	if gender == "N":
 		if num == "SG":
@@ -1096,20 +1100,20 @@ def fthDecl(nom, gen, gender, case, num):
 # takes nominativeS, genitiveS, case, number, declension d, gender
 def decline(nom, gen, case, num, d=None, gender=None):
 	try:
-		d = Roots.LfindDeclG(gen) if d == None else d
+		d = Roots.LfindDeclG(gen) if d == None else d+'  '
 		gender = Roots.LfindGenderG(gen) if gender == None else gender
 	except:
 		return 'Declension or gender doesn\'t exist'
 
-	if d == '1':
+	if d[0] == '1':
 		return fstDecl(nom,gen,gender,case,num)
-	elif d == '2':
+	elif d[0] == '2':
 		return sndDecl(nom,gen,gender,case,num)
 	elif d[0] == '3':
 		return trdDecl(nom,gen,d[1:],gender,case,num)
-	elif d == '4':
+	elif d[0] == '4':
 		return forDecl(nom,gen,gender,case,num)
-	elif d == '5':
+	elif d[0] == '5':
 		return fthDecl(nom,gen,gender,case,num)
 
 # -------------------------------------------------------------
