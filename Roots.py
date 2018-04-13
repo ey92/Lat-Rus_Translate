@@ -214,37 +214,42 @@ def LfindInfP(word):
 def LfindPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
-# 55 Noun stems
+# 60 Noun stems
 LatinN = [
     ("agricola",    "agricolae",    "1",    "M",    "земледелец",   "farmer"                    ), \
     ("femina",      "feminae",      "1",    "F",    "женщина",      "woman"                     ), \
     ("jānua",       "jānuae",       "1",    "F",    "дверь",        "door"                      ), \
     ("patria",      "patriae",      "1",    "F",    "сторона",      "side,party,land,place,part"), \
+    ("penna",       "pennae",       "1",    "F",    "ручка",        "pen"                       ), \
     ("puella",      "puellae",      "1",    "F",    "девочка",      "girl"                      ), \
     ("terra",       "terrae",       "1",    "F",    "земля",        "land"                      ), \
     ("vīta",        "vītae",        "1",    "F",    "жизнь",        "life,existence"            ), \
-    ("puer",        "puerī",        "2",    "M",    "мальчик",      "boy"                       ), \
-    ("vir",         "virī",         "2",    "M",    "мужчина",      "man"                       ), \
-    ("filius",      "filiī",        "2",    "M",    "сын",          "son"                       ), \
-    ("modus",       "modī",         "2",    "M",    "способ",       "measure, manner"           ), \
-    ("annus",       "annī",         "2",    "M",    "год",          "year"                      ), \
-    ("mūrus",       "mūrī",         "2",    "M",    "стена",        "wall"                      ), \
-    ("servus",      "servī",        "2",    "M",    "раб",          "slave, servant"            ), \
-    ("liber",       "librī",        "2",    "M",    "книга",        "book"                      ), \
-    ("amicus",      "amicī",        "2",    "M",    "друг",         "friend"                    ), \
-    ("domus",       "domī",         "2",    "M",    "дом",          "house,home,household"      ), \
-    ("locus",       "locī",         "2",    "M",    "место",        "place,site,region,area"    ), \
-    ("oculus",      "oculī",        "2",    "M",    "глаз",         "eye"                       ), \
-    ("bellum",      "bellī",        "2",    "N",    "война",        "war"                       ), \
-    ("dōnum",       "dōnī",         "2",    "N",    "подарок",      "gift"                      ), \
-    ("bonum",       "bonī",         "2",    "N",    "вещь",         "possession"                ), \
-    ("verbum",      "verbī",        "2",    "N",    "слово",        "word,speech"               ), \
+    ("ānulus ",     "ānulī",        "2 ",   "M",    "кольцо",       "ring"                      ), \
+    ("puer",        "puerī",        "2 ",   "M",    "мальчик",      "boy"                       ), \
+    ("vir",         "virī",         "2 ",   "M",    "мужчина",      "man"                       ), \
+    ("filius",      "filiī",        "2 ",   "M",    "сын",          "son"                       ), \
+    ("modus",       "modī",         "2 ",   "M",    "способ",       "measure, manner"           ), \
+    ("annus",       "annī",         "2 ",   "M",    "год",          "year"                      ), \
+    ("mūrus",       "mūrī",         "2 ",   "M",    "стена",        "wall"                      ), \
+    ("servus",      "servī",        "2 ",   "M",    "раб",          "slave, servant"            ), \
+    ("liber",       "librī",        "2P",   "M",    "книга",        "book"                      ), \
+    ("amicus",      "amicī",        "2 ",   "M",    "друг",         "friend"                    ), \
+    ("domus",       "domī",         "2 ",   "M",    "дом",          "house,home,household"      ), \
+    ("locus",       "locī",         "2 ",   "M",    "место",        "place,site,region,area"    ), \
+    ("oculus",      "oculī",        "2 ",   "M",    "глаз",         "eye"                       ), \
+    ("bellum",      "bellī",        "2 ",   "N",    "война",        "war"                       ), \
+    ("dōnum",       "dōnī",         "2 ",   "N",    "подарок",      "gift"                      ), \
+    ("bonum",       "bonī",         "2 ",   "N",    "вещь",         "possession"                ), \
+    ("verbum",      "verbī",        "2 ",   "N",    "слово",        "word,speech"               ), \
+    ("vīnum",       "vīnī",         "2 ",   "N",    "вино",         "wine"                      ), \
+    ("calix",       "calicis",      "3  ",  "M",    "стакан",       "cup, glass"                ), \
     ("homō",        "hominis",      "3  ",  "M",    "человек",      "human, person"             ), \
-    ("rex",         "regis",        "3  ",  "M",    "царь",         "king"                      ), \
     ("consul",      "consulis",     "3  ",  "M",    "консул",       "consul"                    ), \
     ("labor",       "laboris",      "3  ",  "M",    "работа",       "work,job"                  ), \
     ("pānis",       "pānis",        "3  ",  "M",    "хлеб",         "bread"                     ), \
     ("pēs",         "pedis",        "3  ",  "M",    "нога",         "foot,leg"                  ), \
+    ("rex",         "regis",        "3  ",  "M",    "король",         "king"                      ), \
+    ("graphis",     "graphidis",    "3  ",  "F",    "карандаш",     "pencil"                    ), \
     ("iterātiō",    "iterātiōnis",  "3  ",  "F",    "раз",          "iteration"                 ), \
     ("laus",        "laudis",       "3  ",  "F",    "похвала",      "praise"                    ), \
     ("caput",       "capitis",      "3  ",  "N",    "голова",       "head"                      ), \
@@ -342,24 +347,24 @@ def LfindDeclNM(word):
 # RUSSIAN
 # 18 Verb stems
 RussianV = [
-('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir'), \
-('давать',     'дают',       'ir',  'дать',         'дадут',        'ir'), \
-('есть',       'едят',       'ir',  'съесть',       'съедят',       'ir'), \
-('брать',      'берут',      'ir',  'взять',        'возьмут',      'ir'), \
-('класть',     'кладут',     'ir',  'положить',     'положат',      '2c'), \
-('ждать',      'ждут',       'ir',  'подождать',    'подождут',     'ir'), \
-('жить',       'живут',      'ir',  'прожить',      'проживут',     'ir'), \
-('закрывать',  'закрывают',  '1v',  'закрыть',      'закроют',      'ir'), \
-('ехать',      'едут',       'ir',  'поехать',      'поедут',       'ir'), \
-('идти',       'идут',       'ir',  'пойти',        'пойдут',       'ir'), \
-('хотеть',     'хотят',      'ir',  'захотеть',     'захотят',      'ir'), \
-('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), \
-('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v'), \
-('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v'), \
-('искать',     'ищут',       '1c',  'поискать',     'поищут',       '1c'), \
-('говорить',   'говорят',    '2v',  'сказать',      'скажут',       '1c'), \
-('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v'), \
-('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c') \
+    ('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir'), \
+    ('давать',     'дают',       'ir',  'дать',         'дадут',        'ir'), \
+    ('есть',       'едят',       'ir',  'съесть',       'съедят',       'ir'), \
+    ('брать',      'берут',      'ir',  'взять',        'возьмут',      'ir'), \
+    ('класть',     'кладут',     'ir',  'положить',     'положат',      '2c'), \
+    ('ждать',      'ждут',       'ir',  'подождать',    'подождут',     'ir'), \
+    ('жить',       'живут',      'ir',  'прожить',      'проживут',     'ir'), \
+    ('закрывать',  'закрывают',  '1v',  'закрыть',      'закроют',      'ir'), \
+    ('ехать',      'едут',       'ir',  'поехать',      'поедут',       'ir'), \
+    ('идти',       'идут',       'ir',  'пойти',        'пойдут',       'ir'), \
+    ('хотеть',     'хотят',      'ir',  'захотеть',     'захотят',      'ir'), \
+    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), \
+    ('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v'), \
+    ('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v'), \
+    ('искать',     'ищут',       '1c',  'поискать',     'поищут',       '1c'), \
+    ('говорить',   'говорят',    '2v',  'сказать',      'скажут',       '1c'), \
+    ('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v'), \
+    ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c') \
 ]
 
 RussianV_impf_inf = [x[0] for x in RussianV]
@@ -394,3 +399,45 @@ def RfindIConjIInf(word):
 
 def RfindPConjPInf(word):
     return RussianV_perf_conj[RussianV_perf_inf.index(word)]
+
+# 10 Noun Stems
+RussianN = [
+    ('книга',       'книг',         'aai', 'F', 'librī',    'book'          ), \
+    ('ручка',       'ручек',        'aai', 'F', 'pennae',   'pen'           ), \
+    ('стакан',      'стаканов',     '00i', 'M', 'calicis',  'cup'           ), \
+    ('человек',     'человеков',    '00i', 'M', 'hominis',  'human, person' ), \
+    ('карандаш',    'карандашей',   '00i', 'M', 'pennae',   'pencil'        ), \
+    ('конец',       'концов',       '00i', 'M', 'fīnis',    'end')
+    ('вино',        'вин',          'ooi', 'N', 'vīnī',     'wine'          ), \
+    ('кольцо',      'колец',        'ooi', 'N', 'ānulī',    'ring'          ), \
+    ('ночь',        'ночей',        'mzi', 'F', 'noctis',   'night'         ), \
+    ('дверь',       'дверей',       'mzi', 'F', 'jānuae',   'door'          ) \
+]
+
+RussianN_ns = [x[0] for x in RussianN]          # list of all Latin nomS
+RussianN_gp = [x[1] for x in RussianN]          # list of all Latin genS
+RussianN_decl = [x[2] for x in RussianN]        # list of all Latin decl
+RussianN_gender = [x[3] for x in RussianN]      # list of all Latin gender
+RussianN_latg = [x[4] for x in RussianN]         # list of all Russian equiv of Latin
+RussianN_eng = [x[5] for x in RussianN]         # list of all English equiv of Latin
+
+
+# returns nomS of genP provided
+def RfindNomG(word):
+    return RussianN_ns[RussianN_gp.index(word)]
+
+# returns genP of nomS provided
+def RfindGenN(word):
+    return RussianN_gp[RussianN_ns.index(word)]
+
+# returns declension of genP provided
+def RfindDeclG(word):
+    return RussianN_decl[RussianN_gp.index(word)]
+
+# returns decl of genP provided
+def RfindDeclG(word):
+    return RussianN_decl[RussianN_gp.index(word)]
+
+# returns gender of genP provided
+def RfindGenderG(word):
+    return RussianN_gender[RussianN_gp.index(word)]
