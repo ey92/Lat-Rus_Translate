@@ -23,7 +23,8 @@ NUM_LETTERS_CAP = len(lettersCap)
 VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 PAST_VERB_KEYS = ['M','F','N','PL']
 DECL_FORM_KEYS = ['NOM','GEN','DAT','ACC','PRP','INS']
-DECL_ENDG_KEYS = ['NOMSG','GENSG','DATSG','ACCSG','PRPSG','INSSG','NOMPL','GENPL','DATPL','ACCPL','PRPPL','INSPL']
+DECL_ENDG_KEYSSG = ['NOMSG','GENSG','DATSG','ACCSG','PRPSG','INSSG']
+DECL_ENDG_KEYSPL = ['NOMPL','GENPL','DATPL','ACCPL','PRPPL','INSPL']
 
 # irregular verb conjugations
 irreg = ['мочь','давать','есть','брать','класть','ждать','жить','ехать','идти','хотеть']
@@ -168,18 +169,22 @@ endingsNoosglst = ['о','а','у','о','е','ом']
 endingsNoopllst = ['а','0','ам','а','ах','ами']
 endingsNmzsglst = ['ь','и','и','ь','и','ью']
 endingsNmzpllst = ['и','ей','ям','и','ях','ями']
-endingsN00sg = dict(zip(DECL_ENDG_KEYS,endingsN00sglst))
-endingsN00pl = dict(zip(DECL_ENDG_KEYS,endingsN00pllst))
-endingsNaasg = dict(zip(DECL_ENDG_KEYS,endingsNaasglst))
-endingsNaapl = dict(zip(DECL_ENDG_KEYS,endingsNaapllst))
-endingsNoosg = dict(zip(DECL_ENDG_KEYS,endingsNoosglst))
-endingsNoopl = dict(zip(DECL_ENDG_KEYS,endingsNoopllst))
-endingsNmzsg = dict(zip(DECL_ENDG_KEYS,endingsNmzsglst))
-endingsNmzpl = dict(zip(DECL_ENDG_KEYS,endingsNmzpllst))
-endingsN00 = endingsN00sg+endingsN00pl
-endingsNaa = endingsNaasg+endingsNaapl
-endingsNoo = endingsNoosg+endingsNoopl
-endingsNmz = endingsNmzsg+endingsNmzpl
+endingsN00sg = dict(zip(DECL_ENDG_KEYSSG,endingsN00sglst))
+endingsN00pl = dict(zip(DECL_ENDG_KEYSPL,endingsN00pllst))
+endingsNaasg = dict(zip(DECL_ENDG_KEYSSG,endingsNaasglst))
+endingsNaapl = dict(zip(DECL_ENDG_KEYSPL,endingsNaapllst))
+endingsNoosg = dict(zip(DECL_ENDG_KEYSSG,endingsNoosglst))
+endingsNoopl = dict(zip(DECL_ENDG_KEYSPL,endingsNoopllst))
+endingsNmzsg = dict(zip(DECL_ENDG_KEYSSG,endingsNmzsglst))
+endingsNmzpl = dict(zip(DECL_ENDG_KEYSPL,endingsNmzpllst))
+endingsN00 = endingsN00sg.copy()
+endingsN00.update(endingsN00pl)
+endingsNaa = endingsNaasg.copy()
+endingsNaa.update(endingsNaapl)
+endingsNoo = endingsNoosg.copy()
+endingsNoo.update(endingsNoopl)
+endingsNmz = endingsNmzsg.copy()
+endingsNmz.update(endingsNmzpl)
 
 def takeRaw(word):
 	return word.decode('utf8')
@@ -839,18 +844,18 @@ def findGenP(nom, d, gender):
 			gen = root+'й'
 		elif nom[-4:-2] in cons and nom[-2:] == 'я':
 			gen = root+'ь'
-		elif d[:2] != 'mz' and root[-4:-2] in cons and root[-2:] in cons:
-			gen = root[:-4]+'е'+root[-2:]
+		if d[:2] != 'mz' and root[-4:-2] in cons and root[-2:] in cons:
+			gen = root[:-2]+'е'+root[-2:]
 	elif gender == 'M':
 		# stress is also a 2-char 'letter'
-		if nom[:-2] in ['й','ь'] and nom[-6:-2] in vowStr:
+		if nom[-2:] in ['й','ь'] and nom[-6:-2] in vowStr:
 			gen = root+'ев'
-		elif root[:-2] in ['ж','ч','ш','щ','ь']:
+		elif nom[-2:] in ['ж','ч','ш','щ','ь']:
 			gen = root+'ей'
 		else:
 			gen = root+'ов'
 	elif gender == 'N':
-		if nom[-4:] = 'ие':
+		if nom[-4:] == 'ие':
 			gen = nom[:-4]+'ий'
 		elif nom[-2:] == 'е':
 			gen = nom+'й'
@@ -859,8 +864,9 @@ def findGenP(nom, d, gender):
 
 	return gen
 
-# more morphological changes, independent of gender or declension
-def generalMorph(word):
+# more phonological changes, independent of gender or declension
+def generalPhon(word):
+
 	if word[-2:] == 'ы' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ']:
 		word = word[:-2]+'и'
 	elif word[-2:] == 'о' and word[-4:-2] in ['ж','ч','ш','щ','ц']:
@@ -869,11 +875,14 @@ def generalMorph(word):
 		word = word[:-2]+'а'
 	elif word[-2:] == 'ю' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ','ц']:
 		word = word[:-2]+'у'
+	# vowels include palatal indicators when appended to stem
+	word = word.replace('ьа','я').replace('ьу','ю').replace('ье','е').replace('ьо','ё').replace('ьы','и')
+	word = word.replace('йа','я').replace('йу','ю').replace('йе','е').replace('йы','и')
 
 	return word
 
-# morphologial changes to endings
-def nomPlMorph(noms, gender):
+# phonological changes to nominative plural case endings
+def nomPlPhon(noms, gender):
 	root = noms[:-2]
 	nomp = ''
 
@@ -887,7 +896,7 @@ def nomPlMorph(noms, gender):
 			root = noms
 			nomp = root+'ы'
 	elif gender == 'F':
-		if noms[-2:] == 'a':
+		if noms[-2:] == 'а':
 			nomp = root+'ы'
 		elif noms[-2:] in 'я':
 			nomp = root+'и'
@@ -897,22 +906,50 @@ def nomPlMorph(noms, gender):
 		elif noms[-2:] == 'е':
 			nomp = root+'я'
 
-	return generalMorph(nomp)
+	return generalPhon(nomp)
+
+# phonological changes to instrumental singular case endings for M/F
+def insSgPhon(noms, gender):
+	root = ''
+	inss = ''
+
+	if gender == 'F':
+		root = noms[:-2]
+		if root[-2:] in ['ж','ч','ц','ш','щ']:
+			inss = root+'ей'
+		elif noms[-2:] == 'я' and noms[-4:-2] in [e for e in Russian.vowLow if e!='ё']:
+			inss = root+'ей'
+		elif noms[-2:] == 'я' and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
+			inss = root+'ёй'
+	elif gender == 'M':
+		root = noms
+		if root[-2:] in ['ж','ч','ц','ш','щ']:
+			inss = root+'ем'
+		elif noms[-2:] in ['й','ь'] and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
+			inss = root+'ём'
+		elif noms[-2:] in ['й','ь']:
+			inss = root+'ем'
+		else:
+			inss = root+'ом'
+	return inss
 
 def aDecl(nom, gen, gender, case, num, animate):
 	form = case+num
 	root = nom[:-2]
+
 	if form == 'ACCPL':
 		form = 'GENPL' if animate == 'a' else 'NOMPL'
 
 	if form == 'NOMPL':
-		return nomPlMorph(nom, gender)
+		return nomPlPhon(nom, gender)
 	elif form == 'NOMSG':
 		return nom
 	elif form == 'GENPL':
 		return gen
+	elif form == 'INSSG':
+		return insSgPhon(nom, gender)
 	else:
-		return generalMorph(ztoe(root+endingsNaa[form]))
+		return generalPhon(ztoe(root+endingsNaa[form]))
 
 def zDecl(nom, gen, gender, case, num, animate):
 	form = case+num
@@ -922,13 +959,16 @@ def zDecl(nom, gen, gender, case, num, animate):
 		form = case+num
 
 	if form == 'NOMPL':
-		return nomPlMorph(nom, gender)
+		return nomPlPhon(nom, gender)
 	elif form == 'NOMSG':
 		return nom
 	elif form == 'GENPL':
 		return gen
+	elif form == 'INSSG':
+		return insSgPhon(nom, gender)
 	else:
-		return generalMorph(ztoe(root+endingsN00[form]))
+		# print(ztoe(endingsN00[form]))
+		return generalPhon(ztoe(root+endingsN00[form]))
 
 def oDecl(nom, gen, gender, case, num, animate):
 	form = case+num
@@ -938,13 +978,13 @@ def oDecl(nom, gen, gender, case, num, animate):
 		form = case+num
 
 	if form == 'NOMPL':
-		return nomPlMorph(nom, gender)
+		return nomPlPhon(nom, gender)
 	elif form == 'NOMSG':
 		return nom
 	elif form == 'GENPL':
 		return gen
 	else:
-		return generalMorph(ztoe(root+endingsN00[form]))
+		return generalPhon(ztoe(root+endingsN00[form]))
 
 def mzDecl(nom, gen, gender, case, num, animate):
 	form = case+num
@@ -952,28 +992,30 @@ def mzDecl(nom, gen, gender, case, num, animate):
 	if form == 'ACCPL':
 		form = 'GENPL' if animate == 'a' else 'NOMPL'
 
-	if form == 'NOMPL':
-		return nomPlMorph(nom, gender)
-	elif form == 'NOMSG':
+	# if form == 'NOMPL':
+	# 	return nomPlPhon(nom, gender)
+	# elif form == 'NOMSG':
+	if form == 'NOMSG':
 		return nom
 	elif form == 'GENPL':
 		return gen
 	else:
-		return generalMorph(ztoe(root+endingsNmz[form]))
+		# minor phonology changes
+		return ztoe(root+endingsNmz[form]).replace('щя','ща').replace('ця','ца')
 
 # takes nomS, case, number
 def decline(nom, case, num, d=None, gender=None):
+	try:
+		gen = Roots.RfindGenN(nom)
+	except:
+		gen = findGenP(nom,d,gender)
+		# continue
+
 	try:
 		d = Roots.RfindDeclG(gen) if d == None else d+'  '
 		gender = Roots.RfindGenderG(gen) if gender == None else gender
 	except:
 		return 'Declension or gender doesn\'t exist'
-
-	try:
-		gen = Roots.RfindGenN(word)
-	except:
-		gen = findGenP(nom,d,gender)
-		continue
 
 	if d[:2] == 'aa':
 		return aDecl(nom,gen,gender,case,num,d[2])
