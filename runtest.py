@@ -12,7 +12,7 @@ YNCHOICES = YCHOICES+NCHOICES+ACHOICES
 def printList(lst):
 	if lst == None:
 		print lst
-		
+
 	if len(lst) == 0:
 		print lst
 	elif len(lst) == 1:
@@ -292,6 +292,27 @@ def latinMenu():
 	elif choice1 == 3:
 		return 'a'
 
+def russianConstructNouns():
+	# make nouns
+	params = []
+	while not (len(params) in [3,5]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the nominativeS form, case, number, [declension, gender], separated by commas\n")).strip()
+		params = processInput(params,False, False)
+
+	if len(params) == 3:
+		result =  Russian.decline(params[0], params[1], params[2])
+
+	else:
+		# pad declension param with spaces
+		if len(params[3]) < 3:
+			params[3]+='  '
+		result = Russian.decline(params[0], params[1], params[2], params[3], params[4])
+	
+	print(result)
+	return cont()
+
 def russianConstructVerbs():
 	# make verbs
 	params = []
@@ -315,20 +336,20 @@ def russianConstruct():
 	choice2 = int(choice2)
 
 	# Construct Nouns
-	# if choice2 == 1:
-	# 	val = 2
-	# 	while (True):
-	# 		val = russianConstructNouns()
-	# 		if val == 'y':
-	# 			return 2
-	# 		if val == 'a':
-	# 			val = 2
-	# 		elif val == None:
-	# 			return val	
+	if choice2 == 1:
+		val = 2
+		while (True):
+			val = russianConstructNouns()
+			if val == 'y':
+				return 2
+			if val == 'a':
+				val = 2
+			elif val == None:
+				return val	
 
 	# Construct Verbs
-	# elif choice2 == 2:
-	if choice2 == 2:
+	elif choice2 == 2:
+	# if choice2 == 2:
 		val = 2
 		while (True):
 			val = russianConstructVerbs()
