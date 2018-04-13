@@ -201,4 +201,36 @@ output2:  `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']` (uni
 | PLUP  | pluperfect tense      |
 | FUTP  | future perfect tense  |
 
+### Nouns
+#### DECLENSION
+`Russian.decline()`
+- takes nominativeS, case, number
+- if noun not in dictionary, add declension and gender as last 2 parameters
+
+input:    `человек, ACC, PL`<br>
+output:   `человеков`<br>
+
+input:    `человек, ACC, PL, 00a, M`<br>
+output:   `человеков`<br>
+
+#### REVERSE DECLENSION
+`Russian.reverseDecline()`
+- takes Russian noun form
+
+input:    <br>
+output:   <br>
+
+#### Noun Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| PRP | ablative case   |
+| INS | vocative case   |
+
 [see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)
