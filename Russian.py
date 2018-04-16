@@ -1025,3 +1025,98 @@ def decline(nom, case, num, d=None, gender=None):
 		return oDecl(nom,gen,gender,case,num,d[2])
 	elif d[:2] == 'mz':
 		return mzDecl(nom,gen,gender,case,num,d[2])
+
+# -------------------------------------------------------------
+# REVERSE DECLENSION
+
+def findDeclDatP(root):
+	case = "DAT"
+	num = "PL"
+	nom = ''
+	gen = ''
+
+	if root[-4:] == 'ам':
+		# zero declension M -> find noms by dropping ending
+		if root[:-4] in Roots.RussianN_ns:
+			nom = root[:-4]
+		# a declension -> keep the a in the ending
+		elif root[:-2] in Roots.RussianN_ns:
+			nom = root[:-2]
+		# zero declension N -> find noms by dropping ending and adding 'о'
+		elif (root[:-4]+'о') in Roots.RussianN_ns:
+			nom = root[:-4]+'о'
+	# this would only happen as a result of phonology - ending in 'й' or 'ь'
+	elif root[-4:] = 'ям':
+		# if # decl M, ends in 'й'
+		if (root[:-4]+'й') in Roots.RussianN_ns:
+			nom = root[:-4]+'й'
+		# if ь declension, ends in 'ь'
+		elif (root[:-4]+'ь') in Roots.RussianN_ns:
+			nom = root[:-4]+'ь'
+
+	gen = Roots.RfindGenN(nom)
+	return [nom,gen,case,num]
+
+def findDeclPrpP(root):
+	case = "PRP"
+	num = "PL"
+	nom = ''
+	gen = ''
+
+	if root[-4:] == 'ах':
+		# zero declension M -> find noms by dropping ending
+		if root[:-4] in Roots.RussianN_ns:
+			nom = root[:-4]
+		# a declension -> keep the a in the ending
+		elif root[:-2] in Roots.RussianN_ns:
+			nom = root[:-2]
+		# zero declension N -> find noms by dropping ending and adding 'о'
+		elif (root[:-4]+'о') in Roots.RussianN_ns:
+			nom = root[:-4]+'о'
+	# this would only happen as a result of phonology - ending in 'й' or 'ь'
+	elif root[-4:] = 'ях':
+		# if # decl M, ends in 'й'
+		if (root[:-4]+'й') in Roots.RussianN_ns:
+			nom = root[:-4]+'й'
+		# if ь declension, ends in 'ь'
+		elif (root[:-4]+'ь') in Roots.RussianN_ns:
+			nom = root[:-4]+'ь'
+
+	gen = Roots.RfindGenN(nom)
+	return [nom,gen,case,num]
+
+def findDeclInsP(root):
+	case = "INS"
+	num = "PL"
+	nom = ''
+	gen = ''
+
+	if root[-6:] == 'ами':
+		# zero declension M -> find noms by dropping ending
+		if root[:-6] in Roots.RussianN_ns:
+			nom = root[:-6]
+		# a declension -> keep the a in the ending
+		elif root[:-4] in Roots.RussianN_ns:
+			nom = root[:-4]
+		# zero declension N -> find noms by dropping ending and adding 'о'
+		elif (root[:-6]+'о') in Roots.RussianN_ns:
+			nom = root[:-6]+'о'
+	# this would only happen as a result of phonology - ending in 'й' or 'ь'
+	elif root[-6:] = 'ями':
+		# if # decl M, ends in 'й'
+		if (root[:-6]+'й') in Roots.RussianN_ns:
+			nom = root[:-6]+'й'
+		# if ь declension, ends in 'ь'
+		elif (root[:-6]+'ь') in Roots.RussianN_ns:
+			nom = root[:-6]+'ь'
+
+	gen = Roots.RfindGenN(nom)
+	return [nom,gen,case,num]
+
+def reverseDecline(word):
+	if word[-6:] in ['ами','ями']:
+		return findDeclInsP(word)
+	elif word[-4:] in ['ах','ях']:
+		return findDeclPrpP(word)
+	elif word[-6:] in ['ми','ми']:
+		return findDeclDatP(word)
