@@ -820,6 +820,23 @@ def reverseConjugate(word):
 def ztoe(word):
 	return word.replace('0','')
 
+# more phonological changes, independent of gender or declension
+def generalPhon(word):
+
+	if word[-2:] == 'ы' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ']:
+		word = word[:-2]+'и'
+	elif word[-2:] == 'о' and word[-4:-2] in ['ж','ч','ш','щ','ц']:
+		word = word[:-2]+'е'
+	elif word[-2:] == 'я' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ','ц']:
+		word = word[:-2]+'а'
+	elif word[-2:] == 'ю' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ','ц']:
+		word = word[:-2]+'у'
+	# vowels include palatal indicators when appended to stem
+	word = word.replace('ьа','я').replace('ьу','ю').replace('ье','е').replace('ьо','ё').replace('ьы','и')
+	word = word.replace('йа','я').replace('йу','ю').replace('йе','е').replace('йы','и')
+
+	return word
+
 # includes noun and adj, having stressed syllables important
 def findGenP(nom, d, gender):
 	root = ''
@@ -828,13 +845,21 @@ def findGenP(nom, d, gender):
 	# find stem, depending on the declension
 	if d[:2] == 'aa':
 		root = nom[:-2]
+		if gender == None:
+			gender = 'F'
 	elif d[:2] == '00':
 		root = nom
+		if gender == None:
+			gender = 'M'
 	elif d[:2] == 'oo':
 		root = nom[:-2]
+		if gender == None:
+			gender = 'N'
 	elif d[:2] == 'mz':
 		root = nom[:-2]
 		gen = root+'ей'
+		if gender == None:
+			gender = 'F'
 
 	# find the appropriate ending, depending on the gender
 	if gender == 'F':
@@ -862,24 +887,7 @@ def findGenP(nom, d, gender):
 		elif nom[-2:] == 'о':
 			gen = nom[:-2]
 
-	return gen
-
-# more phonological changes, independent of gender or declension
-def generalPhon(word):
-
-	if word[-2:] == 'ы' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ']:
-		word = word[:-2]+'и'
-	elif word[-2:] == 'о' and word[-4:-2] in ['ж','ч','ш','щ','ц']:
-		word = word[:-2]+'е'
-	elif word[-2:] == 'я' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ','ц']:
-		word = word[:-2]+'а'
-	elif word[-2:] == 'ю' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ','ц']:
-		word = word[:-2]+'у'
-	# vowels include palatal indicators when appended to stem
-	word = word.replace('ьа','я').replace('ьу','ю').replace('ье','е').replace('ьо','ё').replace('ьы','и')
-	word = word.replace('йа','я').replace('йу','ю').replace('йе','е').replace('йы','и')
-
-	return word
+	return generalPhon(gen)
 
 # phonological changes to nominative plural case endings
 def nomPlPhon(noms, gender):
@@ -915,23 +923,26 @@ def insSgPhon(noms, gender):
 
 	if gender == 'F':
 		root = noms[:-2]
-		if root[-2:] in ['ж','ч','ц','ш','щ']:
+		if root[-2:] in ['ж','ч','ц','ш','щ'] and not (root[-6:-2] in vowStr):
 			inss = root+'ей'
 		elif noms[-2:] == 'я' and noms[-4:-2] in [e for e in Russian.vowLow if e!='ё']:
 			inss = root+'ей'
 		elif noms[-2:] == 'я' and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
 			inss = root+'ёй'
+		else:
+			inss = root+'ой'
 	elif gender == 'M':
 		root = noms
-		if root[-2:] in ['ж','ч','ц','ш','щ']:
+		if root[-2:] in ['ж','ч','ц','ш','щ'] and not (root[-6:-2] in vowStr):
 			inss = root+'ем'
-		elif noms[-2:] in ['й','ь'] and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
+		# elif noms[-2:] in ['й','ь'] and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
+		elif noms[-2:] in ['ь'] and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
 			inss = root+'ём'
 		elif noms[-2:] in ['й','ь']:
 			inss = root+'ем'
 		else:
 			inss = root+'ом'
-	return inss
+	return generalPhon(inss)
 
 def aDecl(nom, gen, gender, case, num, animate):
 	form = case+num
@@ -1007,6 +1018,7 @@ def mzDecl(nom, gen, gender, case, num, animate):
 def decline(nom, case, num, d=None, gender=None):
 	try:
 		gen = Roots.RfindGenN(nom)
+		nom = Roots.RfindNomN(nom)
 	except:
 		gen = findGenP(nom,d,gender)
 		# continue
@@ -1130,6 +1142,11 @@ def findDeclInsS(root):
 		nom = root[:-4]+'а'
 		if not (nom in Roots.RussianN_ns):
 			nom = root[:-4]+'ь'
+	# ём as a result of phonology
+	elif root [-4:] == 'ём':
+		nom = root[:-4]+'ь'
+		if not (nom in Roots.RussianN_ns):
+			nom = root[-4:]+'й'
 
 	gen = Roots.RfindGenN(nom)
 	return [nom,gen,case,num]
@@ -1267,7 +1284,7 @@ def reverseDecline(word):
 		# print('finddecl5')
 		return findDeclDatP(word)
 	
-	elif word[-4:] in ['ом','ой','ью']:
+	elif word[-4:] in ['ом','ой','ью','ём']:
 		# print('finddecl6')
 		return findDeclInsS(word)
 	

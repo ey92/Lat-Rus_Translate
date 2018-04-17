@@ -387,7 +387,7 @@ RussianV = [
     ('стоять',     'стоят',      '2v',  'постоять',     'постоят',      '2v', 'to stand',       ), \
     ('уничтожать', 'уничтожают', '1v',  'уничтожить',   'уничтожат',    '2c', 'to destroy',     ), \
     ('иметь',      'имеют',      '1v',  '',             '',             '',   'to have',        ), \
-    ('видеть',     'ви́дят',      '2v',  'увидеть',      'увидят',       '2v', 'to see',         ), #irreg 1ps\
+    ('видеть',     'видят',      '2v',  'увидеть',      'увидят',       '2v', 'to see',         ), #irreg 1ps\
     ('понимать',   'понимают',   '1v',  'понять',       'поймут',       '1c', 'to understand',  ), \
     ('сидеть',     'сидят',      '2v',  'сесть',        'сядут',        '1c', 'to sit',         ), \
     ('слышать',    'слышат',     '2c',  'услышать',     'услышат',      '2c', 'to hear',        ), \
@@ -446,7 +446,7 @@ RussianN = [
     ('способ',       'способов',     '00i', 'M', 'measure, manner'           ), \
     ('год',          'годов',        '00i', 'M', 'year'                      ), \
     ('стена',        'стен',         'aai', 'F', 'wall'                      ), \
-    ('раб',          'рабов',        '00a', 'M', 'slave, servant'            ), #irregular plural\
+    ('раб',          'рабов',        '00a', 'M', 'slave, servant'            ), \
     ('книга',        'книг',         'aai', 'F', 'book'                      ), \
     ('друг',         'друзья',       '00a', 'M', 'friend'                    ), #irregular plural\
     ('дом',          'домов',        '00i', 'M', 'house,home,household'      ), \
@@ -463,8 +463,8 @@ RussianN = [
     ('работа',       'работ',        'aai', 'F', 'work,job'                  ), \
     ('хлеб',         'хлебов',       '00i', 'M', 'bread'                     ), \
     ('нога',         'ног',          'aai', 'F', 'foot,leg'                  ), \
-    ('король',       'короле́й',      '00a', 'M', 'king'                      ), \
-    ('карандаш',     'карандашей',   '00i', 'M', 'pencil'                    ), \
+    ('коро́ль',       'короле́й',      '00a', 'M', 'king'                      ), \
+    ('каранда́ш',     'карандашей',   '00i', 'M', 'pencil'                    ), \
     ('раз',          'раз',          '00i', 'M', 'iteration'                 ), \
     ('похвала',      'похвал',       'aai', 'F', 'praise'                    ), \
     ('голова',       'голов',        'aai', 'F', 'head'                      ), \
@@ -499,26 +499,42 @@ RussianN_decl = [x[2] for x in RussianN]        # list of all Latin decl
 RussianN_gender = [x[3] for x in RussianN]      # list of all Latin gender
 RussianN_eng = [x[4] for x in RussianN]         # list of all English equiv of Latin
 
+def rmStress(word):
+    return word.replace('а́','а').replace('е́','е').replace('и́','и').replace('о́','о').replace('у́','у').replace('ы́','ы').replace('э́','э').replace('ю́','ю').replace('я́','я')
+
+RussianN2 = []
+
+for e in RussianN:
+    RussianN2.append(map(rmStress, e))
+
+RussianN2_ns = [x[0] for x in RussianN2]          # list of all Latin nomS
+RussianN2_gp = [x[1] for x in RussianN2]          # list of all Latin genS
+RussianN2_decl = [x[2] for x in RussianN2]        # list of all Latin decl
+RussianN2_gender = [x[3] for x in RussianN2]      # list of all Latin gender
+RussianN2_eng = [x[4] for x in RussianN2]         # list of all English equiv of Latin
+
+def RfindNomN(word):
+    return RussianN_ns[RussianN2_ns.index(word)]
 
 # returns nomS of genP provided
 def RfindNomG(word):
-    return RussianN_ns[RussianN_gp.index(word)]
+    return RussianN_ns[RussianN2_gp.index(word)]
 
 # returns genP of nomS provided
 def RfindGenN(word):
-    return RussianN_gp[RussianN_ns.index(word)]
+    return RussianN_gp[RussianN2_ns.index(word)]
 
 # returns declension of genP provided
 def RfindDeclG(word):
-    return RussianN_decl[RussianN_gp.index(word)]
+    return RussianN_decl[RussianN2_gp.index(word)]
 
 # returns decl of genP provided
 def RfindDeclG(word):
-    return RussianN_decl[RussianN_gp.index(word)]
+    return RussianN_decl[RussianN2_gp.index(word)]
 
 # returns gender of genP provided
 def RfindGenderG(word):
-    return RussianN_gender[RussianN_gp.index(word)]
+    return RussianN_gender[RussianN2_gp.index(word)]
 
 def RisAnimateG(word):
     return RfindDeclG(word)[2] == 'a'
