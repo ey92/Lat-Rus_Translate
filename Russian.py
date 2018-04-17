@@ -1282,3 +1282,12 @@ def reverseDecline(word):
 	elif word[-2:] in ['ы','и','а']:
 		# print('finddecl9')
 		return findDeclNomPGenS(word)
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# ADJECTIVES
+# -------------------------------------------------------------
+# DECLENSION
+
+# takes nomM, genitive/nomF (root), declension d, gender, case, number
+# def declineA(nomM, root, d, gender, case, num):

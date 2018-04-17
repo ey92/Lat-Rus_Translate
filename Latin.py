@@ -1386,10 +1386,6 @@ def reverseDecline(word):
 
 # takes nomM, genitive/nomF (root), declension d, gender, case, number
 def declineA(nomM, root, d, gender, case, num):
-	print(d)
-	print(gender)
-	print(case)
-	print(num)
 	if d == "12":
 		if gender == "F":
 			d = "1"
