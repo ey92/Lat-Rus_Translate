@@ -170,6 +170,8 @@ endingsNoosglst = ['о','а','у','о','е','ом']
 endingsNoopllst = ['а','0','ам','а','ах','ами']
 endingsNmzsglst = ['ь','и','и','ь','и','ью']
 endingsNmzpllst = ['и','ей','ям','и','ях','ями']
+endingsNiisglst = ['я','и','и','я','и','ем']
+endingsNiipllst = ['а','0','ам','а','ах','ами']
 endingsN00sg = dict(zip(DECL_ENDG_KEYSSG,endingsN00sglst))
 endingsN00pl = dict(zip(DECL_ENDG_KEYSPL,endingsN00pllst))
 endingsNaasg = dict(zip(DECL_ENDG_KEYSSG,endingsNaasglst))
@@ -178,6 +180,8 @@ endingsNoosg = dict(zip(DECL_ENDG_KEYSSG,endingsNoosglst))
 endingsNoopl = dict(zip(DECL_ENDG_KEYSPL,endingsNoopllst))
 endingsNmzsg = dict(zip(DECL_ENDG_KEYSSG,endingsNmzsglst))
 endingsNmzpl = dict(zip(DECL_ENDG_KEYSPL,endingsNmzpllst))
+endingsNiisg = dict(zip(DECL_ENDG_KEYSSG,endingsNiisglst))
+endingsNiipl = dict(zip(DECL_ENDG_KEYSPL,endingsNiipllst))
 endingsN00 = endingsN00sg.copy()
 endingsN00.update(endingsN00pl)
 endingsNaa = endingsNaasg.copy()
@@ -186,6 +190,8 @@ endingsNoo = endingsNoosg.copy()
 endingsNoo.update(endingsNoopl)
 endingsNmz = endingsNmzsg.copy()
 endingsNmz.update(endingsNmzpl)
+endingsNii = endingsNiisg.copy()
+endingsNii.update(endingsNiipl)
 
 def takeRaw(word):
 	return word.decode('utf8')
@@ -1028,6 +1034,21 @@ def mzDecl(nom, gen, gender, case, num, animate):
 		# minor phonology changes
 		return ztoe(root+endingsNmz[form]).replace('щя','ща').replace('ця','ца')
 
+def iDecl(nom, gen, gender, case, num, animate):
+	form = case+num
+	root = Roots.RfindRootG(gen)
+
+	if case == 'ACC':
+		case = 'GEN' if animate == 'a' else 'NOM'
+		form = case+num
+
+	if form == 'NOMSG':
+		return nom
+	elif form == 'GENPL':
+		return gen
+	else:
+		return generalPhon(ztoe(root+endingsNii[form]))
+
 # takes nomS, case, number
 def decline(nom, case, num, d=None, gender=None):
 	try:
@@ -1051,6 +1072,8 @@ def decline(nom, case, num, d=None, gender=None):
 		return oDecl(nom,gen,gender,case,num,d[2])
 	elif d[:2] == 'mz':
 		return mzDecl(nom,gen,gender,case,num,d[2])
+	elif d[:2] == 'ii':
+		return iDecl(nom,gen,gender,case,num,d[2])
 
 # -------------------------------------------------------------
 # REVERSE DECLENSION
