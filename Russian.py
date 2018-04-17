@@ -1102,7 +1102,7 @@ def findDeclPrpS(root):
 	if not (nom in Roots.RussianN_ns):
 		nom = nom+'о'
 		if not (nom in Roots.RussianN_ns):
-			nom = nom+'а'
+			nom = nom[:-2]+'а'
 			case = "DAT/PRP" 	# set dative to be default case for a declension
 	# ь declension has ending 'и', but more common as nom/acc pl
 
