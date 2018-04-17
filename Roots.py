@@ -1,12 +1,17 @@
 # Elizabeth Yam ey92
 # -*- coding: utf-8 -*-
 
-# 55 Noun stems
+# 60 Noun stems: Latin genS to Russian nomS, english
 NMap = [
+    ("agricolae",    "земледелец",   "farmer"                    ), \
+    ("feminae",      "женщина",      "woman"                     ), \
+    ("jānuae",       "дверь",        "door"                      ), \
+    ("patriae",      "сторона",      "side,party,land,place,part"), \
+    ("pennae",       "ручка",        "pen"                       ), \
     ("puellae",      "девочка",      "girl"                      ), \
     ("terrae",       "земля",        "land"                      ), \
-    ("feminae",      "женщина",      "woman"                     ), \
-    ("agricolae",    "земледелец",   "farmer"                    ), \
+    ("vītae",        "жизнь",        "life,existence"            ), \
+    ("ānulī",        "кольцо",       "ring"                      ), \
     ("puerī",        "мальчик",      "boy"                       ), \
     ("virī",         "мужчина",      "man"                       ), \
     ("filiī",        "сын",          "son"                       ), \
@@ -15,17 +20,30 @@ NMap = [
     ("mūrī",         "стена",        "wall"                      ), \
     ("servī",        "раб",          "slave, servant"            ), \
     ("librī",        "книга",        "book"                      ), \
+    ("amicī",        "друг",         "friend"                    ), \
+    ("domī",         "дом",          "house,home,household"      ), \
+    ("locī",         "место",        "place,site,region,area"    ), \
+    ("oculī",        "глаз",         "eye"                       ), \
     ("bellī",        "война",        "war"                       ), \
     ("dōnī",         "подарок",      "gift"                      ), \
+    ("bonī",         "вещь",         "possession"                ), \
+    ("verbī",        "слово",        "word,speech"               ), \
+    ("vīnī",         "вино",         "wine"                      ), \
+    ("calicis",      "стакан",       "cup, glass"                ), \
     ("hominis",      "человек",      "human, person"             ), \
-    ("regis",        "царь",         "king"                      ), \
     ("consulis",     "консул",       "consul"                    ), \
+    ("laboris",      "работа",       "work,job"                  ), \
     ("pānis",        "хлеб",         "bread"                     ), \
+    ("pedis",        "нога",         "foot,leg"                  ), \
+    ("regis",        "король",       "king"                      ), \
+    ("graphidis",    "карандаш",     "pencil"                    ), \
+    ("iterātiōnis",  "раз",          "iteration"                 ), \
     ("laudis",       "похвала",      "praise"                    ), \
+    ("capitis",      "голова",       "head"                      ), \
     ("jūris",        "право",        "law"                       ), \
     ("flūminis",     "река",         "river"                     ), \
-    ("temporis",     "время",        "time"                      ), \
     ("nōminis",      "имя",          "name"                      ), \
+    ("temporis",     "время",        "time"                      ), \
     ("pōntis",       "мост",         "bridge"                    ), \
     ("mēnsis",       "месяц",        "month"                     ), \
     ("noctis",       "ночь",         "night"                     ), \
@@ -33,6 +51,7 @@ NMap = [
     ("urbis",        "город",        "city"                      ), \
     ("turris",       "башня",        "tower"                     ), \
     ("cīvis",        "гражданин",    "citizen"                   ), \
+    ("fīnis",        "конец",        "end,ending"                ), \
     ("nāvis",        "корабль",      "ship"                      ), \
     ("pārtis",       "доля",         "part"                      ), \
     ("clāvis",       "ключ",         "key"                       ), \
@@ -41,23 +60,9 @@ NMap = [
     ("manūs",        "рука",         "hand"                      ), \
     ("portūs",       "порт",         "harbor, port"              ), \
     ("cornūs",       "рог",          "horn"                      ), \
-    ("reī",          "дело",         "thing, matter"             ), \
-    ("bonī",         "вещь",         "possession"                ), \
-    ("iterātiōnis",  "раз",          "iteration"                 ), \
-    ("oculī",        "глаз",         "eye"                       ), \
-    ("vītae",        "жизнь",        "life,existence"            ), \
-    ("capitis",      "голова",       "head"                      ), \
-    ("amicī",        "друг",         "friend"                    ), \
-    ("domī",         "дом",          "house,home,household"      ), \
-    ("verbī",        "слово",        "word,speech"               ), \
-    ("locī",         "место",        "place,site,region,area"    ), \
+    ("diēī",         "день",         "day"                       ), \
     ("faciēī",       "лицо",         "face,person"               ), \
-    ("patriae",      "сторона",      "side,party,land,place,part"), \
-    ("pedis",        "нога",         "foot,leg"                  ), \
-    ("laboris",      "работа",       "work,job"                  ), \
-    ("fīnis",        "конец",        "end,ending"                ), \
-    ("jānuae",       "дверь",        "door"                      ), \
-    ("diēī",         "день",         "day"                       ) \
+    ("rēī",          "дело",         "thing, matter"             ) \
 ]
 
 NMap_lat = [x[0] for x in NMap]
@@ -65,34 +70,42 @@ NMap_rus = [x[1] for x in NMap]
 NMap_eng = [x[2] for x in NMap]
 
 
-# 26 Verb stems
+# 33 Verb stems
 VMap = [
-    ('ire',              'пойти',       'to go'             ), \
-    ('esse',             'есть',        'to be'             ), \
-    ('posse',            'мочь',        'to be able'        ), \
-    ('velle',            'хотеть',      'to want'           ), \
-    ('nōlle',            'нехотеть',    'to not want'       ), \
-    ('ferre',            'нести',       'to bring, carry'   ), \
-    ('amare',            'любить',      'to love'           ), \
-    ('cōgitare',         'думать',      'to think'          ), \
-    ('parare',           'готовить',    'to prepare'        ), \
-    ('rogare',           'спрашивать',  'to ask'            ), \
-    ('spectare',         'смотреть',    'to watch'          ), \
-    ('stare',            'стоять',      'to stand'          ), \
-    ('dēlēre',           'уничтожать',  'to destroy'        ), \
-    ('habēre',           'иметь',       'to have'           ), \
-    ('vidēre',           'видеть',      'to see'            ), \
-    ('comprehendere',    'понимать',    'to understand'     ), \
-    ('dīcere',           'говорить',    'to say'            ), \
-    ('edere',            'есть',        'to eat'            ), \
-    ('petere',           'искать',      'to seek'           ), \
-    ('sīdere',           'сидеть',      'to sit'            ), \
-    ('vīvere',           'жить',        'to live'           ), \
-    ('audire',           'слышать',     'to hear'           ), \
-    ('scire',            'знать',       'to know'           ), \
-    ('venire',           'приходить',   'to come'           ), \
-    ('capere',           'брать',       'to take'           ), \
-    ('incipere',         'начать',      'to begin'          ) \
+    ('ire',              'ехать',      'to go'              ), \
+    ('esse',             'быть',       'to be'              ), #no imperf\
+    ('posse',            'мочь',       'to be able'         ), \
+    ('velle',            'хотеть',     'to want'            ), \
+    ('nōlle',            'нехотеть',   'to not want'        ), \
+    ('ferre',            'нести',      'to bring, carry'    ), \
+    ('amare',            'любить',     'to love'            ), \
+    ('ambulare',         'гулять',     'to walk'            ), \
+    ('cōgitare',         'думать',     'to think'           ), \
+    ('dare',             'давать',     'to give'            ), \
+    ('expectare',        'ждать',      'to wait'            ), \
+    ('parare',           'готовить',   'to prepare'         ), \
+    ('rogare',           'спрашивать', 'to ask'             ), \
+    ('spectare',         'смотреть',   'to watch'           ), \
+    ('stare',            'стоять',     'to stand'           ), \
+    ('dēlēre',           'уничтожать', 'to destroy'         ), \
+    ('docēre',           'учить',      'to teach'           ), \
+    ('habēre',           'иметь',      'to have'            ), \
+    ('vidēre',           'видеть',     'to see'             ), \
+    ('claudere',         'закрывать',  'to close'           ), \
+    ('comprehendere',    'понимать',   'to understand'      ), \
+    ('dīcere',           'говорить',   'to say'             ), \
+    ('edere',            'есть',       'to eat'             ), \
+    ('legere',           'читать',     'to read'            ), \
+    ('petere',           'искать',     'to seek'            ), \
+    ('pōnere',           'класть',     'to put, place'      ), \
+    ('scrībere',         'писать',     'to write'           ), \
+    ('sīdere',           'сидеть',     'to sit'             ), \
+    ('vīvere',           'жить',       'to live'            ), \
+    ('audire',           'слышать',    'to hear'            ), \
+    ('scire',            'знать',      'to know'            ), \
+    ('venire',           'приходить',  'to come'            ), \
+    ('capere',           'брать',      'to take'            ), \
+    ('incipere',         'начинать',   'to begin'           ) \
 ]
 
 VMap_lat = [x[0] for x in VMap]
@@ -156,39 +169,40 @@ PrepMap = {}
 # LATIN
 # 33 Verb stems
 LatinV = [
-    ('eo',          'ire',              'īvī',          '0', 'to go',             'ехать',      'поехать'       ), \
-    ('sum',         'esse',             'fuī',          '0', 'to be',             '(no imperf)','быть'          ), \
-    ('possum',      'posse',            'potuī',        '0', 'to be able',        'мочь',       'смочь'         ), \
-    ('volo',        'velle',            'voluī',        '0', 'to want',           'хотеть',     'захотеть'      ), \
-    ('nōlo',        'nōlle',            'nōluī',        '0', 'to not want',       'нехотеть',   'незахотеть'    ), \
-    ('fero',        'ferre',            'tulī',         '0', 'to bring, carry',   'нести',      'понести'       ), \
-    ('amo',         'amare',            'amāvī',        '1', 'to love',           'любить',     'полюбить'      ), \
-    ('ambulo',      'ambulare',         'ambulāvī',     '1', 'to walk',           'идти',       'пойти'         ), \
-    ('cōgito',      'cōgitare',         'cōgitāvī',     '1', 'to think',          'думать',     'подумать'      ), \
-    ('do',          'dare',             'dedī',         '1', 'to give',           'давать',     'дать'          ), \
-    ('expecto',     'expectare',        'exspectāvī',   '1', 'to wait',           'ждать',      'подождать'     ), \
-    ('paro',        'parare',           'parāvī',       '1', 'to prepare',        'готовить',   'подготовить'   ), \
-    ('rogo',        'rogare',           'rogāvī',       '1', 'to ask',            'спрашивать', 'спросить'      ), \
-    ('specto',      'spectare',         'spectāvī',     '1', 'to watch',          'смотреть',   'посмотреть'    ), \
-    ('sto',         'stare',            'stetī',        '1', 'to stand',          'стоять',     'постоя́ть'      ), \
-    ('dēleo',       'dēlēre',           'dēlēvī',       '2', 'to destroy',        'уничтожать', 'уничтожить'    ), \
-    ('doceo',       'docēre',           'docuī',        '2', 'to teach',          'учить',      'обучить'       ), \
-    ('habeo',       'habēre',           'habuī',        '2', 'to have',           'иметь',      '(no perf)'     ), \
-    ('video',       'vidēre',           'vidī',         '2', 'to see',            'видеть',     'увидеть'       ), \
-    ('comprehendo', 'comprehendere',    'comprehendī',  '3', 'to understand',     'понимать',   'понять'        ), \
-    ('dīco',        'dīcere',           'dīxī',         '3', 'to say',            'говорить',   'сказать'       ), \
-    ('edo',         'edere',            'ēdī',          '3', 'to eat',            'есть',       'съесть'        ), \
-    ('lego',        'legere',           'lēgī',         '3', 'to read',           'читать',     'прочитать'     ), \
-    ('peto',        'petere',           'petīvī',       '3', 'to seek',           'искать',     'поискать'      ), \
-    ('pōno',        'pōnere',           'pōsuī',        '3', 'to put, place',     'класть',     'положить'      ), \
-    ('scrībō',      'scrībere',         'scrīpsī',      '3', 'to write',          'писать',     'написать'      ), \
-    ('sīdo',        'sīdere',           'sīdī',         '3', 'to sit',            'сидеть',     'сесть'         ), \
-    ('vīvo',        'vīvere',           'vīxī',         '3', 'to live',           'жить',       'прожить'       ), \
-    ('audio',       'audire',           'audīvī',       '4', 'to hear',           'слышать',    'услышать'      ), \
-    ('scio',        'scire',            'scīvī',        '4', 'to know',           'знать',      'узнать'        ), \
-    ('venio',       'venire',           'vēnī',         '4', 'to come',           'приходить',  'прийти'        ), \
-    ('capio',       'capere',           'cēpī',         '5', 'to take',           'брать',      'взять'         ), \
-    ('incipio',     'incipere',         'incēpī',       '5', 'to begin',          'начать',    'начинать'       ) \
+    ('eo',          'ire',              'īvī',          '0', 'to go',             ), \
+    ('sum',         'esse',             'fuī',          '0', 'to be',             ), \
+    ('possum',      'posse',            'potuī',        '0', 'to be able',        ), \
+    ('volo',        'velle',            'voluī',        '0', 'to want',           ), \
+    ('nōlo',        'nōlle',            'nōluī',        '0', 'to not want',       ), \
+    ('fero',        'ferre',            'tulī',         '0', 'to bring, carry',   ), \
+    ('amo',         'amare',            'amāvī',        '1', 'to love',           ), \
+    ('ambulo',      'ambulare',         'ambulāvī',     '1', 'to walk',           ), \
+    ('cōgito',      'cōgitare',         'cōgitāvī',     '1', 'to think',          ), \
+    ('do',          'dare',             'dedī',         '1', 'to give',           ), \
+    ('expecto',     'expectare',        'exspectāvī',   '1', 'to wait',           ), \
+    ('paro',        'parare',           'parāvī',       '1', 'to prepare',        ), \
+    ('rogo',        'rogare',           'rogāvī',       '1', 'to ask',            ), \
+    ('specto',      'spectare',         'spectāvī',     '1', 'to watch',          ), \
+    ('sto',         'stare',            'stetī',        '1', 'to stand',          ), \
+    ('dēleo',       'dēlēre',           'dēlēvī',       '2', 'to destroy',        ), \
+    ('doceo',       'docēre',           'docuī',        '2', 'to teach',          ), \
+    ('habeo',       'habēre',           'habuī',        '2', 'to have',           ), \
+    ('video',       'vidēre',           'vidī',         '2', 'to see',            ), \
+    ('claudo',      'claudere',         'clausī',       '3', 'to close',          ), \
+    ('comprehendo', 'comprehendere',    'comprehendī',  '3', 'to understand',     ), \
+    ('dīco',        'dīcere',           'dīxī',         '3', 'to say',            ), \
+    ('edo',         'edere',            'ēdī',          '3', 'to eat',            ), \
+    ('lego',        'legere',           'lēgī',         '3', 'to read',           ), \
+    ('peto',        'petere',           'petīvī',       '3', 'to seek',           ), \
+    ('pōno',        'pōnere',           'pōsuī',        '3', 'to put, place',     ), \
+    ('scrībō',      'scrībere',         'scrīpsī',      '3', 'to write',          ), \
+    ('sīdo',        'sīdere',           'sīdī',         '3', 'to sit',            ), \
+    ('vīvo',        'vīvere',           'vīxī',         '3', 'to live',           ), \
+    ('audio',       'audire',           'audīvī',       '4', 'to hear',           ), \
+    ('scio',        'scire',            'scīvī',        '4', 'to know',           ), \
+    ('venio',       'venire',           'vēnī',         '4', 'to come',           ), \
+    ('capio',       'capere',           'cēpī',         '5', 'to take',           ), \
+    ('incipio',     'incipere',         'incēpī',       '5', 'to begin',          ) \
 ]
 
 LatinV_fs = [x[0] for x in LatinV]
@@ -196,8 +210,6 @@ LatinV_inf = [x[1] for x in LatinV]
 LatinV_perf = [x[2] for x in LatinV]
 LatinV_conj = [x[3] for x in LatinV]
 LatinV_eng = [x[4] for x in LatinV]
-LatinV_rus_impf = [x[5] for x in LatinV]
-LatinV_rus_perf = [x[6] for x in LatinV]
 
 def LfindConjI(word):
     return LatinV_conj[LatinV_inf.index(word)]
@@ -216,74 +228,73 @@ def LfindPerfI(word):
 
 # 60 Noun stems
 LatinN = [
-    ("agricola",    "agricolae",    "1",    "M",    "земледелец",   "farmer"                    ), \
-    ("femina",      "feminae",      "1",    "F",    "женщина",      "woman"                     ), \
-    ("jānua",       "jānuae",       "1",    "F",    "дверь",        "door"                      ), \
-    ("patria",      "patriae",      "1",    "F",    "сторона",      "side,party,land,place,part"), \
-    ("penna",       "pennae",       "1",    "F",    "ручка",        "pen"                       ), \
-    ("puella",      "puellae",      "1",    "F",    "девочка",      "girl"                      ), \
-    ("terra",       "terrae",       "1",    "F",    "земля",        "land"                      ), \
-    ("vīta",        "vītae",        "1",    "F",    "жизнь",        "life,existence"            ), \
-    ("ānulus ",     "ānulī",        "2 ",   "M",    "кольцо",       "ring"                      ), \
-    ("puer",        "puerī",        "2 ",   "M",    "мальчик",      "boy"                       ), \
-    ("vir",         "virī",         "2 ",   "M",    "мужчина",      "man"                       ), \
-    ("filius",      "filiī",        "2 ",   "M",    "сын",          "son"                       ), \
-    ("modus",       "modī",         "2 ",   "M",    "способ",       "measure, manner"           ), \
-    ("annus",       "annī",         "2 ",   "M",    "год",          "year"                      ), \
-    ("mūrus",       "mūrī",         "2 ",   "M",    "стена",        "wall"                      ), \
-    ("servus",      "servī",        "2 ",   "M",    "раб",          "slave, servant"            ), \
-    ("liber",       "librī",        "2P",   "M",    "книга",        "book"                      ), \
-    ("amicus",      "amicī",        "2 ",   "M",    "друг",         "friend"                    ), \
-    ("domus",       "domī",         "2 ",   "M",    "дом",          "house,home,household"      ), \
-    ("locus",       "locī",         "2 ",   "M",    "место",        "place,site,region,area"    ), \
-    ("oculus",      "oculī",        "2 ",   "M",    "глаз",         "eye"                       ), \
-    ("bellum",      "bellī",        "2 ",   "N",    "война",        "war"                       ), \
-    ("dōnum",       "dōnī",         "2 ",   "N",    "подарок",      "gift"                      ), \
-    ("bonum",       "bonī",         "2 ",   "N",    "вещь",         "possession"                ), \
-    ("verbum",      "verbī",        "2 ",   "N",    "слово",        "word,speech"               ), \
-    ("vīnum",       "vīnī",         "2 ",   "N",    "вино",         "wine"                      ), \
-    ("calix",       "calicis",      "3  ",  "M",    "стакан",       "cup, glass"                ), \
-    ("homō",        "hominis",      "3  ",  "M",    "человек",      "human, person"             ), \
-    ("consul",      "consulis",     "3  ",  "M",    "консул",       "consul"                    ), \
-    ("labor",       "laboris",      "3  ",  "M",    "работа",       "work,job"                  ), \
-    ("pānis",       "pānis",        "3  ",  "M",    "хлеб",         "bread"                     ), \
-    ("pēs",         "pedis",        "3  ",  "M",    "нога",         "foot,leg"                  ), \
-    ("rex",         "regis",        "3  ",  "M",    "король",         "king"                      ), \
-    ("graphis",     "graphidis",    "3  ",  "F",    "карандаш",     "pencil"                    ), \
-    ("iterātiō",    "iterātiōnis",  "3  ",  "F",    "раз",          "iteration"                 ), \
-    ("laus",        "laudis",       "3  ",  "F",    "похвала",      "praise"                    ), \
-    ("caput",       "capitis",      "3  ",  "N",    "голова",       "head"                      ), \
-    ("jūs",         "jūris",        "3  ",  "N",    "право",        "law"                       ), \
-    ("flūmen",      "flūminis",     "3  ",  "N",    "река",         "river"                     ), \
-    ("nōmen",       "nōminis",      "3  ",  "N",    "имя",          "name"                      ), \
-    ("tempus",      "temporis",     "3  ",  "N",    "время",        "time"                      ), \
-    ("pōns",        "pōntis",       "3i ",  "M",    "мост",         "bridge"                    ), \
-    ("mēnsis",      "mēnsis",       "3i ",  "M",    "месяц",        "month"                     ), \
-    ("nox",         "noctis",       "3i ",  "F",    "ночь",         "night"                     ), \
-    ("mors",        "mortis",       "3i ",  "F",    "смерть",       "death"                     ), \
-    ("urbs",        "urbis",        "3i ",  "F",    "город",        "city"                      ), \
-    ("turris",      "turris",       "3i ",  "F",    "башня",        "tower"                     ), \
-    ("cīvis",       "cīvis",        "3ii",  "M",    "гражданин",    "citizen"                   ), \
-    ("fīnis",       "fīnis",        "3ii",  "F",    "конец",        "end,ending"                ), \
-    ("nāvis",       "nāvis",        "3ii",  "F",    "корабль",      "ship"                      ), \
-    ("pārs",        "pārtis",       "3ii",  "F",    "доля",         "part"                      ), \
-    ("clāvis",      "clāvis",       "3ii",  "F",    "ключ",         "key"                       ), \
-    ("animal",      "animālis",     "3ii",  "N",    "животное",     "animal"                    ), \
-    ("mare",        "maris",        "3ii",  "N",    "море",         "sea"                       ), \
-    ("manus",       "manūs",        "4",    "F",    "рука",         "hand"                      ), \
-    ("portus",      "portūs",       "4",    "F",    "порт",         "harbor, port"              ), \
-    ("cornū",       "cornūs",       "4",    "N",    "рог",          "horn"                      ), \
-    ("diēs",        "diēī",         "5",    "M",    "день",         "day"                       ), \
-    ("faciēs",      "faciēī",       "5",    "F",    "лицо",         "face,person"               ), \
-    ("rēs",         "rēī",          "5",    "F",    "дело",         "thing, matter"             ) \
+    ("agricola",    "agricolae",    "1",    "M",    "farmer"                    ), \
+    ("femina",      "feminae",      "1",    "F",    "woman"                     ), \
+    ("jānua",       "jānuae",       "1",    "F",    "door"                      ), \
+    ("patria",      "patriae",      "1",    "F",    "side,party,land,place,part"), \
+    ("penna",       "pennae",       "1",    "F",    "pen"                       ), \
+    ("puella",      "puellae",      "1",    "F",    "girl"                      ), \
+    ("terra",       "terrae",       "1",    "F",    "land"                      ), \
+    ("vīta",        "vītae",        "1",    "F",    "life,existence"            ), \
+    ("ānulus ",     "ānulī",        "2 ",   "M",    "ring"                      ), \
+    ("puer",        "puerī",        "2 ",   "M",    "boy"                       ), \
+    ("vir",         "virī",         "2 ",   "M",    "man"                       ), \
+    ("filius",      "filiī",        "2 ",   "M",    "son"                       ), \
+    ("modus",       "modī",         "2 ",   "M",    "measure, manner"           ), \
+    ("annus",       "annī",         "2 ",   "M",    "year"                      ), \
+    ("mūrus",       "mūrī",         "2 ",   "M",    "wall"                      ), \
+    ("servus",      "servī",        "2 ",   "M",    "slave, servant"            ), \
+    ("liber",       "librī",        "2P",   "M",    "book"                      ), \
+    ("amicus",      "amicī",        "2 ",   "M",    "friend"                    ), \
+    ("domus",       "domī",         "2 ",   "M",    "house,home,household"      ), \
+    ("locus",       "locī",         "2 ",   "M",    "place,site,region,area"    ), \
+    ("oculus",      "oculī",        "2 ",   "M",    "eye"                       ), \
+    ("bellum",      "bellī",        "2 ",   "N",    "war"                       ), \
+    ("dōnum",       "dōnī",         "2 ",   "N",    "gift"                      ), \
+    ("bonum",       "bonī",         "2 ",   "N",    "possession"                ), \
+    ("verbum",      "verbī",        "2 ",   "N",    "word,speech"               ), \
+    ("vīnum",       "vīnī",         "2 ",   "N",    "wine"                      ), \
+    ("calix",       "calicis",      "3  ",  "M",    "cup, glass"                ), \
+    ("homō",        "hominis",      "3  ",  "M",    "human, person"             ), \
+    ("consul",      "consulis",     "3  ",  "M",    "consul"                    ), \
+    ("labor",       "laboris",      "3  ",  "M",    "work,job"                  ), \
+    ("pānis",       "pānis",        "3  ",  "M",    "bread"                     ), \
+    ("pēs",         "pedis",        "3  ",  "M",    "foot,leg"                  ), \
+    ("rex",         "regis",        "3  ",  "M",    "king"                      ), \
+    ("graphis",     "graphidis",    "3  ",  "F",    "pencil"                    ), \
+    ("iterātiō",    "iterātiōnis",  "3  ",  "F",    "iteration"                 ), \
+    ("laus",        "laudis",       "3  ",  "F",    "praise"                    ), \
+    ("caput",       "capitis",      "3  ",  "N",    "head"                      ), \
+    ("jūs",         "jūris",        "3  ",  "N",    "law"                       ), \
+    ("flūmen",      "flūminis",     "3  ",  "N",    "river"                     ), \
+    ("nōmen",       "nōminis",      "3  ",  "N",    "name"                      ), \
+    ("tempus",      "temporis",     "3  ",  "N",    "time"                      ), \
+    ("pōns",        "pōntis",       "3i ",  "M",    "bridge"                    ), \
+    ("mēnsis",      "mēnsis",       "3i ",  "M",    "month"                     ), \
+    ("nox",         "noctis",       "3i ",  "F",    "night"                     ), \
+    ("mors",        "mortis",       "3i ",  "F",    "death"                     ), \
+    ("urbs",        "urbis",        "3i ",  "F",    "city"                      ), \
+    ("turris",      "turris",       "3i ",  "F",    "tower"                     ), \
+    ("cīvis",       "cīvis",        "3ii",  "M",    "citizen"                   ), \
+    ("fīnis",       "fīnis",        "3ii",  "F",    "end,ending"                ), \
+    ("nāvis",       "nāvis",        "3ii",  "F",    "ship"                      ), \
+    ("pārs",        "pārtis",       "3ii",  "F",    "part"                      ), \
+    ("clāvis",      "clāvis",       "3ii",  "F",    "key"                       ), \
+    ("animal",      "animālis",     "3ii",  "N",    "animal"                    ), \
+    ("mare",        "maris",        "3ii",  "N",    "sea"                       ), \
+    ("manus",       "manūs",        "4",    "F",    "hand"                      ), \
+    ("portus",      "portūs",       "4",    "F",    "harbor, port"              ), \
+    ("cornū",       "cornūs",       "4",    "N",    "horn"                      ), \
+    ("diēs",        "diēī",         "5",    "M",    "day"                       ), \
+    ("faciēs",      "faciēī",       "5",    "F",    "face,person"               ), \
+    ("rēs",         "rēī",          "5",    "F",    "thing, matter"             ) \
 ]
 
 LatinN_ns = [x[0] for x in LatinN]          # list of all Latin nomS
 LatinN_gs = [x[1] for x in LatinN]          # list of all Latin genS
 LatinN_decl = [x[2] for x in LatinN]        # list of all Latin decl
 LatinN_gender = [x[3] for x in LatinN]      # list of all Latin gender
-LatinN_rus = [x[4] for x in LatinN]         # list of all Russian equiv of Latin
-LatinN_eng = [x[5] for x in LatinN]         # list of all English equiv of Latin
+LatinN_eng = [x[4] for x in LatinN]         # list of all English equiv of Latin
 
 # returns nomS of genS provided
 def LfindNomG(word):
@@ -347,24 +358,42 @@ def LfindDeclNM(word):
 # RUSSIAN
 # 18 Verb stems
 RussianV = [
-    ('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir'), \
-    ('давать',     'дают',       'ir',  'дать',         'дадут',        'ir'), \
-    ('есть',       'едят',       'ir',  'съесть',       'съедят',       'ir'), \
-    ('брать',      'берут',      'ir',  'взять',        'возьмут',      'ir'), \
-    ('класть',     'кладут',     'ir',  'положить',     'положат',      '2c'), \
-    ('ждать',      'ждут',       'ir',  'подождать',    'подождут',     'ir'), \
-    ('жить',       'живут',      'ir',  'прожить',      'проживут',     'ir'), \
-    ('закрывать',  'закрывают',  '1v',  'закрыть',      'закроют',      'ir'), \
-    ('ехать',      'едут',       'ir',  'поехать',      'поедут',       'ir'), \
-    ('идти',       'идут',       'ir',  'пойти',        'пойдут',       'ir'), \
-    ('хотеть',     'хотят',      'ir',  'захотеть',     'захотят',      'ir'), \
-    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c'), \
-    ('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v'), \
-    ('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v'), \
-    ('искать',     'ищут',       '1c',  'поискать',     'поищут',       '1c'), \
-    ('говорить',   'говорят',    '2v',  'сказать',      'скажут',       '1c'), \
-    ('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v'), \
-    ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c') \
+    ('',           '',           '',    'быть',         'будут',        'ir', 'to be'           ), \
+    ('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir', 'to be able'      ), \
+    ('давать',     'дают',       'ir',  'дать',         'дадут',        'ir', 'to give'         ), \
+    ('есть',       'едят',       'ir',  'съесть',       'съедят',       'ir', 'to eat'          ), \
+    ('брать',      'берут',      'ir',  'взять',        'возьмут',      'ir', 'to take'         ), \
+    ('класть',     'кладут',     'ir',  'положить',     'положат',      '2c', 'to put, place'   ), \
+    ('ждать',      'ждут',       'ir',  'подождать',    'подождут',     'ir', 'to wait'         ), \
+    ('жить',       'живут',      'ir',  'прожить',      'проживут',     'ir', 'to live'         ), \
+    ('закрывать',  'закрывают',  '1v',  'закрыть',      'закроют',      'ir', 'to close'        ), \
+    ('ехать',      'едут',       'ir',  'поехать',      'поедут',       'ir', 'to go'           ), \
+    # ('идти',       'идут',       'ir',  'пойти',        'пойдут',       'ir', 'to walk'         ), \
+    ('хотеть',     'хотят',      'ir',  'захотеть',     'захотят',      'ir', 'to want'         ), \
+    ('нехотеть',   'нехотят',    'ir',  'незахотеть',   'незахотят',    'ir', 'to not want'     ), \
+    ('нести',      'несут',      '1c',  'понести',      'понесут',      '1c', 'to bring, carry' ), #find conj\
+    ('писать',     'пишут',      '1c',  'написать',     'напишут',      '1c', 'to write'        ), \
+    ('читать',     'читают',     '1v',  'прочитать',    'прочитают',    '1v', 'to read'         ), \
+    ('гулять',     'гуляют',     '1v',  'погулять',     'погуляют',     '1v', 'to walk'         ), \
+    ('искать',     'ищут',       '1c',  'поискать',     'поищут',       '1c', 'to seek'         ), \
+    ('говорить',   'говорят',    '2v',  'сказать',      'скажут',       '1c', 'to say'          ), \
+    ('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v', 'to watch'        ), \
+    ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c', 'to teach'        ), \
+    #test below
+    ('любить',     'любят',      '2v',  'полюбить',     'полюбят',      '2v', 'to love'         ), \
+    ('думать',     'ду́мают',     '2v',  'подумать',     'подумают',     '2v', 'to think'        ), \
+    ('готовить',   'готовят',    '2v',  'приготовить',  'приготовят',   '2v', 'to prepare',     ), \
+    ('спрашивать', 'спрашивают', '1v',  'спросить',     'спросят',      '2c', 'to ask',         ), \
+    ('стоять',     'стоят',      '2v',  'постоять',     'постоят',      '2v', 'to stand',       ), \
+    ('уничтожать', 'уничтожают', '1v',  'уничтожить',   'уничтожат',    '2c', 'to destroy',     ), \
+    ('иметь',      'имеют',      '1v',  '',             '',             '',   'to have',        ), \
+    ('видеть',     'ви́дят',      '2v',  'увидеть',      'увидят',       '2v', 'to see',         ), #irreg 1ps\
+    ('понимать',   'понимают',   '1v',  'понять',       'поймут',       '1c', 'to understand',  ), \
+    ('сидеть',     'сидят',      '2v',  'сесть',        'сядут',        '1c', 'to sit',         ), \
+    ('слышать',    'слышат',     '2c',  'услышать',     'услышат',      '2c', 'to hear',        ), \
+    ('знать',      'знают',      '1v',  'узнать',       'узнают',       '1v', 'to know',        ), \
+    ('приходить',  'приходят',   '2v',  'прийти',       'придут',       '1c', 'to come',        ), \
+    ('начина́ть',   'начинают',   '1v',  'начать',       'начнут',       '1c', 'to begin',       ), \
 ]
 
 RussianV_impf_inf = [x[0] for x in RussianV]
@@ -400,26 +429,75 @@ def RfindIConjIInf(word):
 def RfindPConjPInf(word):
     return RussianV_perf_conj[RussianV_perf_inf.index(word)]
 
-# 10 Noun Stems
+# 60 Noun Stems
 RussianN = [
-    ('книга',       'книг',         'aai', 'F', 'librī',    'book'          ), \
-    ('ручка',       'ручек',        'aai', 'F', 'pennae',   'pen'           ), \
-    ('стакан',      'стаканов',     '00i', 'M', 'calicis',  'cup'           ), \
-    ('человек',     'человеков',    '00a', 'M', 'hominis',  'human, person' ), \
-    ('карандаш',    'карандашей',   '00i', 'M', 'pennae',   'pencil'        ), \
-    ('конец',       'концов',       '00i', 'M', 'fīnis',    'end'           ), \
-    ('вино',        'вин',          'ooi', 'N', 'vīnī',     'wine'          ), \
-    ('кольцо',      'колец',        'ooi', 'N', 'ānulī',    'ring'          ), \
-    ('ночь',        'ночей',        'mzi', 'F', 'noctis',   'night'         ), \
-    ('дверь',       'дверей',       'mzi', 'F', 'jānuae',   'door'          ) \
+    ('земледелец',   'земледельцев', '00a', 'M', 'farmer'                    ), \
+    ('женщина',      'женщин',       'aaa', 'F', 'woman'                     ), \
+    ('дверь',        'дверей',       'mzi', 'F', 'door'                      ), \
+    ('сторона',      'сторон',       'aai', 'F', 'side,party,land,place,part'), \
+    ('ручка',        'ручек',        'aai', 'F', 'pen'                       ), \
+    ('девочка',      'девочек',      'aaa', 'F', 'girl'                      ), \
+    ('земля',        'земель',       'aai', 'F', 'land'                      ), \
+    ('жизнь',        'жизней',       'mzi', 'F', 'life,existence'            ), \
+    ('кольцо',       'колец',        'ooi', 'N', 'ring'                      ), \
+    ('мальчик',      'мальчиков',    '00a', 'M', 'boy'                       ), \
+    ('мужчина',      'мужчин',       'aaa', 'M', 'man'                       ), \
+    ('сын',          'сынов',        '00a', 'M', 'son'                       ), #irregular plural\
+    ('способ',       'способов',     '00i', 'M', 'measure, manner'           ), \
+    ('год',          'годов',        '00i', 'M', 'year'                      ), \
+    ('стена',        'стен',         'aai', 'F', 'wall'                      ), \
+    ('раб',          'рабов',        '00a', 'M', 'slave, servant'            ), #irregular plural\
+    ('книга',        'книг',         'aai', 'F', 'book'                      ), \
+    ('друг',         'друзья',       '00a', 'M', 'friend'                    ), #irregular plural\
+    ('дом',          'домов',        '00i', 'M', 'house,home,household'      ), \
+    ('место',        'мест',         'ooi', 'N', 'place,site,region,area'    ), \
+    ('глаз',         'глаз',         '00i', 'M', 'eye'                       ), \
+    ('война',        'войн',         'aai', 'F', 'war'                       ), \
+    ('подарок',      'подарков',     '00i', 'M', 'gift'                      ), \
+    ('вещь',         'вещей',        'mzi', 'F', 'possession'                ), \
+    ('слово',        'слов',         'ooi', 'N', 'word,speech'               ), \
+    ('вино',         'вин',          'ooi', 'N', 'wine'                      ), \
+    ('стакан',       'стаканов',     '00i', 'M', 'cup'                       ), \
+    ('человек',      'человеков',    '00a', 'M', 'human, person'             ), \
+    ('консул',       'консулов',     '00a', 'M', 'consul'                    ), \
+    ('работа',       'работ',        'aai', 'F', 'work,job'                  ), \
+    ('хлеб',         'хлебов',       '00i', 'M', 'bread'                     ), \
+    ('нога',         'ног',          'aai', 'F', 'foot,leg'                  ), \
+    ('король',       'короле́й',      '00a', 'M', 'king'                      ), \
+    ('карандаш',     'карандашей',   '00i', 'M', 'pencil'                    ), \
+    ('раз',          'раз',          '00i', 'M', 'iteration'                 ), \
+    ('похвала',      'похвал',       'aai', 'F', 'praise'                    ), \
+    ('голова',       'голов',        'aai', 'F', 'head'                      ), \
+    ('право',        'прав',         'ooi', 'N', 'law'                       ), \
+    ('река',         'рек',          'aai', 'F', 'river'                     ), \
+    ('имя',          'имён',         'iii', 'N', 'name'                      ), \
+    ('время',        'времён',       'iii', 'N', 'time'                      ), \
+    ('мост',         'мостов',       '00i', 'M', 'bridge'                    ), \
+    ('месяц',        'месяцев',      '00i', 'M', 'month'                     ), \
+    ('ночь',         'ночей',        'mzi', 'F', 'night'                     ), \
+    ('смерть',       'смертей',      'mzi', 'F', 'death'                     ), \
+    ('город',        'городо́в',      '00i', 'M', 'city'                      ), #irregular\
+    ('башня',        'башен',        'aai', 'F', 'tower'                     ), \
+    ('гражданин',    'граждан',      '00a', 'M', 'citizen'                   ), \
+    ('конец',        'концов',       '00i', 'M', 'end'                       ), \
+    ('корабль',      'кораблей',     '00i', 'M', 'ship'                      ), \
+    ('доля',         'долей',        'aai', 'F', 'part'                      ), \
+    ('ключ',         'ключей',       '00i', 'M', 'key'                       ), \
+    ('животное',     'животных',     'ooa', 'N', 'animal'                    ), #irregular, declines like adj\
+    ('море',         'морей',        'ooi', 'N', 'sea'                       ), #different root\
+    ('рука',         'рук',          'aai', 'F', 'hand'                      ), \
+    ('порт',         'портов',       '00i', 'M', 'harbor, port'              ), \
+    ('рог',          'рогов',        '00i', 'M', 'horn'                      ), #irregular nom/accpl\
+    ('день',         'дней',         '00i', 'M', 'day'                       ), #irregular root\
+    ('лицо',         'лиц',          'ooi', 'N', 'face,person'               ), \
+    ('дело',         'дел',          'ooi', 'N', 'thing, matter'             ) \
 ]
 
 RussianN_ns = [x[0] for x in RussianN]          # list of all Latin nomS
 RussianN_gp = [x[1] for x in RussianN]          # list of all Latin genS
 RussianN_decl = [x[2] for x in RussianN]        # list of all Latin decl
 RussianN_gender = [x[3] for x in RussianN]      # list of all Latin gender
-RussianN_latg = [x[4] for x in RussianN]        # list of all Russian equiv of Latin
-RussianN_eng = [x[5] for x in RussianN]         # list of all English equiv of Latin
+RussianN_eng = [x[4] for x in RussianN]         # list of all English equiv of Latin
 
 
 # returns nomS of genP provided
