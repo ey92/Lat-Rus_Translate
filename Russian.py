@@ -1070,8 +1070,10 @@ def findDeclNomPGenS(root):
 			# if ь declension F NomPlural
 			if not (noms in Roots.RussianN2_ns):
 				noms = root[:-2]+'ь'
+				if noms in Roots.RussianN_root:
+					noms = Roots.RfindNomR(noms)
 				# nominative plural is more likely than genitive singular for a declension
-				if not (noms in Roots.RussianN2_ns):
+				elif not (noms in Roots.RussianN2_ns):
 					noms = root[:-2]+'а'
 		gen = Roots.RfindGenN(noms)
 		if not (Roots.RisAnimateG(gen)):
@@ -1100,7 +1102,8 @@ def findDeclNomPGenS(root):
 		if not (noms in Roots.RussianN2_ns) and (noms in Roots.RussianN_root):
 			noms = Roots.RfindNomR(noms)
 			gen = Roots.RfindGenN(noms)
-			if Roots.RfindDeclG[3] == 'r':
+			# print(Roots.RfindDeclG)
+			if Roots.RfindDeclG(gen)[3] == 'r':
 				case = "GEN"
 				num = "SG"
 
@@ -1307,36 +1310,28 @@ def findDeclNomS(root):
 def reverseDecline(word):
 	if word in Roots.RussianN2_ns:
 		# print('finddecl1')
-		return findDeclNomS(word)
-	
+		return findDeclNomS(word)	
 	elif word in Roots.RussianN2_gp:
 		# print('finddecl2')
-		return findDeclGenP(word)
-	
+		return findDeclGenP(word)	
 	elif word[-6:] in ['ами','ями']:
 		# print('finddecl3')
-		return findDeclInsP(word)
-	
+		return findDeclInsP(word)	
 	elif word[-4:] in ['ах','ях']:
 		# print('finddecl4')
-		return findDeclPrpP(word)
-	
+		return findDeclPrpP(word)	
 	elif word[-4:] in ['ам','ям']:
 		# print('finddecl5')
-		return findDeclDatP(word)
-	
+		return findDeclDatP(word)	
 	elif word[-4:] in ['ом','ой','ью','ём']:
 		# print('finddecl6')
-		return findDeclInsS(word)
-	
+		return findDeclInsS(word)	
 	elif word[-2:] == 'е':
 		# print('finddecl7')
-		return findDeclPrpS(word)
-	
+		return findDeclPrpS(word)	
 	elif word[-2:] in ['у','ю']:
 		# print('finddecl8')
-		return findDeclDatS(word)
-	
+		return findDeclDatS(word)	
 	elif word[-2:] in ['ы','и','а','я']:
 		# print('finddecl9')
 		return findDeclNomPGenS(word)
