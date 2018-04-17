@@ -376,6 +376,18 @@ def russianConstruct():
 	elif choice2 == 4:
 		return 'y'
 
+def russianDeconstructNouns():
+	# deconstruct noun
+	params = []
+	while len(params) != 1 or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
+		params = processInput(params,True)
+	printList(Russian.reverseDecline(params[0]))
+
+	return cont()
+
 def russianDeconstructVerbs():
 	# deconstruct verb
 	params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
@@ -401,20 +413,20 @@ def russianDeconstruct():
 	choice3 = int(choice3)
 
 	# Deconstruct Noun
-	# if choice3 == 1:
-	# 	val = 2
-	# 	while (True):
-	# 		val = russianDeconstructNouns()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = russianDeconstructNouns()
-	# 		elif val == None:
-	# 			return val	
+	if choice3 == 1:
+		val = 2
+		while (True):
+			val = russianDeconstructNouns()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = russianDeconstructNouns()
+			elif val == None:
+				return val	
 	
 	# Deconstruct Verb
-	# elif choice3 == 2:
-	if choice3 == 2:
+	elif choice3 == 2:
+	# if choice3 == 2:
 		val = 2
 		while (True):
 			val = russianDeconstructVerbs()

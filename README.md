@@ -162,19 +162,19 @@ output:   `буду_жить`<br>
 - takes Russian verb form
 
 input:    `ищет`<br>
-output2:  `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']`<br>
+output:   `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']`<br>
 
 input:    `посмотрите`<br>
-output2:  `['смотреть', 'посмотреть', 'SND', 'PL', '', 'FUTP']`<br>
+output:   `['смотреть', 'посмотреть', 'SND', 'PL', '', 'FUTP']`<br>
 
 input:    `искал`<br>
-output2:  `['искать', 'поискать', 'FST/SND/TRD', 'SG', 'M', 'IMPF']`<br>
+output:   `['искать', 'поискать', 'FST/SND/TRD', 'SG', 'M', 'IMPF']`<br>
 
 input:    `обучили`<br>
-output2:  `['учить', 'обучить', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']`<br>
+output:   `['учить', 'обучить', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']`<br>
 
 input:    `буду_читать`<br>
-output2:  `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']`<br>
+output:   `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']`<br>
 
 #### Verb Parameters
 
@@ -211,8 +211,14 @@ output:   `человеков`<br>
 `Russian.reverseDecline()`
 - takes Russian noun form
 
-input:    <br>
-output:   <br>
+input:    `ночей`<br>
+output:   `[ночь, ночей, GEN, PL]`<br>
+
+input:    `человека`<br>
+output:   `[человек, человеков, GEN/ACC, SG]`<br>
+
+input:    `ручки`<br>
+output:   `[ручка, ручек, NOM/ACC, PL]`<br>
 
 #### Noun Parameters
 

@@ -418,7 +418,7 @@ RussianN_ns = [x[0] for x in RussianN]          # list of all Latin nomS
 RussianN_gp = [x[1] for x in RussianN]          # list of all Latin genS
 RussianN_decl = [x[2] for x in RussianN]        # list of all Latin decl
 RussianN_gender = [x[3] for x in RussianN]      # list of all Latin gender
-RussianN_latg = [x[4] for x in RussianN]         # list of all Russian equiv of Latin
+RussianN_latg = [x[4] for x in RussianN]        # list of all Russian equiv of Latin
 RussianN_eng = [x[5] for x in RussianN]         # list of all English equiv of Latin
 
 
@@ -441,3 +441,6 @@ def RfindDeclG(word):
 # returns gender of genP provided
 def RfindGenderG(word):
     return RussianN_gender[RussianN_gp.index(word)]
+
+def RisAnimateG(word):
+    return RfindDeclG(word)[2] == 'a'
