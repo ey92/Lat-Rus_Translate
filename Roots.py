@@ -430,74 +430,81 @@ def RfindPConjPInf(word):
     return RussianV_perf_conj[RussianV_perf_inf.index(word)]
 
 # 60 Noun Stems
+# p = irregular plural stem
+# n = nom/acc plural ends in a
+# r = irregular root
+# jjj = declines like adj
+# a = animate
+# i = inanimat
 RussianN = [
-    ('земледелец',   'земледельцев', '00a', 'M', 'farmer'                    ), \
-    ('женщина',      'женщин',       'aaa', 'F', 'woman'                     ), \
-    ('дверь',        'дверей',       'mzi', 'F', 'door'                      ), \
-    ('сторона',      'сторон',       'aai', 'F', 'side,party,land,place,part'), \
-    ('ручка',        'ручек',        'aai', 'F', 'pen'                       ), \
-    ('девочка',      'девочек',      'aaa', 'F', 'girl'                      ), \
-    ('земля',        'земель',       'aai', 'F', 'land'                      ), \
-    ('жизнь',        'жизней',       'mzi', 'F', 'life,existence'            ), \
-    ('кольцо',       'колец',        'ooi', 'N', 'ring'                      ), \
-    ('мальчик',      'мальчиков',    '00a', 'M', 'boy'                       ), \
-    ('мужчина',      'мужчин',       'aaa', 'M', 'man'                       ), \
-    ('сын',          'сынов',        '00a', 'M', 'son'                       ), #irregular plural\
-    ('способ',       'способов',     '00i', 'M', 'measure, manner'           ), \
-    ('год',          'годов',        '00i', 'M', 'year'                      ), \
-    ('стена',        'стен',         'aai', 'F', 'wall'                      ), \
-    ('раб',          'рабов',        '00a', 'M', 'slave, servant'            ), \
-    ('книга',        'книг',         'aai', 'F', 'book'                      ), \
-    ('друг',         'друзья',       '00a', 'M', 'friend'                    ), #irregular plural\
-    ('дом',          'домов',        '00i', 'M', 'house,home,household'      ), \
-    ('место',        'мест',         'ooi', 'N', 'place,site,region,area'    ), \
-    ('глаз',         'глаз',         '00i', 'M', 'eye'                       ), \
-    ('война',        'войн',         'aai', 'F', 'war'                       ), \
-    ('подарок',      'подарков',     '00i', 'M', 'gift'                      ), \
-    ('вещь',         'вещей',        'mzi', 'F', 'possession'                ), \
-    ('слово',        'слов',         'ooi', 'N', 'word,speech'               ), \
-    ('вино',         'вин',          'ooi', 'N', 'wine'                      ), \
-    ('стакан',       'стаканов',     '00i', 'M', 'cup'                       ), \
-    ('человек',      'человеков',    '00a', 'M', 'human, person'             ), \
-    ('консул',       'консулов',     '00a', 'M', 'consul'                    ), \
-    ('работа',       'работ',        'aai', 'F', 'work,job'                  ), \
-    ('хлеб',         'хлебов',       '00i', 'M', 'bread'                     ), \
-    ('нога',         'ног',          'aai', 'F', 'foot,leg'                  ), \
-    ('коро́ль',       'короле́й',      '00a', 'M', 'king'                      ), \
-    ('каранда́ш',     'карандашей',   '00i', 'M', 'pencil'                    ), \
-    ('раз',          'раз',          '00i', 'M', 'iteration'                 ), \
-    ('похвала',      'похвал',       'aai', 'F', 'praise'                    ), \
-    ('голова',       'голов',        'aai', 'F', 'head'                      ), \
-    ('право',        'прав',         'ooi', 'N', 'law'                       ), \
-    ('река',         'рек',          'aai', 'F', 'river'                     ), \
-    ('имя',          'имён',         'iii', 'N', 'name'                      ), \
-    ('время',        'времён',       'iii', 'N', 'time'                      ), \
-    ('мост',         'мостов',       '00i', 'M', 'bridge'                    ), \
-    ('месяц',        'месяцев',      '00i', 'M', 'month'                     ), \
-    ('ночь',         'ночей',        'mzi', 'F', 'night'                     ), \
-    ('смерть',       'смертей',      'mzi', 'F', 'death'                     ), \
-    ('город',        'городо́в',      '00i', 'M', 'city'                      ), #irregular\
-    ('башня',        'башен',        'aai', 'F', 'tower'                     ), \
-    ('гражданин',    'граждан',      '00a', 'M', 'citizen'                   ), \
-    ('конец',        'концов',       '00i', 'M', 'end'                       ), \
-    ('корабль',      'кораблей',     '00i', 'M', 'ship'                      ), \
-    ('доля',         'долей',        'aai', 'F', 'part'                      ), \
-    ('ключ',         'ключей',       '00i', 'M', 'key'                       ), \
-    ('животное',     'животных',     'ooa', 'N', 'animal'                    ), #irregular, declines like adj\
-    ('море',         'морей',        'ooi', 'N', 'sea'                       ), #different root\
-    ('рука',         'рук',          'aai', 'F', 'hand'                      ), \
-    ('порт',         'портов',       '00i', 'M', 'harbor, port'              ), \
-    ('рог',          'рогов',        '00i', 'M', 'horn'                      ), #irregular nom/accpl\
-    ('день',         'дней',         '00i', 'M', 'day'                       ), #irregular root\
-    ('лицо',         'лиц',          'ooi', 'N', 'face,person'               ), \
-    ('дело',         'дел',          'ooi', 'N', 'thing, matter'             ) \
+    ('земледелец',   'земледельцев', '00a ', '',       'M', 'farmer'                    ), \
+    ('женщина',      'женщин',       'aaa ', '',       'F', 'woman'                     ), \
+    ('дверь',        'дверей',       'mzi ', '',       'F', 'door'                      ), \
+    ('сторона',      'сторон',       'aai ', '',       'F', 'side,party,land,place,part'), \
+    ('ручка',        'ручек',        'aai ', '',       'F', 'pen'                       ), \
+    ('девочка',      'девочек',      'aaa ', '',       'F', 'girl'                      ), \
+    ('земля',        'земель',       'aai ', '',       'F', 'land'                      ), \
+    ('жизнь',        'жизней',       'mzi ', '',       'F', 'life,existence'            ), \
+    ('кольцо',       'колец',        'ooi ', '',       'N', 'ring'                      ), \
+    ('мальчик',      'мальчиков',    '00a ', '',       'M', 'boy'                       ), \
+    ('мужчина',      'мужчин',       'aaa ', '',       'M', 'man'                       ), \
+    ('сын',          'сынове́й',      '00ap', 'сыновьь', 'M', 'son'                       ), \
+    ('способ',       'способов',     '00i ', '',       'M', 'measure, manner'           ), \
+    ('год',          'годов',        '00i ', '',       'M', 'year'                      ), \
+    ('стена',        'стен',         'aai ', '',       'F', 'wall'                      ), \
+    ('раб',          'рабов',        '00a ', '',       'M', 'slave, servant'            ), \
+    ('книга',        'книг',         'aai ', '',       'F', 'book'                      ), \
+    ('друг',         'друзей',       '00ap', 'друзьь', 'M', 'friend'                    ), \
+    ('дом',          'домов',        '00i ', '',       'M', 'house,home,household'      ), \
+    ('место',        'мест',         'ooi ', '',       'N', 'place,site,region,area'    ), \
+    ('глаз',         'глаз',         '00i ', '',       'M', 'eye'                       ), \
+    ('война',        'войн',         'aai ', '',       'F', 'war'                       ), \
+    ('подарок',      'подарков',     '00i ', '',       'M', 'gift'                      ), \
+    ('вещь',         'вещей',        'mzi ', '',       'F', 'possession'                ), \
+    ('слово',        'слов',         'ooi ', '',       'N', 'word,speech'               ), \
+    ('вино',         'вин',          'ooi ', '',       'N', 'wine'                      ), \
+    ('стакан',       'стаканов',     '00i ', '',       'M', 'cup'                       ), \
+    ('человек',      'человеков',    '00a ', '',       'M', 'human, person'             ), \
+    ('консул',       'консулов',     '00a ', '',       'M', 'consul'                    ), \
+    ('работа',       'работ',        'aai ', '',       'F', 'work,job'                  ), \
+    ('хлеб',         'хлебов',       '00i ', '',       'M', 'bread'                     ), \
+    ('нога',         'ног',          'aai ', '',       'F', 'foot,leg'                  ), \
+    ('коро́ль',       'короле́й',      '00a ', '',       'M', 'king'                      ), \
+    ('каранда́ш',     'карандашей',   '00i ', '',       'M', 'pencil'                    ), \
+    ('раз',          'раз',          '00i ', '',       'M', 'iteration'                 ), \
+    ('похвала',      'похвал',       'aai ', '',       'F', 'praise'                    ), \
+    ('голова',       'голов',        'aai ', '',       'F', 'head'                      ), \
+    ('право',        'прав',         'ooi ', '',       'N', 'law'                       ), \
+    ('река',         'рек',          'aai ', '',       'F', 'river'                     ), \
+    ('имя',          'имён',         'iii ', '',       'N', 'name'                      ), #irregular stem\
+    ('время',        'времён',       'iii ', '',       'N', 'time'                      ), #irregular stem\
+    ('мост',         'мостов',       '00i ', '',       'M', 'bridge'                    ), \
+    ('месяц',        'месяцев',      '00i ', '',       'M', 'month'                     ), \
+    ('ночь',         'ночей',        'mzi ', '',       'F', 'night'                     ), \
+    ('смерть',       'смертей',      'mzi ', '',       'F', 'death'                     ), \
+    ('город',        'городо́в',      '00in', '',       'M', 'city'                      ), \
+    ('башня',        'башен',        'aai ', '',       'F', 'tower'                     ), \
+    ('гражданин',    'граждан',      '00a ', '',       'M', 'citizen'                   ), \
+    ('конец',        'концов',       '00i ', '',       'M', 'end'                       ), \
+    ('корабль',      'кораблей',     '00i ', '',       'M', 'ship'                      ), \
+    ('доля',         'долей',        'aai ', '',       'F', 'part'                      ), \
+    ('ключ',         'ключей',       '00i ', '',       'M', 'key'                       ), \
+    ('животное',     'животных',     'jja ', '',       'N', 'animal'                    ), #irregular, declines like adj\
+    ('море',         'морей',        'ooi ', '',       'N', 'sea'                       ), #different root\
+    ('рука',         'рук',          'aai ', '',       'F', 'hand'                      ), \
+    ('порт',         'портов',       '00i ', '',       'M', 'harbor, port'              ), \
+    ('рог',          'рогов',        '00in', '',       'M', 'horn'                      ), \
+    ('де́нь',         'дней',         '00ir', 'днь',    'M', 'day'                       ), \
+    ('лицо',         'лиц',          'ooi ', '',       'N', 'face,person'               ), \
+    ('дело',         'дел',          'ooi ', '',       'N', 'thing, matter'             ) \
 ]
 
-RussianN_ns = [x[0] for x in RussianN]          # list of all Latin nomS
-RussianN_gp = [x[1] for x in RussianN]          # list of all Latin genS
-RussianN_decl = [x[2] for x in RussianN]        # list of all Latin decl
-RussianN_gender = [x[3] for x in RussianN]      # list of all Latin gender
-RussianN_eng = [x[4] for x in RussianN]         # list of all English equiv of Latin
+RussianN_ns = [x[0] for x in RussianN]          # list of all Russian nomS
+RussianN_gp = [x[1] for x in RussianN]          # list of all Russian genS
+RussianN_decl = [x[2] for x in RussianN]        # list of all Russian decl
+RussianN_root = [x[3] for x in RussianN]        # list of all Russian Roots
+RussianN_gender = [x[4] for x in RussianN]      # list of all Russian gender
+RussianN_eng = [x[5] for x in RussianN]         # list of all English equiv of Russian
 
 def rmStress(word):
     return word.replace('а́','а').replace('е́','е').replace('и́','и').replace('о́','о').replace('у́','у').replace('ы́','ы').replace('э́','э').replace('ю́','ю').replace('я́','я')
@@ -507,12 +514,14 @@ RussianN2 = []
 for e in RussianN:
     RussianN2.append(map(rmStress, e))
 
-RussianN2_ns = [x[0] for x in RussianN2]          # list of all Latin nomS
-RussianN2_gp = [x[1] for x in RussianN2]          # list of all Latin genS
-RussianN2_decl = [x[2] for x in RussianN2]        # list of all Latin decl
-RussianN2_gender = [x[3] for x in RussianN2]      # list of all Latin gender
-RussianN2_eng = [x[4] for x in RussianN2]         # list of all English equiv of Latin
+RussianN2_ns = [x[0] for x in RussianN2]          # list of all Russian nomS
+RussianN2_gp = [x[1] for x in RussianN2]          # list of all Russian genS
+RussianN2_decl = [x[2] for x in RussianN2]        # list of all Russian decl
+RussianN2_root = [x[3] for x in RussianN2]        # list of all Russian Roots
+RussianN2_gender = [x[4] for x in RussianN2]      # list of all Russian gender
+RussianN2_eng = [x[5] for x in RussianN2]         # list of all English equiv of Russian
 
+# return nomS with stresses (if included)
 def RfindNomN(word):
     return RussianN_ns[RussianN2_ns.index(word)]
 
@@ -520,21 +529,43 @@ def RfindNomN(word):
 def RfindNomG(word):
     return RussianN_ns[RussianN2_gp.index(word)]
 
+def RfindNomR(word):
+    return RussianN_ns[RussianN2_root.index(word)]
+
 # returns genP of nomS provided
 def RfindGenN(word):
-    return RussianN_gp[RussianN2_ns.index(word)]
+    try:
+        return RussianN_gp[RussianN2_ns.index(word)]
+    except:
+        return RussianN_gp[RussianN_ns.index(word)]
 
 # returns declension of genP provided
 def RfindDeclG(word):
-    return RussianN_decl[RussianN2_gp.index(word)]
-
-# returns decl of genP provided
-def RfindDeclG(word):
-    return RussianN_decl[RussianN2_gp.index(word)]
+    try:
+        return RussianN_decl[RussianN2_gp.index(word)]
+    except:
+        try:
+            return RussianN_decl[RussianN_gp.index(word)]
+        except:
+            return '    '
 
 # returns gender of genP provided
 def RfindGenderG(word):
-    return RussianN_gender[RussianN2_gp.index(word)]
+    try:
+        return RussianN_gender[RussianN2_gp.index(word)]
+    except:
+        try:
+            return RussianN_gender[RussianN_gp.index(word)]
+        except:
+            return ' '
 
+# returns True if noun is animate
 def RisAnimateG(word):
     return RfindDeclG(word)[2] == 'a'
+
+# returns noun root if noun has irregular root
+def RfindRootG(word):
+    try:
+        return RussianN_root[RussianN2_gp.index(word)]
+    except:
+        return RussianN_root[RussianN_gp.index(word)]

@@ -1677,9 +1677,9 @@ def declineAN(nom, root, d, gender, case, num, AN):
 # REVERSE NOUNS AND ADJECTIVES
 def reversedeclineAN(word):
 	try:
-		return reverseDecline(word)+['N']
+		return reverseDecline(word)+['[N]']
 	except:
 		try:
-			return reverseDeclineA(word)+['A']
+			return reverseDeclineA(word)+['[A]']
 		except:
 			return None
