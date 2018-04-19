@@ -200,6 +200,9 @@ output:   `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']`<br>
 `Russian.decline()`
 - takes nominativeS, case, number
 - if noun not in dictionary, add declension and gender as last 2 parameters
+- CAVEATs: 
+	- the noun `море` declines irregularly
+	- some nouns decline like adjectives, e.g. `животное`, `мороженое`
 
 input:    `человек, ACC, PL`<br>
 output:   `человеков`<br>

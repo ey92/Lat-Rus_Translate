@@ -70,7 +70,7 @@ NMap_rus = [x[1] for x in NMap]
 NMap_eng = [x[2] for x in NMap]
 
 
-# 33 Verb stems
+# 34 Verb stems
 VMap = [
     ('ire',              'ехать',      'to go'              ), \
     ('esse',             'быть',       'to be'              ), #no imperf\
@@ -167,7 +167,7 @@ PrepMap = {}
 
 # -------------------------------------------------------------
 # LATIN
-# 33 Verb stems
+# 34 Verb stems
 LatinV = [
     ('eo',          'ire',              'īvī',          '0', 'to go',             ), \
     ('sum',         'esse',             'fuī',          '0', 'to be',             ), \
@@ -356,7 +356,7 @@ def LfindDeclNM(word):
 
 # -------------------------------------------------------------
 # RUSSIAN
-# 18 Verb stems
+# 34 Verb stems
 RussianV = [
     ('',           '',           '',    'быть',         'будут',        'ir', 'to be'           ), \
     ('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir', 'to be able'      ), \
@@ -429,13 +429,14 @@ def RfindIConjIInf(word):
 def RfindPConjPInf(word):
     return RussianV_perf_conj[RussianV_perf_inf.index(word)]
 
+
 # 60 Noun Stems
-# p = irregular plural stem
-# n = nom/acc plural ends in a
-# r = irregular root
-# jjj = declines like adj
-# a = animate
-# i = inanimat
+# __p = irregular plural stem
+# __n = nom/acc plural ends in a
+# __r = irregular root
+# jj_ = declines like adj
+# __a = animate
+# __i = inanimate
 RussianN = [
     ('земледелец',   'земледельцев', '00a ', '',       'M', 'farmer'                    ), \
     ('женщина',      'женщин',       'aaa ', '',       'F', 'woman'                     ), \
@@ -448,7 +449,7 @@ RussianN = [
     ('кольцо',       'колец',        'ooi ', '',       'N', 'ring'                      ), \
     ('мальчик',      'мальчиков',    '00a ', '',       'M', 'boy'                       ), \
     ('мужчина',      'мужчин',       'aaa ', '',       'M', 'man'                       ), \
-    ('сын',          'сынове́й',      '00ap', 'сыновьь', 'M', 'son'                       ), \
+    ('сын',          'сынове́й',      '00ap', 'сыновьь', 'M', 'son'                      ), \
     ('способ',       'способов',     '00i ', '',       'M', 'measure, manner'           ), \
     ('год',          'годов',        '00i ', '',       'M', 'year'                      ), \
     ('стена',        'стен',         'aai ', '',       'F', 'wall'                      ), \
@@ -476,8 +477,8 @@ RussianN = [
     ('голова',       'голов',        'aai ', '',       'F', 'head'                      ), \
     ('право',        'прав',         'ooi ', '',       'N', 'law'                       ), \
     ('река',         'рек',          'aai ', '',       'F', 'river'                     ), \
-    ('имя',          'имён',         'iii ', 'имен',   'N', 'name'                      ), #irregular stem\
-    ('время',        'времён',       'iii ', 'времен', 'N', 'time'                      ), #irregular stem\
+    ('имя',          'имён',         'iii ', 'имен',   'N', 'name'                      ), \
+    ('время',        'времён',       'iii ', 'времен', 'N', 'time'                      ), \
     ('мост',         'мостов',       '00i ', '',       'M', 'bridge'                    ), \
     ('месяц',        'месяцев',      '00i ', '',       'M', 'month'                     ), \
     ('ночь',         'ночей',        'mzi ', '',       'F', 'night'                     ), \
@@ -489,7 +490,7 @@ RussianN = [
     ('корабль',      'кораблей',     '00i ', '',       'M', 'ship'                      ), \
     ('доля',         'долей',        'aai ', '',       'F', 'part'                      ), \
     ('ключ',         'ключей',       '00i ', '',       'M', 'key'                       ), \
-    ('животное',     'животных',     'jja ', '',       'N', 'animal'                    ), #irregular, declines like adj\
+    ('животное',     'животных',     'jja ', 'животн', 'N', 'animal'                    ), \
     ('море',         'морей',        'ooi ', '',       'N', 'sea'                       ), #different root\
     ('рука',         'рук',          'aai ', '',       'F', 'hand'                      ), \
     ('порт',         'портов',       '00i ', '',       'M', 'harbor, port'              ), \
@@ -514,12 +515,12 @@ RussianN2 = []
 for e in RussianN:
     RussianN2.append(map(rmStress, e))
 
-RussianN2_ns = [x[0] for x in RussianN2]          # list of all Russian nomS
-RussianN2_gp = [x[1] for x in RussianN2]          # list of all Russian genS
-RussianN2_decl = [x[2] for x in RussianN2]        # list of all Russian decl
-RussianN2_root = [x[3] for x in RussianN2]        # list of all Russian Roots
-RussianN2_gender = [x[4] for x in RussianN2]      # list of all Russian gender
-RussianN2_eng = [x[5] for x in RussianN2]         # list of all English equiv of Russian
+RussianN2_ns = [x[0] for x in RussianN2]        # list of all Russian nomS
+RussianN2_gp = [x[1] for x in RussianN2]        # list of all Russian genS
+RussianN2_decl = [x[2] for x in RussianN2]      # list of all Russian decl
+RussianN2_root = [x[3] for x in RussianN2]      # list of all Russian Roots
+RussianN2_gender = [x[4] for x in RussianN2]    # list of all Russian gender
+RussianN2_eng = [x[5] for x in RussianN2]       # list of all English equiv of Russian
 
 # return nomS with stresses (if included)
 def RfindNomN(word):

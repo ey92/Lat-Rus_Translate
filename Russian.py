@@ -145,6 +145,8 @@ irregImpf = mochImpflst+datImpflst+estImpflst+bratImpflst+klastImpflst+zhdatImpf
 irregPerf = mochPerflst+datPerflst+estPerflst+bratPerflst+klastPerflst+zhdatPerflst+zhitPerflst+exatPerflst+idtiPerflst+xotetPerflst
 irregAll = irregPres+irregFutp+irregImpf+irregPerf
 
+
+
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
 endings1clst = ['у','ёшь','ёт','ём','ёте','ут']
@@ -820,7 +822,7 @@ def reverseConjugate(word):
 
 # -------------------------------------------------------------
 # -------------------------------------------------------------
-# NOUNS
+# ADJECTIVES
 # -------------------------------------------------------------
 # DECLENSION
 
@@ -832,6 +834,17 @@ def contains(string, lst):
 
 def ztoe(word):
 	return word.replace('0','')
+
+# takes nomM, genitive/nomF (root), declension d, gender, case, number
+def declineA(nomM, root, d, gender, case, num):
+	# TODO
+	return None
+
+# -------------------------------------------------------------
+# -------------------------------------------------------------
+# NOUNS
+# -------------------------------------------------------------
+# DECLENSION
 
 # more phonological changes, independent of gender or declension
 def generalPhon(word):
@@ -1064,7 +1077,9 @@ def decline(nom, case, num, d=None, gender=None):
 	except:
 		return 'Declension or gender doesn\'t exist'
 
-	if d[:2] == 'aa':
+	if d[:2] == 'jj':
+		return declineA(nom,Roos.RfindRootG(gen),d,gender,case,num)
+	elif d[:2] == 'aa':
 		return aDecl(nom,gen,gender,case,num,d[2])
 	elif d[:2] == '00':
 		return zDecl(nom,gen,gender,case,num,d[2])
@@ -1387,12 +1402,3 @@ def reverseDecline(word):
 	elif word[-2:] in ['ы','и','а','я']:
 		# print('finddecl9')
 		return findDeclNomPGenS(word)
-
-# -------------------------------------------------------------
-# -------------------------------------------------------------
-# ADJECTIVES
-# -------------------------------------------------------------
-# DECLENSION
-
-# takes nomM, genitive/nomF (root), declension d, gender, case, number
-# def declineA(nomM, root, d, gender, case, num):
