@@ -175,11 +175,11 @@ endingsAhardPlst = ['ие','их','им','ие','их','ими']
 endingsAsoftM = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftMlst))
 endingsAsoftF = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftFlst))
 endingsAsoftN = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftNlst))
-endingsAsoftP = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftPlst))
+endingsAsoftP = dict(zip(DECL_ENDG_KEYSPL,endingsAsoftPlst))
 endingsAhardM = dict(zip(DECL_ENDG_KEYSSG,endingsAhardMlst))
 endingsAhardF = dict(zip(DECL_ENDG_KEYSSG,endingsAhardFlst))
 endingsAhardN = dict(zip(DECL_ENDG_KEYSSG,endingsAhardNlst))
-endingsAhardP = dict(zip(DECL_ENDG_KEYSSG,endingsAhardPlst))
+endingsAhardP = dict(zip(DECL_ENDG_KEYSPL,endingsAhardPlst))
 
 # noun decl endings, default inanimate
 endingsN00sglst = ['0','а','у','0','е','ом']
