@@ -163,7 +163,25 @@ endings2c = dict(zip(VERB_FORM_KEYS,endings2clst))
 endingsPast = dict(zip(PAST_VERB_KEYS,endingsPastlst))
 endingsFuture = dict(zip(VERB_FORM_KEYS,endingsFuturelst))
 
-# decl endings, default inanimate
+# adj decl endings, default inanimate
+endingsAsoftMlst = ['ый','ого','ому','ый','ой','ом','ым']
+endingsAsoftFlst = ['ая','ой','ой','ую','ой','ой']
+endingsAsoftNlst = ['ое','ого','ому','ое','ом','ым']
+endingsAsoftPlst = ['ые','ых','ым','ые','ых','ыми']
+endingsAhardMlst = ['ий','его','ему','ий','ем','им']
+endingsAhardFlst = ['яя','ей','ей','юю','ей','ей']
+endingsAhardNlst = ['ие','их','им','ие','их','ими']
+endingsAhardPlst = ['ие','их','им','ие','их','ими']
+endingsAsoftM = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftMlst))
+endingsAsoftF = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftFlst))
+endingsAsoftN = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftNlst))
+endingsAsoftP = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftPlst))
+endingsAhardM = dict(zip(DECL_ENDG_KEYSSG,endingsAhardMlst))
+endingsAhardF = dict(zip(DECL_ENDG_KEYSSG,endingsAhardFlst))
+endingsAhardN = dict(zip(DECL_ENDG_KEYSSG,endingsAhardNlst))
+endingsAhardP = dict(zip(DECL_ENDG_KEYSSG,endingsAhardPlst))
+
+# noun decl endings, default inanimate
 endingsN00sglst = ['0','а','у','0','е','ом']
 endingsN00pllst = ['ы','ов','ам','ы','ах','ами']
 endingsNaasglst = ['а','ы','е','у','е','ой']
@@ -835,10 +853,48 @@ def contains(string, lst):
 def ztoe(word):
 	return word.replace('0','')
 
+def hardDecl(nom, gender, case, num, animate):
+	root = nom[:-4]
+
+	if case == 'ACC':
+		case = 'GEN' if animate == 'a' else 'NOM'
+
+	form = case+num
+	if num == 'SG':
+		if gender == 'M':
+			return root+endingsAhardM[form]
+		elif gender == 'F':
+			return root+endingsAhardF[form]
+		elif gender == 'N':
+			return root+endingsAhardN[form]
+	elif num == 'PL':
+		return root+endingsAhardP[form]
+
+def softDecl(nom, gender, case, num, animate):
+	root = nom[:-4]
+
+	if case == 'ACC':
+		case = 'GEN' if animate == 'a' else 'NOM'
+
+	form = case+num
+	if num == 'SG':
+		if gender == 'M':
+			return root+endingsAsoftM[form]
+		elif gender == 'F':
+			return root+endingsAsoftF[form]
+		elif gender == 'N':
+			return root+endingsAsoftN[form]
+	elif num == 'PL':
+		return root+endingsAsoftP[form]
+
 # takes nomM, genitive/nomF (root), declension d, gender, case, number
-def declineA(nomM, root, d, gender, case, num):
-	# TODO
-	return None
+def declineA(nomM, gender, case, num, animate):
+	# hard root end
+	if nomM[-6:] in ['ний','няя','нее','ние']:
+		return hardDecl(nomM,gender,case,num,animate)
+	# soft root end
+	elif nomM[-4:] in ['ый','ой','ий','ая','ое','ые']:
+		return softDecl(nomM,gender,case,num,animate)
 
 # -------------------------------------------------------------
 # -------------------------------------------------------------
@@ -1078,7 +1134,7 @@ def decline(nom, case, num, d=None, gender=None):
 		return 'Declension or gender doesn\'t exist'
 
 	if d[:2] == 'jj':
-		return declineA(nom,Roos.RfindRootG(gen),d,gender,case,num)
+		return declineA(nom,gender,case,num,d[2])
 	elif d[:2] == 'aa':
 		return aDecl(nom,gen,gender,case,num,d[2])
 	elif d[:2] == '00':
