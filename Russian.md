@@ -33,6 +33,7 @@ Does not include:
 Declensions:
 
 | Declension | Gender | NOM SG |
+| ---------- | ------ | ------ |
 | -a | F | -a |
 | -0 | M | -0 |
 | -o | N | -o |
@@ -51,8 +52,8 @@ Declensions:
 
 | Category | M | F | N | Plural |
 | -------- | - | - | - | --------- |
-| "soft"   | ый<br>ой<br>ий | ая | ое | ые |
-| "hard"   | ний | яя | ее | ие |
+| "soft"   | -ый<br>-ой<br>-ий | -ая | -ое | -ые |
+| "hard"   | -ний | -яя | -ее | -ие |
 
 category is based on consonant ending of adjective root (found by dropping the ending)
 
