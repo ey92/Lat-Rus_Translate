@@ -66,6 +66,7 @@ Does not include:
 
 #### Russian Verbs
 | Imperfective Infinitive | 3P Non-Past | Conjugation | Perfective Infinitive | 3P Non-Past | Conjugation | English |
+| ---------  | ------------ | -- | ------------ | -------------- | -- | ---------------- |
 | --         | --           | -- | быть         | будут          | ir | to be            |
 | мочь       | могут        | ir | смочь        | смогут         | ir | to be able       |
 | давать     | дают         | ir | дать         | дадут          | ir | to give          |
@@ -102,3 +103,68 @@ Does not include:
 | начина́ть   | начинают     | 1v | начать       | начнут         | 1c | to begin         |
 
 #### Russian Nouns
+
+| NOM SG | GEN PL | Declension | Gender | English |
+| ------------ | ------------ | ----- | - | ------------------------- |
+| земледелец   | земледельцев | 00a   | M | farmer                    |
+| женщина      | женщин       | aaa   | F | woman                     |
+| дверь        | дверей       | mzi   | F | door                      |
+| сторона      | сторон       | aai   | F | side,party,land,place,part|
+| ручка        | ручек        | aai   | F | pen                       |
+| девочка      | девочек      | aaa   | F | girl                      |
+| земля        | земель       | aai   | F | land                      |
+| жизнь        | жизней       | mzi   | F | life,existence            |
+| кольцо       | колец        | ooi   | N | ring                      |
+| мальчик      | мальчиков    | 00a   | M | boy                       |
+| мужчина      | мужчин       | aaa   | M | man                       |
+| сын          | сынове́й      | 00ap  | M | son                       |
+| способ       | способов     | 00i   | M | measure, manner           |
+| год          | годов        | 00i   | M | year                      |
+| стена        | стен         | aai   | F | wall                      |
+| раб          | рабов        | 00a   | M | slave, servant            |
+| книга        | книг         | aai   | F | book                      |
+| друг         | друзей       | 00ap  | M | friend                    |
+| дом          | домов        | 00i   | M | house,home,household      |
+| место        | мест         | ooi   | N | place,site,region,area    |
+| глаз         | глаз         | 00i   | M | eye                       |
+| война        | войн         | aai   | F | war                       |
+| подарок      | подарков     | 00i   | M | gift                      |
+| вещь         | вещей        | mzi   | F | possession                |
+| слово        | слов         | ooi   | N | word,speech               |
+| вино         | вин          | ooi   | N | wine                      |
+| стакан       | стаканов     | 00i   | M | cup                       |
+| человек      | человеков    | 00a   | M | human, person             |
+| консул       | консулов     | 00a   | M | consul                    |
+| работа       | работ        | aai   | F | work,job                  |
+| хлеб         | хлебов       | 00i   | M | bread                     |
+| нога         | ног          | aai   | F | foot,leg                  |
+| коро́ль       | короле́й      | 00a   | M | king                      |
+| каранда́ш     | карандашей   | 00i   | M | pencil                    |
+| раз          | раз          | 00i   | M | iteration                 |
+| похвала      | похвал       | aai   | F | praise                    |
+| голова       | голов        | aai   | F | head                      |
+| право        | прав         | ooi   | N | law                       |
+| река         | рек          | aai   | F | river                     |
+| имя          | имён         | iii   | N | name                      |
+| время        | времён       | iii   | N | time                      |
+| мост         | мостов       | 00i   | M | bridge                    |
+| месяц        | месяцев      | 00i   | M | month                     |
+| ночь         | ночей        | mzi   | F | night                     |
+| смерть       | смертей      | mzi   | F | death                     |
+| город        | городо́в      | 00in  | M | city                      |
+| башня        | башен        | aai   | F | tower                     |
+| гражданин    | граждан      | 00a   | M | citizen                   |
+| конец        | концов       | 00i   | M | end                       |
+| корабль      | кораблей     | 00i   | M | ship                      |
+| доля         | долей        | aai   | F | part                      |
+| ключ         | ключей       | 00i   | M | key                       |
+| животное     | животных     | jji   | N | animal                    |
+| море         | морей        | ooi   | N | sea                       |
+| рука         | рук          | aai   | F | hand                      |
+| порт         | портов       | 00i   | M | harbor, port              |
+| рог          | рогов        | 00in  | M | horn                      |
+| де́нь         | дней         | 00ir  | M | day                       |
+| лицо         | лиц          | ooi   | N | face,person               |
+| дело         | дел          | ooi   | N | thing, matter             |
+
+#### Russian Ajdectives
