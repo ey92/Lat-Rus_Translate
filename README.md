@@ -236,4 +236,35 @@ output:   `[ручка, ручек, NOM/ACC, PL]`<br>
 | PRP | ablative case   |
 | INS | vocative case   |
 
+### Adjectives
+#### DECLENSION
+`Russian.declineA()`
+- takes nomM, gender, case, number, animate
+
+input:  `ācer, ācris, 3a, N, GEN, PL`<br>
+output: `acrium`<br>
+
+#### REVERSE DECLENSION
+`Russian.reverseDeclineA()`
+- takes Russian adjective form
+- optional gender parameter (if known)
+
+input:  <br>
+output: <br>
+
+#### Adjective Parameters
+| Parameter | Meaning      |
+| --------- | ------------ |
+| F   | feminine gender    |
+| M   | masculine gender   |
+| N   | neuter gender      |
+| SG  | singular           |
+| PL  | plural             |
+| NOM | nominative case    |
+| GEN | genitive case      |
+| DAT | dative case        |
+| ACC | accusative case    |
+| PRP | prepositional case |
+| INS | instrumental case  |
+
 [see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)

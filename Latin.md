@@ -54,7 +54,7 @@ Declensions:
 | 3a    | -is   | -is | -e  | M/F |
 | 3b    | ?     | ?   | ?   | -is |
 
-1/2 decline like norm 1/2 nouns<br>
+1/2 decline like normal 1/2 nouns<br>
 3a and 3b decline like 3ii nouns<br>
 
 Does not include:
@@ -65,96 +65,109 @@ Does not include:
 ---
 ### Words in dictionary:
 
-#### Latin Nouns
-
-| NOM SG | GEN SG | Decl | Gender | Russian NOM SG | English |
-| ------ | ------ | ---- | ------ | ------- | ------- |
-|"agricola"|    "agricolae"|    "1"|    "M"|    "земледелец"|   "farmer"                    | 
-|"femina"|      "feminae"|      "1"|    "F"|    "женщина"|      "woman"                     | 
-|"jānua"|       "jānuae"|       "1"|    "F"|    "дверь"|        "door"                      | 
-|"patria"|      "patriae"|      "1"|    "F"|    "сторона"|      "side|party|land|place|part"| 
-|"puella"|      "puellae"|      "1"|    "F"|    "девочка"|      "girl"                      | 
-|"terra"|       "terrae"|       "1"|    "F"|    "земля"|        "land"                      | 
-|"vīta"|        "vītae"|        "1"|    "F"|    "жизнь"|        "life|existence"            | 
-|"puer"|        "puerī"|        "2"|    "M"|    "мальчик"|      "boy"                       | 
-|"vir"|         "virī"|         "2"|    "M"|    "мужчина"|      "man"                       | 
-|"filius"|      "filiī"|        "2"|    "M"|    "сын"|          "son"                       | 
-|"modus"|       "modī"|         "2"|    "M"|    "способ"|       "measure| manner"           | 
-|"annus"|       "annī"|         "2"|    "M"|    "год"|          "year"                      | 
-|"mūrus"|       "mūrī"|         "2"|    "M"|    "стена"|        "wall"                      | 
-|"servus"|      "servī"|        "2"|    "M"|    "раб"|          "slave| servant"            | 
-|"liber"|       "librī"|        "2"|    "M"|    "книга"|        "book"                      | 
-|"amicus"|      "amicī"|        "2"|    "M"|    "друг"|         "friend"                    | 
-|"domus"|       "domī"|         "2"|    "M"|    "дом"|          "house|home|household"      | 
-|"locus"|       "locī"|         "2"|    "M"|    "место"|        "place|site|region|area"    | 
-|"oculus"|      "oculī"|        "2"|    "M"|    "глаз"|         "eye"                       | 
-|"bellum"|      "bellī"|        "2"|    "N"|    "война"|        "war"                       | 
-|"dōnum"|       "dōnī"|         "2"|    "N"|    "подарок"|      "gift"                      | 
-|"bonum"|       "bonī"|         "2"|    "N"|    "вещь"|         "possession"                | 
-|"verbum"|      "verbī"|        "2"|    "N"|    "слово"|        "word|speech"               | 
-|"homō"|        "hominis"|      "3  "|  "M"|    "человек"|      "human| person"             | 
-|"rex"|         "regis"|        "3  "|  "M"|    "царь"|         "king"                      | 
-|"consul"|      "consulis"|     "3  "|  "M"|    "консул"|       "consul"                    | 
-|"labor"|       "laboris"|      "3  "|  "M"|    "работа"|       "work|job"                  | 
-|"pānis"|       "pānis"|        "3  "|  "M"|    "хлеб"|         "bread"                     | 
-|"pēs"|         "pedis"|        "3  "|  "M"|    "нога"|         "foot|leg"                  | 
-|"iterātiō"|    "iterātiōnis"|  "3  "|  "F"|    "раз"|          "iteration"                 | 
-|"laus"|        "laudis"|       "3  "|  "F"|    "похвала"|      "praise"                    | 
-|"caput"|       "capitis"|      "3  "|  "N"|    "голова"|       "head"                      | 
-|"jūs"|         "jūris"|        "3  "|  "N"|    "право"|        "law"                       | 
-|"flūmen"|      "flūminis"|     "3  "|  "N"|    "река"|         "river"                     | 
-|"nōmen"|       "nōminis"|      "3  "|  "N"|    "имя"|          "name"                      | 
-|"tempus"|      "temporis"|     "3  "|  "N"|    "время"|        "time"                      | 
-|"pōns"|        "pōntis"|       "3i "|  "M"|    "мост"|         "bridge"                    | 
-|"mēnsis"|      "mēnsis"|       "3i "|  "M"|    "месяц"|        "month"                     | 
-|"nox"|         "noctis"|       "3i "|  "F"|    "ночь"|         "night"                     | 
-|"mors"|        "mortis"|       "3i "|  "F"|    "смерть"|       "death"                     | 
-|"urbs"|        "urbis"|        "3i "|  "F"|    "город"|        "city"                      | 
-|"turris"|      "turris"|       "3i "|  "F"|    "башня"|        "tower"                     | 
-|"cīvis"|       "cīvis"|        "3ii"|  "M"|    "гражданин"|    "citizen"                   | 
-|"fīnis"|       "fīnis"|        "3ii"|  "F"|    "конец"|        "end|ending"                | 
-|"nāvis"|       "nāvis"|        "3ii"|  "F"|    "корабль"|      "ship"                      | 
-|"pārs"|        "pārtis"|       "3ii"|  "F"|    "доля"|         "part"                      | 
-|"clāvis"|      "clāvis"|       "3ii"|  "F"|    "ключ"|         "key"                       | 
-|"animal"|      "animālis"|     "3ii"|  "N"|    "животное"|     "animal"                    | 
-|"mare"|        "maris"|        "3ii"|  "N"|    "море"|         "sea"                       | 
-|"manus"|       "manūs"|        "4"|    "F"|    "рука"|         "hand"                      | 
-|"portus"|      "portūs"|       "4"|    "F"|    "порт"|         "harbor| port"              | 
-|"cornū"|       "cornūs"|       "4"|    "N"|    "рог"|          "horn"                      | 
-|"diēs"|        "diēī"|         "5"|    "M"|    "день"|         "day"                       | 
-|"faciēs"|      "faciēī"|       "5"|    "F"|    "лицо"|         "face|person"               | 
-|"rēs"|         "rēī"|          "5"|    "F"|    "дело"|         "thing| matter"             |
-
 #### Latin Verbs
 
-| FST SG PRES | Infinitive | FST SG PERF | Conj<br>(0 = irreg) | English | Russian Imperf Inf | Russian Perf Inf |
-| ----------- | ----- | ---------------- | --------- | ------ | ------------------ | --------- |
-|"eo"|          "ire"|              "īvī"|          0| "to go"|             "пойти"|     "идти"|
-|"sum"|         "esse"|             "fuī"|          0| "to be"|             "есть"|      "быть"|
-|"possum"|      "posse"|            "potuī"|        0| "to be able"|        "мочь"|      "смочь"|
-|"volo"|        "velle"|            "voluī"|        0| "to want"|           "хотеть"|    "захотеть"|
-|"nōlo"|        "nōlle"|            "nōluī"|        0| "to not want"|       "нехотеть"|  "незахотеть"|
-|"fero"|        "ferre"|            "tulī"|         0| "to bring, carry"|   "нести"|     "понести"|
-|"amo"|         "amare"|            "amāvī"|        1| "to love"|           "любить"|    "полюбить"|
-|"cōgito"|      "cōgitare"|         "cōgitāvī"|     1| "to think"|          "думать"|    "подумать"|
-|"paro"|        "parare"|           "parāvī"|       1| "to prepare"|        "готовить"|  "подготовить"|
-|"rogo"|        "rogare"|           "rogāvī"|       1| "to ask"|            "спрашивать"|"спросить"|
-|"specto"|      "spectare"|         "spectāvī"|     1| "to watch"|          "смотреть"|  "посмотреть"|
-|"sto"|         "stare"|            "stetī"|        1| "to stand"|          "стоять"|    "постоя́ть"|
-|"dēleo"|       "dēlēre"|           "dēlēvī"|       2| "to destroy"|        "уничтожать"|"уничтожить"|
-|"habeo"|       "habēre"|           "habuī"|        2| "to have"|           "иметь"|     "(no perf)"|
-|"video"|       "vidēre"|           "vidī"|         2| "to see"|            "видеть"|    "увидеть"|
-|"comprehendo"| "comprehendere"|    "comprehendī"|  3| "to understand"|     "понимать"|  "понять"|
-|"dīco"|        "dīcere"|           "dīxī"|         3| "to say"|            "говорить"|  "сказать"|
-|"edo"|         "edere"|            "ēdī"|          3| "to eat"|            "есть"|      "съесть"|
-|"peto"|        "petere"|           "petīvī"|       3| "to seek"|           "искать"|    "поискать"|
-|"sīdo"|        "sīdere"|           "sīdī"|         3| "to sit"|            "сидеть"|    "сесть"|
-|"vīvo"|        "vīvere"|           "vīxī"|         3| "to live"|           "жить"|      "прожить"|
-|"audio"|       "audire"|           "audīvī"|       4| "to hear"|           "слышать"|   "услышать"|
-|"scio"|        "scire"|            "scīvī"|        4| "to know"|           "знать"|     "узнать"|
-|"venio"|       "venire"|           "vēnī"|         4| "to come"|           "приходить"| "прийти"|
-|"capio"|       "capere"|           "cēpī"|         5| "to take"|           "брать"|     "взять"|
-|"incipio"|     "incipere"|         "incēpī"|       5| "to begin"|          "начать"|    "начинать"|
+| FST SG PRES | Infinitive | FST SG PERF | Conj<br>(0 = irreg) | English   |
+| ----------- | ---------- | ----------- | ------------------- | --------- |
+| eo          |  ire              |  īvī          |  0 |  to go            |
+| sum         |  esse             |  fuī          |  0 |  to be            |
+| possum      |  posse            |  potuī        |  0 |  to be able       |
+| volo        |  velle            |  voluī        |  0 |  to want          |
+| nōlo        |  nōlle            |  nōluī        |  0 |  to not want      |
+| fero        |  ferre            |  tulī         |  0 |  to bring, carry  |
+| amo         |  amare            |  amāvī        |  1 |  to love          |
+| ambulo      |  ambulare         |  ambulāvī     |  1 |  to walk          |
+| cōgito      |  cōgitare         |  cōgitāvī     |  1 |  to think         |
+| do          |  dare             |  dedī         |  1 |  to give          |
+| expecto     |  expectare        |  exspectāvī   |  1 |  to wait          |
+| paro        |  parare           |  parāvī       |  1 |  to prepare       |
+| rogo        |  rogare           |  rogāvī       |  1 |  to ask           |
+| specto      |  spectare         |  spectāvī     |  1 |  to watch         |
+| sto         |  stare            |  stetī        |  1 |  to stand         |
+| dēleo       |  dēlēre           |  dēlēvī       |  2 |  to destroy       |
+| doceo       |  docēre           |  docuī        |  2 |  to teach         |
+| habeo       |  habēre           |  habuī        |  2 |  to have          |
+| video       |  vidēre           |  vidī         |  2 |  to see           |
+| claudo      |  claudere         |  clausī       |  3 |  to close         |
+| comprehendo |  comprehendere    |  comprehendī  |  3 |  to understand    |
+| dīco        |  dīcere           |  dīxī         |  3 |  to say           |
+| edo         |  edere            |  ēdī          |  3 |  to eat           |
+| lego        |  legere           |  lēgī         |  3 |  to read          |
+| peto        |  petere           |  petīvī       |  3 |  to seek          |
+| pōno        |  pōnere           |  pōsuī        |  3 |  to put, place    |
+| scrībō      |  scrībere         |  scrīpsī      |  3 |  to write         |
+| sīdo        |  sīdere           |  sīdī         |  3 |  to sit           |
+| vīvo        |  vīvere           |  vīxī         |  3 |  to live          |
+| audio       |  audire           |  audīvī       |  4 |  to hear          |
+| scio        |  scire            |  scīvī        |  4 |  to know          |
+| venio       |  venire           |  vēnī         |  4 |  to come          |
+| capio       |  capere           |  cēpī         |  5 |  to take          |
+| incipio     |  incipere         |  incēpī       |  5 |  to begin         |
+
+#### Latin Nouns
+
+| NOM SG | GEN SG | Decl | Gender | English |
+| ------ | ------ | ---- | ------ | ------- |
+| agricola   | agricolae   | 1   | M   | farmer                     |
+| femina     | feminae     | 1   | F   | woman                      |
+| jānua      | jānuae      | 1   | F   | door                       |
+| patria     | patriae     | 1   | F   | side,party,land,place,part |
+| penna      | pennae      | 1   | F   | pen                        |
+| puella     | puellae     | 1   | F   | girl                       |
+| terra      | terrae      | 1   | F   | land                       |
+| vīta       | vītae       | 1   | F   | life,existence             |
+| ānulus     | ānulī       | 2   | M   | ring                       |
+| puer       | puerī       | 2   | M   | boy                        |
+| vir        | virī        | 2   | M   | man                        |
+| filius     | filiī       | 2   | M   | son                        |
+| modus      | modī        | 2   | M   | measure, manner            |
+| annus      | annī        | 2   | M   | year                       |
+| mūrus      | mūrī        | 2   | M   | wall                       |
+| servus     | servī       | 2   | M   | slave, servant             |
+| liber      | librī       | 2P  | M   | book                       |
+| amicus     | amicī       | 2   | M   | friend                     |
+| domus      | domī        | 2   | M   | house,home,household       |
+| locus      | locī        | 2   | M   | place,site,region,area     |
+| oculus     | oculī       | 2   | M   | eye                        |
+| bellum     | bellī       | 2   | N   | war                        |
+| dōnum      | dōnī        | 2   | N   | gift                       |
+| bonum      | bonī        | 2   | N   | possession                 |
+| verbum     | verbī       | 2   | N   | word,speech                |
+| vīnum      | vīnī        | 2   | N   | wine                       |
+| calix      | calicis     | 3   | M   | cup, glass                 |
+| homō       | hominis     | 3   | M   | human, person              |
+| consul     | consulis    | 3   | M   | consul                     |
+| labor      | laboris     | 3   | M   | work,job                   |
+| pānis      | pānis       | 3   | M   | bread                      |
+| pēs        | pedis       | 3   | M   | foot,leg                   |
+| rex        | regis       | 3   | M   | king                       |
+| graphis    | graphidis   | 3   | F   | pencil                     |
+| iterātiō   | iterātiōnis | 3   | F   | iteration                  |
+| laus       | laudis      | 3   | F   | praise                     |
+| caput      | capitis     | 3   | N   | head                       |
+| jūs        | jūris       | 3   | N   | law                        |
+| flūmen     | flūminis    | 3   | N   | river                      |
+| nōmen      | nōminis     | 3   | N   | name                       |
+| tempus     | temporis    | 3   | N   | time                       |
+| pōns       | pōntis      | 3i  | M   | bridge                     |
+| mēnsis     | mēnsis      | 3i  | M   | month                      |
+| nox        | noctis      | 3i  | F   | night                      |
+| mors       | mortis      | 3i  | F   | death                      |
+| urbs       | urbis       | 3i  | F   | city                       |
+| turris     | turris      | 3i  | F   | tower                      |
+| cīvis      | cīvis       | 3ii | M   | citizen                    |
+| fīnis      | fīnis       | 3ii | F   | end,ending                 |
+| nāvis      | nāvis       | 3ii | F   | ship                       |
+| pārs       | pārtis      | 3ii | F   | part                       |
+| clāvis     | clāvis      | 3ii | F   | key                        |
+| animal     | animālis    | 3ii | N   | animal                     |
+| mare       | maris       | 3ii | N   | sea                        |
+| manus      | manūs       | 4   | F   | hand                       |
+| portus     | portūs      | 4   | F   | harbor, port               |
+| cornū      | cornūs      | 4   | N   | horn                       |
+| diēs       | diēī        | 5   | M   | day                        |
+| faciēs     | faciēī      | 5   | F   | face,person                |
+| rēs        | rēī         | 5   | F   | thing, matter              |
 
 #### Latin Adjectives
 
