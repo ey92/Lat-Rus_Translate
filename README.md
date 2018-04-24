@@ -239,10 +239,10 @@ output:   `[ручка, ручек, NOM/ACC, PL]`<br>
 ### Adjectives
 #### DECLENSION
 `Russian.declineA()`
-- takes nomM, gender, case, number, animate
+- takes nomM, gender, case, number, animacy
 
-input:  `ācer, ācris, 3a, N, GEN, PL`<br>
-output: `acrium`<br>
+input:  `голубой, M,GEN,PL,i`<br>
+output: `голубых`<br>
 
 #### REVERSE DECLENSION
 `Russian.reverseDeclineA()`

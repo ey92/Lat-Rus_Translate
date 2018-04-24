@@ -112,7 +112,7 @@ def latinConstructAdj():
 	while len(params) != 6 or not(checkStr(params)):
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
-		params = str(raw_input("Please enter the infinitive form, perfective form, conjugation, person, number, and tense, separated by commas\n")).strip()
+		params = str(raw_input("Please enter the nominativeMS, root form, declension, gender, case, and number, separated by commas\n")).strip()
 		params = processInput(params,True,False)
 	print Latin.declineA(params[0], params[1], params[2], params[3], params[4], params[5])
 
@@ -326,6 +326,18 @@ def russianConstructVerbs():
 
 	return cont()
 
+def russianConstructAdj():
+	# make adjectives
+	params = []
+	while len(params) != 5 or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the nominativeMS, gender, case, number, and animacy, separated by commas\n")).strip()
+		params = processInput(params,True,False)
+	print Russian.declineA(params[0], params[1], params[2], params[3], params[4])
+
+	return cont()
+
 def russianConstruct():
 	choice2 = 0
 	while checkInt(choice2) and (int(choice2) < 1 or int(choice2) > 4):
@@ -361,16 +373,16 @@ def russianConstruct():
 				return val	
 
 	# Construct Adjectives
-	# elif choice2 == 3:
-	# 	val = 2
-	# 	while (True):
-	# 		val = russianConstructAdj()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = 2
-	# 		elif val == None:
-	# 			return val
+	elif choice2 == 3:
+		val = 2
+		while (True):
+			val = russianConstructAdj()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = 2
+			elif val == None:
+				return val
 
 	# Return to previous menu
 	elif choice2 == 4:
