@@ -61,6 +61,8 @@ Does not include:
 - comparatives
 - superlatives
 - adverbs
+- adjective short forms
+	- e.g. новый, ая, ое -> нов, а, о
 
 ---
 ### Words in dictionary:

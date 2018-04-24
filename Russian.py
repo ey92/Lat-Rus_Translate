@@ -164,13 +164,13 @@ endingsPast = dict(zip(PAST_VERB_KEYS,endingsPastlst))
 endingsFuture = dict(zip(VERB_FORM_KEYS,endingsFuturelst))
 
 # adj decl endings, default inanimate
-endingsAsoftMlst = ['ый','ого','ому','ый','ой','ом','ым']
+endingsAsoftMlst = ['ый','ого','ому','ый','ом','ым']
 endingsAsoftFlst = ['ая','ой','ой','ую','ой','ой']
 endingsAsoftNlst = ['ое','ого','ому','ое','ом','ым']
 endingsAsoftPlst = ['ые','ых','ым','ые','ых','ыми']
 endingsAhardMlst = ['ий','его','ему','ий','ем','им']
 endingsAhardFlst = ['яя','ей','ей','юю','ей','ей']
-endingsAhardNlst = ['ие','их','им','ие','их','ими']
+endingsAhardNlst = ['ее','его','ему','ее','ем','им']
 endingsAhardPlst = ['ие','их','им','ие','их','ими']
 endingsAsoftM = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftMlst))
 endingsAsoftF = dict(zip(DECL_ENDG_KEYSSG,endingsAsoftFlst))
@@ -856,7 +856,7 @@ def ztoe(word):
 def hardDecl(nom, gender, case, num, animate):
 	root = nom[:-4]
 
-	if case == 'ACC':
+	if case == 'ACC' and (gender =='M' or num == 'PL'):
 		case = 'GEN' if animate == 'a' else 'NOM'
 
 	form = case+num
@@ -873,7 +873,7 @@ def hardDecl(nom, gender, case, num, animate):
 def softDecl(nom, gender, case, num, animate):
 	root = nom[:-4]
 
-	if case == 'ACC':
+	if case == 'ACC' and (gender == 'M' or num == 'PL'):
 		case = 'GEN' if animate == 'a' else 'NOM'
 
 	form = case+num

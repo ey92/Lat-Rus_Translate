@@ -1,7 +1,7 @@
 <!---Elizabeth Yam ey92-->
-# Lat-Rus_Translate (Latin/Russian Literal Translator)
-## CS 4744/Ling 4244 Computational Linguistics Final Project (1mo)
-## Elizabeth Yam (ey92)
+# Latin/Russian Literal Translator
+## CS 4744/Ling 4244 Computational Linguistics Final Project (~1mo)
+### Elizabeth Yam (ey92)
 As my final project for this class, I am creating a program to translate between Latin and Russian via their morphology and phonology (Python 2.7.6). I chose these two languages because I have studied Latin for 5 years and Russian for about 2 years, and they have relatively similar grammatical structures (parallels in conjugating and declining).<br>
 
 This translator was created to do a direct, word-for-word literal translation between Latin and Russian. <br>
