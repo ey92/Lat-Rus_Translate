@@ -1,7 +1,9 @@
 <!---Elizabeth Yam ey92-->
 ## Latin
-### Verbs:
+
 Latin, for the most part, seems to be chiefly based on morphology and changing suffixes to change meanings. Some literature suggests that the morphology of each declension and conjugation also represents phonology, especially with respect to associating specific sound and morphemes with gendered nouns and tenses of conjugated verbs.
+
+### Verbs:
 
 Conjugations:
 
