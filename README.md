@@ -31,6 +31,7 @@ output:   `amo`<br>
 #### REVERSE CONJUGATION
 `Latin.reverseConjugate()`
 - takes Latin verb form
+- returns infinitive, 1st person singular perfective, person, number, tense
 
 input:    `amant`<br>
 output:  `['amare', 'amāvī', 'TRD', 'PL', 'PRES']`<br>
@@ -66,6 +67,7 @@ output:   `puellam`<br>
 #### REVERSE DECLENSION
 `Latin.reverseDecline()`
 - takes Latin noun form
+- returns nominative singular, genitive singular, case, number
 
 input:    `puellīs`<br>
 output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
@@ -95,6 +97,7 @@ output: `acrium`<br>
 `Latin.reverseDeclineA()`
 - takes Latin adjective form
 - optional gender parameter (if known)
+- returns nominative singular masculine, root form, case, number, gender
 
 input:  `fortibus`<br>
 output: `['fortis', 'fortis', 'DAT/ABL', 'PL', 'F/M/N']`<br>
@@ -160,6 +163,7 @@ output:   `буду_жить`<br>
 #### REVERSE CONJUGATION
 `Russian.reverseConjugate()`
 - takes Russian verb form
+- returns imperfective infinitive, perfective infinitive, person, number, gender, tense
 
 input:    `ищет`<br>
 output:   `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']`<br>
@@ -213,6 +217,7 @@ output:   `человеков`<br>
 #### REVERSE DECLENSION
 `Russian.reverseDecline()`
 - takes Russian noun form
+- returns nominative singular, genitive plural, case, number
 
 input:    `ночей`<br>
 output:   `[ночь, ночей, GEN, PL]`<br>
@@ -250,6 +255,7 @@ output: `голубых`<br>
 `Russian.reverseDeclineA()`
 - takes Russian adjective form
 - optional gender parameter (if known)
+- [not yet implemented]
 
 input:  <br>
 output: <br>
