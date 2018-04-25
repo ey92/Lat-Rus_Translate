@@ -227,6 +227,8 @@ output:   `[ручка, ручек, NOM/ACC, PL]`<br>
 
 | Parameter | Meaning |
 | --------- | ------- |
+| a   | animate         |
+| i   | inanimate       |
 | SG  | singular        |
 | PL  | plural          |
 | NOM | nominative case |
@@ -255,6 +257,8 @@ output: <br>
 #### Adjective Parameters
 | Parameter | Meaning      |
 | --------- | ------------ |
+| a   | animate            |
+| i   | inanimate          |
 | F   | feminine gender    |
 | M   | masculine gender   |
 | N   | neuter gender      |

@@ -175,4 +175,4 @@ Does not include:
 | лицо         | лиц          | ooi   | N | face,person               |
 | дело         | дел          | ooi   | N | thing, matter             |
 
-#### Russian Ajdectives
+#### Russian Adjectives
