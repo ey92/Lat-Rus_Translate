@@ -145,8 +145,6 @@ irregImpf = mochImpflst+datImpflst+estImpflst+bratImpflst+klastImpflst+zhdatImpf
 irregPerf = mochPerflst+datPerflst+estPerflst+bratPerflst+klastPerflst+zhdatPerflst+zhitPerflst+exatPerflst+idtiPerflst+xotetPerflst
 irregAll = irregPres+irregFutp+irregImpf+irregPerf
 
-
-
 # verb endings
 endings1vlst = ['ю','ешь','ет','ем','ете','ют']
 endings1clst = ['у','ёшь','ёт','ём','ёте','ут']

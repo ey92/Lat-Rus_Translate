@@ -2,6 +2,8 @@
 ## Russian
 ### Verbs:
 
+Russian seems to be very morphologically and phonologically rich. A key feature Russian-speakers may be extremely aware of is _palatalization_ of consonants, since they have dedicated letters to represent consonant palatalization, which affect the spelling of most surface forms. This includes ь (_мягкий знак_ "mʲæxʲkʲɪj znak"/soft sign, unpronounced), е (_ye_), ё (_yo_), и (_yi_), ю (_yu_), я (_ya_). Additionally, the placement of a word's primary stress also results in phonological changes to some spellings, although not nearly as prevalent as palatalization. Russian morphemes and sound changes seem to be much more strongly impacted by pronunciation than spelling.
+
 Conjugations:
 
 | Imperfective<br>Conjugation | Imperfective<br>Infinitive | TRD PL PRES/<br>Non-past | Perfective<br>Conjugation | Perfective<br>Infinitive | TRD PL FUTP/<br>Non-past |
