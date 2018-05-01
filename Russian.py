@@ -895,6 +895,67 @@ def declineA(nomM, gender, case, num, animate):
 		return softDecl(nomM,gender,case,num,animate)
 
 # -------------------------------------------------------------
+# REVERSE DECLENSION
+
+def findDeclNomAccSA(root):
+	#TODO
+	return None
+
+def findDeclNomAccPA(root):
+	#TODO
+	return None
+
+def findDeclGenSMNA(root):
+	#TODO
+	return None
+
+def findDeclFemSA(root):
+	#TODO
+	return None
+
+def findDeclFemAccSA(root):
+	#TODO
+	return None
+
+def findDeclDatSA(root):
+	#TODO
+	return None
+
+def findDeclInsSDatPA(root):
+	#TODO
+	return None
+
+def findDeclGenAccPrpPA(root):
+	#TODO
+	return None
+
+def findDeclInsPA(root):
+	#TODO
+	return None
+
+def reverseDeclineA(word):
+	if word[:-4] in ['ый','ая','ое','ий','яя','ее']:
+		return findDeclNomAccSA(word)
+	elif word[:-4] in ['ые','ие']:
+		return findDeclNomAccPA(word)
+	elif word[:-6] in ['ого','его']:
+		return findDeclGenSMNA(word)
+	elif word[:-4] in ['ой,''ей']:
+		return findDeclFemSA(word)
+	elif word[:-4] in ['ую','юю']:
+		return findDeclFemAccSA(word)
+	elif word[:-6] in ['ому','ему']:
+		return findDeclDatSA(word)
+	elif word[:-4] in ['ом','ем']:
+		return findDeclPRPSA(word)
+	elif word[:-4] in ['ым','им']:
+		return findDeclInsSDatPA(word)
+	elif word[:-4] in ['ых','их']:
+		return findDeclGenAccPrpPA(word)
+	elif word[:-6] in ['ыми','ими']:
+		return findDeclInsPA(word)
+
+# -------------------------------------------------------------
 # -------------------------------------------------------------
 # NOUNS
 # -------------------------------------------------------------
