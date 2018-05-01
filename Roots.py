@@ -228,32 +228,32 @@ def LfindPerfI(word):
 
 # 60 Noun stems
 LatinN = [
-    ("agricola",    "agricolae",    "1",    "M",    "farmer"                    ), \
-    ("femina",      "feminae",      "1",    "F",    "woman"                     ), \
-    ("jānua",       "jānuae",       "1",    "F",    "door"                      ), \
-    ("patria",      "patriae",      "1",    "F",    "side,party,land,place,part"), \
-    ("penna",       "pennae",       "1",    "F",    "pen"                       ), \
-    ("puella",      "puellae",      "1",    "F",    "girl"                      ), \
-    ("terra",       "terrae",       "1",    "F",    "land"                      ), \
-    ("vīta",        "vītae",        "1",    "F",    "life,existence"            ), \
-    ("ānulus ",     "ānulī",        "2 ",   "M",    "ring"                      ), \
-    ("puer",        "puerī",        "2 ",   "M",    "boy"                       ), \
-    ("vir",         "virī",         "2 ",   "M",    "man"                       ), \
-    ("filius",      "filiī",        "2 ",   "M",    "son"                       ), \
-    ("modus",       "modī",         "2 ",   "M",    "measure, manner"           ), \
-    ("annus",       "annī",         "2 ",   "M",    "year"                      ), \
-    ("mūrus",       "mūrī",         "2 ",   "M",    "wall"                      ), \
-    ("servus",      "servī",        "2 ",   "M",    "slave, servant"            ), \
-    ("liber",       "librī",        "2P",   "M",    "book"                      ), \
-    ("amicus",      "amicī",        "2 ",   "M",    "friend"                    ), \
-    ("domus",       "domī",         "2 ",   "M",    "house,home,household"      ), \
-    ("locus",       "locī",         "2 ",   "M",    "place,site,region,area"    ), \
-    ("oculus",      "oculī",        "2 ",   "M",    "eye"                       ), \
-    ("bellum",      "bellī",        "2 ",   "N",    "war"                       ), \
-    ("dōnum",       "dōnī",         "2 ",   "N",    "gift"                      ), \
-    ("bonum",       "bonī",         "2 ",   "N",    "possession"                ), \
-    ("verbum",      "verbī",        "2 ",   "N",    "word,speech"               ), \
-    ("vīnum",       "vīnī",         "2 ",   "N",    "wine"                      ), \
+    ("agricola",    "agricolae",    "1  ",  "M",    "farmer"                    ), \
+    ("femina",      "feminae",      "1  ",  "F",    "woman"                     ), \
+    ("jānua",       "jānuae",       "1  ",  "F",    "door"                      ), \
+    ("patria",      "patriae",      "1  ",  "F",    "side,party,land,place,part"), \
+    ("penna",       "pennae",       "1  ",  "F",    "pen"                       ), \
+    ("puella",      "puellae",      "1  ",  "F",    "girl"                      ), \
+    ("terra",       "terrae",       "1  ",  "F",    "land"                      ), \
+    ("vīta",        "vītae",        "1  ",  "F",    "life,existence"            ), \
+    ("ānulus ",     "ānulī",        "2  ",  "M",    "ring"                      ), \
+    ("puer",        "puerī",        "2  ",  "M",    "boy"                       ), \
+    ("vir",         "virī",         "2  ",  "M",    "man"                       ), \
+    ("filius",      "filiī",        "2  ",  "M",    "son"                       ), \
+    ("modus",       "modī",         "2  ",  "M",    "measure, manner"           ), \
+    ("annus",       "annī",         "2  ",  "M",    "year"                      ), \
+    ("mūrus",       "mūrī",         "2  ",  "M",    "wall"                      ), \
+    ("servus",      "servī",        "2  ",  "M",    "slave, servant"            ), \
+    ("liber",       "librī",        "2P ",  "M",    "book"                      ), \
+    ("amicus",      "amicī",        "2  ",  "M",    "friend"                    ), \
+    ("domus",       "domī",         "2  ",  "M",    "house,home,household"      ), \
+    ("locus",       "locī",         "2  ",  "M",    "place,site,region,area"    ), \
+    ("oculus",      "oculī",        "2  ",  "M",    "eye"                       ), \
+    ("bellum",      "bellī",        "2  ",  "N",    "war"                       ), \
+    ("dōnum",       "dōnī",         "2  ",  "N",    "gift"                      ), \
+    ("bonum",       "bonī",         "2  ",  "N",    "possession"                ), \
+    ("verbum",      "verbī",        "2  ",  "N",    "word,speech"               ), \
+    ("vīnum",       "vīnī",         "2  ",  "N",    "wine"                      ), \
     ("calix",       "calicis",      "3  ",  "M",    "cup, glass"                ), \
     ("homō",        "hominis",      "3  ",  "M",    "human, person"             ), \
     ("consul",      "consulis",     "3  ",  "M",    "consul"                    ), \
@@ -282,12 +282,12 @@ LatinN = [
     ("clāvis",      "clāvis",       "3ii",  "F",    "key"                       ), \
     ("animal",      "animālis",     "3ii",  "N",    "animal"                    ), \
     ("mare",        "maris",        "3ii",  "N",    "sea"                       ), \
-    ("manus",       "manūs",        "4",    "F",    "hand"                      ), \
-    ("portus",      "portūs",       "4",    "F",    "harbor, port"              ), \
-    ("cornū",       "cornūs",       "4",    "N",    "horn"                      ), \
-    ("diēs",        "diēī",         "5",    "M",    "day"                       ), \
-    ("faciēs",      "faciēī",       "5",    "F",    "face,person"               ), \
-    ("rēs",         "rēī",          "5",    "F",    "thing, matter"             ) \
+    ("manus",       "manūs",        "4  ",  "F",    "hand"                      ), \
+    ("portus",      "portūs",       "4  ",  "F",    "harbor, port"              ), \
+    ("cornū",       "cornūs",       "4  ",  "N",    "horn"                      ), \
+    ("diēs",        "diēī",         "5  ",  "M",    "day"                       ), \
+    ("faciēs",      "faciēī",       "5  ",  "F",    "face,person"               ), \
+    ("rēs",         "rēī",          "5  ",  "F",    "thing, matter"             ) \
 ]
 
 LatinN_ns = [x[0] for x in LatinN]          # list of all Latin nomS
@@ -570,3 +570,9 @@ def RfindRootG(word):
         return RussianN_root[RussianN2_gp.index(word)]
     except:
         return RussianN_root[RussianN_gp.index(word)]
+
+RussianA = [
+    ('новый'    ), \
+    ('хороший'  ), \
+    ('синий'    ) \
+]
