@@ -897,60 +897,70 @@ def declineA(nomM, gender, case, num, animate):
 # -------------------------------------------------------------
 # REVERSE DECLENSION
 
+def getNomM(root,case,num,gender):
+	nomM = root[:-4]+'ый'
+	if not (nomM in Roots.RussianA):
+		nomM = root[:-4]+'ый'
+
+	return [nomM, case, num, gender]
+
 def findDeclNomAccSA(root):
-	#TODO
-	return None
+	num = 'SG'
+	case = 'NOM/ACC'
+	gender = ''
+
+	if root[-4:] in ['ый','ий']:
+		gender = 'M'
+	elif root[-4:] in ['ая','яя']:
+		gender = 'F'
+		case = 'NOM'
+	elif root[-4:] in ['ое','ее']:
+		gender = 'N'
+
+	return getNomM(root,case,num,gender)
 
 def findDeclNomAccPA(root):
-	#TODO
-	return None
+	return getNomM(root,'NOM/ACC','PL','F/M/N')
 
 def findDeclGenSMNA(root):
-	#TODO
-	return None
+	return getNomM(root,'GEN','SG','M/N')
 
 def findDeclFemSA(root):
-	#TODO
-	return None
+	return getNomM(root,'GEN/DAT/ACC/PRP/INS','SG','F')
 
 def findDeclFemAccSA(root):
-	#TODO
-	return None
+	return getNomM(root,'ACC','SG','F')
 
 def findDeclDatSA(root):
-	#TODO
-	return None
+	return getNomM(root,'DAT','SG','M/N')
 
 def findDeclInsSDatPA(root):
-	#TODO
-	return None
+	return getNomM(root,'INS/DAT','SG/PL','M/N/F')
 
 def findDeclGenAccPrpPA(root):
-	#TODO
-	return None
+	return getNomM(root,'GEN/ACC/PRP','PL','F/M/N')
 
 def findDeclInsPA(root):
-	#TODO
-	return None
+	return getNomM(root,'INS','PL','F/M/N')
 
 def reverseDeclineA(word):
-	if word[:-4] in ['ый','ая','ое','ий','яя','ее']:
+	if word[-4:] in ['ый','ая','ое','ий','яя','ее']:
 		return findDeclNomAccSA(word)
-	elif word[:-4] in ['ые','ие']:
+	elif word[-4:] in ['ые','ие']:
 		return findDeclNomAccPA(word)
 	elif word[:-6] in ['ого','его']:
 		return findDeclGenSMNA(word)
-	elif word[:-4] in ['ой,''ей']:
+	elif word[-4:] in ['ой,''ей']:
 		return findDeclFemSA(word)
-	elif word[:-4] in ['ую','юю']:
+	elif word[-4:] in ['ую','юю']:
 		return findDeclFemAccSA(word)
 	elif word[:-6] in ['ому','ему']:
 		return findDeclDatSA(word)
-	elif word[:-4] in ['ом','ем']:
+	elif word[-4:] in ['ом','ем']:
 		return findDeclPRPSA(word)
-	elif word[:-4] in ['ым','им']:
+	elif word[-4:] in ['ым','им']:
 		return findDeclInsSDatPA(word)
-	elif word[:-4] in ['ых','их']:
+	elif word[-4:] in ['ых','их']:
 		return findDeclGenAccPrpPA(word)
 	elif word[:-6] in ['ыми','ими']:
 		return findDeclInsPA(word)
