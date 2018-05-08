@@ -14,267 +14,70 @@ It doesn't into account context or identify special phrasal constructions. It is
 
 [See what's included for Russian](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.md)
 
-## Latin
-
-### Verbs
-#### CONJUGATION
-`Latin.conjugate()`
-- takes infinitive, number, person, tense
-- if verb not in dictionary, add perfective and conjugation as last 2 parameters
-
-input:    `amare, FST, SG, PRES`<br>
-output:   `amo`<br>
-
-input:    `amare, FST, SG, PRES, 1, amāvī`<br>
-output:   `amo`<br>
-
-#### REVERSE CONJUGATION
-`Latin.reverseConjugate()`
-- takes Latin verb form
-- returns infinitive, 1st person singular perfective, person, number, tense
-
-input:    `amant`<br>
-output:  `['amare', 'amāvī', 'TRD', 'PL', 'PRES']`<br>
-
-#### Verb Parameters
-
-| Parameter | Meaning |
-| --------- | ------- |
-| FST   | first-person          |
-| SND   | second-person         |
-| TRD   | third-person          |
-| SG    | singular              |
-| PL    | plural                |
-| PRES  | present tense         |
-| IMPF  | imperfect tense       |
-| FUTR  | future tense          |
-| PERF  | perfect tense         |
-| PLUP  | pluperfect tense      |
-| FUTP  | future perfect tense  |
-
-### Nouns
-#### DECLENSION
-`Latin.decline()`
-- takes nominativeS, genitiveS, case, number
-- if noun not in dictionary, add declension and gender as last 2 parameters
-
-input:    `puella, puellae, ACC, SG`<br>
-output:   `puellam`<br>
-
-input:    `puella, puellae, ACC, SG, 1, F`<br>
-output:   `puellam`<br>
-
-#### REVERSE DECLENSION
-`Latin.reverseDecline()`
-- takes Latin noun form
-- returns nominative singular, genitive singular, case, number
-
-input:    `puellīs`<br>
-output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
-
-#### Noun Parameters
-
-| Parameter | Meaning |
-| --------- | ------- |
-| SG  | singular        |
-| PL  | plural          |
-| NOM | nominative case |
-| GEN | genitive case   |
-| DAT | dative case     |
-| ACC | accusative case |
-| ABL | ablative case   |
-| VOC | vocative case   |
-
-### Adjectives
-#### DECLENSION
-`Latin.declineA()`
-- takes nomM, genitive/nomF (root), declension d, gender, case, number
-
-input:  `ācer, ācris, 3a, N, GEN, PL`<br>
-output: `acrium`<br>
-
-#### REVERSE DECLENSION
-`Latin.reverseDeclineA()`
-- takes Latin adjective form
-- optional gender parameter (if known)
-- returns nominative singular masculine, root form, case, number, gender
-
-input:  `fortibus`<br>
-output: `['fortis', 'fortis', 'DAT/ABL', 'PL', 'F/M/N']`<br>
-
-input:  `pulchrum`<br>
-output: `['pulcher', 'pulchra', 'NOM/ACC', 'SG', 'M/N']`<br>
-
-input:  `pulchrum, M`<br>
-outputb: `['pulcher', 'pulchra', 'ACC', 'SG', 'M']`<br>  
-
-input:  `bona`<br>
-output: `['bonus', 'bona', 'NOM', 'SG', 'F']`<br>
-
-input:  `bona, N`<br>
-output: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
-
-
-#### Adjective Parameters
-| Parameter | Meaning |
-| --------- | ------- |
-| F   | feminine gender |
-| M   | masculine gender|
-| N   | neuter gender   |
-| SG  | singular        |
-| PL  | plural          |
-| NOM | nominative case |
-| GEN | genitive case   |
-| DAT | dative case     |
-| ACC | accusative case |
-| ABL | ablative case   |
-| VOC | vocative case   |
-
 [see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
 
----
-
-## Russian
-
-### Verbs
-#### CONJUGATION
-`Russian.conjugate()`
-- takes (either) infinitive, person, number, gender(matters sometimes), tense
-
-input: 	  `читать, SND, PL, , PRES`<br>
-output:   `читаете`<br>
-
-input: 	  `прочитать, SND, PL, , PRES`<br>
-output:   `читаете`<br>
-
-input: 	  `сказать, , PL, F, PERF `<br>
-output:   `сказали`<br>
-
-input: 	  `говорить, , PL, F, PERF`<br>
-output:   `сказали`<br>
-
-input: 	  `жить, FST, SG, , FUTR`<br>
-output:   `буду_жить`<br>
-
-input: 	  `прожить, FST, SG,  , FUTR`<br>
-output:   `буду_жить`<br>
-
-
-#### REVERSE CONJUGATION
-`Russian.reverseConjugate()`
-- takes Russian verb form
-- returns imperfective infinitive, perfective infinitive, person, number, gender, tense
-
-input:    `ищет`<br>
-output:   `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']`<br>
-
-input:    `посмотрите`<br>
-output:   `['смотреть', 'посмотреть', 'SND', 'PL', '', 'FUTP']`<br>
-
-input:    `искал`<br>
-output:   `['искать', 'поискать', 'FST/SND/TRD', 'SG', 'M', 'IMPF']`<br>
-
-input:    `обучили`<br>
-output:   `['учить', 'обучить', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']`<br>
-
-input:    `буду_читать`<br>
-output:   `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']`<br>
-
-#### Verb Parameters
-
-| Parameter | Meaning |
-| --------- | ------- |
-| M     | masculine	gender		|
-| F 	| feminine gender		|
-| N 	| neuter gender 		|
-| FST   | first-person          |
-| SND   | second-person         |
-| TRD   | third-person          |
-| SG    | singular              |
-| PL    | plural                |
-| PRES  | present tense         |
-| IMPF  | imperfect tense       |
-| FUTR  | future tense          |
-| PERF  | perfect tense         |
-| PLUP  | pluperfect tense      |
-| FUTP  | future perfect tense  |
-
-### Nouns
-#### DECLENSION
-`Russian.decline()`
-- takes nominativeS, case, number
-- if noun not in dictionary, add declension and gender as last 2 parameters
-- CAVEATs: 
-	- the noun `море` declines irregularly
-	- some nouns decline like adjectives, e.g. `животное`, `мороженое`
-
-input:    `человек, ACC, PL`<br>
-output:   `человеков`<br>
-
-input:    `человек, ACC, PL, 00a, M`<br>
-output:   `человеков`<br>
-
-#### REVERSE DECLENSION
-`Russian.reverseDecline()`
-- takes Russian noun form
-- returns nominative singular, genitive plural, case, number
-
-input:    `ночей`<br>
-output:   `[ночь, ночей, GEN, PL]`<br>
-
-input:    `человека`<br>
-output:   `[человек, человеков, GEN/ACC, SG]`<br>
-
-input:    `ручки`<br>
-output:   `[ручка, ручек, NOM/ACC, PL]`<br>
-
-#### Noun Parameters
-
-| Parameter | Meaning |
-| --------- | ------- |
-| a   | animate         |
-| i   | inanimate       |
-| SG  | singular        |
-| PL  | plural          |
-| NOM | nominative case |
-| GEN | genitive case   |
-| DAT | dative case     |
-| ACC | accusative case |
-| PRP | ablative case   |
-| INS | vocative case   |
-
-### Adjectives
-#### DECLENSION
-`Russian.declineA()`
-- takes nomM, gender, case, number, animacy
-
-input:  `голубой, M,GEN,PL,i`<br>
-output: `голубых`<br>
-
-#### REVERSE DECLENSION
-`Russian.reverseDeclineA()`
-- takes Russian adjective form
-- optional gender parameter (if known)
-- [not yet implemented]
-
-input:  <br>
-output: <br>
-
-#### Adjective Parameters
-| Parameter | Meaning      |
-| --------- | ------------ |
-| a   | animate            |
-| i   | inanimate          |
-| F   | feminine gender    |
-| M   | masculine gender   |
-| N   | neuter gender      |
-| SG  | singular           |
-| PL  | plural             |
-| NOM | nominative case    |
-| GEN | genitive case      |
-| DAT | dative case        |
-| ACC | accusative case    |
-| PRP | prepositional case |
-| INS | instrumental case  |
-
 [see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)
+
+## Using the UI
+- Open the command line (Windows) or terminal (Mac/Linux) and navigate to where the project files are.
+- Run `python runtest.py`
+- Enter the number corresponding to the option you want to pick
+- Enter the required parameters, separated by commas
+	- **caveat**: The program is not very robust and may crash if you provide the wrong input here
+- After the inflected word is produced, you are given a prompt: "Would you like to do more? (y/n/a)"
+	- y(es) returns to the previous menu
+	- n(o) quits the UI
+	- a(gain) re-runs the same choice from the previous menu
+
+### Translation Example
+[UI Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/UIExample.png)
+
+### Latin to Russian Examples
+Translate Latin Verb to Russian Verb:<br>
+[Latin to Russian Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRverb.png)
+
+Translate Latin Noun to Russian Noun:<br>
+[Latin to Russian Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRnoun.png)
+
+### Russian to Latin Examples
+
+
+### Latin Examples
+Construct Verb:<br>
+[Latin Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructVerb.png)
+
+Construct Noun:<br>
+[Latin Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructNoun.png)
+
+Construct Adjective:<br>
+[Latin Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructAdjective.png)
+
+Deconstruct Verb:<br>
+[Latin Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructVerb.png)
+
+Deconstruct Noun:<br>
+[Latin Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructNoun.png)
+
+Deconstruct Adjective:<br>
+[Latin Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructAdjective.png)
+
+
+### Russian Examples
+
+Construct Verb:<br>
+[Russian Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructVerb.png)
+
+Construct Noun:<br>
+[Russian Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructNoun.png)
+
+Construct Adjective:<br>
+[Russian Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructAdjective.png)
+
+Deconstruct Verb:<br>
+[Russian Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructVerb.png)
+
+Deconstruct Noun:<br>
+[Russian Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructNoun.png)
+
+Deconstruct Adjective:<br>
+[Russian Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructAdjective.png)

@@ -1,5 +1,152 @@
 <!---Elizabeth Yam ey92-->
-## Russian
+# Russian
+## Capabilities
+### Verbs
+#### CONJUGATION
+`Russian.conjugate()`
+- takes (either) infinitive, person, number, gender(matters sometimes), tense
+
+input: 	  `читать, SND, PL, , PRES`<br>
+output:   `читаете`<br>
+
+input: 	  `прочитать, SND, PL, , PRES`<br>
+output:   `читаете`<br>
+
+input: 	  `сказать, , PL, F, PERF `<br>
+output:   `сказали`<br>
+
+input: 	  `говорить, , PL, F, PERF`<br>
+output:   `сказали`<br>
+
+input: 	  `жить, FST, SG, , FUTR`<br>
+output:   `буду_жить`<br>
+
+input: 	  `прожить, FST, SG,  , FUTR`<br>
+output:   `буду_жить`<br>
+
+
+#### REVERSE CONJUGATION
+`Russian.reverseConjugate()`
+- takes Russian verb form
+- returns imperfective infinitive, perfective infinitive, person, number, gender, tense
+
+input:    `ищет`<br>
+output:   `['искать', 'поискать', 'TRD', 'SG', '', 'PRES']`<br>
+
+input:    `посмотрите`<br>
+output:   `['смотреть', 'посмотреть', 'SND', 'PL', '', 'FUTP']`<br>
+
+input:    `искал`<br>
+output:   `['искать', 'поискать', 'FST/SND/TRD', 'SG', 'M', 'IMPF']`<br>
+
+input:    `обучили`<br>
+output:   `['учить', 'обучить', 'FST/SND/TRD', 'PL', 'M/F/N', 'PERF']`<br>
+
+input:    `буду_читать`<br>
+output:   `['читать', 'прочитать', 'FST', 'SG', '', 'FUTR']`<br>
+
+#### Verb Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| M     | masculine	gender		|
+| F 	| feminine gender		|
+| N 	| neuter gender 		|
+| FST   | first-person          |
+| SND   | second-person         |
+| TRD   | third-person          |
+| SG    | singular              |
+| PL    | plural                |
+| PRES  | present tense         |
+| IMPF  | imperfect tense       |
+| FUTR  | future tense          |
+| PERF  | perfect tense         |
+| PLUP  | pluperfect tense      |
+| FUTP  | future perfect tense  |
+
+### Nouns
+#### DECLENSION
+`Russian.decline()`
+- takes nominativeS, case, number
+- if noun not in dictionary, add declension and gender as last 2 parameters
+- CAVEATs: 
+	- the noun `море` declines irregularly
+	- some nouns decline like adjectives, e.g. `животное`, `мороженое`
+
+input:    `человек, ACC, PL`<br>
+output:   `человеков`<br>
+
+input:    `человек, ACC, PL, 00a, M`<br>
+output:   `человеков`<br>
+
+#### REVERSE DECLENSION
+`Russian.reverseDecline()`
+- takes Russian noun form
+- returns nominative singular, genitive plural, case, number
+
+input:    `ночей`<br>
+output:   `[ночь, ночей, GEN, PL]`<br>
+
+input:    `человека`<br>
+output:   `[человек, человеков, GEN/ACC, SG]`<br>
+
+input:    `ручки`<br>
+output:   `[ручка, ручек, NOM/ACC, PL]`<br>
+
+#### Noun Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| a   | animate         |
+| i   | inanimate       |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| PRP | ablative case   |
+| INS | vocative case   |
+
+### Adjectives
+#### DECLENSION
+`Russian.declineA()`
+- takes nomM, gender, case, number, animacy
+
+input:  `голубой, M,GEN,PL,i`<br>
+output: `голубых`<br>
+
+#### REVERSE DECLENSION
+`Russian.reverseDeclineA()`
+- takes Russian adjective form
+- optional gender parameter (if known)
+- [not yet implemented]
+
+input:  <br>
+output: <br>
+
+#### Adjective Parameters
+| Parameter | Meaning      |
+| --------- | ------------ |
+| a   | animate            |
+| i   | inanimate          |
+| F   | feminine gender    |
+| M   | masculine gender   |
+| N   | neuter gender      |
+| SG  | singular           |
+| PL  | plural             |
+| NOM | nominative case    |
+| GEN | genitive case      |
+| DAT | dative case        |
+| ACC | accusative case    |
+| PRP | prepositional case |
+| INS | instrumental case  |
+
+[see Russian.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Russian.py)
+
+---
+
+## Grammatical Reference
 
 Russian seems to be very morphologically and phonologically rich. A key feature Russian-speakers may be extremely aware of is _palatalization_ of consonants, since they have dedicated letters to represent consonant palatalization, which affect the spelling of most surface forms. This includes ь (_мягкий знак_ "mʲæxʲkʲɪj znak"/soft sign, unpronounced), е (_ye_), ё (_yo_), и (_yi_), ю (_yu_), я (_ya_). Additionally, the placement of a word's primary stress also results in phonological changes to some spellings, although not nearly as prevalent as palatalization. Russian morphemes and sound changes seem to be much more strongly impacted by pronunciation than spelling.
 

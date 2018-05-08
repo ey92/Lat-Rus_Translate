@@ -1,5 +1,125 @@
 <!---Elizabeth Yam ey92-->
-## Latin
+# Latin
+## Capabilities
+### Verbs
+#### CONJUGATION
+`Latin.conjugate()`
+- takes infinitive, number, person, tense
+- if verb not in dictionary, add perfective and conjugation as last 2 parameters
+
+input:    `amare, FST, SG, PRES`<br>
+output:   `amo`<br>
+
+input:    `amare, FST, SG, PRES, 1, amāvī`<br>
+output:   `amo`<br>
+
+#### REVERSE CONJUGATION
+`Latin.reverseConjugate()`
+- takes Latin verb form
+- returns infinitive, 1st person singular perfective, person, number, tense
+
+input:    `amant`<br>
+output:  `['amare', 'amāvī', 'TRD', 'PL', 'PRES']`<br>
+
+#### Verb Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| FST   | first-person          |
+| SND   | second-person         |
+| TRD   | third-person          |
+| SG    | singular              |
+| PL    | plural                |
+| PRES  | present tense         |
+| IMPF  | imperfect tense       |
+| FUTR  | future tense          |
+| PERF  | perfect tense         |
+| PLUP  | pluperfect tense      |
+| FUTP  | future perfect tense  |
+
+### Nouns
+#### DECLENSION
+`Latin.decline()`
+- takes nominativeS, genitiveS, case, number
+- if noun not in dictionary, add declension and gender as last 2 parameters
+
+input:    `puella, puellae, ACC, SG`<br>
+output:   `puellam`<br>
+
+input:    `puella, puellae, ACC, SG, 1, F`<br>
+output:   `puellam`<br>
+
+#### REVERSE DECLENSION
+`Latin.reverseDecline()`
+- takes Latin noun form
+- returns nominative singular, genitive singular, case, number
+
+input:    `puellīs`<br>
+output:   `['puella', 'puellae', 'DAT/ABL', 'PL']`<br>
+
+#### Noun Parameters
+
+| Parameter | Meaning |
+| --------- | ------- |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| ABL | ablative case   |
+| VOC | vocative case   |
+
+### Adjectives
+#### DECLENSION
+`Latin.declineA()`
+- takes nomM, genitive/nomF (root), declension d, gender, case, number
+
+input:  `ācer, ācris, 3a, N, GEN, PL`<br>
+output: `acrium`<br>
+
+#### REVERSE DECLENSION
+`Latin.reverseDeclineA()`
+- takes Latin adjective form
+- optional gender parameter (if known)
+- returns nominative singular masculine, root form, case, number, gender
+
+input:  `fortibus`<br>
+output: `['fortis', 'fortis', 'DAT/ABL', 'PL', 'F/M/N']`<br>
+
+input:  `pulchrum`<br>
+output: `['pulcher', 'pulchra', 'NOM/ACC', 'SG', 'M/N']`<br>
+
+input:  `pulchrum, M`<br>
+outputb: `['pulcher', 'pulchra', 'ACC', 'SG', 'M']`<br>  
+
+input:  `bona`<br>
+output: `['bonus', 'bona', 'NOM', 'SG', 'F']`<br>
+
+input:  `bona, N`<br>
+output: `['bonus', 'bona', 'NOM/ACC', 'PL', 'N']`<br>
+
+
+#### Adjective Parameters
+| Parameter | Meaning |
+| --------- | ------- |
+| F   | feminine gender |
+| M   | masculine gender|
+| N   | neuter gender   |
+| SG  | singular        |
+| PL  | plural          |
+| NOM | nominative case |
+| GEN | genitive case   |
+| DAT | dative case     |
+| ACC | accusative case |
+| ABL | ablative case   |
+| VOC | vocative case   |
+
+[see Latin.py](https://github.com/ey92/Lat-Rus_Translate/blob/master/Latin.py)
+
+---
+
+## Grammatical Reference
 
 Latin, for the most part, seems to be chiefly based on morphology and changing suffixes to change meanings. Some literature suggests that the morphology of each declension and conjugation also represents phonology, especially with respect to associating specific sound and morphemes with gendered nouns and tenses of conjugated verbs.
 
