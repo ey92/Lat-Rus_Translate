@@ -30,54 +30,59 @@ It doesn't into account context or identify special phrasal constructions. It is
 	- a(gain) re-runs the same choice from the previous menu
 
 ### Translation Example
-[UI Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/UIExample.png)
+![UI Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/UIExample.png)
 
 ### Latin to Russian Examples
 Translate Latin Verb to Russian Verb:<br>
-[Latin to Russian Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRverb.png)
+![Latin to Russian Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRverb.png)
 
 Translate Latin Noun to Russian Noun:<br>
-[Latin to Russian Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRnoun.png)
+![Latin to Russian Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRnoun.png)
 
 ### Russian to Latin Examples
+Translate Russian Verb to Latin Verb:<br>
+![Russian to Latin Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RLverb.png)
+
+Translate Russian Noun to Latin Noun:<br>
+![Russian to Latin Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RLnoun.png)
 
 
 ### Latin Examples
 Construct Verb:<br>
-[Latin Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructVerb.png)
+![Latin Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructVerb.png)
 
 Construct Noun:<br>
-[Latin Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructNoun.png)
+![Latin Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructNoun.png)
 
 Construct Adjective:<br>
-[Latin Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructAdjective.png)
+![Latin Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinConstructAdjective.png)
 
 Deconstruct Verb:<br>
-[Latin Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructVerb.png)
+![Latin Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructVerb.png)
 
 Deconstruct Noun:<br>
-[Latin Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructNoun.png)
+![Latin Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructNoun.png)
 
 Deconstruct Adjective:<br>
-[Latin Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructAdjective.png)
+![Latin Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LatinDeconstructAdjective.png)
 
 
 ### Russian Examples
 
 Construct Verb:<br>
-[Russian Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructVerb.png)
+![Russian Construct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructVerb.png)
 
 Construct Noun:<br>
-[Russian Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructNoun.png)
+![Russian Construct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructNoun.png)
 
 Construct Adjective:<br>
-[Russian Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructAdjective.png)
+![Russian Construct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianConstructAdjective.png)
 
 Deconstruct Verb:<br>
-[Russian Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructVerb.png)
+![Russian Deconstruct Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructVerb.png)
 
 Deconstruct Noun:<br>
-[Russian Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructNoun.png)
+![Russian Deconstruct Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructNoun.png)
 
 Deconstruct Adjective:<br>
-[Russian Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructAdjective.png)
+![Russian Deconstruct Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RussianDeconstructAdjective.png)
