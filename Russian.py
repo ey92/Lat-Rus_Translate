@@ -912,13 +912,13 @@ def declineA(nomM, gender, case, num, animate):
 # REVERSE DECLENSION
 
 def getNomM(root,case,num,gender,six):
-	print(root)
+	# print(root)
 	ind = 4 if not six else 6
 	nomM = root[:-ind]+'ый'
 	if not (nomM in Roots.RussianA):
 		nomM = root[:-ind]+'ий'
 
-	print(nomM)
+	# print(nomM)
 
 	return [nomM, case, num, gender]
 
@@ -935,7 +935,7 @@ def findDeclNomAccSA(root):
 	elif root[-4:] in ['ое','ее']:
 		gender = 'N'
 
-	return getNomM(root,case,num,gender)
+	return getNomM(root,case,num,gender,False)
 
 def findDeclNomAccPA(root):
 	return getNomM(root,'NOM/ACC','PL','F/M/N')
