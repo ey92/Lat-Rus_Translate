@@ -1,4 +1,5 @@
 # Elizabeth Yam ey92
+# -*- coding: utf-8 -*-
 import sys
 import Roots
 import Latin
@@ -9,6 +10,17 @@ YCHOICES = ['y','yes']
 NCHOICES = ['n','no']
 ACHOICES = ['a','again']
 YNCHOICES = YCHOICES+NCHOICES+ACHOICES
+
+def transliterateRussian(rus):
+	rus = rus.replace('a','а').replace('б','b').replace('в','v').replace('г','g').replace('д','d')
+	rus = rus.replace('е','ye').replace('ё','yo').replace('ж','zh').replace('з','z').replace('й','y')
+	rus = rus.replace('и','yi').replace('к','k').replace('л','l').replace('м','m').replace('н','n')
+	rus = rus.replace('о','o').replace('п','p').replace('р','r').replace('с','s').replace('т','t')
+	rus = rus.replace('у','u').replace('ф','f').replace('х','x').replace('ц','ts').replace('ч','ch')
+	rus = rus.replace('ш','sh').replace('щ','sh\'').replace('ъ','').replace('ы','i').replace('ь','\'')
+	rus = rus.replace('э','e').replace('ю','yu').replace('я','ya')
+
+	return rus
 
 def printList(lst):
 	if lst == None:
@@ -311,7 +323,9 @@ def russianConstructNouns():
 			params[3]+='  '
 		result = Russian.decline(params[0], params[1], params[2], params[3], params[4])
 	
-	print(result)
+	print result
+	print transliterateRussian(result)
+
 	return cont()
 
 def russianConstructVerbs():
@@ -323,7 +337,9 @@ def russianConstructVerbs():
 		params = str(raw_input("Please enter the infinitive form, person, number, gender, and tense, separated by commas\n")).strip()
 		params = processInput(params)
 
-		print Russian.conjugate(params[0], params[1], params[2], params[3], params[4])
+		form = Russian.conjugate(params[0], params[1], params[2], params[3], params[4])
+		print form
+		print transliterateRussian(form)
 
 	return cont()
 
@@ -335,7 +351,9 @@ def russianConstructAdj():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the nominativeMS, gender, case, number, and animacy, separated by commas\n")).strip()
 		params = processInput(params,True,False)
-	print Russian.declineA(params[0], params[1], params[2], params[3], params[4])
+	form = Russian.declineA(params[0], params[1], params[2], params[3], params[4])
+	print form
+	print transliterateRussian(form)
 
 	return cont()
 
@@ -525,7 +543,9 @@ def transLRverb():
 		params = processInput(params, True, True)
 		params += ['']
 	
-	print trans.LRVerb(params[0])
+	form = trans.LRVerb(params[0])
+	print form
+	print transliterateRussian(form)
 
 	return cont()
 
@@ -539,7 +559,9 @@ def transLRnoun():
 		params = processInput(params, True, False)
 		params += ['']
 	
-	print trans.LRNoun(params[0])
+	form =  trans.LRNoun(params[0])
+	print form
+	print transliterateRussian(form)
 
 	return cont()
 
