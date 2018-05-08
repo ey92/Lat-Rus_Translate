@@ -599,7 +599,7 @@ def translateLRmenu():
 				return val
 
 	# Translate Adjectives
-	# elif choice1 == 2:
+	# elif choice1 == 3:
 	# 	val = 2
 	# 	while (True):
 	# 		val = transLRadjective()
@@ -610,7 +610,7 @@ def translateLRmenu():
 	# 		elif val == None:
 	# 			return val
 		
-	elif choice1 == 3:
+	elif choice1 == 4:
 		return 'a'
 
 def transRLverb():
@@ -675,7 +675,7 @@ def translateRLmenu():
 				return val
 
 	# Translate Adjectives
-	# elif choice1 == 2:
+	# elif choice1 == 3:
 	# 	val = 2
 	# 	while (True):
 	# 		val = transRLadjective()
@@ -686,7 +686,7 @@ def translateRLmenu():
 	# 		elif val == None:
 	# 			return val
 		
-	elif choice1 == 3:
+	elif choice1 == 4:
 		return 'a'
 
 def main():
