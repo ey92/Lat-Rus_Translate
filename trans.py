@@ -87,7 +87,7 @@ def RLNoun(rus_noun, accconstr=False):
 	return Latin.decline(lnom,lgen,case,num)
 
 # translate Latin noun to Russian noun
-def LRNoun(lat_noun, insconstr=False)
+def LRNoun(lat_noun, insconstr=False):
 	# deconstruct Latin form
 	(lnom,lgen,case,num) = Latin.reverseDecline(lat_noun)
 
@@ -115,7 +115,7 @@ def LRNoun(lat_noun, insconstr=False)
 	#   so this can only be determined from context, requiring additional input to the function
 	if case == 'ABL':
 		if insconstr:
-			case = 'INS':
+			case = 'INS'
 		else:
 			case = 'PRP'
 
@@ -124,3 +124,8 @@ def LRNoun(lat_noun, insconstr=False)
 
 	# construct Russian form
 	return Russian.decline(rnom,case,num)
+
+# -------------------------------------------------------------
+# TRANSLATE ADJECTIVES
+
+# TODO
