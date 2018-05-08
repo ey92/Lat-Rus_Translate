@@ -4,12 +4,12 @@
 Russian seems to be very morphologically and phonologically rich. A key feature Russian-speakers may be extremely aware of is _palatalization_ of consonants, since they have dedicated letters to represent consonant palatalization, which affect the spelling of most surface forms. This includes ь (_мягкий знак_ "mʲæxʲkʲɪj znak"/soft sign, unpronounced), е (_ye_), ё (_yo_), и (_yi_), ю (_yu_), я (_ya_). Additionally, the placement of a word's primary stress also results in phonological changes to some spellings, although not nearly as prevalent as palatalization. Russian morphemes and sound changes seem to be much more strongly impacted by pronunciation than spelling.
 
 Prevailing Spelling Changes:
-- If word root ends in 'г'/'к'/'х'/'ж'/'ч'/'ш'/'щ' + 'ы'
+- If word root ends in 'г/к/х/ж/ч/ш/щ' + 'ы'
 	- replace 'ы' with 'и'
-- If word root ends in 'ж'/'ч'/'ш'/'щ'/'ц' + 'о'
+- If word root ends in 'ж/ч/ш/щ/ц' + 'о'
 	- replace 'о' with 'е'
-- If word root ends in consonant + 'ь' + plain indicators (vowels 'а'/'з'/'ы'/'о'/'у')
-	- replace plain indicators with palatal indicators (vowels 'я'/'е'/'и'/'ё'/'ю' )- The 'ё' is often written as a plain 'е', with speakers differentiating by recognizing the word.
+- If word root ends in consonant + 'ь' + plain indicators (vowels 'а/з/ы/о/у')
+	- replace plain indicators with palatal indicators (vowels 'я/е/и/ё/ю' )- The 'ё' is often written as a plain 'е', with speakers differentiating by recognizing the word.
 
 In contrast with viewing Latin verbs' imperfective forms and perfective forms as the same lexeme, Russian verbs' imperfective and perfective forms are treated as completely separate verbs.  This may be because an imperfective verb in Russian corresponds to multiple perfective forms, each corresponding to a more specific meaning, or vice versa. Because the goal of this portion of the project is to translate between Latin and Russian, I have attempted to select the most common or general forms of each of these one-to-many imperfective/perfective relationships, with the aid of some online Russian translation dictionaries. As a result, imperfective and perfective forms are listed together under a single entry in this program's dictionary, in order to create a simpler correspondence with their Latin counterparts.  A more thorough and accurate translation that can select the appropriate imperfective or perfective forms would require semantic understanding of the verb's context.
 

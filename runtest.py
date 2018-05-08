@@ -3,6 +3,7 @@ import sys
 import Roots
 import Latin
 import Russian
+import trans
 
 YCHOICES = ['y','yes']
 NCHOICES = ['n','no']
@@ -514,6 +515,130 @@ def russianMenu():
 	elif choice1 == 3:
 		return 'a'
 
+def transLRverb():
+	# translate verb Latin to Russian
+	params = []
+	while not (len(params) in [1,2]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Latin verb you want to translate\n")).strip()
+		params = processInput(params, True, True)
+		params += ['']
+	
+	print trans.LRVerb(params[0])
+
+	return cont()
+
+def translateLRmenu():
+	choice1 = 0
+	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 4):
+		if choice1 != 0:
+			print("That's not a choice")
+		print("What do you want to do? (LR)\n1) Translate verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
+		choice1 = raw_input().strip()
+	choice1 = int(choice1)
+		
+	# Translate Verbs
+	if choice1 == 1:
+		val = 2
+		while (True):
+			val = transLRverb()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transLRverb()
+			elif val == None:
+				return val	
+
+	# Translate Nouns
+	# elif choice1 == 2:
+	# 	val = 2
+	# 	while (True):
+	# 		val = transLRnoun()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = transLRnoun()
+	# 		elif val == None:
+	# 			return val
+
+	# Translate Adjectives
+	# elif choice1 == 2:
+	# 	val = 2
+	# 	while (True):
+	# 		val = transLRadjective()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = transLRadjective()
+	# 		elif val == None:
+	# 			return val
+		
+	elif choice1 == 3:
+		return 'a'
+
+def transRLverb():
+	# translate verb Latin to Russian
+	params = []
+	while not (len(params) in [1,2]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Russian verb you want to translate\n")).strip()
+		params = processInput(params, False, True)
+		params += ['']
+	
+	print trans.RLVerb(params[0])
+
+	return cont()
+
+def translateRLmenu():
+	choice1 = 0
+	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 4):
+		if choice1 != 0:
+			print("That's not a choice")
+		print("What do you want to do? (RL)\n1) Translate verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
+		choice1 = raw_input().strip()
+	choice1 = int(choice1)
+		
+	# Translate Verbs
+	if choice1 == 1:
+		val = 2
+		while (True):
+			val = transRLverb()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transRLverb()
+			elif val == None:
+				return val	
+
+	# Translate Nouns
+	# elif choice1 == 2:
+	# 	val = 2
+	# 	while (True):
+	# 		val = transRLnoun()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = transRLnoun()
+	# 		elif val == None:
+	# 			return val
+
+	# Translate Adjectives
+	# elif choice1 == 2:
+	# 	val = 2
+	# 	while (True):
+	# 		val = transRLadjective()
+	# 		if val == 'y':
+	# 			return 2
+	# 		elif val == 'a':
+	# 			val = transRLadjective()
+	# 		elif val == None:
+	# 			return val
+		
+	elif choice1 == 3:
+		return 'a'
+
 def main():
 	print("Latin/Russian Translator\n")
 	choice0 = 0
@@ -524,16 +649,28 @@ def main():
 	choice0 = int(choice0)
 
 	# Latin to Russian
-	# if choice0 == 1:
-		#do something
+	if choice0 == 1:
+		val = 2
+		while (True):
+			val = translateLRmenu()
+			if val == 'y' or val == 'a':
+				return 'y'
+			elif val == None:
+				return val
 	
 	# Russian to Latin
-	# elif choice0 == 2:
-		#do something
+	elif choice0 == 2:
+		val = 2
+		while (True):
+			val = translateRLmenu()
+			if val == 'y' or val == 'a':
+				return 'y'
+			elif val == None:
+				return val
 	
 	# Latin
-	# elif choice0 == 3:
-	if choice0 == 3:
+	elif choice0 == 3:
+	# if choice0 == 3:
 		val = 2
 		while (True):
 			val = latinMenu()
