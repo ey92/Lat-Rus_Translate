@@ -243,6 +243,12 @@ def toLowerL(letter):
 def toLower(word):
 	toUpper(word)
 
+def contains(string, lst):
+	for e in lst:
+		if e in string:
+			return True
+	return False
+
 # -------------------------------------------------------------
 # -------------------------------------------------------------
 # VERBS
@@ -842,17 +848,20 @@ def reverseConjugate(word):
 # -------------------------------------------------------------
 # DECLENSION
 
-def contains(string, lst):
-	for e in lst:
-		if e in string:
-			return True
-	return False
+def generalPhonA(word):
+	if word[-2:] == 'ы' and word[-4:-2] in ['г','к','х','ж','ч','ш','щ']:
+		word = word[:-2]+'и'
+	elif word[-2:] == 'о' and word[-4:-2] in ['ж','ч','ш','щ','ц']:
+		word = word[:-2]+'е'
+
+	return word
 
 def ztoe(word):
 	return word.replace('0','')
 
 def hardDecl(nom, gender, case, num, animate):
 	root = nom[:-4]
+	form = ''
 
 	if case == 'ACC' and (gender =='M' or num == 'PL'):
 		case = 'GEN' if animate == 'a' else 'NOM'
@@ -860,16 +869,19 @@ def hardDecl(nom, gender, case, num, animate):
 	form = case+num
 	if num == 'SG':
 		if gender == 'M':
-			return root+endingsAhardM[form]
+			form = root+endingsAhardM[form]
 		elif gender == 'F':
-			return root+endingsAhardF[form]
+			form = root+endingsAhardF[form]
 		elif gender == 'N':
-			return root+endingsAhardN[form]
+			form = root+endingsAhardN[form]
 	elif num == 'PL':
-		return root+endingsAhardP[form]
+		form = root+endingsAhardP[form]
+
+	return generalPhonA(form)
 
 def softDecl(nom, gender, case, num, animate):
 	root = nom[:-4]
+	form = ''
 
 	if case == 'ACC' and (gender == 'M' or num == 'PL'):
 		case = 'GEN' if animate == 'a' else 'NOM'
@@ -877,13 +889,15 @@ def softDecl(nom, gender, case, num, animate):
 	form = case+num
 	if num == 'SG':
 		if gender == 'M':
-			return root+endingsAsoftM[form]
+			form = root+endingsAsoftM[form]
 		elif gender == 'F':
-			return root+endingsAsoftF[form]
+			form = root+endingsAsoftF[form]
 		elif gender == 'N':
-			return root+endingsAsoftN[form]
+			form = root+endingsAsoftN[form]
 	elif num == 'PL':
-		return root+endingsAsoftP[form]
+		form = root+endingsAsoftP[form]
+
+	return generalPhonA(form)
 
 # takes nomM, genitive/nomF (root), declension d, gender, case, number
 def declineA(nomM, gender, case, num, animate):
