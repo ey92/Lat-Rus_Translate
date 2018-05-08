@@ -529,12 +529,26 @@ def transLRverb():
 
 	return cont()
 
+def transLRnoun():
+	# translate verb Latin to Russian
+	params = []
+	while not (len(params) in [1,2]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Latin noun you want to translate\n")).strip()
+		params = processInput(params, True, False)
+		params += ['']
+	
+	print trans.LRNoun(params[0])
+
+	return cont()
+
 def translateLRmenu():
 	choice1 = 0
 	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 4):
 		if choice1 != 0:
 			print("That's not a choice")
-		print("What do you want to do? (LR)\n1) Translate verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
+		print("What do you want to do? (LR)\n1) Translate Verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
 		choice1 = raw_input().strip()
 	choice1 = int(choice1)
 		
@@ -551,16 +565,16 @@ def translateLRmenu():
 				return val	
 
 	# Translate Nouns
-	# elif choice1 == 2:
-	# 	val = 2
-	# 	while (True):
-	# 		val = transLRnoun()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = transLRnoun()
-	# 		elif val == None:
-	# 			return val
+	elif choice1 == 2:
+		val = 2
+		while (True):
+			val = transLRnoun()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transLRnoun()
+			elif val == None:
+				return val
 
 	# Translate Adjectives
 	# elif choice1 == 2:
@@ -591,12 +605,26 @@ def transRLverb():
 
 	return cont()
 
+def transRLnoun():
+	# translate verb Latin to Russian
+	params = []
+	while not (len(params) in [1,2]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Russian noun you want to translate\n")).strip()
+		params = processInput(params)
+		params += ['']
+	
+	print trans.RLNoun(params[0])
+
+	return cont()
+
 def translateRLmenu():
 	choice1 = 0
 	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 4):
 		if choice1 != 0:
 			print("That's not a choice")
-		print("What do you want to do? (RL)\n1) Translate verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
+		print("What do you want to do? (RL)\n1) Translate Verbs\n2) Translate Nouns\n3) Translate Adjectives\n4) Return to previous menu")
 		choice1 = raw_input().strip()
 	choice1 = int(choice1)
 		
@@ -613,16 +641,16 @@ def translateRLmenu():
 				return val	
 
 	# Translate Nouns
-	# elif choice1 == 2:
-	# 	val = 2
-	# 	while (True):
-	# 		val = transRLnoun()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = transRLnoun()
-	# 		elif val == None:
-	# 			return val
+	elif choice1 == 2:
+		val = 2
+		while (True):
+			val = transRLnoun()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transRLnoun()
+			elif val == None:
+				return val
 
 	# Translate Adjectives
 	# elif choice1 == 2:
