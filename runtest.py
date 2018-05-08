@@ -98,6 +98,7 @@ def latinConstructNouns():
 			params[4]+='  '
 		result = Latin.decline(params[0], params[1], params[2], params[3], params[4], params[5])
 	
+	print("The Latin form is:")
 	print(result)
 	return cont()
 
@@ -116,6 +117,7 @@ def latinConstructVerbs():
 	else:
 		result = Latin.conjugate(params[0], params[1], params[2], params[3], params[4], params[5])
 
+	print("The Latin form is:")
 	print(result)
 	return cont()
 
@@ -127,6 +129,8 @@ def latinConstructAdj():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the nominativeMS, root form, declension, gender, case, and number, separated by commas\n")).strip()
 		params = processInput(params,True,False)
+
+	print("The Latin form is:")
 	print Latin.declineA(params[0], params[1], params[2], params[3], params[4], params[5])
 
 	return cont()
@@ -189,6 +193,8 @@ def latinDeconstructNouns():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
+
+	print("The Latin components are:")
 	printList(Latin.reverseDecline(params[0]))
 
 	return cont()
@@ -201,6 +207,8 @@ def latinDeconstructVerbs():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
+
+	print("The Latin components are:")
 	printList(Latin.reverseConjugate(params[0]))
 
 	return cont()
@@ -214,6 +222,8 @@ def latinDeconstructAdj():
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
 		params += ['']
+
+	print("The Latin components are:")
 	printList(Latin.reverseDeclineA(params[0], params[1]))
 
 	return cont()
@@ -323,6 +333,7 @@ def russianConstructNouns():
 			params[3]+='  '
 		result = Russian.decline(params[0], params[1], params[2], params[3], params[4])
 	
+	print("The Russian form is:")
 	print result
 	print transliterateRussian(result)
 
@@ -338,6 +349,7 @@ def russianConstructVerbs():
 		params = processInput(params)
 
 		form = Russian.conjugate(params[0], params[1], params[2], params[3], params[4])
+		print("The Russian form is:")
 		print form
 		print transliterateRussian(form)
 
@@ -351,7 +363,9 @@ def russianConstructAdj():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the nominativeMS, gender, case, number, and animacy, separated by commas\n")).strip()
 		params = processInput(params,True,False)
+	
 	form = Russian.declineA(params[0], params[1], params[2], params[3], params[4])
+	print("The Russian form is:")
 	print form
 	print transliterateRussian(form)
 
@@ -415,6 +429,8 @@ def russianDeconstructNouns():
 			print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params,True)
+
+	print("The Russian components are:")
 	printList(Russian.reverseDecline(params[0]))
 
 	return cont()
@@ -428,6 +444,8 @@ def russianDeconstructVerbs():
 		print("Sorry, not the right number of parameters or they aren't all strings.")
 		params = str(raw_input("Please enter the form you want to deconstruct\n")).strip()
 		params = processInput(params)
+
+	print("The Russian components are:")
 	printList(Russian.reverseConjugate(params[0]))
 
 	return cont()
@@ -442,6 +460,8 @@ def russianDeconstructAdj():
 		params = processInput(params,True)
 		params += ['']
 	# printList(Russian.reverseDeclineA(params[0], params[1]))
+
+	print("The Russian components are:")
 	printList(Russian.reverseDeclineA(params[0]))
 
 	return cont()
@@ -544,6 +564,7 @@ def transLRverb():
 		params += ['']
 	
 	form = trans.LRVerb(params[0])
+	print("The Russian equivalent is:")
 	print form
 	print transliterateRussian(form)
 
@@ -560,6 +581,7 @@ def transLRnoun():
 		params += ['']
 	
 	form =  trans.LRNoun(params[0])
+	print("The Russian equivalent is:")
 	print form
 	print transliterateRussian(form)
 
@@ -623,6 +645,7 @@ def transRLverb():
 		params = processInput(params, False, True)
 		params += ['']
 	
+	print("The Latin equivalent is:")
 	print trans.RLVerb(params[0])
 
 	return cont()
@@ -637,6 +660,7 @@ def transRLnoun():
 		params = processInput(params)
 		params += ['']
 	
+	print("The Latin equivalent is:")
 	print trans.RLNoun(params[0])
 
 	return cont()
