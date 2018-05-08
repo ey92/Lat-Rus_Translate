@@ -423,10 +423,10 @@ def findRoot(stem):
 		# try 1st conj
 		P3 = stem+endings1v[P3form]
 		# try 2nd conj
-		if not P3 in Roots.RussianV_3p:
+		if not (P3 in Roots.RussianV_3p or P3 in Roots.RussianV_3p2):
 			P3 = stem+endings2v[P3form]
 
-	if P3 in Roots.RussianV_impf_3p:
+	if (P3 in Roots.RussianV_impf_3p) or (P3 in Roots.RussianV_impf_3p2):
 		inf = Roots.RfindIInf3PI(P3)
 		pinf = Roots.RfindPInfI(inf)
 		perf = False

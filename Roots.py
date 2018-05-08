@@ -405,6 +405,23 @@ RussianV_perf_conj = [x[5] for x in RussianV]
 RussianV_inf = RussianV_impf_inf+RussianV_perf_inf
 RussianV_3p = RussianV_impf_3p+RussianV_perf_3p
 
+def rmStress(word):
+    return word.replace('а́','а').replace('е́','е').replace('и́','и').replace('о́','о').replace('у́','у').replace('ы́','ы').replace('э́','э').replace('ю́','ю').replace('я́','я')
+
+RussianV2 = []
+
+for e in RussianV:
+    RussianV2.append(map(rmStress, e))
+
+RussianV_impf_inf2 = [x[0] for x in RussianV2]
+RussianV_impf_3p2 = [x[1] for x in RussianV2]
+RussianV_impf_conj2 = [x[2] for x in RussianV2]
+RussianV_perf_inf2 = [x[3] for x in RussianV2]
+RussianV_perf_3p2 = [x[4] for x in RussianV2]
+RussianV_perf_conj2 = [x[5] for x in RussianV2]
+RussianV_inf2 = RussianV_impf_inf2+RussianV_perf_inf2
+RussianV_3p2 = RussianV_impf_3p2+RussianV_perf_3p2
+
 def RfindPInfI(word):
     return RussianV_perf_inf[RussianV_impf_inf.index(word)]
 
@@ -412,10 +429,22 @@ def RfindIInfP(word):
     return RussianV_impf_inf[RussianV_perf_inf.index(word)]
 
 def RfindIInf3PI(word):
-    return RussianV_impf_inf[RussianV_impf_3p.index(word)]
+    try:
+        return RussianV_impf_inf[RussianV_impf_3p.index(word)]
+    except:
+        try:
+            return RussianV_impf_inf[RussianV_impf_3p2.index(word)]
+        except:
+            return None
 
 def RfindPInf3PP(word):
-    return RussianV_perf_inf[RussianV_perf_3p.index(word)]
+    try:
+        return RussianV_perf_inf[RussianV_perf_3p.index(word)]
+    except:
+        try:
+            return RussianV_perf_inf[RussianV_perf_3p2.index(word)]
+        except:
+            return None
 
 def RfindI3PIInf(word):
     return RussianV_impf_3p[RussianV_impf_inf.index(word)]
@@ -506,9 +535,6 @@ RussianN_decl = [x[2] for x in RussianN]        # list of all Russian decl
 RussianN_root = [x[3] for x in RussianN]        # list of all Russian Roots
 RussianN_gender = [x[4] for x in RussianN]      # list of all Russian gender
 RussianN_eng = [x[5] for x in RussianN]         # list of all English equiv of Russian
-
-def rmStress(word):
-    return word.replace('а́','а').replace('е́','е').replace('и́','и').replace('о́','о').replace('у́','у').replace('ы́','ы').replace('э́','э').replace('ю́','ю').replace('я́','я')
 
 RussianN2 = []
 
