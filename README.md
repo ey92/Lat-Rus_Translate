@@ -28,6 +28,7 @@ It doesn't into account context or identify special phrasal constructions. It is
 	- y(es) returns to the previous menu
 	- n(o) quits the UI
 	- a(gain) re-runs the same choice from the previous menu
+- Options that produce Russian forms print both the surface form in Cyrillic and an English transliteration below them
 
 ### Translation Example
 ![UI Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/UIExample.png)
