@@ -587,6 +587,29 @@ def transLRnoun():
 
 	return cont()
 
+def transLRadjective():
+	# translate adjective Latin to Russian
+	params = []
+	while not (len(params) in [1,2,3]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Latin adjective you want to translate\nOptional: provide noun case")).strip()
+		params = processInput(params, True, False)
+		params += ['']
+	
+	if len(params) == 1:
+		form =  trans.LRAdj(params[0])
+	elif len(params) == 2:
+		form =  trans.LRAdj(params[0],noun_case=params[1])
+	elif len(params) == 3:
+		form =  trans.LRAdj(params[0],accconstr=params[2],noun_case=params[1])
+
+	print("\nThe Russian equivalent is:")
+	print form
+	print transliterateRussian(form)
+
+	return cont()
+
 def translateLRmenu():
 	choice1 = 0
 	while checkInt(choice1) and (int(choice1) < 1 or int(choice1) > 4):
@@ -621,16 +644,16 @@ def translateLRmenu():
 				return val
 
 	# Translate Adjectives
-	# elif choice1 == 3:
-	# 	val = 2
-	# 	while (True):
-	# 		val = transLRadjective()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = transLRadjective()
-	# 		elif val == None:
-	# 			return val
+	elif choice1 == 3:
+		val = 2
+		while (True):
+			val = transLRadjective()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transLRadjective()
+			elif val == None:
+				return val
 		
 	elif choice1 == 4:
 		return 'a'
@@ -662,6 +685,29 @@ def transRLnoun():
 	
 	print("\nThe Latin equivalent is:")
 	print trans.RLNoun(params[0])
+
+	return cont()
+
+def transRLadjective():
+	# translate adjective Latin to Russian
+	params = []
+	while not (len(params) in [1,2,3,4,5]) or not(checkStr(params)):
+		if params != []:
+			print("Sorry, not the right number of parameters or they aren't all strings.")
+		params = str(raw_input("Please enter the Russian adjective you want to translate\nOptional: provide noun case, noun gender, animacy")).strip()
+		params = processInput(params, True, False)
+		params += ['']
+	
+	if len(params) == 1:
+		form =  trans.LRAdj(params[0])
+	elif len(params) == 2:
+		form =  trans.LRAdj(params[0],noun_case=params[1])
+	elif len(params) == 3:
+		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2])
+	elif len(params) == 4:
+		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3])
+	elif len(params) == 5:
+		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3],accconstr=params[4])
 
 	return cont()
 
@@ -699,16 +745,16 @@ def translateRLmenu():
 				return val
 
 	# Translate Adjectives
-	# elif choice1 == 3:
-	# 	val = 2
-	# 	while (True):
-	# 		val = transRLadjective()
-	# 		if val == 'y':
-	# 			return 2
-	# 		elif val == 'a':
-	# 			val = transRLadjective()
-	# 		elif val == None:
-	# 			return val
+	elif choice1 == 3:
+		val = 2
+		while (True):
+			val = transRLadjective()
+			if val == 'y':
+				return 2
+			elif val == 'a':
+				val = transRLadjective()
+			elif val == None:
+				return val
 		
 	elif choice1 == 4:
 		return 'a'

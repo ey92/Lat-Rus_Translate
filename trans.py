@@ -78,6 +78,9 @@ def RLNoun(rus_noun, accconstr=False):
 	if case in ['INS','PRP']:
 		case = 'ABL'
 
+	if case == 'ABL' and accconstr:
+		case = 'ACC'
+
 	# look up Latin root
 	lgen = RLnRoot(rnoms)
 	# look up Latin nominative form from genitive form
@@ -122,10 +125,121 @@ def LRNoun(lat_noun, insconstr=False):
 	# look up Russian root
 	rnom = LRnRoot(lgen)
 
+	#check for animacy
+	animate = Roots.RisAnimateG()
+	if case == 'ACC' and animate:
+		case = 'GEN'
+
 	# construct Russian form
 	return Russian.decline(rnom,case,num)
 
 # -------------------------------------------------------------
 # TRANSLATE ADJECTIVES
 
-# TODO
+# find Latin adjective masculine nominative singular from Russian adjective masculine nominative singular
+def RLaRoot(rnomM):
+	return (Roots.AMap_lat[Roots.AMap_rus.index(rnomM)])
+
+# find Russian adjective masculine nominative singular from Latin adjective masculine nominative singular
+def LRaRoot(lnomM):
+	return (Roots.AMap_rus[Roots.AMap_lat.index(lnomM)])
+
+# translate Russian adjective to Latin adjective
+def RLAdj(rus_adj, accconstr=False, noun_case=None)
+	case = ''
+
+	# deconstruct Russian form
+	(rnomM, case, num, gender) = Russian.reverseDeclineA(rus_adj)
+
+	# always copy the noun's case if known
+	if noun_case != None:
+		case = noun_case
+
+	else:
+		# if multiple possible cases, pick one, in order of preference as listed below
+		if len(case) > 3:
+			if 'NOM' in case:
+				case = 'NOM'
+			elif 'ACC' in case:
+				case = 'ACC'
+			elif 'GEN' in case:
+				case = 'GEN'
+			elif 'PRP' in case:
+				case = 'PRP'
+			elif 'DAT' in case:
+				case = 'DAT'
+			# only pick INS if that is the only choice
+
+		# the Russian Instrumental is often the "Ablative of means" construction in Latin
+		# the Prepositional cases must be found from context, so we require additional input in those cases
+		# most of the Prepositional uses in Russian align with Ablative uses in Latin
+		if case in ['INS','PRP']:
+			case = 'ABL'
+
+		if case == 'ABL' and accconstr:
+			case = 'ACC'
+
+	# look up Latin nomM
+	lnomM = RLaRoot(rnomM)
+
+	# look up Latin adj root form
+	lroot = Roots.LfindRootNM(lnomM)
+
+	# look up Latin adj decl
+	ldecl = Roots.LfindDeclR(lroot)
+
+	# construct Latin form
+	return Latin.declineA(lnomM,lroot,ldecl,gender,case,num)
+
+# translate Russian adjective to Latin adjective
+# assume not animate
+def LRAdj(lat_adj, accconstr=False, noun_gender=None, noun_case=None, animate=False)
+	case = ''
+
+	# deconstruct Latin form
+	(lnom, lrt, case, num, lgender) = Latin.reverseDeclineA(lat_adj)
+
+	# always copy the noun's case if known
+	if noun_case != None:
+		case = noun_case
+
+	else:
+		# if multiple possible cases, pick one, in order of preference as listed below
+		if len(case) > 3:
+			if 'NOM' in case:
+				case = 'NOM'
+			elif 'ACC' in case:
+				case = 'ACC'
+			elif 'GEN' in case:
+				case = 'GEN'
+			elif 'ABL' in case:
+				case = 'ABL'
+			elif 'DAT' in case:
+				case = 'DAT'
+			# only pick VOC if that is the only choice
+			# VOC is only used in direct speech, and thus the least likely to be used
+
+		# Russians address each other by the nominative form of their names
+		if case == 'VOC':
+			case = 'NOM'
+
+		# check for case change with animacy
+		if case == 'ACC' and animate:
+			case = 'GEN'
+
+		# many Ablative uses in Latin align with Prepositional uses in Russian
+		# the Russian Instrumental is a subset of the Latin Ablative ("Ablative of means"), 
+		#   so this can only be determined from context, requiring additional input to the function
+		if case == 'ABL':
+			if insconstr:
+				case = 'INS'
+			else:
+				case = 'PRP'
+
+	# look up Russian nomM
+	rnomM = LRaRoot(lnom)
+
+	# should require noun's gender, otherwise guess from latin noun's gender
+	rgender = lgender if noun_gender = None else noun_gender
+
+	return Latin.declineA(rnomM,rgender,case,num,animate)

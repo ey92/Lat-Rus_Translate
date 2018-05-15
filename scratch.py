@@ -1,3 +1,12 @@
+consLow = 
+bcdfghjklmnpqrstvxz
+aeiouāēīōū
+
+vowLow = 
+аеёиоуыэюя
+
+бвгджзйклмнпрстфхцчшщъь
+
 # Elizabeth Yam ey92
 # -*- coding: utf-8 -*-
 vow = [u'а', u'е', u'ё', u'и', u'о', u'у', u'ы', u'э', u'ю', u'я']
