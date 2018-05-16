@@ -145,7 +145,7 @@ def LRaRoot(lnomM):
 	return (Roots.AMap_rus[Roots.AMap_lat.index(lnomM)])
 
 # translate Russian adjective to Latin adjective
-def RLAdj(rus_adj, accconstr=False, noun_case=None)
+def RLAdj(rus_adj, accconstr=False, noun_case=None):
 	case = ''
 
 	# deconstruct Russian form
@@ -193,7 +193,7 @@ def RLAdj(rus_adj, accconstr=False, noun_case=None)
 
 # translate Russian adjective to Latin adjective
 # assume not animate
-def LRAdj(lat_adj, accconstr=False, noun_gender=None, noun_case=None, animate=False)
+def LRAdj(lat_adj, accconstr=False, noun_gender=None, noun_case=None, animate=False):
 	case = ''
 
 	# deconstruct Latin form
@@ -240,6 +240,6 @@ def LRAdj(lat_adj, accconstr=False, noun_gender=None, noun_case=None, animate=Fa
 	rnomM = LRaRoot(lnom)
 
 	# should require noun's gender, otherwise guess from latin noun's gender
-	rgender = lgender if noun_gender = None else noun_gender
+	rgender = lgender if noun_gender == None else noun_gender
 
 	return Latin.declineA(rnomM,rgender,case,num,animate)

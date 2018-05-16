@@ -129,7 +129,6 @@ AMap_lat = [x[0] for x in AMap]
 AMap_rus = [x[1] for x in AMap]
 AMap_eng = [x[2] for x in AMap]
 
-def P
 
 # Pronoun mapping
 LatinPN = [
