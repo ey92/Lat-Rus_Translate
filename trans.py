@@ -193,7 +193,7 @@ def RLAdj(rus_adj, accconstr=False, noun_case=None):
 
 # translate Russian adjective to Latin adjective
 # assume not animate
-def LRAdj(lat_adj, accconstr=False, noun_gender=M, noun_case=None, animate=False):
+def LRAdj(lat_adj, accconstr=False, noun_gender='M', noun_case=None, animate=False):
 	case = ''
 
 	# deconstruct Latin form
