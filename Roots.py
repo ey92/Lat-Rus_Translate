@@ -1,7 +1,7 @@
 # Elizabeth Yam ey92
 # -*- coding: utf-8 -*-
 
-# 60 Noun stems: Latin genS to Russian nomS, english
+# 61 Noun stems: Latin genS to Russian nomS, english
 NMap = [
     ("agricolae",    "земледелец",   "farmer"                    ), \
     ("feminae",      "женщина",      "woman"                     ), \
@@ -62,7 +62,8 @@ NMap = [
     ("cornūs",       "рог",          "horn"                      ), \
     ("diēī",         "день",         "day"                       ), \
     ("faciēī",       "лицо",         "face,person"               ), \
-    ("rēī",          "дело",         "thing, matter"             ) \
+    ("rēī",          "дело",         "thing, matter"             ), \
+    ("spēī",         "наде́жда",      "hope"                      ) \
 ]
 
 NMap_lat = [x[0] for x in NMap]
@@ -244,7 +245,7 @@ def LfindInfP(word):
 def LfindPerfI(word):
     return LatinV_perf[LatinV_inf.index(word)]
 
-# 60 Noun stems
+# 61 Noun stems
 LatinN = [
     ("agricola",    "agricolae",    "1  ",  "M",    "farmer"                    ), \
     ("femina",      "feminae",      "1  ",  "F",    "woman"                     ), \
@@ -305,7 +306,8 @@ LatinN = [
     ("cornū",       "cornūs",       "4  ",  "N",    "horn"                      ), \
     ("diēs",        "diēī",         "5  ",  "M",    "day"                       ), \
     ("faciēs",      "faciēī",       "5  ",  "F",    "face,person"               ), \
-    ("rēs",         "rēī",          "5  ",  "F",    "thing, matter"             ) \
+    ("rēs",         "rēī",          "5  ",  "F",    "thing, matter"             ), \
+    ("spēs",        "spēī",         "5  ",  "F",    "hope"                      ) \
 ]
 
 LatinN_ns = [x[0] for x in LatinN]          # list of all Latin nomS
@@ -478,13 +480,17 @@ def RfindPConjPInf(word):
     return RussianV_perf_conj[RussianV_perf_inf.index(word)]
 
 
-# 60 Noun Stems
+# 61 Noun Stems
+# aa_ = a-declension
+# 00_ = 0-declension
+# oo_ = o-declension
+# mz_ = ь-declension
+# jj_ = declines like adj
+# __i = inanimate
+# __a = animate
 # __p = irregular plural stem
 # __n = nom/acc plural ends in a
 # __r = irregular root
-# jj_ = declines like adj
-# __a = animate
-# __i = inanimate
 RussianN = [
     ('земледелец',   'земледельцев', '00a ', '',       'M', 'farmer'                    ), \
     ('женщина',      'женщин',       'aaa ', '',       'F', 'woman'                     ), \
@@ -545,7 +551,8 @@ RussianN = [
     ('рог',          'рогов',        '00in', '',       'M', 'horn'                      ), \
     ('де́нь',         'дней',         '00ir', 'днь',    'M', 'day'                       ), \
     ('лицо',         'лиц',          'ooi ', '',       'N', 'face,person'               ), \
-    ('дело',         'дел',          'ooi ', '',       'N', 'thing, matter'             ) \
+    ('дело',         'дел',          'ooi ', '',       'N', 'thing, matter'             ), \
+    ('наде́жда',      'наде́жд',       'aai ', '',       'F', 'hope'                      ) \
 ]
 
 RussianN_ns = [x[0] for x in RussianN]          # list of all Russian nomS

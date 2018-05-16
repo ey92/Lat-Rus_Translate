@@ -1416,14 +1416,8 @@ def declineA(nomM, root, d, gender, case, num):
 				nom = nomM
 			return decline(nom,gen,case,num,d,gender)
 	elif d == "3b":
-		if gender == "N":
-			d = "3ii"
-			nom = nomM
-			gen = root
-			return decline(nom,gen,case,num,d,gender)
-		else:
-			d = "3ii"
-			return decline(nomM,root,case,num,d,gender)
+		d = "3ii"
+		return decline(nomM,root,case,num,d,gender)
 
 # -------------------------------------------------------------
 # REVERSE DECLENSION
