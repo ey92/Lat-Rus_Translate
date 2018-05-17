@@ -1,5 +1,6 @@
 ire
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | eo | is | it | imus | itis | eunt |
 
@@ -16,6 +17,7 @@ ire
 
 esse
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | sum | es | est | sumus | estis | sunt |
 
@@ -32,6 +34,7 @@ esse
 
 posse
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | possum | potes | potest | possumus | potestis | possunt |
 
@@ -48,6 +51,7 @@ posse
 
 velle
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | volo | vis | vult | volumus | vultis | volunt |
 
@@ -64,6 +68,7 @@ velle
 
 nōlle
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | nōlo | nonvis | nonvult | nōlumus | nonvultis | nōlunt |
 
@@ -80,6 +85,7 @@ nōlle
 
 ferre
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | fero | fers | fert | ferimus | fertis | ferunt |
 
@@ -96,6 +102,7 @@ ferre
 
 amare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | amo | amas | amat | amamus | amatis | amant |
 
@@ -112,6 +119,7 @@ amare
 
 ambulare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | ambulo | ambulas | ambulat | ambulamus | ambulatis | ambulant |
 
@@ -128,6 +136,7 @@ ambulare
 
 clāmare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | clāmo | clāmas | clāmat | clāmamus | clāmatis | clāmant |
 
@@ -144,6 +153,7 @@ clāmare
 
 cōgitare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | cōgito | cōgitas | cōgitat | cōgitamus | cōgitatis | cōgitant |
 
@@ -160,6 +170,7 @@ cōgitare
 
 dare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | do | das | dat | damus | datis | dant |
 
@@ -176,6 +187,7 @@ dare
 
 expectare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | expecto | expectas | expectat | expectamus | expectatis | expectant |
 
@@ -192,6 +204,7 @@ expectare
 
 parare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | paro | paras | parat | paramus | paratis | parant |
 
@@ -208,6 +221,7 @@ parare
 
 rogare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | rogo | rogas | rogat | rogamus | rogatis | rogant |
 
@@ -224,6 +238,7 @@ rogare
 
 spectare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | specto | spectas | spectat | spectamus | spectatis | spectant |
 
@@ -240,6 +255,7 @@ spectare
 
 stare
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | sto | stas | stat | stamus | statis | stant |
 
@@ -256,6 +272,7 @@ stare
 
 dēlēre
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | dēl�eo | dēl�es | dēl�et | dēl�emus | dēl�etis | dēl�ent |
 
@@ -272,6 +289,7 @@ dēlēre
 
 docēre
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | doc�eo | doc�es | doc�et | doc�emus | doc�etis | doc�ent |
 
@@ -288,6 +306,7 @@ docēre
 
 habēre
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | hab�eo | hab�es | hab�et | hab�emus | hab�etis | hab�ent |
 
@@ -304,6 +323,7 @@ habēre
 
 vidēre
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | vid�eo | vid�es | vid�et | vid�emus | vid�etis | vid�ent |
 
@@ -320,6 +340,7 @@ vidēre
 
 claudere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | claudo | claudis | claudit | claudimus | clauditis | claudunt |
 
@@ -336,6 +357,7 @@ claudere
 
 comprehendere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | comprehendo | comprehendis | comprehendit | comprehendimus | comprehenditis | comprehendunt |
 
@@ -352,6 +374,7 @@ comprehendere
 
 dīcere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | dīco | dīcis | dīcit | dīcimus | dīcitis | dīcunt |
 
@@ -368,6 +391,7 @@ dīcere
 
 edere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | edo | edis | edit | edimus | editis | edunt |
 
@@ -384,6 +408,7 @@ edere
 
 legere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | lego | legis | legit | legimus | legitis | legunt |
 
@@ -400,6 +425,7 @@ legere
 
 lūdere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | lūdo | lūdis | lūdit | lūdimus | lūditis | lūdunt |
 
@@ -416,6 +442,7 @@ lūdere
 
 petere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | peto | petis | petit | petimus | petitis | petunt |
 
@@ -432,6 +459,7 @@ petere
 
 pōnere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | pōno | pōnis | pōnit | pōnimus | pōnitis | pōnunt |
 
@@ -448,6 +476,7 @@ pōnere
 
 scrībere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | scrībo | scrībis | scrībit | scrībimus | scrībitis | scrībunt |
 
@@ -464,6 +493,7 @@ scrībere
 
 sīdere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | sīdo | sīdis | sīdit | sīdimus | sīditis | sīdunt |
 
@@ -480,6 +510,7 @@ sīdere
 
 vīvere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | vīvo | vīvis | vīvit | vīvimus | vīvitis | vīvunt |
 
@@ -496,6 +527,7 @@ vīvere
 
 audire
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | audio | audis | audit | audimus | auditis | audiunt |
 
@@ -512,6 +544,7 @@ audire
 
 scire
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | scio | scis | scit | scimus | scitis | sciunt |
 
@@ -528,6 +561,7 @@ scire
 
 venire
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | venio | venis | venit | venimus | venitis | veniunt |
 
@@ -544,6 +578,7 @@ venire
 
 capere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | capio | capis | capit | capimus | capitis | capiunt |
 
@@ -560,6 +595,7 @@ capere
 
 incipere
 | S |   |   | P |   |   |
+| - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
 | incipio | incipis | incipit | incipimus | incipitis | incipiunt |
 
