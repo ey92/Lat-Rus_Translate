@@ -71,7 +71,7 @@ NMap_rus = [x[1] for x in NMap]
 NMap_eng = [x[2] for x in NMap]
 
 
-# 34 Verb stems
+# 35 Verb stems
 VMap = [
     ('ire',              'ехать',      'to go'              ), \
     ('esse',             'быть',       'to be'              ), #no imperf\
@@ -81,6 +81,7 @@ VMap = [
     ('ferre',            'нести',      'to bring, carry'    ), \
     ('amare',            'любить',     'to love'            ), \
     ('ambulare',         'гулять',     'to walk'            ), \
+    ('clāmare',          'кричать',    'to shout'           ), \
     ('cōgitare',         'думать',     'to think'           ), \
     ('dare',             'давать',     'to give'            ), \
     ('expectare',        'ждать',      'to wait'            ), \
@@ -114,10 +115,12 @@ VMap_lat = [x[0] for x in VMap]
 VMap_rus = [x[1] for x in VMap]
 VMap_eng = [x[2] for x in VMap]
 
-# 8 Adjectives
+# 10 Adjectives
 AMap = [
     ('bonus',   'хороший',          'good'          ), \
+    ('caeruleus','синий',           'blue'          ), \
     ('miser',   'жалкий',           'miserable'     ), \
+    ('novus',   'новый',            'new'           ), \
     ('pulcher', 'красивы',          'beautiful'     ), \
     ('ācer',    'острый',           'sharp'         ), \
     ('fortis',  'крепкий',          'strong, brave' ), \
@@ -185,7 +188,7 @@ PrepMap = {}
 
 # -------------------------------------------------------------
 # LATIN
-# 34 Verb stems
+# 35 Verb stems
 LatinV = [
     ('eo',          'ire',              'īvī',          '0', 'to go',             ), \
     ('sum',         'esse',             'fuī',          '0', 'to be',             ), \
@@ -195,6 +198,7 @@ LatinV = [
     ('fero',        'ferre',            'tulī',         '0', 'to bring, carry',   ), \
     ('amo',         'amare',            'amāvī',        '1', 'to love',           ), \
     ('ambulo',      'ambulare',         'ambulāvī',     '1', 'to walk',           ), \
+    ('clāmō',       'clāmare',          'clāmāvī',      '1', 'to shout',          ), \
     ('cōgito',      'cōgitare',         'cōgitāvī',     '1', 'to think',          ), \
     ('do',          'dare',             'dedī',         '1', 'to give',           ), \
     ('expecto',     'expectare',        'exspectāvī',   '1', 'to wait',           ), \
@@ -344,10 +348,12 @@ def Lis3iistemG(word):
 def LisNG(word):
     return LatinN_gender[LatinN_gs.index(word)] == "N"
 
-# 8 Adjectives
+# 10 Adjectives
 LatinA = [
     ('bonus',   'bona',     '12',   'хороший',          'good'          ), \
+    ('caeruleus','caerulea','12',   'синий',          'blue'          ), \
     ('miser',   'misera',   '12',   'жалкий',           'miserable'     ), \
+    ('novus',   'nova',     '12',   'новый',            'new'           ), \
     ('pulcher', 'pulchra',  '12',   'красивы',          'beautiful'     ), \
     ('ācer',    'ācris',    '3a',   'острый',           'sharp'         ), \
     ('fortis',  'fortis',   '3a',   'крепкий',          'strong, brave' ), \
@@ -376,7 +382,7 @@ def LfindDeclNM(word):
 
 # -------------------------------------------------------------
 # RUSSIAN
-# 34 Verb stems
+# 35 Verb stems
 RussianV = [
     ('',           '',           '',    'быть',         'будут',        'ir', 'to be'           ), \
     ('мочь',       'могут',      'ir',  'смочь',        'смогут',       'ir', 'to be able'      ), \
@@ -400,6 +406,7 @@ RussianV = [
     ('смотреть',   'смотрят',    '2v',  'посмотреть',   'посмотрят',    '2v', 'to watch'        ), \
     ('учить',      'учат',       '2c',  'обучить',      'обучат',       '2c', 'to teach'        ), \
     #test below
+    ('кричать',    'кричат',     '1v',  'закричать',    'закричат',     '2v', 'to shout'        ), \
     ('любить',     'любят',      '2v',  'полюбить',     'полюбят',      '2v', 'to love'         ), \
     ('думать',     'ду́мают',     '2v',  'подумать',     'подумают',     '2v', 'to think'        ), \
     ('готовить',   'готовят',    '2v',  'приготовить',  'приготовят',   '2v', 'to prepare',     ), \
@@ -623,8 +630,16 @@ def RfindRootG(word):
     except:
         return RussianN_root[RussianN_gp.index(word)]
 
+# 10 Adjectives
 RussianA = [
-    ('новый'    ), \
-    ('хороший'  ), \
-    ('синий'    ) \
+    ('хороший',          'good'          ), \
+    ('синий',            'dark blue'     ), \
+    ('жалкий',           'miserable'     ), \
+    ('новый',            'new'           ), \
+    ('красивы',          'beautiful'     ), \
+    ('острый',           'sharp'         ), \
+    ('крепкий',          'strong, brave' ), \
+    ('любящий',          'loving'        ), \
+    ('счастливый',       'lucky, happy'  ), \
+    ('благоразумный',    'wise'          ) \
 ]
