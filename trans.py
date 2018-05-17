@@ -204,7 +204,7 @@ def LRAdj(lat_adj, accconstr=False, noun_gender='M', noun_case=None, animate=Fal
 	(lnom, lrt, case, num, lgender) = Latin.reverseDeclineA(lat_adj)
 
 	# always copy the noun's case if known
-	if noun_case != None:
+	if not noun_case in [None,'']:
 		case = noun_case
 
 	else:
@@ -239,6 +239,12 @@ def LRAdj(lat_adj, accconstr=False, noun_gender='M', noun_case=None, animate=Fal
 				case = 'INS'
 			else:
 				case = 'PRP'
+
+		if len(lgender) > 1:
+			if 'M' in case:
+				lgender = 'M'
+			elif 'F' in case:
+				lgender = 'F'
 
 	# look up Russian nomM
 	rnomM = LRaRoot(lnom)
