@@ -26,7 +26,7 @@ NUM_LETTERS_CAP = len(lettersCap)
 VERB_FORM_KEYS = ['FSTSG', 'SNDSG', 'TRDSG', 'FSTPL', 'SNDPL', 'TRDPL']
 
 # irregular verb conjugations
-irreg = ["ire","esse","posse","velle","nolle","ferre"]
+irreg = ["ire","esse","posse","velle","nōlle","ferre"]
 irePres = {"FSTSG":"eo","SNDSG":"is","TRDSG":"it","FSTPL":"imus","SNDPL":"itis","TRDPL":"eunt"}
 ireImpf = {"FSTSG":"ibam","SNDSG":"ibas","TRDSG":"ibat","FSTPL":"ibamus","SNDPL":"ibatis","TRDPL":"ibant"}
 ireFutr = {"FSTSG":"ibo","SNDSG":"ibis","TRDSG":"ibit","FSTPL":"ibimus","SNDPL":"ibitis","TRDPL":"ibunt"}
@@ -245,7 +245,7 @@ def irregular(inf, per, num, tense):
 		return esseConj[tense][form]
 
 	if inf == "posse":
-		temp = irregular("esse", "fuī", per, num, tense)
+		temp = irregular("esse", per, num, tense)
 		if tense == "PRES" or tense == "IMPF" or tense == "FUTR":
 			if temp[0] == "s":
 				return "pos"+temp
@@ -258,7 +258,7 @@ def irregular(inf, per, num, tense):
 		return velleConj[tense][form]
 		
 	if inf == "nōlle":
-		temp = irregular("velle", "voluī", per, num, tense)
+		temp = irregular("velle", per, num, tense)
 		if tense == "PRES" and (form in ["SNDSG", "TRDSG", "SNDPL"]):
 				return "non"+temp
 		else:
