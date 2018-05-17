@@ -1,4 +1,5 @@
 #!/bin/env
+# -*- coding: utf-8 -*-
 import Roots
 import Latin
 import runtest
@@ -16,12 +17,12 @@ for inf in Roots.VMap_lat:
 
 	for tense in ['PRES','IMPF','FUTR','PERF','PLUP','FUTP']:
 		table += '| '
-		table += Latin.conjugate(inf,"FST","SG",tense) + ' | '
+		table += Latin.conjugate(inf,"FST","SG",tense) + ' |'
 		table += Latin.conjugate(inf,"SND","SG",tense) + ' | '
 		table += Latin.conjugate(inf,"TRD","SG",tense) + ' | '
 		table += Latin.conjugate(inf,"FST","PL",tense) + ' | '
 		table += Latin.conjugate(inf,"SND","PL",tense) + ' | '
-		table += Latin.conjugate(inf,"TRD","PL",tense) + ' |\n\n'
+		table += Latin.conjugate(inf,"TRD","PL",tense) + ' |\n'
 
 	table += '\n'
 
