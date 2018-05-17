@@ -59,38 +59,121 @@ if pos == 'N':
 		print Latin.decline(nom,gen,"VOC","PL")
 
 	else:
-		case = Roots.RfindDeclG(Roots.RfindGenN(nom))
+		# d = Roots.RfindDeclG(Roots.RfindGenN(nom))
+		transliterate = sys.argv[3].strip()
+		if transliterateRussian in [None,'']:
+			transliterate = False
 
-		print Russian.decline(nom,gen,"NOM","SG")
-		print Russian.decline(nom,gen,"GEN","SG")
-		print Russian.decline(nom,gen,"DAT","SG")
-		print Russian.decline(nom,gen,"ACC","SG")
-		print Russian.decline(nom,gen,"PRP","SG")
-		print Russian.decline(nom,gen,"INS","SG")
-		print Russian.decline(nom,gen,"NOM","PL")
-		print Russian.decline(nom,gen,"GEN","PL")
-		print Russian.decline(nom,gen,"DAT","PL")
-		print Russian.decline(nom,gen,"ACC","PL")
-		print Russian.decline(nom,gen,"PRP","PL")
-		print Russian.decline(nom,gen,"INS","PL")
+		if transliterate:
+			print runtest.transliterateRussian(Russian.decline(nom,"NOM","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"GEN","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"DAT","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"ACC","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"PRP","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"INS","SG"))
+			print runtest.transliterateRussian(Russian.decline(nom,"NOM","PL"))
+			print runtest.transliterateRussian(Russian.decline(nom,"GEN","PL"))
+			print runtest.transliterateRussian(Russian.decline(nom,"DAT","PL"))
+			print runtest.transliterateRussian(Russian.decline(nom,"ACC","PL"))
+			print runtest.transliterateRussian(Russian.decline(nom,"PRP","PL"))
+			print runtest.transliterateRussian(Russian.decline(nom,"INS","PL"))
+
+		else:
+			print Russian.decline(nom,"NOM","SG")
+			print Russian.decline(nom,"GEN","SG")
+			print Russian.decline(nom,"DAT","SG")
+			print Russian.decline(nom,"ACC","SG")
+			print Russian.decline(nom,"PRP","SG")
+			print Russian.decline(nom,"INS","SG")
+			print Russian.decline(nom,"NOM","PL")
+			print Russian.decline(nom,"GEN","PL")
+			print Russian.decline(nom,"DAT","PL")
+			print Russian.decline(nom,"ACC","PL")
+			print Russian.decline(nom,"PRP","PL")
+			print Russian.decline(nom,"INS","PL")
 
 if pos == 'A':
 	nomM = sys.argv[3].strip()
+	gender = sys.argv[4].strip()
+
 	if lang == "Latin":
 		nomM = Latin.toMacron(nomM)
 		root = Roots.LfindRootNM(nomM)
 		d = Roots.LfindDeclR(root)
-		gender = sys.argv[4].strip()
 
-		print Latin.declineA(nomM,root,d,gender,"NOM","SG")
-		print Latin.declineA(nomM,root,d,gender,"GEN","SG")
-		print Latin.declineA(nomM,root,d,gender,"DAT","SG")
-		print Latin.declineA(nomM,root,d,gender,"ACC","SG")
-		print Latin.declineA(nomM,root,d,gender,"ABL","SG")
-		print Latin.declineA(nomM,root,d,gender,"VOC","SG")
+		if gender in [None,'']:
+			for gender in ["M","F","N"]:
+				print Latin.declineA(nomM,root,d,gender,"NOM","SG")
+				print Latin.declineA(nomM,root,d,gender,"GEN","SG")
+				print Latin.declineA(nomM,root,d,gender,"DAT","SG")
+				print Latin.declineA(nomM,root,d,gender,"ACC","SG")
+				print Latin.declineA(nomM,root,d,gender,"ABL","SG")
+				print Latin.declineA(nomM,root,d,gender,"VOC","SG")
+
+		else:
+			print Latin.declineA(nomM,root,d,gender,"NOM","SG")
+			print Latin.declineA(nomM,root,d,gender,"GEN","SG")
+			print Latin.declineA(nomM,root,d,gender,"DAT","SG")
+			print Latin.declineA(nomM,root,d,gender,"ACC","SG")
+			print Latin.declineA(nomM,root,d,gender,"ABL","SG")
+			print Latin.declineA(nomM,root,d,gender,"VOC","SG")
+
 		print Latin.declineA(nomM,root,d,gender,"NOM","PL")
 		print Latin.declineA(nomM,root,d,gender,"GEN","PL")
 		print Latin.declineA(nomM,root,d,gender,"DAT","PL")
 		print Latin.declineA(nomM,root,d,gender,"ACC","PL")
 		print Latin.declineA(nomM,root,d,gender,"ABL","PL")
 		print Latin.declineA(nomM,root,d,gender,"VOC","PL")
+
+	else:
+		transliterate = False
+		if gender in [None,'','True','False']:
+			transliterate = eval(sys.argv[4])
+			for gender in ["M","F","N"]:
+				if transliterate: 
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"NOM","SG",False))
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"GEN","SG",False))
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"DAT","SG",False))
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"ACC","SG",False))
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"PRP","SG",False))
+					print runtest.transliterateRussian(Russian.declineA(nomM,gender,"INS","SG",False))
+				else:
+					print Russian.declineA(nomM,gender,"NOM","SG",False)
+					print Russian.declineA(nomM,gender,"GEN","SG",False)
+					print Russian.declineA(nomM,gender,"DAT","SG",False)
+					print Russian.declineA(nomM,gender,"ACC","SG",False)
+					print Russian.declineA(nomM,gender,"PRP","SG",False)
+					print Russian.declineA(nomM,gender,"INS","SG",False)
+
+		else:
+			transliterate = eval(sys.argv[5])
+			if transliterate: 
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"NOM","SG",False))
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"GEN","SG",False))
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"DAT","SG",False))
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"ACC","SG",False))
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"PRP","SG",False))
+				print runtest.transliterateRussian(Russian.declineA(nomM,gender,"INS","SG",False))
+			else:
+				print Russian.declineA(nomM,gender,"NOM","SG",False)
+				print Russian.declineA(nomM,gender,"GEN","SG",False)
+				print Russian.declineA(nomM,gender,"DAT","SG",False)
+				print Russian.declineA(nomM,gender,"ACC","SG",False)
+				print Russian.declineA(nomM,gender,"PRP","SG",False)
+				print Russian.declineA(nomM,gender,"INS","SG",False)
+
+		if transliterate:
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"NOM","PL",False))
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"GEN","PL",False))
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"DAT","PL",False))
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"ACC","PL",False))
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"PRP","PL",False))
+			print runtest.transliterateRussian(Russian.declineA(nomM,gender,"INS","PL",False))
+
+		else:
+			print Russian.declineA(nomM,gender,"NOM","PL",False)
+			print Russian.declineA(nomM,gender,"GEN","PL",False)
+			print Russian.declineA(nomM,gender,"DAT","PL",False)
+			print Russian.declineA(nomM,gender,"ACC","PL",False)
+			print Russian.declineA(nomM,gender,"PRP","PL",False)
+			print Russian.declineA(nomM,gender,"INS","PL",False)
