@@ -156,7 +156,7 @@ def RLAdj(rus_adj, accconstr=False, noun_case=None):
 	(rnomM, case, num, gender) = Russian.reverseDeclineA(rus_adj)
 
 	# always copy the noun's case if known
-	if noun_case != None:
+	if not noun_case in [None,'']:
 		case = noun_case
 
 	else:
@@ -191,7 +191,7 @@ def RLAdj(rus_adj, accconstr=False, noun_case=None):
 
 	# look up Latin adj decl
 	ldecl = Roots.LfindDeclR(lroot)
-
+	
 	# construct Latin form
 	return Latin.declineA(lnomM,lroot,ldecl,gender,case,num)
 
