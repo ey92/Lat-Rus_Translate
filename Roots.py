@@ -121,7 +121,7 @@ AMap = [
     ('caeruleus','синий',           'blue'          ), \
     ('miser',   'жалкий',           'miserable'     ), \
     ('novus',   'новый',            'new'           ), \
-    ('pulcher', 'красивы',          'beautiful'     ), \
+    ('pulcher', 'красивый',         'beautiful'     ), \
     ('ācer',    'острый',           'sharp'         ), \
     ('fortis',  'крепкий',          'strong, brave' ), \
     ('amāns',   'любящий',          'loving'        ), \
@@ -354,7 +354,7 @@ LatinA = [
     ('caeruleus','caerulea','12',   'синий',            'blue'          ), \
     ('miser',   'misera',   '12',   'жалкий',           'miserable'     ), \
     ('novus',   'nova',     '12',   'новый',            'new'           ), \
-    ('pulcher', 'pulchra',  '12',   'красивы',          'beautiful'     ), \
+    ('pulcher', 'pulchra',  '12',   'красивый',         'beautiful'     ), \
     ('ācer',    'ācris',    '3a',   'острый',           'sharp'         ), \
     ('fortis',  'fortis',   '3a',   'крепкий',          'strong, brave' ), \
     ('amāns',   'amantis',  '3b',   'любящий',          'loving'        ), \
@@ -636,7 +636,7 @@ RussianA = [
     ('синий',            'dark blue'     ), \
     ('жалкий',           'miserable'     ), \
     ('новый',            'new'           ), \
-    ('красивы',          'beautiful'     ), \
+    ('красивый',         'beautiful'     ), \
     ('острый',           'sharp'         ), \
     ('крепкий',          'strong, brave' ), \
     ('любящий',          'loving'        ), \
