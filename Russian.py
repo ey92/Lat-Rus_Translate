@@ -911,7 +911,7 @@ def declineA(nomM, gender, case, num, animate):
 # -------------------------------------------------------------
 # REVERSE DECLENSION
 
-def getNomM(root,case,num,gender,six):
+def getNomM(root,case,num,gender,six=False):
 	# print(root)
 	ind = 4 if not six else 6
 	nomM = root[:-ind]+'ый'
@@ -938,16 +938,16 @@ def findDeclNomAccSA(root):
 	return getNomM(root,case,num,gender,False)
 
 def findDeclNomAccPA(root):
-	return getNomM(root,'NOM/ACC','PL','F/M/N')
+	return getNomM(root,'NOM/ACC','PL','F/M/N',False)
 
 def findDeclGenSMNA(root):
 	return getNomM(root,'GEN','SG','M/N',True)
 
 def findDeclFemSA(root):
-	return getNomM(root,'GEN/DAT/ACC/PRP/INS','SG','F')
+	return getNomM(root,'GEN/DAT/ACC/PRP/INS','SG','F',False)
 
 def findDeclFemAccSA(root):
-	return getNomM(root,'ACC','SG','F')
+	return getNomM(root,'ACC','SG','F',False)
 
 def findDeclDatSA(root):
 	return getNomM(root,'DAT','SG','M/N')
