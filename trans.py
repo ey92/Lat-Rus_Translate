@@ -244,6 +244,6 @@ def LRAdj(lat_adj, accconstr=False, noun_gender='M', noun_case=None, animate=Fal
 	rnomM = LRaRoot(lnom)
 
 	# should require noun's gender, otherwise guess from latin noun's gender
-	# rgender = lgender if noun_gender == None else noun_gender
+	rgender = lgender if noun_gender == None else noun_gender
 
 	return Russian.declineA(rnomM,rgender,case,num,animate)
