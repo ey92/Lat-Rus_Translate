@@ -865,8 +865,11 @@ def fstDecl(nom, gen, gender, case, num):
 
 def sndDecl(nom, gen, gender, case, num):
 	# some nouns are always plural
-	if Roots.LfindDeclG(gen)[2] == 'P':
-		num = 'PL'
+	try:
+		if Roots.LfindDeclG(gen)[2] == 'P':
+			num = 'PL'
+	except:
+		num = num
 
 	# always masculine or neuter	
 	if gender == "N":
@@ -1458,7 +1461,7 @@ def findDeclNomSA(root, gender):
 def findDeclAccSA(root, gender):
 	num = "SG"
 	case = "ACC"
-	gender = "F/M/N" if gender == None else gender
+	gender = "F/M/N" if gender in [None,''] else gender
 	rt = ""
 	nom = ""
 
