@@ -111,3 +111,6 @@ print(Russian.decline('время','DAT','SG'))
 print(Russian.decline('время','ACC','SG'))
 print(Russian.decline('время','PRP','SG'))
 print(Russian.decline('время','INS','SG'))
+
+lūdebat
+играл

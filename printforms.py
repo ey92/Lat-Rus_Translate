@@ -10,7 +10,7 @@ lang = sys.argv[1].strip()
 language = eval(lang)
 pos = sys.argv[2].strip()
 
-if pos == 'V': 	
+if pos == 'V':
 	inf = sys.argv[3].strip()
 	tense = sys.argv[4].strip()
 	
