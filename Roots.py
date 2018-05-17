@@ -351,7 +351,7 @@ def LisNG(word):
 # 10 Adjectives
 LatinA = [
     ('bonus',   'bona',     '12',   'хороший',          'good'          ), \
-    ('caeruleus','caerulea','12',   'синий',          'blue'          ), \
+    ('caeruleus','caerulea','12',   'синий',            'blue'          ), \
     ('miser',   'misera',   '12',   'жалкий',           'miserable'     ), \
     ('novus',   'nova',     '12',   'новый',            'new'           ), \
     ('pulcher', 'pulchra',  '12',   'красивы',          'beautiful'     ), \
