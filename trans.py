@@ -22,6 +22,10 @@ def RLVerb(rus_verb):
 	
 	# look up Latin root
 	linf = RLvRoot(rinf)
+
+	# if Russian verb in past form, default to 3rd person
+	if len(per) > 3:
+		per = 'TRD'
 	
 	# construct Latin form
 	return Latin.conjugate(linf,per,num,tense)
@@ -126,7 +130,7 @@ def LRNoun(lat_noun, insconstr=False):
 	rnom = LRnRoot(lgen)
 
 	#check for animacy
-	animate = Roots.RisAnimateG()
+	animate = Roots.RisAnimateG(rnom)
 	if case == 'ACC' and animate:
 		case = 'GEN'
 
