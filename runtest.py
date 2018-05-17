@@ -709,6 +709,7 @@ def transRLadjective():
 	elif len(params) == 5:
 		form =  trans.RLAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3],accconstr=params[4])
 
+	print("\nThe Latin equivalent is:")
 	print form
 
 	return cont()
