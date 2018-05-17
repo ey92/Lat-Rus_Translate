@@ -13,12 +13,12 @@ YNCHOICES = YCHOICES+NCHOICES+ACHOICES
 
 def transliterateRussian(rus):
 	rus = rus.replace('a','а').replace('б','b').replace('в','v').replace('г','g').replace('д','d')
-	rus = rus.replace('е','ye').replace('ё','yo').replace('ж','zh').replace('з','z').replace('й','y')
-	rus = rus.replace('и','yi').replace('к','k').replace('л','l').replace('м','m').replace('н','n')
+	rus = rus.replace('е','je').replace('ё','jo').replace('ж','zh').replace('з','z').replace('й','j')
+	rus = rus.replace('и','ji').replace('к','k').replace('л','l').replace('м','m').replace('н','n')
 	rus = rus.replace('о','o').replace('п','p').replace('р','r').replace('с','s').replace('т','t')
 	rus = rus.replace('у','u').replace('ф','f').replace('х','x').replace('ц','ts').replace('ч','ch')
 	rus = rus.replace('ш','sh').replace('щ','sh\'').replace('ъ','').replace('ы','i').replace('ь','\'')
-	rus = rus.replace('э','e').replace('ю','yu').replace('я','ya')
+	rus = rus.replace('э','e').replace('ю','ju').replace('я','ja')
 
 	return rus
 
