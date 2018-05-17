@@ -699,15 +699,17 @@ def transRLadjective():
 		params += ['']
 	
 	if len(params) == 1:
-		form =  trans.LRAdj(params[0])
+		form =  trans.RLAdj(params[0])
 	elif len(params) == 2:
-		form =  trans.LRAdj(params[0],noun_case=params[1])
+		form =  trans.RLAdj(params[0],noun_case=params[1])
 	elif len(params) == 3:
-		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2])
+		form =  trans.RLAdj(params[0],noun_case=params[1],noun_gender=params[2])
 	elif len(params) == 4:
-		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3])
+		form =  trans.RLAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3])
 	elif len(params) == 5:
-		form =  trans.LRAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3],accconstr=params[4])
+		form =  trans.RLAdj(params[0],noun_case=params[1],noun_gender=params[2],animacy=params[3],accconstr=params[4])
+
+	print form
 
 	return cont()
 
