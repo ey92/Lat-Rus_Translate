@@ -1,4 +1,5 @@
 ire
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -10,6 +11,7 @@ ire
 | Ä«vero |Ä«veris | Ä«verit | Ä«verimus | Ä«veritis | Ä«verint |
 
 esse
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -21,6 +23,7 @@ esse
 | fuero |fueris | fuerit | fuerimus | fueritis | fuerint |
 
 posse
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -32,6 +35,7 @@ posse
 | potuero |potueris | potuerit | potuerimus | potueritis | potuerint |
 
 velle
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -43,6 +47,7 @@ velle
 | voluero |volueris | voluerit | voluerimus | volueritis | voluerint |
 
 nÅlle
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -54,6 +59,7 @@ nÅlle
 | nÅluero |nÅlueris | nÅluerit | nÅluerimus | nÅlueritis | nÅluerint |
 
 ferre
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -65,6 +71,7 @@ ferre
 | tulero |tuleris | tulerit | tulerimus | tuleritis | tulerint |
 
 amare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -76,6 +83,7 @@ amare
 | amÄvÄero |amÄvÄeris | amÄvÄerit | amÄvÄerimus | amÄvÄeritis | amÄvÄerint |
 
 ambulare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -87,6 +95,7 @@ ambulare
 | ambulÄvÄero |ambulÄvÄeris | ambulÄvÄerit | ambulÄvÄerimus | ambulÄvÄeritis | ambulÄvÄerint |
 
 clÄmare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -98,6 +107,7 @@ clÄmare
 | clÄmÄvÄero |clÄmÄvÄeris | clÄmÄvÄerit | clÄmÄvÄerimus | clÄmÄvÄeritis | clÄmÄvÄerint |
 
 cÅgitare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -109,6 +119,7 @@ cÅgitare
 | cÅgitÄvÄero |cÅgitÄvÄeris | cÅgitÄvÄerit | cÅgitÄvÄerimus | cÅgitÄvÄeritis | cÅgitÄvÄerint |
 
 dare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -120,6 +131,7 @@ dare
 | dedÄero |dedÄeris | dedÄerit | dedÄerimus | dedÄeritis | dedÄerint |
 
 expectare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -131,6 +143,7 @@ expectare
 | exspectÄvÄero |exspectÄvÄeris | exspectÄvÄerit | exspectÄvÄerimus | exspectÄvÄeritis | exspectÄvÄerint |
 
 parare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -142,6 +155,7 @@ parare
 | parÄvÄero |parÄvÄeris | parÄvÄerit | parÄvÄerimus | parÄvÄeritis | parÄvÄerint |
 
 rogare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -153,6 +167,7 @@ rogare
 | rogÄvÄero |rogÄvÄeris | rogÄvÄerit | rogÄvÄerimus | rogÄvÄeritis | rogÄvÄerint |
 
 spectare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -164,6 +179,7 @@ spectare
 | spectÄvÄero |spectÄvÄeris | spectÄvÄerit | spectÄvÄerimus | spectÄvÄeritis | spectÄvÄerint |
 
 stare
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -175,6 +191,7 @@ stare
 | stetÄero |stetÄeris | stetÄerit | stetÄerimus | stetÄeritis | stetÄerint |
 
 dÄ“lÄ“re
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -186,6 +203,7 @@ dÄ“lÄ“re
 | dÄ“lÄ“vÄero |dÄ“lÄ“vÄeris | dÄ“lÄ“vÄerit | dÄ“lÄ“vÄerimus | dÄ“lÄ“vÄeritis | dÄ“lÄ“vÄerint |
 
 docÄ“re
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -197,6 +215,7 @@ docÄ“re
 | docuÄero |docuÄeris | docuÄerit | docuÄerimus | docuÄeritis | docuÄerint |
 
 habÄ“re
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -208,6 +227,7 @@ habÄ“re
 | habuÄero |habuÄeris | habuÄerit | habuÄerimus | habuÄeritis | habuÄerint |
 
 vidÄ“re
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -219,6 +239,7 @@ vidÄ“re
 | vidÄero |vidÄeris | vidÄerit | vidÄerimus | vidÄeritis | vidÄerint |
 
 claudere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -230,6 +251,7 @@ claudere
 | clausÄero |clausÄeris | clausÄerit | clausÄerimus | clausÄeritis | clausÄerint |
 
 comprehendere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -241,6 +263,7 @@ comprehendere
 | comprehendÄero |comprehendÄeris | comprehendÄerit | comprehendÄerimus | comprehendÄeritis | comprehendÄerint |
 
 dÄ«cere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -252,6 +275,7 @@ dÄ«cere
 | dÄ«xÄero |dÄ«xÄeris | dÄ«xÄerit | dÄ«xÄerimus | dÄ«xÄeritis | dÄ«xÄerint |
 
 edere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -263,6 +287,7 @@ edere
 | Ä“dÄero |Ä“dÄeris | Ä“dÄerit | Ä“dÄerimus | Ä“dÄeritis | Ä“dÄerint |
 
 legere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -274,6 +299,7 @@ legere
 | lÄ“gÄero |lÄ“gÄeris | lÄ“gÄerit | lÄ“gÄerimus | lÄ“gÄeritis | lÄ“gÄerint |
 
 lÅ«dere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -285,6 +311,7 @@ lÅ«dere
 | lÅ«sÄero |lÅ«sÄeris | lÅ«sÄerit | lÅ«sÄerimus | lÅ«sÄeritis | lÅ«sÄerint |
 
 petere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -296,6 +323,7 @@ petere
 | petÄ«vÄero |petÄ«vÄeris | petÄ«vÄerit | petÄ«vÄerimus | petÄ«vÄeritis | petÄ«vÄerint |
 
 pÅnere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -307,6 +335,7 @@ pÅnere
 | pÅsuÄero |pÅsuÄeris | pÅsuÄerit | pÅsuÄerimus | pÅsuÄeritis | pÅsuÄerint |
 
 scrÄ«bere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -318,6 +347,7 @@ scrÄ«bere
 | scrÄ«psÄero |scrÄ«psÄeris | scrÄ«psÄerit | scrÄ«psÄerimus | scrÄ«psÄeritis | scrÄ«psÄerint |
 
 sÄ«dere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -329,6 +359,7 @@ sÄ«dere
 | sÄ«dÄero |sÄ«dÄeris | sÄ«dÄerit | sÄ«dÄerimus | sÄ«dÄeritis | sÄ«dÄerint |
 
 vÄ«vere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -340,6 +371,7 @@ vÄ«vere
 | vÄ«xÄero |vÄ«xÄeris | vÄ«xÄerit | vÄ«xÄerimus | vÄ«xÄeritis | vÄ«xÄerint |
 
 audire
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -351,6 +383,7 @@ audire
 | audÄ«vÄero |audÄ«vÄeris | audÄ«vÄerit | audÄ«vÄerimus | audÄ«vÄeritis | audÄ«vÄerint |
 
 scire
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -362,6 +395,7 @@ scire
 | scÄ«vÄero |scÄ«vÄeris | scÄ«vÄerit | scÄ«vÄerimus | scÄ«vÄeritis | scÄ«vÄerint |
 
 venire
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -373,6 +407,7 @@ venire
 | vÄ“nÄero |vÄ“nÄeris | vÄ“nÄerit | vÄ“nÄerimus | vÄ“nÄeritis | vÄ“nÄerint |
 
 capere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
@@ -384,6 +419,7 @@ capere
 | cÄ“pÄero |cÄ“pÄeris | cÄ“pÄerit | cÄ“pÄerimus | cÄ“pÄeritis | cÄ“pÄerint |
 
 incipere
+
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |

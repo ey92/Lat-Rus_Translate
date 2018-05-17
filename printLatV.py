@@ -10,7 +10,7 @@ table = ''
 
 for inf in Roots.VMap_lat:
 	table += inf
-	table += '\n'
+	table += '\n\n'
 	table += '| S |   |   | P |   |   |\n'
 	table += '| - | - |- | - | - | - |\n'
 	table += '| 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |\n'
