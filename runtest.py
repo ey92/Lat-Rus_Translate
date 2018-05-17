@@ -694,7 +694,7 @@ def transRLadjective():
 	while not (len(params) in [1,2,3,4,5]) or not(checkStr(params)):
 		if params != []:
 			print("Sorry, not the right number of parameters or they aren't all strings.")
-		params = str(raw_input("Please enter the Russian adjective you want to translate\nOptional: provide noun case, noun gender, animacy")).strip()
+		params = str(raw_input("Please enter the Russian adjective you want to translate\nOptional: provide noun case, noun gender, animacy\n")).strip()
 		params = processInput(params, True, False)
 		params += ['']
 	
