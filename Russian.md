@@ -122,8 +122,11 @@ output: `голубых`<br>
 - optional gender parameter (if known)
 - [not yet implemented]
 
-input:  <br>
-output: <br>
+input:  `хорошего`<br>
+output: `[хороший, GEN, SG, M/N]`<br>
+
+input: `новая`<br>
+output: `[новый, NOM, SG, F]`<br>
 
 #### Adjective Parameters
 | Parameter | Meaning      |
