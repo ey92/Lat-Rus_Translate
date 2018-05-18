@@ -583,6 +583,8 @@ RussianN2_eng = [x[5] for x in RussianN2]       # list of all English equiv of R
 
 # return nomS with stresses (if included)
 def RfindNomN(word):
+    if word in RussianN_ns:
+        return word
     return RussianN_ns[RussianN2_ns.index(word)]
 
 # returns nomS of genP provided

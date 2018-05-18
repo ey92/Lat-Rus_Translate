@@ -1113,7 +1113,7 @@ def insSgPhon(noms, gender):
 		root = noms[:-2]
 		if root[-2:] in ['ж','ч','ц','ш','щ'] and not (root[-6:-2] in vowStr):
 			inss = root+'ей'
-		elif noms[-2:] == 'я' and noms[-4:-2] in [e for e in Russian.vowLow if e!='ё']:
+		elif noms[-2:] == 'я' and noms[-4:-2] in [e for e in vowLow if e!='ё']:
 			inss = root+'ей'
 		elif noms[-2:] == 'я' and (noms[-6:-2] in vowStr or noms[-4:-2] == 'ё'):
 			inss = root+'ёй'
