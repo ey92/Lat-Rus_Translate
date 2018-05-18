@@ -40,12 +40,18 @@ Translate Latin Verb to Russian Verb:<br>
 Translate Latin Noun to Russian Noun:<br>
 ![Latin to Russian Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRnoun.png)
 
+Translate Latin Adjective to Russian Adjective:<br>
+![Latin to Russian Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/LRadj.png)
+
 ### Russian to Latin Examples
 Translate Russian Verb to Latin Verb:<br>
 ![Russian to Latin Verb Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RLverb.png)
 
 Translate Russian Noun to Latin Noun:<br>
 ![Russian to Latin Noun Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RLnoun.png)
+
+Translate Russian Adjective to Latin Adjective:<br>
+![Russian to Latin Adjective Example](https://github.com/ey92/Lat-Rus_Translate/blob/master/pics/RLadj.png)
 
 
 ### Latin Examples
