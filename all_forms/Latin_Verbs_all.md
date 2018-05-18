@@ -3,429 +3,429 @@ ire
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| eo |is | it | imus | itis | eunt |
-| ibam |ibas | ibat | ibamus | ibatis | ibant |
-| ibo |ibis | ibit | ibimus | ibitis | ibunt |
-| īvī |īvisti | īvit | īvimus | īvistis | īverunt |
-| īveram |īveras | īverat | īveramus | īveratis | īverant |
-| īvero |īveris | īverit | īverimus | īveritis | īverint |
+| PRES | eo |PRES | is | PRES | it | PRES | imus | PRES | itis | PRES | eunt |
+| IMPF | ibam |IMPF | ibas | IMPF | ibat | IMPF | ibamus | IMPF | ibatis | IMPF | ibant |
+| FUTR | ibo |FUTR | ibis | FUTR | ibit | FUTR | ibimus | FUTR | ibitis | FUTR | ibunt |
+| PERF | īvī |PERF | īvisti | PERF | īvit | PERF | īvimus | PERF | īvistis | PERF | īverunt |
+| PLUP | īveram |PLUP | īveras | PLUP | īverat | PLUP | īveramus | PLUP | īveratis | PLUP | īverant |
+| FUTP | īvero |FUTP | īveris | FUTP | īverit | FUTP | īverimus | FUTP | īveritis | FUTP | īverint |
 
 esse
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| sum |es | est | sumus | estis | sunt |
-| eram |eras | erat | eramus | eratis | erant |
-| ero |eris | erit | erimus | eritis | erunt |
-| fuī |fuisti | fuit | fuimus | fuistis | fuerunt |
-| fueram |fueras | fuerat | fueramus | fueratis | fuerant |
-| fuero |fueris | fuerit | fuerimus | fueritis | fuerint |
+| PRES | sum |PRES | es | PRES | est | PRES | sumus | PRES | estis | PRES | sunt |
+| IMPF | eram |IMPF | eras | IMPF | erat | IMPF | eramus | IMPF | eratis | IMPF | erant |
+| FUTR | ero |FUTR | eris | FUTR | erit | FUTR | erimus | FUTR | eritis | FUTR | erunt |
+| PERF | fuī |PERF | fuisti | PERF | fuit | PERF | fuimus | PERF | fuistis | PERF | fuerunt |
+| PLUP | fueram |PLUP | fueras | PLUP | fuerat | PLUP | fueramus | PLUP | fueratis | PLUP | fuerant |
+| FUTP | fuero |FUTP | fueris | FUTP | fuerit | FUTP | fuerimus | FUTP | fueritis | FUTP | fuerint |
 
 posse
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| possum |potes | potest | possumus | potestis | possunt |
-| poteram |poteras | poterat | poteramus | poteratis | poterant |
-| potero |poteris | poterit | poterimus | poteritis | poterunt |
-| potuī |potuisti | potuit | potuimus | potuistis | potuerunt |
-| potueram |potueras | potuerat | potueramus | potueratis | potuerant |
-| potuero |potueris | potuerit | potuerimus | potueritis | potuerint |
+| PRES | possum |PRES | potes | PRES | potest | PRES | possumus | PRES | potestis | PRES | possunt |
+| IMPF | poteram |IMPF | poteras | IMPF | poterat | IMPF | poteramus | IMPF | poteratis | IMPF | poterant |
+| FUTR | potero |FUTR | poteris | FUTR | poterit | FUTR | poterimus | FUTR | poteritis | FUTR | poterunt |
+| PERF | potuī |PERF | potuisti | PERF | potuit | PERF | potuimus | PERF | potuistis | PERF | potuerunt |
+| PLUP | potueram |PLUP | potueras | PLUP | potuerat | PLUP | potueramus | PLUP | potueratis | PLUP | potuerant |
+| FUTP | potuero |FUTP | potueris | FUTP | potuerit | FUTP | potuerimus | FUTP | potueritis | FUTP | potuerint |
 
 velle
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| volo |vis | vult | volumus | vultis | volunt |
-| volēbam |volēbas | volēbat | volēbamus | volēbatis | volēbant |
-| volam |volēs | volet | volēmus | volētis | volent |
-| voluī |voluisti | voluit | voluimus | voluistis | voluērunt |
-| volueram |volueras | voluerat | volueramus | volueratis | voluerant |
-| voluero |volueris | voluerit | voluerimus | volueritis | voluerint |
+| PRES | volo |PRES | vis | PRES | vult | PRES | volumus | PRES | vultis | PRES | volunt |
+| IMPF | volēbam |IMPF | volēbas | IMPF | volēbat | IMPF | volēbamus | IMPF | volēbatis | IMPF | volēbant |
+| FUTR | volam |FUTR | volēs | FUTR | volet | FUTR | volēmus | FUTR | volētis | FUTR | volent |
+| PERF | voluī |PERF | voluisti | PERF | voluit | PERF | voluimus | PERF | voluistis | PERF | voluērunt |
+| PLUP | volueram |PLUP | volueras | PLUP | voluerat | PLUP | volueramus | PLUP | volueratis | PLUP | voluerant |
+| FUTP | voluero |FUTP | volueris | FUTP | voluerit | FUTP | voluerimus | FUTP | volueritis | FUTP | voluerint |
 
 nōlle
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| nōlo |nonvis | nonvult | nōlumus | nonvultis | nōlunt |
-| nōlēbam |nōlēbas | nōlēbat | nōlēbamus | nōlēbatis | nōlēbant |
-| nōlam |nōlēs | nōlet | nōlēmus | nōlētis | nōlent |
-| nōluī |nōluisti | nōluit | nōluimus | nōluistis | nōluērunt |
-| nōlueram |nōlueras | nōluerat | nōlueramus | nōlueratis | nōluerant |
-| nōluero |nōlueris | nōluerit | nōluerimus | nōlueritis | nōluerint |
+| PRES | nōlo |PRES | nonvis | PRES | nonvult | PRES | nōlumus | PRES | nonvultis | PRES | nōlunt |
+| IMPF | nōlēbam |IMPF | nōlēbas | IMPF | nōlēbat | IMPF | nōlēbamus | IMPF | nōlēbatis | IMPF | nōlēbant |
+| FUTR | nōlam |FUTR | nōlēs | FUTR | nōlet | FUTR | nōlēmus | FUTR | nōlētis | FUTR | nōlent |
+| PERF | nōluī |PERF | nōluisti | PERF | nōluit | PERF | nōluimus | PERF | nōluistis | PERF | nōluērunt |
+| PLUP | nōlueram |PLUP | nōlueras | PLUP | nōluerat | PLUP | nōlueramus | PLUP | nōlueratis | PLUP | nōluerant |
+| FUTP | nōluero |FUTP | nōlueris | FUTP | nōluerit | FUTP | nōluerimus | FUTP | nōlueritis | FUTP | nōluerint |
 
 ferre
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| fero |fers | fert | ferimus | fertis | ferunt |
-| ferēbam |ferēbas | ferēbat | ferēbamus | ferēbatis | ferēbant |
-| feram |ferēs | feret | ferēmus | ferētis | ferent |
-| tulī |tulisti | tulit | tulimus | tulistis | tulērunt |
-| tuleram |tuleras | tulerat | tuleramus | tuleratis | tulerant |
-| tulero |tuleris | tulerit | tulerimus | tuleritis | tulerint |
+| PRES | fero |PRES | fers | PRES | fert | PRES | ferimus | PRES | fertis | PRES | ferunt |
+| IMPF | ferēbam |IMPF | ferēbas | IMPF | ferēbat | IMPF | ferēbamus | IMPF | ferēbatis | IMPF | ferēbant |
+| FUTR | feram |FUTR | ferēs | FUTR | feret | FUTR | ferēmus | FUTR | ferētis | FUTR | ferent |
+| PERF | tulī |PERF | tulisti | PERF | tulit | PERF | tulimus | PERF | tulistis | PERF | tulērunt |
+| PLUP | tuleram |PLUP | tuleras | PLUP | tulerat | PLUP | tuleramus | PLUP | tuleratis | PLUP | tulerant |
+| FUTP | tulero |FUTP | tuleris | FUTP | tulerit | FUTP | tulerimus | FUTP | tuleritis | FUTP | tulerint |
 
 amare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| amo |amas | amat | amamus | amatis | amant |
-| amabam |amabas | amabat | amabamus | amabatis | amabant |
-| amabo |amabis | amabit | amabimus | amabitis | amabunt |
-| amāvī |amāvisti | amāvit | amāvimus | amāvistis | amāverunt |
-| amāveram |amāveras | amāverat | amāveramus | amāveratis | amāverant |
-| amāvero |amāveris | amāverit | amāverimus | amāveritis | amāverint |
+| PRES | amo |PRES | amas | PRES | amat | PRES | amamus | PRES | amatis | PRES | amant |
+| IMPF | amabam |IMPF | amabas | IMPF | amabat | IMPF | amabamus | IMPF | amabatis | IMPF | amabant |
+| FUTR | amabo |FUTR | amabis | FUTR | amabit | FUTR | amabimus | FUTR | amabitis | FUTR | amabunt |
+| PERF | amāvī |PERF | amāvisti | PERF | amāvit | PERF | amāvimus | PERF | amāvistis | PERF | amāverunt |
+| PLUP | amāveram |PLUP | amāveras | PLUP | amāverat | PLUP | amāveramus | PLUP | amāveratis | PLUP | amāverant |
+| FUTP | amāvero |FUTP | amāveris | FUTP | amāverit | FUTP | amāverimus | FUTP | amāveritis | FUTP | amāverint |
 
 ambulare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| ambulo |ambulas | ambulat | ambulamus | ambulatis | ambulant |
-| ambulabam |ambulabas | ambulabat | ambulabamus | ambulabatis | ambulabant |
-| ambulabo |ambulabis | ambulabit | ambulabimus | ambulabitis | ambulabunt |
-| ambulāvī |ambulāvisti | ambulāvit | ambulāvimus | ambulāvistis | ambulāverunt |
-| ambulāveram |ambulāveras | ambulāverat | ambulāveramus | ambulāveratis | ambulāverant |
-| ambulāvero |ambulāveris | ambulāverit | ambulāverimus | ambulāveritis | ambulāverint |
+| PRES | ambulo |PRES | ambulas | PRES | ambulat | PRES | ambulamus | PRES | ambulatis | PRES | ambulant |
+| IMPF | ambulabam |IMPF | ambulabas | IMPF | ambulabat | IMPF | ambulabamus | IMPF | ambulabatis | IMPF | ambulabant |
+| FUTR | ambulabo |FUTR | ambulabis | FUTR | ambulabit | FUTR | ambulabimus | FUTR | ambulabitis | FUTR | ambulabunt |
+| PERF | ambulāvī |PERF | ambulāvisti | PERF | ambulāvit | PERF | ambulāvimus | PERF | ambulāvistis | PERF | ambulāverunt |
+| PLUP | ambulāveram |PLUP | ambulāveras | PLUP | ambulāverat | PLUP | ambulāveramus | PLUP | ambulāveratis | PLUP | ambulāverant |
+| FUTP | ambulāvero |FUTP | ambulāveris | FUTP | ambulāverit | FUTP | ambulāverimus | FUTP | ambulāveritis | FUTP | ambulāverint |
 
 clāmare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| clāmo |clāmas | clāmat | clāmamus | clāmatis | clāmant |
-| clāmabam |clāmabas | clāmabat | clāmabamus | clāmabatis | clāmabant |
-| clāmabo |clāmabis | clāmabit | clāmabimus | clāmabitis | clāmabunt |
-| clāmāvī |clāmāvisti | clāmāvit | clāmāvimus | clāmāvistis | clāmāverunt |
-| clāmāveram |clāmāveras | clāmāverat | clāmāveramus | clāmāveratis | clāmāverant |
-| clāmāvero |clāmāveris | clāmāverit | clāmāverimus | clāmāveritis | clāmāverint |
+| PRES | clāmo |PRES | clāmas | PRES | clāmat | PRES | clāmamus | PRES | clāmatis | PRES | clāmant |
+| IMPF | clāmabam |IMPF | clāmabas | IMPF | clāmabat | IMPF | clāmabamus | IMPF | clāmabatis | IMPF | clāmabant |
+| FUTR | clāmabo |FUTR | clāmabis | FUTR | clāmabit | FUTR | clāmabimus | FUTR | clāmabitis | FUTR | clāmabunt |
+| PERF | clāmāvī |PERF | clāmāvisti | PERF | clāmāvit | PERF | clāmāvimus | PERF | clāmāvistis | PERF | clāmāverunt |
+| PLUP | clāmāveram |PLUP | clāmāveras | PLUP | clāmāverat | PLUP | clāmāveramus | PLUP | clāmāveratis | PLUP | clāmāverant |
+| FUTP | clāmāvero |FUTP | clāmāveris | FUTP | clāmāverit | FUTP | clāmāverimus | FUTP | clāmāveritis | FUTP | clāmāverint |
 
 cōgitare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| cōgito |cōgitas | cōgitat | cōgitamus | cōgitatis | cōgitant |
-| cōgitabam |cōgitabas | cōgitabat | cōgitabamus | cōgitabatis | cōgitabant |
-| cōgitabo |cōgitabis | cōgitabit | cōgitabimus | cōgitabitis | cōgitabunt |
-| cōgitāvī |cōgitāvisti | cōgitāvit | cōgitāvimus | cōgitāvistis | cōgitāverunt |
-| cōgitāveram |cōgitāveras | cōgitāverat | cōgitāveramus | cōgitāveratis | cōgitāverant |
-| cōgitāvero |cōgitāveris | cōgitāverit | cōgitāverimus | cōgitāveritis | cōgitāverint |
+| PRES | cōgito |PRES | cōgitas | PRES | cōgitat | PRES | cōgitamus | PRES | cōgitatis | PRES | cōgitant |
+| IMPF | cōgitabam |IMPF | cōgitabas | IMPF | cōgitabat | IMPF | cōgitabamus | IMPF | cōgitabatis | IMPF | cōgitabant |
+| FUTR | cōgitabo |FUTR | cōgitabis | FUTR | cōgitabit | FUTR | cōgitabimus | FUTR | cōgitabitis | FUTR | cōgitabunt |
+| PERF | cōgitāvī |PERF | cōgitāvisti | PERF | cōgitāvit | PERF | cōgitāvimus | PERF | cōgitāvistis | PERF | cōgitāverunt |
+| PLUP | cōgitāveram |PLUP | cōgitāveras | PLUP | cōgitāverat | PLUP | cōgitāveramus | PLUP | cōgitāveratis | PLUP | cōgitāverant |
+| FUTP | cōgitāvero |FUTP | cōgitāveris | FUTP | cōgitāverit | FUTP | cōgitāverimus | FUTP | cōgitāveritis | FUTP | cōgitāverint |
 
 dare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| do |das | dat | damus | datis | dant |
-| dabam |dabas | dabat | dabamus | dabatis | dabant |
-| dabo |dabis | dabit | dabimus | dabitis | dabunt |
-| dedī |dedisti | dedit | dedimus | dedistis | dederunt |
-| dederam |dederas | dederat | dederamus | dederatis | dederant |
-| dedero |dederis | dederit | dederimus | dederitis | dederint |
+| PRES | do |PRES | das | PRES | dat | PRES | damus | PRES | datis | PRES | dant |
+| IMPF | dabam |IMPF | dabas | IMPF | dabat | IMPF | dabamus | IMPF | dabatis | IMPF | dabant |
+| FUTR | dabo |FUTR | dabis | FUTR | dabit | FUTR | dabimus | FUTR | dabitis | FUTR | dabunt |
+| PERF | dedī |PERF | dedisti | PERF | dedit | PERF | dedimus | PERF | dedistis | PERF | dederunt |
+| PLUP | dederam |PLUP | dederas | PLUP | dederat | PLUP | dederamus | PLUP | dederatis | PLUP | dederant |
+| FUTP | dedero |FUTP | dederis | FUTP | dederit | FUTP | dederimus | FUTP | dederitis | FUTP | dederint |
 
 expectare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| expecto |expectas | expectat | expectamus | expectatis | expectant |
-| expectabam |expectabas | expectabat | expectabamus | expectabatis | expectabant |
-| expectabo |expectabis | expectabit | expectabimus | expectabitis | expectabunt |
-| exspectāvī |exspectāvisti | exspectāvit | exspectāvimus | exspectāvistis | exspectāverunt |
-| exspectāveram |exspectāveras | exspectāverat | exspectāveramus | exspectāveratis | exspectāverant |
-| exspectāvero |exspectāveris | exspectāverit | exspectāverimus | exspectāveritis | exspectāverint |
+| PRES | expecto |PRES | expectas | PRES | expectat | PRES | expectamus | PRES | expectatis | PRES | expectant |
+| IMPF | expectabam |IMPF | expectabas | IMPF | expectabat | IMPF | expectabamus | IMPF | expectabatis | IMPF | expectabant |
+| FUTR | expectabo |FUTR | expectabis | FUTR | expectabit | FUTR | expectabimus | FUTR | expectabitis | FUTR | expectabunt |
+| PERF | exspectāvī |PERF | exspectāvisti | PERF | exspectāvit | PERF | exspectāvimus | PERF | exspectāvistis | PERF | exspectāverunt |
+| PLUP | exspectāveram |PLUP | exspectāveras | PLUP | exspectāverat | PLUP | exspectāveramus | PLUP | exspectāveratis | PLUP | exspectāverant |
+| FUTP | exspectāvero |FUTP | exspectāveris | FUTP | exspectāverit | FUTP | exspectāverimus | FUTP | exspectāveritis | FUTP | exspectāverint |
 
 parare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| paro |paras | parat | paramus | paratis | parant |
-| parabam |parabas | parabat | parabamus | parabatis | parabant |
-| parabo |parabis | parabit | parabimus | parabitis | parabunt |
-| parāvī |parāvisti | parāvit | parāvimus | parāvistis | parāverunt |
-| parāveram |parāveras | parāverat | parāveramus | parāveratis | parāverant |
-| parāvero |parāveris | parāverit | parāverimus | parāveritis | parāverint |
+| PRES | paro |PRES | paras | PRES | parat | PRES | paramus | PRES | paratis | PRES | parant |
+| IMPF | parabam |IMPF | parabas | IMPF | parabat | IMPF | parabamus | IMPF | parabatis | IMPF | parabant |
+| FUTR | parabo |FUTR | parabis | FUTR | parabit | FUTR | parabimus | FUTR | parabitis | FUTR | parabunt |
+| PERF | parāvī |PERF | parāvisti | PERF | parāvit | PERF | parāvimus | PERF | parāvistis | PERF | parāverunt |
+| PLUP | parāveram |PLUP | parāveras | PLUP | parāverat | PLUP | parāveramus | PLUP | parāveratis | PLUP | parāverant |
+| FUTP | parāvero |FUTP | parāveris | FUTP | parāverit | FUTP | parāverimus | FUTP | parāveritis | FUTP | parāverint |
 
 rogare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| rogo |rogas | rogat | rogamus | rogatis | rogant |
-| rogabam |rogabas | rogabat | rogabamus | rogabatis | rogabant |
-| rogabo |rogabis | rogabit | rogabimus | rogabitis | rogabunt |
-| rogāvī |rogāvisti | rogāvit | rogāvimus | rogāvistis | rogāverunt |
-| rogāveram |rogāveras | rogāverat | rogāveramus | rogāveratis | rogāverant |
-| rogāvero |rogāveris | rogāverit | rogāverimus | rogāveritis | rogāverint |
+| PRES | rogo |PRES | rogas | PRES | rogat | PRES | rogamus | PRES | rogatis | PRES | rogant |
+| IMPF | rogabam |IMPF | rogabas | IMPF | rogabat | IMPF | rogabamus | IMPF | rogabatis | IMPF | rogabant |
+| FUTR | rogabo |FUTR | rogabis | FUTR | rogabit | FUTR | rogabimus | FUTR | rogabitis | FUTR | rogabunt |
+| PERF | rogāvī |PERF | rogāvisti | PERF | rogāvit | PERF | rogāvimus | PERF | rogāvistis | PERF | rogāverunt |
+| PLUP | rogāveram |PLUP | rogāveras | PLUP | rogāverat | PLUP | rogāveramus | PLUP | rogāveratis | PLUP | rogāverant |
+| FUTP | rogāvero |FUTP | rogāveris | FUTP | rogāverit | FUTP | rogāverimus | FUTP | rogāveritis | FUTP | rogāverint |
 
 spectare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| specto |spectas | spectat | spectamus | spectatis | spectant |
-| spectabam |spectabas | spectabat | spectabamus | spectabatis | spectabant |
-| spectabo |spectabis | spectabit | spectabimus | spectabitis | spectabunt |
-| spectāvī |spectāvisti | spectāvit | spectāvimus | spectāvistis | spectāverunt |
-| spectāveram |spectāveras | spectāverat | spectāveramus | spectāveratis | spectāverant |
-| spectāvero |spectāveris | spectāverit | spectāverimus | spectāveritis | spectāverint |
+| PRES | specto |PRES | spectas | PRES | spectat | PRES | spectamus | PRES | spectatis | PRES | spectant |
+| IMPF | spectabam |IMPF | spectabas | IMPF | spectabat | IMPF | spectabamus | IMPF | spectabatis | IMPF | spectabant |
+| FUTR | spectabo |FUTR | spectabis | FUTR | spectabit | FUTR | spectabimus | FUTR | spectabitis | FUTR | spectabunt |
+| PERF | spectāvī |PERF | spectāvisti | PERF | spectāvit | PERF | spectāvimus | PERF | spectāvistis | PERF | spectāverunt |
+| PLUP | spectāveram |PLUP | spectāveras | PLUP | spectāverat | PLUP | spectāveramus | PLUP | spectāveratis | PLUP | spectāverant |
+| FUTP | spectāvero |FUTP | spectāveris | FUTP | spectāverit | FUTP | spectāverimus | FUTP | spectāveritis | FUTP | spectāverint |
 
 stare
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| sto |stas | stat | stamus | statis | stant |
-| stabam |stabas | stabat | stabamus | stabatis | stabant |
-| stabo |stabis | stabit | stabimus | stabitis | stabunt |
-| stetī |stetisti | stetit | stetimus | stetistis | steterunt |
-| steteram |steteras | steterat | steteramus | steteratis | steterant |
-| stetero |steteris | steterit | steterimus | steteritis | steterint |
+| PRES | sto |PRES | stas | PRES | stat | PRES | stamus | PRES | statis | PRES | stant |
+| IMPF | stabam |IMPF | stabas | IMPF | stabat | IMPF | stabamus | IMPF | stabatis | IMPF | stabant |
+| FUTR | stabo |FUTR | stabis | FUTR | stabit | FUTR | stabimus | FUTR | stabitis | FUTR | stabunt |
+| PERF | stetī |PERF | stetisti | PERF | stetit | PERF | stetimus | PERF | stetistis | PERF | steterunt |
+| PLUP | steteram |PLUP | steteras | PLUP | steterat | PLUP | steteramus | PLUP | steteratis | PLUP | steterant |
+| FUTP | stetero |FUTP | steteris | FUTP | steterit | FUTP | steterimus | FUTP | steteritis | FUTP | steterint |
 
 dēlēre
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| dēleo |dēles | dēlet | dēlemus | dēletis | dēlent |
-| dēlēbam |dēlēbas | dēlēbat | dēlēbamus | dēlēbatis | dēlēbant |
-| dēlēbo |dēlēbis | dēlēbit | dēlēbimus | dēlēbitis | dēlēbunt |
-| dēlēvī |dēlēvisti | dēlēvit | dēlēvimus | dēlēvistis | dēlēverunt |
-| dēlēveram |dēlēveras | dēlēverat | dēlēveramus | dēlēveratis | dēlēverant |
-| dēlēvero |dēlēveris | dēlēverit | dēlēverimus | dēlēveritis | dēlēverint |
+| PRES | dēleo |PRES | dēles | PRES | dēlet | PRES | dēlemus | PRES | dēletis | PRES | dēlent |
+| IMPF | dēlēbam |IMPF | dēlēbas | IMPF | dēlēbat | IMPF | dēlēbamus | IMPF | dēlēbatis | IMPF | dēlēbant |
+| FUTR | dēlēbo |FUTR | dēlēbis | FUTR | dēlēbit | FUTR | dēlēbimus | FUTR | dēlēbitis | FUTR | dēlēbunt |
+| PERF | dēlēvī |PERF | dēlēvisti | PERF | dēlēvit | PERF | dēlēvimus | PERF | dēlēvistis | PERF | dēlēverunt |
+| PLUP | dēlēveram |PLUP | dēlēveras | PLUP | dēlēverat | PLUP | dēlēveramus | PLUP | dēlēveratis | PLUP | dēlēverant |
+| FUTP | dēlēvero |FUTP | dēlēveris | FUTP | dēlēverit | FUTP | dēlēverimus | FUTP | dēlēveritis | FUTP | dēlēverint |
 
 docēre
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| doceo |doces | docet | docemus | docetis | docent |
-| docēbam |docēbas | docēbat | docēbamus | docēbatis | docēbant |
-| docēbo |docēbis | docēbit | docēbimus | docēbitis | docēbunt |
-| docuī |docuisti | docuit | docuimus | docuistis | docuerunt |
-| docueram |docueras | docuerat | docueramus | docueratis | docuerant |
-| docuero |docueris | docuerit | docuerimus | docueritis | docuerint |
+| PRES | doceo |PRES | doces | PRES | docet | PRES | docemus | PRES | docetis | PRES | docent |
+| IMPF | docēbam |IMPF | docēbas | IMPF | docēbat | IMPF | docēbamus | IMPF | docēbatis | IMPF | docēbant |
+| FUTR | docēbo |FUTR | docēbis | FUTR | docēbit | FUTR | docēbimus | FUTR | docēbitis | FUTR | docēbunt |
+| PERF | docuī |PERF | docuisti | PERF | docuit | PERF | docuimus | PERF | docuistis | PERF | docuerunt |
+| PLUP | docueram |PLUP | docueras | PLUP | docuerat | PLUP | docueramus | PLUP | docueratis | PLUP | docuerant |
+| FUTP | docuero |FUTP | docueris | FUTP | docuerit | FUTP | docuerimus | FUTP | docueritis | FUTP | docuerint |
 
 habēre
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| habeo |habes | habet | habemus | habetis | habent |
-| habēbam |habēbas | habēbat | habēbamus | habēbatis | habēbant |
-| habēbo |habēbis | habēbit | habēbimus | habēbitis | habēbunt |
-| habuī |habuisti | habuit | habuimus | habuistis | habuerunt |
-| habueram |habueras | habuerat | habueramus | habueratis | habuerant |
-| habuero |habueris | habuerit | habuerimus | habueritis | habuerint |
+| PRES | habeo |PRES | habes | PRES | habet | PRES | habemus | PRES | habetis | PRES | habent |
+| IMPF | habēbam |IMPF | habēbas | IMPF | habēbat | IMPF | habēbamus | IMPF | habēbatis | IMPF | habēbant |
+| FUTR | habēbo |FUTR | habēbis | FUTR | habēbit | FUTR | habēbimus | FUTR | habēbitis | FUTR | habēbunt |
+| PERF | habuī |PERF | habuisti | PERF | habuit | PERF | habuimus | PERF | habuistis | PERF | habuerunt |
+| PLUP | habueram |PLUP | habueras | PLUP | habuerat | PLUP | habueramus | PLUP | habueratis | PLUP | habuerant |
+| FUTP | habuero |FUTP | habueris | FUTP | habuerit | FUTP | habuerimus | FUTP | habueritis | FUTP | habuerint |
 
 vidēre
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| video |vides | videt | videmus | videtis | vident |
-| vidēbam |vidēbas | vidēbat | vidēbamus | vidēbatis | vidēbant |
-| vidēbo |vidēbis | vidēbit | vidēbimus | vidēbitis | vidēbunt |
-| vidī |vidisti | vidit | vidimus | vidistis | viderunt |
-| videram |videras | viderat | videramus | videratis | viderant |
-| videro |videris | viderit | viderimus | videritis | viderint |
+| PRES | video |PRES | vides | PRES | videt | PRES | videmus | PRES | videtis | PRES | vident |
+| IMPF | vidēbam |IMPF | vidēbas | IMPF | vidēbat | IMPF | vidēbamus | IMPF | vidēbatis | IMPF | vidēbant |
+| FUTR | vidēbo |FUTR | vidēbis | FUTR | vidēbit | FUTR | vidēbimus | FUTR | vidēbitis | FUTR | vidēbunt |
+| PERF | vidī |PERF | vidisti | PERF | vidit | PERF | vidimus | PERF | vidistis | PERF | viderunt |
+| PLUP | videram |PLUP | videras | PLUP | viderat | PLUP | videramus | PLUP | videratis | PLUP | viderant |
+| FUTP | videro |FUTP | videris | FUTP | viderit | FUTP | viderimus | FUTP | videritis | FUTP | viderint |
 
 claudere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| claudo |claudis | claudit | claudimus | clauditis | claudunt |
-| claudebam |claudebas | claudebat | claudebamus | claudebatis | claudebant |
-| claudam |claudes | claudet | claudemus | claudetis | claudent |
-| clausī |clausisti | clausit | clausimus | clausistis | clauserunt |
-| clauseram |clauseras | clauserat | clauseramus | clauseratis | clauserant |
-| clausero |clauseris | clauserit | clauserimus | clauseritis | clauserint |
+| PRES | claudo |PRES | claudis | PRES | claudit | PRES | claudimus | PRES | clauditis | PRES | claudunt |
+| IMPF | claudebam |IMPF | claudebas | IMPF | claudebat | IMPF | claudebamus | IMPF | claudebatis | IMPF | claudebant |
+| FUTR | claudam |FUTR | claudes | FUTR | claudet | FUTR | claudemus | FUTR | claudetis | FUTR | claudent |
+| PERF | clausī |PERF | clausisti | PERF | clausit | PERF | clausimus | PERF | clausistis | PERF | clauserunt |
+| PLUP | clauseram |PLUP | clauseras | PLUP | clauserat | PLUP | clauseramus | PLUP | clauseratis | PLUP | clauserant |
+| FUTP | clausero |FUTP | clauseris | FUTP | clauserit | FUTP | clauserimus | FUTP | clauseritis | FUTP | clauserint |
 
 comprehendere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| comprehendo |comprehendis | comprehendit | comprehendimus | comprehenditis | comprehendunt |
-| comprehendebam |comprehendebas | comprehendebat | comprehendebamus | comprehendebatis | comprehendebant |
-| comprehendam |comprehendes | comprehendet | comprehendemus | comprehendetis | comprehendent |
-| comprehendī |comprehendisti | comprehendit | comprehendimus | comprehendistis | comprehenderunt |
-| comprehenderam |comprehenderas | comprehenderat | comprehenderamus | comprehenderatis | comprehenderant |
-| comprehendero |comprehenderis | comprehenderit | comprehenderimus | comprehenderitis | comprehenderint |
+| PRES | comprehendo |PRES | comprehendis | PRES | comprehendit | PRES | comprehendimus | PRES | comprehenditis | PRES | comprehendunt |
+| IMPF | comprehendebam |IMPF | comprehendebas | IMPF | comprehendebat | IMPF | comprehendebamus | IMPF | comprehendebatis | IMPF | comprehendebant |
+| FUTR | comprehendam |FUTR | comprehendes | FUTR | comprehendet | FUTR | comprehendemus | FUTR | comprehendetis | FUTR | comprehendent |
+| PERF | comprehendī |PERF | comprehendisti | PERF | comprehendit | PERF | comprehendimus | PERF | comprehendistis | PERF | comprehenderunt |
+| PLUP | comprehenderam |PLUP | comprehenderas | PLUP | comprehenderat | PLUP | comprehenderamus | PLUP | comprehenderatis | PLUP | comprehenderant |
+| FUTP | comprehendero |FUTP | comprehenderis | FUTP | comprehenderit | FUTP | comprehenderimus | FUTP | comprehenderitis | FUTP | comprehenderint |
 
 dīcere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| dīco |dīcis | dīcit | dīcimus | dīcitis | dīcunt |
-| dīcebam |dīcebas | dīcebat | dīcebamus | dīcebatis | dīcebant |
-| dīcam |dīces | dīcet | dīcemus | dīcetis | dīcent |
-| dīxī |dīxisti | dīxit | dīximus | dīxistis | dīxerunt |
-| dīxeram |dīxeras | dīxerat | dīxeramus | dīxeratis | dīxerant |
-| dīxero |dīxeris | dīxerit | dīxerimus | dīxeritis | dīxerint |
+| PRES | dīco |PRES | dīcis | PRES | dīcit | PRES | dīcimus | PRES | dīcitis | PRES | dīcunt |
+| IMPF | dīcebam |IMPF | dīcebas | IMPF | dīcebat | IMPF | dīcebamus | IMPF | dīcebatis | IMPF | dīcebant |
+| FUTR | dīcam |FUTR | dīces | FUTR | dīcet | FUTR | dīcemus | FUTR | dīcetis | FUTR | dīcent |
+| PERF | dīxī |PERF | dīxisti | PERF | dīxit | PERF | dīximus | PERF | dīxistis | PERF | dīxerunt |
+| PLUP | dīxeram |PLUP | dīxeras | PLUP | dīxerat | PLUP | dīxeramus | PLUP | dīxeratis | PLUP | dīxerant |
+| FUTP | dīxero |FUTP | dīxeris | FUTP | dīxerit | FUTP | dīxerimus | FUTP | dīxeritis | FUTP | dīxerint |
 
 edere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| edo |edis | edit | edimus | editis | edunt |
-| edebam |edebas | edebat | edebamus | edebatis | edebant |
-| edam |edes | edet | edemus | edetis | edent |
-| ēdī |ēdisti | ēdit | ēdimus | ēdistis | ēderunt |
-| ēderam |ēderas | ēderat | ēderamus | ēderatis | ēderant |
-| ēdero |ēderis | ēderit | ēderimus | ēderitis | ēderint |
+| PRES | edo |PRES | edis | PRES | edit | PRES | edimus | PRES | editis | PRES | edunt |
+| IMPF | edebam |IMPF | edebas | IMPF | edebat | IMPF | edebamus | IMPF | edebatis | IMPF | edebant |
+| FUTR | edam |FUTR | edes | FUTR | edet | FUTR | edemus | FUTR | edetis | FUTR | edent |
+| PERF | ēdī |PERF | ēdisti | PERF | ēdit | PERF | ēdimus | PERF | ēdistis | PERF | ēderunt |
+| PLUP | ēderam |PLUP | ēderas | PLUP | ēderat | PLUP | ēderamus | PLUP | ēderatis | PLUP | ēderant |
+| FUTP | ēdero |FUTP | ēderis | FUTP | ēderit | FUTP | ēderimus | FUTP | ēderitis | FUTP | ēderint |
 
 legere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| lego |legis | legit | legimus | legitis | legunt |
-| legebam |legebas | legebat | legebamus | legebatis | legebant |
-| legam |leges | leget | legemus | legetis | legent |
-| lēgī |lēgisti | lēgit | lēgimus | lēgistis | lēgerunt |
-| lēgeram |lēgeras | lēgerat | lēgeramus | lēgeratis | lēgerant |
-| lēgero |lēgeris | lēgerit | lēgerimus | lēgeritis | lēgerint |
+| PRES | lego |PRES | legis | PRES | legit | PRES | legimus | PRES | legitis | PRES | legunt |
+| IMPF | legebam |IMPF | legebas | IMPF | legebat | IMPF | legebamus | IMPF | legebatis | IMPF | legebant |
+| FUTR | legam |FUTR | leges | FUTR | leget | FUTR | legemus | FUTR | legetis | FUTR | legent |
+| PERF | lēgī |PERF | lēgisti | PERF | lēgit | PERF | lēgimus | PERF | lēgistis | PERF | lēgerunt |
+| PLUP | lēgeram |PLUP | lēgeras | PLUP | lēgerat | PLUP | lēgeramus | PLUP | lēgeratis | PLUP | lēgerant |
+| FUTP | lēgero |FUTP | lēgeris | FUTP | lēgerit | FUTP | lēgerimus | FUTP | lēgeritis | FUTP | lēgerint |
 
 lūdere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| lūdo |lūdis | lūdit | lūdimus | lūditis | lūdunt |
-| lūdebam |lūdebas | lūdebat | lūdebamus | lūdebatis | lūdebant |
-| lūdam |lūdes | lūdet | lūdemus | lūdetis | lūdent |
-| lūsī |lūsisti | lūsit | lūsimus | lūsistis | lūserunt |
-| lūseram |lūseras | lūserat | lūseramus | lūseratis | lūserant |
-| lūsero |lūseris | lūserit | lūserimus | lūseritis | lūserint |
+| PRES | lūdo |PRES | lūdis | PRES | lūdit | PRES | lūdimus | PRES | lūditis | PRES | lūdunt |
+| IMPF | lūdebam |IMPF | lūdebas | IMPF | lūdebat | IMPF | lūdebamus | IMPF | lūdebatis | IMPF | lūdebant |
+| FUTR | lūdam |FUTR | lūdes | FUTR | lūdet | FUTR | lūdemus | FUTR | lūdetis | FUTR | lūdent |
+| PERF | lūsī |PERF | lūsisti | PERF | lūsit | PERF | lūsimus | PERF | lūsistis | PERF | lūserunt |
+| PLUP | lūseram |PLUP | lūseras | PLUP | lūserat | PLUP | lūseramus | PLUP | lūseratis | PLUP | lūserant |
+| FUTP | lūsero |FUTP | lūseris | FUTP | lūserit | FUTP | lūserimus | FUTP | lūseritis | FUTP | lūserint |
 
 petere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| peto |petis | petit | petimus | petitis | petunt |
-| petebam |petebas | petebat | petebamus | petebatis | petebant |
-| petam |petes | petet | petemus | petetis | petent |
-| petīvī |petīvisti | petīvit | petīvimus | petīvistis | petīverunt |
-| petīveram |petīveras | petīverat | petīveramus | petīveratis | petīverant |
-| petīvero |petīveris | petīverit | petīverimus | petīveritis | petīverint |
+| PRES | peto |PRES | petis | PRES | petit | PRES | petimus | PRES | petitis | PRES | petunt |
+| IMPF | petebam |IMPF | petebas | IMPF | petebat | IMPF | petebamus | IMPF | petebatis | IMPF | petebant |
+| FUTR | petam |FUTR | petes | FUTR | petet | FUTR | petemus | FUTR | petetis | FUTR | petent |
+| PERF | petīvī |PERF | petīvisti | PERF | petīvit | PERF | petīvimus | PERF | petīvistis | PERF | petīverunt |
+| PLUP | petīveram |PLUP | petīveras | PLUP | petīverat | PLUP | petīveramus | PLUP | petīveratis | PLUP | petīverant |
+| FUTP | petīvero |FUTP | petīveris | FUTP | petīverit | FUTP | petīverimus | FUTP | petīveritis | FUTP | petīverint |
 
 pōnere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| pōno |pōnis | pōnit | pōnimus | pōnitis | pōnunt |
-| pōnebam |pōnebas | pōnebat | pōnebamus | pōnebatis | pōnebant |
-| pōnam |pōnes | pōnet | pōnemus | pōnetis | pōnent |
-| pōsuī |pōsuisti | pōsuit | pōsuimus | pōsuistis | pōsuerunt |
-| pōsueram |pōsueras | pōsuerat | pōsueramus | pōsueratis | pōsuerant |
-| pōsuero |pōsueris | pōsuerit | pōsuerimus | pōsueritis | pōsuerint |
+| PRES | pōno |PRES | pōnis | PRES | pōnit | PRES | pōnimus | PRES | pōnitis | PRES | pōnunt |
+| IMPF | pōnebam |IMPF | pōnebas | IMPF | pōnebat | IMPF | pōnebamus | IMPF | pōnebatis | IMPF | pōnebant |
+| FUTR | pōnam |FUTR | pōnes | FUTR | pōnet | FUTR | pōnemus | FUTR | pōnetis | FUTR | pōnent |
+| PERF | pōsuī |PERF | pōsuisti | PERF | pōsuit | PERF | pōsuimus | PERF | pōsuistis | PERF | pōsuerunt |
+| PLUP | pōsueram |PLUP | pōsueras | PLUP | pōsuerat | PLUP | pōsueramus | PLUP | pōsueratis | PLUP | pōsuerant |
+| FUTP | pōsuero |FUTP | pōsueris | FUTP | pōsuerit | FUTP | pōsuerimus | FUTP | pōsueritis | FUTP | pōsuerint |
 
 scrībere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| scrībo |scrībis | scrībit | scrībimus | scrībitis | scrībunt |
-| scrībebam |scrībebas | scrībebat | scrībebamus | scrībebatis | scrībebant |
-| scrībam |scrībes | scrībet | scrībemus | scrībetis | scrībent |
-| scrīpsī |scrīpsisti | scrīpsit | scrīpsimus | scrīpsistis | scrīpserunt |
-| scrīpseram |scrīpseras | scrīpserat | scrīpseramus | scrīpseratis | scrīpserant |
-| scrīpsero |scrīpseris | scrīpserit | scrīpserimus | scrīpseritis | scrīpserint |
+| PRES | scrībo |PRES | scrībis | PRES | scrībit | PRES | scrībimus | PRES | scrībitis | PRES | scrībunt |
+| IMPF | scrībebam |IMPF | scrībebas | IMPF | scrībebat | IMPF | scrībebamus | IMPF | scrībebatis | IMPF | scrībebant |
+| FUTR | scrībam |FUTR | scrībes | FUTR | scrībet | FUTR | scrībemus | FUTR | scrībetis | FUTR | scrībent |
+| PERF | scrīpsī |PERF | scrīpsisti | PERF | scrīpsit | PERF | scrīpsimus | PERF | scrīpsistis | PERF | scrīpserunt |
+| PLUP | scrīpseram |PLUP | scrīpseras | PLUP | scrīpserat | PLUP | scrīpseramus | PLUP | scrīpseratis | PLUP | scrīpserant |
+| FUTP | scrīpsero |FUTP | scrīpseris | FUTP | scrīpserit | FUTP | scrīpserimus | FUTP | scrīpseritis | FUTP | scrīpserint |
 
 sīdere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| sīdo |sīdis | sīdit | sīdimus | sīditis | sīdunt |
-| sīdebam |sīdebas | sīdebat | sīdebamus | sīdebatis | sīdebant |
-| sīdam |sīdes | sīdet | sīdemus | sīdetis | sīdent |
-| sīdī |sīdisti | sīdit | sīdimus | sīdistis | sīderunt |
-| sīderam |sīderas | sīderat | sīderamus | sīderatis | sīderant |
-| sīdero |sīderis | sīderit | sīderimus | sīderitis | sīderint |
+| PRES | sīdo |PRES | sīdis | PRES | sīdit | PRES | sīdimus | PRES | sīditis | PRES | sīdunt |
+| IMPF | sīdebam |IMPF | sīdebas | IMPF | sīdebat | IMPF | sīdebamus | IMPF | sīdebatis | IMPF | sīdebant |
+| FUTR | sīdam |FUTR | sīdes | FUTR | sīdet | FUTR | sīdemus | FUTR | sīdetis | FUTR | sīdent |
+| PERF | sīdī |PERF | sīdisti | PERF | sīdit | PERF | sīdimus | PERF | sīdistis | PERF | sīderunt |
+| PLUP | sīderam |PLUP | sīderas | PLUP | sīderat | PLUP | sīderamus | PLUP | sīderatis | PLUP | sīderant |
+| FUTP | sīdero |FUTP | sīderis | FUTP | sīderit | FUTP | sīderimus | FUTP | sīderitis | FUTP | sīderint |
 
 vīvere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| vīvo |vīvis | vīvit | vīvimus | vīvitis | vīvunt |
-| vīvebam |vīvebas | vīvebat | vīvebamus | vīvebatis | vīvebant |
-| vīvam |vīves | vīvet | vīvemus | vīvetis | vīvent |
-| vīxī |vīxisti | vīxit | vīximus | vīxistis | vīxerunt |
-| vīxeram |vīxeras | vīxerat | vīxeramus | vīxeratis | vīxerant |
-| vīxero |vīxeris | vīxerit | vīxerimus | vīxeritis | vīxerint |
+| PRES | vīvo |PRES | vīvis | PRES | vīvit | PRES | vīvimus | PRES | vīvitis | PRES | vīvunt |
+| IMPF | vīvebam |IMPF | vīvebas | IMPF | vīvebat | IMPF | vīvebamus | IMPF | vīvebatis | IMPF | vīvebant |
+| FUTR | vīvam |FUTR | vīves | FUTR | vīvet | FUTR | vīvemus | FUTR | vīvetis | FUTR | vīvent |
+| PERF | vīxī |PERF | vīxisti | PERF | vīxit | PERF | vīximus | PERF | vīxistis | PERF | vīxerunt |
+| PLUP | vīxeram |PLUP | vīxeras | PLUP | vīxerat | PLUP | vīxeramus | PLUP | vīxeratis | PLUP | vīxerant |
+| FUTP | vīxero |FUTP | vīxeris | FUTP | vīxerit | FUTP | vīxerimus | FUTP | vīxeritis | FUTP | vīxerint |
 
 audire
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| audio |audis | audit | audimus | auditis | audiunt |
-| audiebam |audiebas | audiebat | audiebamus | audiebatis | audiebant |
-| audiam |audies | audiet | audiemus | audietis | audient |
-| audīvī |audīvisti | audīvit | audīvimus | audīvistis | audīverunt |
-| audīveram |audīveras | audīverat | audīveramus | audīveratis | audīverant |
-| audīvero |audīveris | audīverit | audīverimus | audīveritis | audīverint |
+| PRES | audio |PRES | audis | PRES | audit | PRES | audimus | PRES | auditis | PRES | audiunt |
+| IMPF | audiebam |IMPF | audiebas | IMPF | audiebat | IMPF | audiebamus | IMPF | audiebatis | IMPF | audiebant |
+| FUTR | audiam |FUTR | audies | FUTR | audiet | FUTR | audiemus | FUTR | audietis | FUTR | audient |
+| PERF | audīvī |PERF | audīvisti | PERF | audīvit | PERF | audīvimus | PERF | audīvistis | PERF | audīverunt |
+| PLUP | audīveram |PLUP | audīveras | PLUP | audīverat | PLUP | audīveramus | PLUP | audīveratis | PLUP | audīverant |
+| FUTP | audīvero |FUTP | audīveris | FUTP | audīverit | FUTP | audīverimus | FUTP | audīveritis | FUTP | audīverint |
 
 scire
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| scio |scis | scit | scimus | scitis | sciunt |
-| sciebam |sciebas | sciebat | sciebamus | sciebatis | sciebant |
-| sciam |scies | sciet | sciemus | scietis | scient |
-| scīvī |scīvisti | scīvit | scīvimus | scīvistis | scīverunt |
-| scīveram |scīveras | scīverat | scīveramus | scīveratis | scīverant |
-| scīvero |scīveris | scīverit | scīverimus | scīveritis | scīverint |
+| PRES | scio |PRES | scis | PRES | scit | PRES | scimus | PRES | scitis | PRES | sciunt |
+| IMPF | sciebam |IMPF | sciebas | IMPF | sciebat | IMPF | sciebamus | IMPF | sciebatis | IMPF | sciebant |
+| FUTR | sciam |FUTR | scies | FUTR | sciet | FUTR | sciemus | FUTR | scietis | FUTR | scient |
+| PERF | scīvī |PERF | scīvisti | PERF | scīvit | PERF | scīvimus | PERF | scīvistis | PERF | scīverunt |
+| PLUP | scīveram |PLUP | scīveras | PLUP | scīverat | PLUP | scīveramus | PLUP | scīveratis | PLUP | scīverant |
+| FUTP | scīvero |FUTP | scīveris | FUTP | scīverit | FUTP | scīverimus | FUTP | scīveritis | FUTP | scīverint |
 
 venire
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| venio |venis | venit | venimus | venitis | veniunt |
-| veniebam |veniebas | veniebat | veniebamus | veniebatis | veniebant |
-| veniam |venies | veniet | veniemus | venietis | venient |
-| vēnī |vēnisti | vēnit | vēnimus | vēnistis | vēnerunt |
-| vēneram |vēneras | vēnerat | vēneramus | vēneratis | vēnerant |
-| vēnero |vēneris | vēnerit | vēnerimus | vēneritis | vēnerint |
+| PRES | venio |PRES | venis | PRES | venit | PRES | venimus | PRES | venitis | PRES | veniunt |
+| IMPF | veniebam |IMPF | veniebas | IMPF | veniebat | IMPF | veniebamus | IMPF | veniebatis | IMPF | veniebant |
+| FUTR | veniam |FUTR | venies | FUTR | veniet | FUTR | veniemus | FUTR | venietis | FUTR | venient |
+| PERF | vēnī |PERF | vēnisti | PERF | vēnit | PERF | vēnimus | PERF | vēnistis | PERF | vēnerunt |
+| PLUP | vēneram |PLUP | vēneras | PLUP | vēnerat | PLUP | vēneramus | PLUP | vēneratis | PLUP | vēnerant |
+| FUTP | vēnero |FUTP | vēneris | FUTP | vēnerit | FUTP | vēnerimus | FUTP | vēneritis | FUTP | vēnerint |
 
 capere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| capio |capis | capit | capimus | capitis | capiunt |
-| capiebam |capiebas | capiebat | capiebamus | capiebatis | capiebant |
-| capiam |capies | capiet | capiemus | capietis | capient |
-| cēpī |cēpisti | cēpit | cēpimus | cēpistis | cēperunt |
-| cēperam |cēperas | cēperat | cēperamus | cēperatis | cēperant |
-| cēpero |cēperis | cēperit | cēperimus | cēperitis | cēperint |
+| PRES | capio |PRES | capis | PRES | capit | PRES | capimus | PRES | capitis | PRES | capiunt |
+| IMPF | capiebam |IMPF | capiebas | IMPF | capiebat | IMPF | capiebamus | IMPF | capiebatis | IMPF | capiebant |
+| FUTR | capiam |FUTR | capies | FUTR | capiet | FUTR | capiemus | FUTR | capietis | FUTR | capient |
+| PERF | cēpī |PERF | cēpisti | PERF | cēpit | PERF | cēpimus | PERF | cēpistis | PERF | cēperunt |
+| PLUP | cēperam |PLUP | cēperas | PLUP | cēperat | PLUP | cēperamus | PLUP | cēperatis | PLUP | cēperant |
+| FUTP | cēpero |FUTP | cēperis | FUTP | cēperit | FUTP | cēperimus | FUTP | cēperitis | FUTP | cēperint |
 
 incipere
 
 | S |   |   | P |   |   |
 | - | - |- | - | - | - |
 | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |
-| incipio |incipis | incipit | incipimus | incipitis | incipiunt |
-| incipiebam |incipiebas | incipiebat | incipiebamus | incipiebatis | incipiebant |
-| incipiam |incipies | incipiet | incipiemus | incipietis | incipient |
-| incēpī |incēpisti | incēpit | incēpimus | incēpistis | incēperunt |
-| incēperam |incēperas | incēperat | incēperamus | incēperatis | incēperant |
-| incēpero |incēperis | incēperit | incēperimus | incēperitis | incēperint |
+| PRES | incipio |PRES | incipis | PRES | incipit | PRES | incipimus | PRES | incipitis | PRES | incipiunt |
+| IMPF | incipiebam |IMPF | incipiebas | IMPF | incipiebat | IMPF | incipiebamus | IMPF | incipiebatis | IMPF | incipiebant |
+| FUTR | incipiam |FUTR | incipies | FUTR | incipiet | FUTR | incipiemus | FUTR | incipietis | FUTR | incipient |
+| PERF | incēpī |PERF | incēpisti | PERF | incēpit | PERF | incēpimus | PERF | incēpistis | PERF | incēperunt |
+| PLUP | incēperam |PLUP | incēperas | PLUP | incēperat | PLUP | incēperamus | PLUP | incēperatis | PLUP | incēperant |
+| FUTP | incēpero |FUTP | incēperis | FUTP | incēperit | FUTP | incēperimus | FUTP | incēperitis | FUTP | incēperint |

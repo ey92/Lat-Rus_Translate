@@ -19,17 +19,17 @@ for inf in Roots.VMap_lat:
 
 	for tense in ['PRES','IMPF','FUTR','PERF','PLUP','FUTP']:
 		table += '| '
-		table += Latin.conjugate(inf,"FST","SG",tense) + ' |'
-		table += Latin.conjugate(inf,"SND","SG",tense) + ' | '
-		table += Latin.conjugate(inf,"TRD","SG",tense) + ' | '
-		table += Latin.conjugate(inf,"FST","PL",tense) + ' | '
-		table += Latin.conjugate(inf,"SND","PL",tense) + ' | '
-		table += Latin.conjugate(inf,"TRD","PL",tense) + ' |\n'
+		table += tense + ' | ' + Latin.conjugate(inf,"FST","SG",tense) + ' |'
+		table += tense + ' | ' + Latin.conjugate(inf,"SND","SG",tense) + ' | '
+		table += tense + ' | ' + Latin.conjugate(inf,"TRD","SG",tense) + ' | '
+		table += tense + ' | ' + Latin.conjugate(inf,"FST","PL",tense) + ' | '
+		table += tense + ' | ' + Latin.conjugate(inf,"SND","PL",tense) + ' | '
+		table += tense + ' | ' + Latin.conjugate(inf,"TRD","PL",tense) + ' |\n'
 
 	table += '\n'
 
-# print(table)
+print(table)
 
-f1=open('./Latin_Verbs_all.md', 'w+')
-f1.write(table)
-f1.close()
+# f1=open('./Latin_Verbs_all.md', 'w+')
+# f1.write(table)
+# f1.close()
