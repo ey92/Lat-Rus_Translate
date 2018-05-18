@@ -15,7 +15,7 @@ for nomM in Roots.AMap_lat:
 	d = Roots.LfindDeclR(root)
 
 
-	table += nomM + ', ' + root
+	table += nomM + ', ' + root + ' - ' + Roots.AMap_eng[Roots.AMap_lat.index(nomM)]
 	table += '\n\n'
 	table += '|   | F |   | M |   | N |   |\n'
 	table += '| - | - | - | - | - | - | - |\n'

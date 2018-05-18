@@ -1,4 +1,4 @@
-bonus, bona
+bonus, bona - good
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -10,7 +10,7 @@ bonus, bona
 | ABL | bonā | bonīs | bonō | bonīs | bonō | bonīs |
 | VOC | bona | bonae | bone | bonī | bonum | bona |
 
-caeruleus, caerulea
+caeruleus, caerulea - blue
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -22,7 +22,7 @@ caeruleus, caerulea
 | ABL | caeruleā | caeruleīs | caeruleō | caeruleīs | caeruleō | caeruleīs |
 | VOC | caerulea | caeruleae | caerulee | caeruleī | caeruleum | caerulea |
 
-miser, misera
+miser, misera - miserable
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -34,7 +34,7 @@ miser, misera
 | ABL | miserā | miserīs | miserō | miserīs | miserō | miserīs |
 | VOC | misera | miserae | miser | miserī | miserum | misera |
 
-novus, nova
+novus, nova - new
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -46,7 +46,7 @@ novus, nova
 | ABL | novā | novīs | novō | novīs | novō | novīs |
 | VOC | nova | novae | nove | novī | novum | nova |
 
-pulcher, pulchra
+pulcher, pulchra - beautiful
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -58,7 +58,7 @@ pulcher, pulchra
 | ABL | pulchrā | pulchrīs | pulchrō | pulchrīs | pulchrō | pulchrīs |
 | VOC | pulchra | pulchrae | pulcher | pulchrī | pulchrum | pulchra |
 
-ācer, ācris
+ācer, ācris - sharp
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -70,7 +70,7 @@ pulcher, pulchra
 | ABL | ācrī | ācribus | ācrī | ācribus | ācrī | ācribus |
 | VOC | ācris | ācrēs | ācer | ācrēs | ācre | ācria |
 
-fortis, fortis
+fortis, fortis - strong, brave
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -82,7 +82,7 @@ fortis, fortis
 | ABL | fortī | fortibus | fortī | fortibus | fortī | fortibus |
 | VOC | fortis | fortēs | fortis | fortēs | forte | fortia |
 
-amāns, amantis
+amāns, amantis - loving
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -94,7 +94,7 @@ amāns, amantis
 | ABL | amantī | amantibus | amantī | amantibus | amantī | amantibus |
 | VOC | amāns | amantēs | amāns | amantēs | amāns | amantia |
 
-fēlīx, fēlicis
+fēlīx, fēlicis - lucky, happy
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |
@@ -106,7 +106,7 @@ fēlīx, fēlicis
 | ABL | fēlicī | fēlicibus | fēlicī | fēlicibus | fēlicī | fēlicibus |
 | VOC | fēlīx | fēlicēs | fēlīx | fēlicēs | fēlīx | fēlicia |
 
-prūdens, prūdentis
+prūdens, prūdentis - wise
 
 |   | F |   | M |   | N |   |
 | - | - | - | - | - | - | - |

@@ -1,4 +1,4 @@
-agricola, agricolae
+agricola, agricolae - M - farmer
 
 |   | S | P |
 | - | - | - |
@@ -9,7 +9,7 @@ agricola, agricolae
 | ABL | agricolā | agricolīs |
 | VOC | agricola | agricolae |
 
-femina, feminae
+femina, feminae - F - woman
 
 |   | S | P |
 | - | - | - |
@@ -20,7 +20,7 @@ femina, feminae
 | ABL | feminā | feminīs |
 | VOC | femina | feminae |
 
-jānua, jānuae
+jānua, jānuae - F - door
 
 |   | S | P |
 | - | - | - |
@@ -31,7 +31,7 @@ jānua, jānuae
 | ABL | jānuā | jānuīs |
 | VOC | jānua | jānuae |
 
-patria, patriae
+patria, patriae - F - side,party,land,place,part
 
 |   | S | P |
 | - | - | - |
@@ -42,7 +42,7 @@ patria, patriae
 | ABL | patriā | patriīs |
 | VOC | patria | patriae |
 
-penna, pennae
+penna, pennae - F - pen
 
 |   | S | P |
 | - | - | - |
@@ -53,7 +53,7 @@ penna, pennae
 | ABL | pennā | pennīs |
 | VOC | penna | pennae |
 
-puella, puellae
+puella, puellae - F - girl
 
 |   | S | P |
 | - | - | - |
@@ -64,7 +64,7 @@ puella, puellae
 | ABL | puellā | puellīs |
 | VOC | puella | puellae |
 
-terra, terrae
+terra, terrae - F - land
 
 |   | S | P |
 | - | - | - |
@@ -75,7 +75,7 @@ terra, terrae
 | ABL | terrā | terrīs |
 | VOC | terra | terrae |
 
-vīta, vītae
+vīta, vītae - F - life,existence
 
 |   | S | P |
 | - | - | - |
@@ -86,7 +86,7 @@ vīta, vītae
 | ABL | vītā | vītīs |
 | VOC | vīta | vītae |
 
-ānulus , ānulī
+ānulus , ānulī - M - ring
 
 |   | S | P |
 | - | - | - |
@@ -97,7 +97,7 @@ vīta, vītae
 | ABL | ānulō | ānulīs |
 | VOC | ānulus  | ānulī |
 
-puer, puerī
+puer, puerī - M - boy
 
 |   | S | P |
 | - | - | - |
@@ -108,7 +108,7 @@ puer, puerī
 | ABL | puerō | puerīs |
 | VOC | puer | puerī |
 
-vir, virī
+vir, virī - M - man
 
 |   | S | P |
 | - | - | - |
@@ -119,7 +119,7 @@ vir, virī
 | ABL | virō | virīs |
 | VOC | vir | virī |
 
-filius, filiī
+filius, filiī - M - son
 
 |   | S | P |
 | - | - | - |
@@ -130,7 +130,7 @@ filius, filiī
 | ABL | filiō | filiīs |
 | VOC | filī | filiī |
 
-modus, modī
+modus, modī - M - measure, manner
 
 |   | S | P |
 | - | - | - |
@@ -141,7 +141,7 @@ modus, modī
 | ABL | modō | modīs |
 | VOC | mode | modī |
 
-annus, annī
+annus, annī - M - year
 
 |   | S | P |
 | - | - | - |
@@ -152,7 +152,7 @@ annus, annī
 | ABL | annō | annīs |
 | VOC | anne | annī |
 
-mūrus, mūrī
+mūrus, mūrī - M - wall
 
 |   | S | P |
 | - | - | - |
@@ -163,7 +163,7 @@ mūrus, mūrī
 | ABL | mūrō | mūrīs |
 | VOC | mūre | mūrī |
 
-servus, servī
+servus, servī - M - slave, servant
 
 |   | S | P |
 | - | - | - |
@@ -174,7 +174,7 @@ servus, servī
 | ABL | servō | servīs |
 | VOC | serve | servī |
 
-liber, librī
+liber, librī - M - book
 
 |   | S | P |
 | - | - | - |
@@ -185,7 +185,7 @@ liber, librī
 | ABL | librō | librīs |
 | VOC | liber | librī |
 
-amicus, amicī
+amicus, amicī - M - friend
 
 |   | S | P |
 | - | - | - |
@@ -196,7 +196,7 @@ amicus, amicī
 | ABL | amicō | amicīs |
 | VOC | amice | amicī |
 
-domus, domī
+domus, domī - M - house,home,household
 
 |   | S | P |
 | - | - | - |
@@ -207,7 +207,7 @@ domus, domī
 | ABL | domō | domīs |
 | VOC | dome | domī |
 
-locus, locī
+locus, locī - M - place,site,region,area
 
 |   | S | P |
 | - | - | - |
@@ -218,7 +218,7 @@ locus, locī
 | ABL | locō | locīs |
 | VOC | loce | locī |
 
-oculus, oculī
+oculus, oculī - M - eye
 
 |   | S | P |
 | - | - | - |
@@ -229,7 +229,7 @@ oculus, oculī
 | ABL | oculō | oculīs |
 | VOC | ocule | oculī |
 
-bellum, bellī
+bellum, bellī - N - war
 
 |   | S | P |
 | - | - | - |
@@ -240,7 +240,7 @@ bellum, bellī
 | ABL | bellō | bellīs |
 | VOC | bellum | bella |
 
-dōnum, dōnī
+dōnum, dōnī - N - gift
 
 |   | S | P |
 | - | - | - |
@@ -251,7 +251,7 @@ dōnum, dōnī
 | ABL | dōnō | dōnīs |
 | VOC | dōnum | dōna |
 
-bonum, bonī
+bonum, bonī - N - possession
 
 |   | S | P |
 | - | - | - |
@@ -262,7 +262,7 @@ bonum, bonī
 | ABL | bonō | bonīs |
 | VOC | bonum | bona |
 
-verbum, verbī
+verbum, verbī - N - word,speech
 
 |   | S | P |
 | - | - | - |
@@ -273,7 +273,7 @@ verbum, verbī
 | ABL | verbō | verbīs |
 | VOC | verbum | verba |
 
-vīnum, vīnī
+vīnum, vīnī - N - wine
 
 |   | S | P |
 | - | - | - |
@@ -284,7 +284,7 @@ vīnum, vīnī
 | ABL | vīnō | vīnīs |
 | VOC | vīnum | vīna |
 
-calix, calicis
+calix, calicis - M - cup, glass
 
 |   | S | P |
 | - | - | - |
@@ -295,7 +295,7 @@ calix, calicis
 | ABL | calice | calicibus |
 | VOC | calix | calicēs |
 
-homō, hominis
+homō, hominis - M - human, person
 
 |   | S | P |
 | - | - | - |
@@ -306,7 +306,7 @@ homō, hominis
 | ABL | homine | hominibus |
 | VOC | homō | hominēs |
 
-consul, consulis
+consul, consulis - M - consul
 
 |   | S | P |
 | - | - | - |
@@ -317,7 +317,7 @@ consul, consulis
 | ABL | consule | consulibus |
 | VOC | consul | consulēs |
 
-labor, laboris
+labor, laboris - M - work,job
 
 |   | S | P |
 | - | - | - |
@@ -328,7 +328,7 @@ labor, laboris
 | ABL | labore | laboribus |
 | VOC | labor | laborēs |
 
-pānis, pānis
+pānis, pānis - M - bread
 
 |   | S | P |
 | - | - | - |
@@ -339,7 +339,7 @@ pānis, pānis
 | ABL | pāne | pānibus |
 | VOC | pānis | pānēs |
 
-pēs, pedis
+pēs, pedis - M - foot,leg
 
 |   | S | P |
 | - | - | - |
@@ -350,7 +350,7 @@ pēs, pedis
 | ABL | pede | pedibus |
 | VOC | pēs | pedēs |
 
-rex, regis
+rex, regis - M - king
 
 |   | S | P |
 | - | - | - |
@@ -361,7 +361,7 @@ rex, regis
 | ABL | rege | regibus |
 | VOC | rex | regēs |
 
-graphis, graphidis
+graphis, graphidis - F - pencil
 
 |   | S | P |
 | - | - | - |
@@ -372,7 +372,7 @@ graphis, graphidis
 | ABL | graphide | graphidibus |
 | VOC | graphis | graphidēs |
 
-iterātiō, iterātiōnis
+iterātiō, iterātiōnis - F - iteration
 
 |   | S | P |
 | - | - | - |
@@ -383,7 +383,7 @@ iterātiō, iterātiōnis
 | ABL | iterātiōne | iterātiōnibus |
 | VOC | iterātiō | iterātiōnēs |
 
-laus, laudis
+laus, laudis - F - praise
 
 |   | S | P |
 | - | - | - |
@@ -394,7 +394,7 @@ laus, laudis
 | ABL | laude | laudibus |
 | VOC | laus | laudēs |
 
-caput, capitis
+caput, capitis - N - head
 
 |   | S | P |
 | - | - | - |
@@ -405,7 +405,7 @@ caput, capitis
 | ABL | capite | capitibus |
 | VOC | caput | capita |
 
-jūs, jūris
+jūs, jūris - N - law
 
 |   | S | P |
 | - | - | - |
@@ -416,7 +416,7 @@ jūs, jūris
 | ABL | jūre | jūribus |
 | VOC | jūs | jūra |
 
-flūmen, flūminis
+flūmen, flūminis - N - river
 
 |   | S | P |
 | - | - | - |
@@ -427,7 +427,7 @@ flūmen, flūminis
 | ABL | flūmine | flūminibus |
 | VOC | flūmen | flūmina |
 
-nōmen, nōminis
+nōmen, nōminis - N - name
 
 |   | S | P |
 | - | - | - |
@@ -438,7 +438,7 @@ nōmen, nōminis
 | ABL | nōmine | nōminibus |
 | VOC | nōmen | nōmina |
 
-tempus, temporis
+tempus, temporis - N - time
 
 |   | S | P |
 | - | - | - |
@@ -449,7 +449,7 @@ tempus, temporis
 | ABL | tempore | temporibus |
 | VOC | tempus | tempora |
 
-pōns, pōntis
+pōns, pōntis - M - bridge
 
 |   | S | P |
 | - | - | - |
@@ -460,7 +460,7 @@ pōns, pōntis
 | ABL | pōnte | pōntibus |
 | VOC | pōns | pōntēs |
 
-mēnsis, mēnsis
+mēnsis, mēnsis - M - month
 
 |   | S | P |
 | - | - | - |
@@ -471,7 +471,7 @@ mēnsis, mēnsis
 | ABL | mēnse | mēnsibus |
 | VOC | mēnsis | mēnsēs |
 
-nox, noctis
+nox, noctis - F - night
 
 |   | S | P |
 | - | - | - |
@@ -482,7 +482,7 @@ nox, noctis
 | ABL | nocte | noctibus |
 | VOC | nox | noctēs |
 
-mors, mortis
+mors, mortis - F - death
 
 |   | S | P |
 | - | - | - |
@@ -493,7 +493,7 @@ mors, mortis
 | ABL | morte | mortibus |
 | VOC | mors | mortēs |
 
-urbs, urbis
+urbs, urbis - F - city
 
 |   | S | P |
 | - | - | - |
@@ -504,7 +504,7 @@ urbs, urbis
 | ABL | urbe | urbibus |
 | VOC | urbs | urbēs |
 
-turris, turris
+turris, turris - F - tower
 
 |   | S | P |
 | - | - | - |
@@ -515,7 +515,7 @@ turris, turris
 | ABL | turre | turribus |
 | VOC | turris | turrēs |
 
-cīvis, cīvis
+cīvis, cīvis - M - citizen
 
 |   | S | P |
 | - | - | - |
@@ -526,7 +526,7 @@ cīvis, cīvis
 | ABL | cīvī | cīvibus |
 | VOC | cīvis | cīvēs |
 
-fīnis, fīnis
+fīnis, fīnis - F - end,ending
 
 |   | S | P |
 | - | - | - |
@@ -537,7 +537,7 @@ fīnis, fīnis
 | ABL | fīnī | fīnibus |
 | VOC | fīnis | fīnēs |
 
-nāvis, nāvis
+nāvis, nāvis - F - ship
 
 |   | S | P |
 | - | - | - |
@@ -548,7 +548,7 @@ nāvis, nāvis
 | ABL | nāvī | nāvibus |
 | VOC | nāvis | nāvēs |
 
-pārs, pārtis
+pārs, pārtis - F - part
 
 |   | S | P |
 | - | - | - |
@@ -559,7 +559,7 @@ pārs, pārtis
 | ABL | pārtī | pārtibus |
 | VOC | pārs | pārtēs |
 
-clāvis, clāvis
+clāvis, clāvis - F - key
 
 |   | S | P |
 | - | - | - |
@@ -570,7 +570,7 @@ clāvis, clāvis
 | ABL | clāvī | clāvibus |
 | VOC | clāvis | clāvēs |
 
-animal, animālis
+animal, animālis - N - animal
 
 |   | S | P |
 | - | - | - |
@@ -581,7 +581,7 @@ animal, animālis
 | ABL | animālī | animālibus |
 | VOC | animal | animālia |
 
-mare, maris
+mare, maris - N - sea
 
 |   | S | P |
 | - | - | - |
@@ -592,7 +592,7 @@ mare, maris
 | ABL | marī | maribus |
 | VOC | mare | maria |
 
-manus, manūs
+manus, manūs - F - hand
 
 |   | S | P |
 | - | - | - |
@@ -603,7 +603,7 @@ manus, manūs
 | ABL | manū | manibus |
 | VOC | manus | manūs |
 
-portus, portūs
+portus, portūs - F - harbor, port
 
 |   | S | P |
 | - | - | - |
@@ -614,7 +614,7 @@ portus, portūs
 | ABL | portū | portibus |
 | VOC | portus | portūs |
 
-cornū, cornūs
+cornū, cornūs - N - horn
 
 |   | S | P |
 | - | - | - |
@@ -625,7 +625,7 @@ cornū, cornūs
 | ABL | cornū | cornibus |
 | VOC | cornū | cornua |
 
-diēs, diēī
+diēs, diēī - M - day
 
 |   | S | P |
 | - | - | - |
@@ -636,7 +636,7 @@ diēs, diēī
 | ABL | diē | diēbus |
 | VOC | diēs | diēs |
 
-faciēs, faciēī
+faciēs, faciēī - F - face,person
 
 |   | S | P |
 | - | - | - |
@@ -647,7 +647,7 @@ faciēs, faciēī
 | ABL | faciē | faciēbus |
 | VOC | faciēs | faciēs |
 
-rēs, rēī
+rēs, rēī - F - thing, matter
 
 |   | S | P |
 | - | - | - |
@@ -658,7 +658,7 @@ rēs, rēī
 | ABL | rē | rēbus |
 | VOC | rēs | rēs |
 
-spēs, spēī
+spēs, spēī - F - hope
 
 |   | S | P |
 | - | - | - |

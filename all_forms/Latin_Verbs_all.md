@@ -1,4 +1,4 @@
-ire
+ire - to go
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -10,7 +10,7 @@ ire
 | PLUP | īveram |īveras | īverat | īveramus | īveratis | īverant |
 | FUTP | īvero |īveris | īverit | īverimus | īveritis | īverint |
 
-esse
+esse - to be
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -22,7 +22,7 @@ esse
 | PLUP | fueram |fueras | fuerat | fueramus | fueratis | fuerant |
 | FUTP | fuero |fueris | fuerit | fuerimus | fueritis | fuerint |
 
-posse
+posse - to be able
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -34,7 +34,7 @@ posse
 | PLUP | potueram |potueras | potuerat | potueramus | potueratis | potuerant |
 | FUTP | potuero |potueris | potuerit | potuerimus | potueritis | potuerint |
 
-velle
+velle - to want
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -46,7 +46,7 @@ velle
 | PLUP | volueram |volueras | voluerat | volueramus | volueratis | voluerant |
 | FUTP | voluero |volueris | voluerit | voluerimus | volueritis | voluerint |
 
-nōlle
+nōlle - to not want
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -58,7 +58,7 @@ nōlle
 | PLUP | nōlueram |nōlueras | nōluerat | nōlueramus | nōlueratis | nōluerant |
 | FUTP | nōluero |nōlueris | nōluerit | nōluerimus | nōlueritis | nōluerint |
 
-ferre
+ferre - to bring, carry
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -70,7 +70,7 @@ ferre
 | PLUP | tuleram |tuleras | tulerat | tuleramus | tuleratis | tulerant |
 | FUTP | tulero |tuleris | tulerit | tulerimus | tuleritis | tulerint |
 
-amare
+amare - to love
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -82,7 +82,7 @@ amare
 | PLUP | amāveram |amāveras | amāverat | amāveramus | amāveratis | amāverant |
 | FUTP | amāvero |amāveris | amāverit | amāverimus | amāveritis | amāverint |
 
-ambulare
+ambulare - to walk
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -94,7 +94,7 @@ ambulare
 | PLUP | ambulāveram |ambulāveras | ambulāverat | ambulāveramus | ambulāveratis | ambulāverant |
 | FUTP | ambulāvero |ambulāveris | ambulāverit | ambulāverimus | ambulāveritis | ambulāverint |
 
-clāmare
+clāmare - to shout
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -106,7 +106,7 @@ clāmare
 | PLUP | clāmāveram |clāmāveras | clāmāverat | clāmāveramus | clāmāveratis | clāmāverant |
 | FUTP | clāmāvero |clāmāveris | clāmāverit | clāmāverimus | clāmāveritis | clāmāverint |
 
-cōgitare
+cōgitare - to think
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -118,7 +118,7 @@ cōgitare
 | PLUP | cōgitāveram |cōgitāveras | cōgitāverat | cōgitāveramus | cōgitāveratis | cōgitāverant |
 | FUTP | cōgitāvero |cōgitāveris | cōgitāverit | cōgitāverimus | cōgitāveritis | cōgitāverint |
 
-dare
+dare - to give
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -130,7 +130,7 @@ dare
 | PLUP | dederam |dederas | dederat | dederamus | dederatis | dederant |
 | FUTP | dedero |dederis | dederit | dederimus | dederitis | dederint |
 
-expectare
+expectare - to wait
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -142,7 +142,7 @@ expectare
 | PLUP | exspectāveram |exspectāveras | exspectāverat | exspectāveramus | exspectāveratis | exspectāverant |
 | FUTP | exspectāvero |exspectāveris | exspectāverit | exspectāverimus | exspectāveritis | exspectāverint |
 
-parare
+parare - to prepare
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -154,7 +154,7 @@ parare
 | PLUP | parāveram |parāveras | parāverat | parāveramus | parāveratis | parāverant |
 | FUTP | parāvero |parāveris | parāverit | parāverimus | parāveritis | parāverint |
 
-rogare
+rogare - to ask
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -166,7 +166,7 @@ rogare
 | PLUP | rogāveram |rogāveras | rogāverat | rogāveramus | rogāveratis | rogāverant |
 | FUTP | rogāvero |rogāveris | rogāverit | rogāverimus | rogāveritis | rogāverint |
 
-spectare
+spectare - to watch
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -178,7 +178,7 @@ spectare
 | PLUP | spectāveram |spectāveras | spectāverat | spectāveramus | spectāveratis | spectāverant |
 | FUTP | spectāvero |spectāveris | spectāverit | spectāverimus | spectāveritis | spectāverint |
 
-stare
+stare - to stand
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -190,7 +190,7 @@ stare
 | PLUP | steteram |steteras | steterat | steteramus | steteratis | steterant |
 | FUTP | stetero |steteris | steterit | steterimus | steteritis | steterint |
 
-dēlēre
+dēlēre - to destroy
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -202,7 +202,7 @@ dēlēre
 | PLUP | dēlēveram |dēlēveras | dēlēverat | dēlēveramus | dēlēveratis | dēlēverant |
 | FUTP | dēlēvero |dēlēveris | dēlēverit | dēlēverimus | dēlēveritis | dēlēverint |
 
-docēre
+docēre - to teach
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -214,7 +214,7 @@ docēre
 | PLUP | docueram |docueras | docuerat | docueramus | docueratis | docuerant |
 | FUTP | docuero |docueris | docuerit | docuerimus | docueritis | docuerint |
 
-habēre
+habēre - to have
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -226,7 +226,7 @@ habēre
 | PLUP | habueram |habueras | habuerat | habueramus | habueratis | habuerant |
 | FUTP | habuero |habueris | habuerit | habuerimus | habueritis | habuerint |
 
-vidēre
+vidēre - to see
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -238,7 +238,7 @@ vidēre
 | PLUP | videram |videras | viderat | videramus | videratis | viderant |
 | FUTP | videro |videris | viderit | viderimus | videritis | viderint |
 
-claudere
+claudere - to close
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -250,7 +250,7 @@ claudere
 | PLUP | clauseram |clauseras | clauserat | clauseramus | clauseratis | clauserant |
 | FUTP | clausero |clauseris | clauserit | clauserimus | clauseritis | clauserint |
 
-comprehendere
+comprehendere - to understand
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -262,7 +262,7 @@ comprehendere
 | PLUP | comprehenderam |comprehenderas | comprehenderat | comprehenderamus | comprehenderatis | comprehenderant |
 | FUTP | comprehendero |comprehenderis | comprehenderit | comprehenderimus | comprehenderitis | comprehenderint |
 
-dīcere
+dīcere - to say
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -274,7 +274,7 @@ dīcere
 | PLUP | dīxeram |dīxeras | dīxerat | dīxeramus | dīxeratis | dīxerant |
 | FUTP | dīxero |dīxeris | dīxerit | dīxerimus | dīxeritis | dīxerint |
 
-edere
+edere - to eat
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -286,7 +286,7 @@ edere
 | PLUP | ēderam |ēderas | ēderat | ēderamus | ēderatis | ēderant |
 | FUTP | ēdero |ēderis | ēderit | ēderimus | ēderitis | ēderint |
 
-legere
+legere - to read
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -298,7 +298,7 @@ legere
 | PLUP | lēgeram |lēgeras | lēgerat | lēgeramus | lēgeratis | lēgerant |
 | FUTP | lēgero |lēgeris | lēgerit | lēgerimus | lēgeritis | lēgerint |
 
-lūdere
+lūdere - to play
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -310,7 +310,7 @@ lūdere
 | PLUP | lūseram |lūseras | lūserat | lūseramus | lūseratis | lūserant |
 | FUTP | lūsero |lūseris | lūserit | lūserimus | lūseritis | lūserint |
 
-petere
+petere - to seek
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -322,7 +322,7 @@ petere
 | PLUP | petīveram |petīveras | petīverat | petīveramus | petīveratis | petīverant |
 | FUTP | petīvero |petīveris | petīverit | petīverimus | petīveritis | petīverint |
 
-pōnere
+pōnere - to put, place
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -334,7 +334,7 @@ pōnere
 | PLUP | pōsueram |pōsueras | pōsuerat | pōsueramus | pōsueratis | pōsuerant |
 | FUTP | pōsuero |pōsueris | pōsuerit | pōsuerimus | pōsueritis | pōsuerint |
 
-scrībere
+scrībere - to write
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -346,7 +346,7 @@ scrībere
 | PLUP | scrīpseram |scrīpseras | scrīpserat | scrīpseramus | scrīpseratis | scrīpserant |
 | FUTP | scrīpsero |scrīpseris | scrīpserit | scrīpserimus | scrīpseritis | scrīpserint |
 
-sīdere
+sīdere - to sit
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -358,7 +358,7 @@ sīdere
 | PLUP | sīderam |sīderas | sīderat | sīderamus | sīderatis | sīderant |
 | FUTP | sīdero |sīderis | sīderit | sīderimus | sīderitis | sīderint |
 
-vīvere
+vīvere - to live
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -370,7 +370,7 @@ vīvere
 | PLUP | vīxeram |vīxeras | vīxerat | vīxeramus | vīxeratis | vīxerant |
 | FUTP | vīxero |vīxeris | vīxerit | vīxerimus | vīxeritis | vīxerint |
 
-audire
+audire - to hear
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -382,7 +382,7 @@ audire
 | PLUP | audīveram |audīveras | audīverat | audīveramus | audīveratis | audīverant |
 | FUTP | audīvero |audīveris | audīverit | audīverimus | audīveritis | audīverint |
 
-scire
+scire - to know
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -394,7 +394,7 @@ scire
 | PLUP | scīveram |scīveras | scīverat | scīveramus | scīveratis | scīverant |
 | FUTP | scīvero |scīveris | scīverit | scīverimus | scīveritis | scīverint |
 
-venire
+venire - to come
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -406,7 +406,7 @@ venire
 | PLUP | vēneram |vēneras | vēnerat | vēneramus | vēneratis | vēnerant |
 | FUTP | vēnero |vēneris | vēnerit | vēnerimus | vēneritis | vēnerint |
 
-capere
+capere - to take
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |
@@ -418,7 +418,7 @@ capere
 | PLUP | cēperam |cēperas | cēperat | cēperamus | cēperatis | cēperant |
 | FUTP | cēpero |cēperis | cēperit | cēperimus | cēperitis | cēperint |
 
-incipere
+incipere - to begin
 
 |   | S |   |   | P |   |   |
 | - | - | - |- | - | - | - |

@@ -13,7 +13,7 @@ table = ''
 for gen in Roots.NMap_lat:
 	nom = Roots.LfindNomG(gen)
 
-	table += nom + ', ' + gen
+	table += nom + ', ' + gen + ' - ' + Roots.LfindGenderG(gen) + ' - ' + Roots.NMap_eng[Roots.NMap_lat.index(gen)]
 	table += '\n\n'
 	table += '|   | S | P |\n'
 	table += '| - | - | - |\n'

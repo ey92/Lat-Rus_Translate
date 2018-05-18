@@ -11,7 +11,7 @@ import sys
 table = ''
 
 for inf in Roots.VMap_lat:
-	table += inf
+	table += inf + ' - ' + Roots.VMap_eng[Roots.VMap_lat.index(inf)]
 	table += '\n\n'
 	table += '|   | S |   |   | P |   |   |\n'
 	table += '| - | - | - |- | - | - | - |\n'
