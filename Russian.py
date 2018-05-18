@@ -28,7 +28,7 @@ DECL_ENDG_KEYSSG = ['NOMSG','GENSG','DATSG','ACCSG','PRPSG','INSSG']
 DECL_ENDG_KEYSPL = ['NOMPL','GENPL','DATPL','ACCPL','PRPPL','INSPL']
 
 # irregular verb conjugations
-irreg = ['мочь','давать','есть','брать','класть','ждать','жить','ехать','идти','хотеть']
+irreg = ['мочь','давать','есть','брать','класть','ждать','жить','ехать','идти','хотеть','быть']
 mochPreslst = ['могу','можешь','может','можем','можете','могут']
 mochFutplst = ['смогу','сможешь','сможет','сможем','сможете','смогут']
 mochImpflst = ['мог','могла','могло','могли']
@@ -139,10 +139,21 @@ xotetPerf = dict(zip(PAST_VERB_KEYS,xotetPerflst))
 xotetConj = {'PRES':xotetPres,'FUTP':xotetFutp,'IMPF':xotetImpf,'PERF':xotetPerf}
 xotetAll = xotetPreslst+xotetFutplst+xotetImpflst+xotetPerflst
 
-irregPres = mochPreslst+datPreslst+estPreslst+bratPreslst+klastPreslst+zhdatPreslst+zhitPreslst+exatPreslst+idtiPreslst+xotetPreslst
-irregFutp = mochFutplst+datFutplst+estFutplst+bratFutplst+klastFutplst+zhdatFutplst+zhitFutplst+exatFutplst+idtiFutplst+xotetFutplst
-irregImpf = mochImpflst+datImpflst+estImpflst+bratImpflst+klastImpflst+zhdatImpflst+zhitImpflst+exatImpflst+idtiImpflst+xotetImpflst
-irregPerf = mochPerflst+datPerflst+estPerflst+bratPerflst+klastPerflst+zhdatPerflst+zhitPerflst+exatPerflst+idtiPerflst+xotetPerflst
+bitPreslst = ['есмь','еси','есть','есмы','есте','суть']
+bitFutplst = ['doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist']
+bitImpflst = ['был','была','было','были']
+bitPerflst = ['doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist','doesn\'t exist']
+bitPres = dict(zip(VERB_FORM_KEYS,bitPreslst))
+bitFutp = dict(zip(VERB_FORM_KEYS,bitFutplst))
+bitImpf = dict(zip(PAST_VERB_KEYS,bitImpflst))
+bitPerf = dict(zip(PAST_VERB_KEYS,bitPerflst))
+bitConj = {'PRES':bitPres,'FUTP':bitFutp,'IMPF':bitImpf,'PERF':bitPerf}
+bitAll = bitPreslst+bitFutplst+bitImpflst+bitPerflst
+
+irregPres = mochPreslst+datPreslst+estPreslst+bratPreslst+klastPreslst+zhdatPreslst+zhitPreslst+exatPreslst+idtiPreslst+xotetPreslst+bitPreslst
+irregFutp = mochFutplst+datFutplst+estFutplst+bratFutplst+klastFutplst+zhdatFutplst+zhitFutplst+exatFutplst+idtiFutplst+xotetFutplst+bitFutplst
+irregImpf = mochImpflst+datImpflst+estImpflst+bratImpflst+klastImpflst+zhdatImpflst+zhitImpflst+exatImpflst+idtiImpflst+xotetImpflst+bitImpflst
+irregPerf = mochPerflst+datPerflst+estPerflst+bratPerflst+klastPerflst+zhdatPerflst+zhitPerflst+exatPerflst+idtiPerflst+xotetPerflst+bitPerflst
 irregAll = irregPres+irregFutp+irregImpf+irregPerf
 
 # verb endings
@@ -256,6 +267,8 @@ def contains(string, lst):
 # CONJUGATION
 
 def nonPastTense(inf, t, per, num, perf):
+	if inf == '':
+		return 'doeesn\'t exist'
 	form = per+num
 	end = ''
 
@@ -294,6 +307,9 @@ def nonPastTense(inf, t, per, num, perf):
 	return stem+end
 
 def pastTense(inf, t, gender, num, perf):
+	if inf == '':
+		return 'doeesn\'t exist'
+
 	form = num if num=='PL' else gender
 	end = endingsPast[form]
 
@@ -303,6 +319,8 @@ def pastTense(inf, t, gender, num, perf):
 	return stem+end
 
 def futureTense(inf, t, per, num):
+	if inf == '':
+		return 'doeesn\'t exist'
 	form = per+num
 	return endingsFuture[form]+inf
 
@@ -339,6 +357,8 @@ def irregular(inf, per, num, gender, tense):
 		return idtiConj[tense][form]
 	elif inf == 'хотеть':
 		return xotetConj[tense][form]
+	elif inf == 'быть':
+		return bitConj[tense][form]
 
 # takes either infinitive form, person, number, and tense
 def conjugate (inf, per, num, gender, tense):
