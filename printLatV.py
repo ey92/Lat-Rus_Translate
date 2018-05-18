@@ -18,13 +18,13 @@ for inf in Roots.VMap_lat:
 	table += '|   | 1st person | 2nd person | 3rd person | 1st person | 2nd person | 3rd person |\n'
 
 	for tense in ['PRES','IMPF','FUTR','PERF','PLUP','FUTP']:
-		table += '| '
-		table += tense + ' | ' + Latin.conjugate(inf,"FST","SG",tense) + ' |'
-		table += tense + ' | ' + Latin.conjugate(inf,"SND","SG",tense) + ' | '
-		table += tense + ' | ' + Latin.conjugate(inf,"TRD","SG",tense) + ' | '
-		table += tense + ' | ' + Latin.conjugate(inf,"FST","PL",tense) + ' | '
-		table += tense + ' | ' + Latin.conjugate(inf,"SND","PL",tense) + ' | '
-		table += tense + ' | ' + Latin.conjugate(inf,"TRD","PL",tense) + ' |\n'
+		table += '| ' + tense + ' | '
+		table += Latin.conjugate(inf,"FST","SG",tense) + ' |'
+		table += Latin.conjugate(inf,"SND","SG",tense) + ' | '
+		table += Latin.conjugate(inf,"TRD","SG",tense) + ' | '
+		table += Latin.conjugate(inf,"FST","PL",tense) + ' | '
+		table += Latin.conjugate(inf,"SND","PL",tense) + ' | '
+		table += Latin.conjugate(inf,"TRD","PL",tense) + ' |\n'
 
 	table += '\n'
 
