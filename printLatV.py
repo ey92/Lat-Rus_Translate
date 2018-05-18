@@ -1,10 +1,12 @@
 #!/bin/env
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import Roots
 import Latin
 import runtest
 
 import sys
+
 
 table = ''
 
@@ -26,4 +28,8 @@ for inf in Roots.VMap_lat:
 
 	table += '\n'
 
-print table
+# print(table)
+
+f1=open('./Latin_Verbs_all.md', 'w+')
+f1.write(table)
+f1.close()
